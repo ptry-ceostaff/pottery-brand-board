@@ -167,10 +167,10 @@ const CELLS = {
   'natural|tech':[{n:'Patagonia',id:'patagonia'}],
   'vinnat|casual':[{n:'Aimé Leon Dore'}],
   'vinnat|tech':[{n:'The North Face Purple Label'}],
-  'vintage|formal':[{n:"Drake's"},{n:'Ralph Lauren Purple Label'}],
+  'vintage|formal':[{n:"Drake's"},{n:'Ralph Lauren Purple Label',id:'rl-purple-label'}],
   'vintage|f-s':[{n:'Beams Plus'}],
   'vintage|standard':[{n:"Levi's"},{n:'Merz b. Schwanen'}],
-  'vintage|casual':[{n:'Warehouse'},{n:'A PRESSE'},{n:'RRL',id:'rrl'}],
+  'vintage|casual':[{n:'Warehouse',id:'warehouse'},{n:'A PRESSE'},{n:'RRL',id:'rrl'}],
   'vintage|c-t':[{n:'Stone Island'},{n:'Nigel Cabourn'}]
 };
 const HOME_CELLS = [];
@@ -1078,6 +1078,342 @@ DETAILS['patagonia'] = `
       <a href="https://circle-economy.com/knowledge-hub/article/28920" target="_blank">Circle Economy — 수선 인센티브 구조</a> ·
       <a href="https://www.projectpractical.com/patagonia-branding-strategy/" target="_blank">Patagonia 브랜딩 전략 2025</a> ·
       <a href="https://reflawn.com/articles/how-patagonia-turned-sustainability-into-a-business-model-that-works/61" target="_blank">지속가능성의 사업 모델화</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['warehouse'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Vintage × Casual</span>
+    <h2>웨어하우스 <span class="en">Warehouse &amp; Co. · Osaka, Japan</span></h2>
+    <p class="oneline">"1930년대 원단을 <b>실 한 올 단위로 해부해서 복원</b>하는 오사카의 학술적 복각 브랜드 — 디자인이 아니라 '연구'를 파는, 소재 서사의 가장 극단적인 형태"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>론칭</th><td>1995년, 오사카</td></tr>
+      <tr><th>창업자</th><td>시오타니 켄이치 · 코지 <b>쌍둥이 형제</b> — 에비수(EVISU) 출신. 더 순수한 복각을 하겠다며 독립</td></tr>
+      <tr><th>포지셔닝</th><td><b>'오사카 파이브'의 마지막 멤버</b>. 모토는 "Faithful Reproduction of Authentic Vintage Garments"</td></tr>
+      <tr><th>주력</th><td>셀비지 데님, 요코편 티셔츠, 스웨트, 워크셔츠, 밀리터리 복각</td></tr>
+      <tr><th>가격대</th><td>진 ¥25,000~40,000 (한국 30~50만원대), 티셔츠 ¥8,000~13,000, 스웨트 ¥20,000~</td></tr>
+      <tr><th>생산</th><td><b>도요타 G3 셔틀 직기</b>로 데님 제직, 와카야마 공장 <b>구형 요코편기(하리코 편기)</b>로 저지 편직. 멤피스·애리조나·테네시산 면 블렌드</td></tr>
+      <tr><th>라인·협업</th><td>Duck Digger · Heller's Café · Dubbleworks · Brown Duck &amp; Digger / 로키마운틴 페더베드, 빔스 플러스 등과 협업</td></tr>
+      <tr><th>채널</th><td>일본 직영 소수 + 글로벌 편집샵 도매. <b>한국 정식 유통 없음</b> — 병행·직구·일부 편집샵</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>대표 원단 'Banner Denim'의 개발 방식이 이 브랜드의 전부</b> — 1930년대 리바이스 <b>광고용 데님 배너를 실제로 해체</b>해 원사의 미시 구조(꼬임·불균일도·번수)를 분석하고, <b>페이딩이 원본과 똑같이 나오도록</b> 원사를 역설계함. 색이 아니라 '시간이 지난 뒤의 모습'을 복원 대상으로 삼음</li>
+      <li>티셔츠는 <b>생산성이 낮아 업계가 버린 구형 편기</b>를 와카야마에서 계속 돌려서 만듦 — 20세기 중반 미국 운동복의 질감을 재현하기 위해 <b>기계 자체를 복각 대상</b>으로 취급</li>
+      <li>'오사카 파이브'(스튜디오 다르티잔, 데님 유니온/에비수, 풀카운트, 데나임, 웨어하우스) 중 <b>가장 학술적·보수적</b>인 포지션 — 아트웍이나 브랜딩으로 튀지 않음</li>
+      <li>서브 라인으로 시대·장르를 분할: <b>Duck Digger</b>(20세기 초 워크웨어), <b>Heller's Café</b>(빈티지 수집가 래리 맥커핸과의 협업 — 실물 아카이브 기반 초기 워크웨어 복각)</li>
+      <li>⚠️ 브랜드 로고·마케팅 노출이 극도로 적어 <b>일반 소비자 인지도는 사실상 없음</b>. 매출 규모도 작음 — '깊이'와 '규모'를 맞바꾼 전형</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">~1995</span>시오타니 형제, 에비수에서 근무 — 복각 데님 1세대 현장을 경험</div>
+      <div class="ev"><span class="y">1995</span>오사카에서 웨어하우스 설립. "충실한 복각"을 유일한 원칙으로 선언</div>
+      <div class="ev"><span class="y">2000s</span>Banner Denim 개발 — 1930년대 실물 원단 해부를 통한 원사 역설계</div>
+      <div class="ev"><span class="y">2000s~</span>Duck Digger · Heller's Café 등 서브 라인으로 시대·장르 세분화</div>
+      <div class="ev"><span class="y">2010s~</span>글로벌 편집샵(Son of a Stag, Withered Fig 등)을 통해 서구 마니아 시장 확대</div>
+      <div class="ev"><span class="y">2020s</span>아메리카나·워크웨어 리바이벌로 재조명. 빔스 플러스 등 협업으로 접점 확대</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: 카테고리도 매장도 늘리지 않고 <b>'복각의 시대와 장르'를 늘리는 방식으로 확장</b>. 새 상품을 만드는 게 아니라 새 원본을 찾아오는 구조 — RRL과 같은 지향이지만, RRL이 <b>매장</b>으로 설득한다면 웨어하우스는 <b>원단</b>으로 설득함.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>데님 — 연구의 결정체</h4>
+    <p>Lot 1001, 800XX 등 <b>연도·모델별로 시대를 특정</b>해 전개. 같은 브랜드 안에서 1930년대 진과 1950년대 진이 서로 다른 상품으로 공존함. 고객은 '핏'이 아니라 <b>'연도'를 고름</b> — 상품 분류 축 자체가 다른 브랜드와 다름.</p>
+    <h4>티셔츠 · 저지 ★</h4>
+    <p>구형 요코편기로 짠 두꺼운 저지. <b>티셔츠 한 장에 원단 서사가 데님만큼 붙는</b> 드문 사례. 포터리 관점에서는 데님보다 이쪽이 더 참고할 만함 — 기본 아이템에 어떻게 서사를 붙이는가의 교본.</p>
+    <h4>스웨트 · 워크셔츠 · 밀리터리</h4>
+    <p>후크빙(뒤편기) 스웨트, 샴브레이 워크셔츠, 밀리터리 복각. 전부 <b>원본의 봉제 방식(체인스티치·유니온스페셜)까지 재현</b>.</p>
+    <h4>서브 라인 — 시대별 분할</h4>
+    <p><b>Duck Digger</b>(20세기 초 덕캔버스 워크웨어), <b>Heller's Café</b>(수집가 아카이브 기반 초기 워크웨어), <b>Dubbleworks</b>(보다 일상적인 가격대). 하나의 브랜드가 커버할 수 없는 시대 폭을 <b>라인 분할로 해결</b>.</p>
+    <h4>잡화 · 라이프스타일</h4>
+    <p>⚠️ <b>거의 없음.</b> 벨트·캡 정도. 라이프스타일 확장도 없음. 선스펠과 마찬가지로 <b>'옷 안에 머무는' 브랜드</b>이며, 그 결과 규모의 천장이 명확함.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">Banner Denim 진 (Lot 1001XP 등)</b> <span class="price">¥25,000~40,000</span>
+      <p>인기 포인트: 원사의 불균일함에서 나오는 세로 낙차(タテ落ち) 페이딩, 셔틀 직기 특유의 밀도감.</p>
+      <p class="voice">소비자 반응 — <b>"페이딩이 진짜 빈티지처럼 나오는 유일한 브랜드"</b>라는 평가가 마니아층의 공통 언어. 페이딩 진행 사진을 몇 년에 걸쳐 공유하는 문화가 형성돼 있어 <b>제품 자체가 장기 콘텐츠</b>가 됨. 반면 <b>"입기 전엔 그냥 비싼 청바지", "브랜드를 아무도 모른다"</b>는 인지도 문제와, 생지 특유의 초기 뻣뻣함·수축 관리 부담이 진입장벽으로 지적됨.</p>
+    </div>
+    <div class="sig"><b class="t">요코편 티셔츠</b> <span class="price">¥8,000~13,000</span>
+      <p>"티셔츠에 이 돈을?"에서 시작해 <b>"목이 안 늘어나고 몸에 붙는 방식이 다르다"</b>로 끝나는 전형적 후기. 기본템 프리미엄을 소재 공정으로 설득한 사례.</p>
+    </div>
+    <div class="sig"><b class="t">Heller's Café 복각</b> <span class="price">고가·소량</span>
+      <p>실물 아카이브 기반 한정 복각. 판매보다 <b>브랜드의 학술적 신뢰도를 증명하는 역할</b>이 큼 — RRL의 '비매품 아카이브'와 기능적으로 같은 장치.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●●</span><span class="sum">★ 원사 단위 역설계 — 업계 최상위</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>복원 대상이 '원단'이 아니라 '원사'</b>: 1930년대 실물을 해체해 꼬임수·불균일도까지 분석 후 방적부터 다시 만듦. 소재 서사의 가장 깊은 층위</li>
+          <li><b>목표가 '지금의 모습'이 아니라 '5년 뒤의 모습'</b> — 페이딩 결과를 역산해 원사를 설계함. 시간을 설계 변수로 삼는 발상</li>
+          <li><b>기계를 복각 대상으로</b>: 도요타 G3 셔틀 직기, 구형 요코편기. 생산성을 포기하고 질감을 택함</li>
+          <li>면 산지(멤피스·애리조나·테네시)를 블렌드 단위로 지정 — 원료 조달까지 스펙의 일부</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●○○○</span><span class="sum">창작 없음 — 원본이 곧 설계도</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>디자인 행위가 <b>'어떤 원본을 고를 것인가'</b>로 완전히 대체됨. RRL과 같은 구조지만 훨씬 엄격 — 해석이나 각색조차 최소화</li>
+          <li>봉제 방식(체인스티치·유니온스페셜)까지 시대 사양을 따름 — 보이지 않는 곳의 고증이 마니아 신뢰의 근거</li>
+          <li>로고·그래픽 노출 거의 없음. 식별점은 원단과 스티치뿐</li>
+          <li>⚠️ 신규 고객에게 <b>'왜 비싼지'가 착용 전에는 전달되지 않음</b> — 설명이 필요한 상품의 구조적 약점</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●○○○</span><span class="sum">시대별 라인 분할 — 좁고 깊게</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>상품 분류축이 '연도'</b>(Lot 1001, 800XX 등) — 핏·용도가 아니라 시대로 나눔. 같은 카테고리 안에서 SKU를 늘리는 독특한 방법</li>
+          <li>서브 라인(Duck Digger·Heller's Café·Dubbleworks)으로 <b>시대 폭과 가격대를 동시에 분할</b> — 본체 정체성을 지키면서 아래위로 확장</li>
+          <li>⚠️ <b>잡화·라이프스타일 부재</b>. 객단가는 진 한 벌로 고정되고, 매장 평당 매출을 올릴 수단이 없음</li>
+          <li>⚠️ 협업(빔스 플러스, 로키마운틴)이 사실상 유일한 신규 고객 유입 장치</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●○○○</span><span class="sum">마케팅을 하지 않음 — 페이딩이 광고</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>광고·캠페인 사실상 없음. <b>고객이 몇 년에 걸쳐 올리는 페이딩 사진이 유일하고 가장 강력한 콘텐츠</b> — 제품이 스스로 시간을 들여 광고가 되는 구조</li>
+          <li>제품 설명이 <b>스펙 문서에 가까움</b>(원사 번수, 직기 종류, 봉제 사양) — 설득 대상이 대중이 아니라 마니아</li>
+          <li>편집샵·포럼(Heddels 등)에서의 평판이 실질 마케팅 채널</li>
+          <li>⚠️ CRM·D2C 운영은 거의 부재. 도매 의존도가 높아 고객 데이터가 브랜드에 남지 않음 — <b>포터리가 명확히 앞서는 영역</b></li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●○○</span><span class="sum">공방형 매장 — 원단을 만지게 하는 진열</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>직영 매장 수가 매우 적고 <b>도매(편집샵) 중심</b> — 브랜드 경험 통제력은 낮지만 저비용 글로벌 도달</li>
+          <li>VMD는 <b>공방·창고 문법</b>: 목재 선반, 금속 행거, 원단 롤과 직기 부품 전시. RRL의 '연출된 아카이브'와 달리 <b>실제 작업 도구를 그대로</b> 두는 쪽</li>
+          <li><b>페이딩 샘플을 함께 진열</b>하는 것이 핵심 — 생지 신품 옆에 3년·5년 착용본을 걸어 '사면 이렇게 된다'를 보여줌. 미래 상태를 판매하는 진열</li>
+          <li>편집샵 진열에서는 <b>원단 클로즈업 사진과 스펙 카드</b>가 사실상 판매원 역할</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>★ '입은 뒤의 모습'을 진열하기 — 경년변화 샘플</b>
+      <p>웨어하우스 VMD의 핵심. 포터리도 <b>신품 옆에 1년·3년 착용한 실물</b>(직원 착용본이면 충분)을 나란히 두면, "오래 입는 옷"이라는 주장이 문장이 아니라 증거가 됨. 노세일·고품질 포지션과 정확히 맞물리고, 비용은 거의 0. <b>성수 플래그십에서 즉시 실행 가능</b>.</p></div>
+    <div class="ref"><div class="tags"><span class="tag std">스탠다드</span><span class="tag cas">캐주얼</span></div>
+      <b>기본 아이템에 '공정' 서사 붙이기 — 티셔츠가 증명</b>
+      <p>웨어하우스는 티셔츠 한 장에 <b>편기 종류</b>까지 서사를 붙여 프리미엄을 만듦. 포터리도 티셔츠·이너 같은 최저가 아이템에 원사·편직·봉제 공정 서사를 붙이면, 진입 상품이 '싼 것'이 아니라 '입문용 정품'으로 읽힘.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>상품 분류축을 바꿔보기</b>
+      <p>웨어하우스는 핏이 아니라 <b>'연도'</b>로 상품을 나눔. 포터리도 카테고리·핏 외에 <b>'상황'이나 '원단'을 1차 분류축</b>으로 쓰는 진열/온라인 필터를 실험해볼 수 있음 — 같은 상품 수로 선택 경험이 달라짐.</p></div>
+    <div class="ref"><div class="tags"><span class="tag cas">캐주얼</span></div>
+      <b>서브 라인으로 시대·가격대를 동시 분할</b>
+      <p>Duck Digger·Dubbleworks처럼 본체를 건드리지 않고 <b>아래 가격대와 다른 장르를 별도 이름으로</b> 열어둠. 포터리가 캐주얼을 확장할 때 본체 톤을 지키는 방법으로 참고 가능.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>제품 설명을 '스펙 문서'로도 제공</b>
+      <p>웨어하우스 상품 페이지는 원사 번수·직기·봉제 사양이 적힌 문서에 가까움. 포터리 자사몰에도 <b>일반 설명 아래 접히는 '상세 스펙' 블록</b>을 두면, 대중에게는 부담을 안 주고 소재에 민감한 고객만 열어보게 할 수 있음.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① <b>깊이는 인지도를 만들어주지 않음</b> — 30년간 최고 수준의 복각을 해도 일반 소비자 인지도는 거의 없음. 소재 서사는 <b>이미 브랜드를 아는 고객에게만</b> 작동함. 유입 장치는 따로 필요.<br>
+    ② <b>도매 의존 = 고객 데이터 없음</b> — 웨어하우스의 가장 큰 구조적 약점. 자사몰 70% 구조인 포터리는 이 점에서 명백히 유리하며, 도매를 늘릴 때 이 대가를 계산해야 함.<br>
+    ③ <b>잡화 부재로 객단가 천장</b> — 선스펠과 동일한 한계. 소재 깊이만으로는 매출이 확장되지 않음.<br>
+    ④ 설명이 필요한 상품은 <b>온라인에서 특히 불리함</b> — 만져봐야 아는 가치는 매장 경험 설계로 보완해야 함.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://www.ware-house.co.jp/" target="_blank">공식 사이트 (일본)</a>
+      <a href="https://sonofastag.com/collections/warehouse-co-japan" target="_blank">Son of a Stag (상품·원단 클로즈업)</a>
+      <a href="https://www.witheredfig.com/collections/warehouse-co" target="_blank">Withered Fig (스펙 상세)</a>
+      <a href="https://hinoya.shop/en-us/collections/ware-house" target="_blank">Hinoya (일본 편집샵)</a>
+      <a href="https://www.instagram.com/warehouse_co_official/" target="_blank">인스타그램</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>warehouse denim fade</b> · <b>japanese repro denim shop interior</b> · <b>selvedge fabric roll display</b> · <b>shuttle loom weaving</b> (런웨이 미운영 — <b>원단 클로즈업 · 페이딩 경년 비교 사진 · 직기/공장 컷</b>이 이미지 축. 경년변화 진열 아이디어의 원본 자료)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://www.heddels.com/2020/11/warehouse-co-behind-osaka-five-denim-purists/" target="_blank">Heddels — Warehouse &amp; Co. 심층 브랜드 프로파일</a> ·
+      <a href="https://www.heddels.com/2014/03/history-osaka-5/" target="_blank">Heddels — 오사카 파이브의 역사</a> ·
+      <a href="https://sonofastag.com/collections/warehouse-co-japan" target="_blank">Son of a Stag — 브랜드 소개</a> ·
+      <a href="https://williemurphy.net/1821/warehouse-co-clothing-authentic-denim-and-vintage-garments/" target="_blank">Warehouse &amp; Co. 복각 철학 해설</a> ·
+      <a href="https://www.witheredfig.com/collections/warehouse-co" target="_blank">Withered Fig — 제품 스펙</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['rl-purple-label'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Vintage × Formal</span>
+    <h2>랄프 로렌 퍼플라벨 <span class="en">Ralph Lauren Purple Label</span></h2>
+    <p class="oneline">"대중 브랜드가 <b>최상위 라인을 따로 만들어 브랜드 전체의 격을 끌어올린</b> 라벨 아키텍처의 교과서 — 나폴리 재단과 이탈리아 생산으로 '올드 머니'를 상품화한 라인"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>론칭</th><td>1994년 — 초고가 남성복 수요에 대응해 신설. 랄프 로렌 라벨 체계의 <b>최상단</b></td></tr>
+      <tr><th>창업자</th><td>랄프 로렌 — 새빌로(영국) 테일러링에서 출발해 이후 이탈리아 재단으로 이동</td></tr>
+      <tr><th>포지셔닝</th><td>올드 머니 · 타임리스. 유행이 아니라 <b>'계급의 옷차림'</b>을 파는 라인</td></tr>
+      <tr><th>주력</th><td>수트·재킷 등 테일러링, 파인게이지 니트, 드레스 셔츠, 아우터</td></tr>
+      <tr><th>가격대</th><td>수트 $3,000~8,000, <b>비스포크 $10,000+</b>, 니트 $700~2,000 (폴로 본체의 5~10배)</td></tr>
+      <tr><th>생산</th><td><b>대부분 Made in Italy</b> — 수트·테일러링은 <b>나폴리 인근</b>(소프트 숄더·핸드워크), 니트는 <b>베네토</b>(파인게이지 편직)</td></tr>
+      <tr><th>채널</th><td><b>선별된 부티크와 플래그십에서만</b> 판매. 폴로처럼 광범위하게 유통하지 않음. 한국은 청담 플래그십·주요 백화점 일부</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>같은 회사 안에서 가격이 10배 차이 나는 라인이 공존</b> — 폴로(대중) / RRL(고증) / 퍼플라벨(럭셔리)이 각기 다른 가격·유통·할인 정책으로 운영됨. 그룹 라벨 아키텍처의 대표 사례</li>
+      <li><b>브랜드가 아니라 '라인'이 럭셔리를 만든 사례</b> — 신규 브랜드를 인수하지 않고 내부에서 최상위 라인을 만들어 그룹 전체의 격을 올림. 이른바 <b>헤일로(halo) 효과</b></li>
+      <li>초기엔 새빌로풍 구조적 테일러링 → 이후 <b>나폴리풍 소프트 숄더</b>로 이동. 영국의 '격식'에서 이탈리아의 '편안한 격식'으로 이동한 남성복 흐름을 그대로 반영</li>
+      <li>유통을 <b>의도적으로 제한</b> — 아무 폴로 매장에서나 살 수 없다는 사실 자체가 라인의 지위를 만듦</li>
+      <li>⚠️ 그룹 후광의 역효과: <b>"결국 랄프 로렌 아니냐"</b>는 인식 때문에 동급 가격의 이탈리아 정통 테일러 브랜드 대비 저평가받는다는 지적이 꾸준함</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">1967</span>랄프 로렌, 넥타이로 시작 — 이후 폴로로 아메리칸 프레피를 대중화</div>
+      <div class="ev"><span class="y">1993</span>RRL 론칭 — 아래쪽(고증·워크웨어) 방향으로 라인 확장</div>
+      <div class="ev"><span class="y">1994</span><b>퍼플라벨 론칭</b> — 위쪽(럭셔리 테일러링) 방향으로 라인 확장. 상하 양방향 라벨 체계 완성</div>
+      <div class="ev"><span class="y">2000s</span>생산 거점을 이탈리아로 집중 — 나폴리 테일러링, 베네토 니트</div>
+      <div class="ev"><span class="y">2010s</span>테일러링 외 캐주얼·아우터로 품목 확장, 비스포크 서비스 강화</div>
+      <div class="ev"><span class="y">2020s</span>올드 머니·조용한 럭셔리 트렌드로 재조명 — 로고 없는 상위 라인의 가치 재평가</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: 카테고리가 아니라 <b>'가격대'로 확장</b>한 사례. 같은 감성을 유지한 채 위(퍼플라벨)와 아래(RRL·폴로)로 라인을 벌려 <b>하나의 세계관 안에 여러 소득층을 수용</b>.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>테일러링 — 라인의 존재 이유</h4>
+    <p>나폴리 인근 공방에서 생산되는 소프트 숄더 재킷·수트. 핸드 스티치, 반(半)구조 캔버스 등 공정을 상품 설명에 명시. <b>비스포크·MTM 서비스</b>를 플래그십에서 운영해 최상위 고객을 직접 응대.</p>
+    <h4>니트 — 두 번째 축</h4>
+    <p>베네토 파인게이지 니트, 캐시미어. 수트를 안 사는 고객이 <b>퍼플라벨을 처음 경험하는 관문</b> 역할. 로로피아나의 로퍼와 같은 위치.</p>
+    <h4>셔츠 · 캐주얼 · 아우터</h4>
+    <p>드레스 셔츠에서 시작해 최근에는 스웨이드 블루종, 캐시미어 아우터 등 <b>포멀-캐주얼 경계 상품</b>으로 확장. 격식이 완화되는 시장 흐름에 맞춘 조정.</p>
+    <h4>잡화</h4>
+    <p>슈즈(이탈리아 생산), 레더 굿즈, 넥타이·머플러. <b>넥타이가 브랜드의 원점</b>이라는 서사가 여기서 다시 회수됨. 다만 잡화 자체의 독립적 존재감은 로로피아나보다 약함.</p>
+    <h4>라이프스타일 — 그룹 차원에서 해결</h4>
+    <p>퍼플라벨 단독 리빙 라인은 없지만, <b>Ralph Lauren Home과 랄프스 커피·레스토랑</b>이 그룹 차원에서 세계관을 완성. 라인이 아니라 <b>그룹이 라이프스타일을 담당하는 구조</b> — 서브 라인이 무리하게 확장하지 않아도 되는 이유.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">나폴리 재단 수트 · 재킷</b> <span class="price">$3,000~8,000</span>
+      <p>인기 포인트: 어깨의 부드러움, 원단 등급, 기성복인데 맞춤처럼 떨어지는 실루엣.</p>
+      <p class="voice">소비자 반응 — <b>"같은 값이면 이탈리아 정통 브랜드를 사겠다"</b>는 회의론과 <b>"세일 때 사면 이 가격에 이 퀄리티는 없다"</b>는 실용론이 정면 충돌하는 라인. 즉 <b>정가 신뢰가 가장 약한 지점</b>이 브랜드의 약점으로 반복 지적됨. 반대로 원단·봉제 자체에 대한 불만은 드묾 — 품질이 아니라 <b>가격 정당성</b>이 논쟁 대상.</p>
+    </div>
+    <div class="sig"><b class="t">캐시미어 · 파인게이지 니트</b> <span class="price">$700~2,000</span>
+      <p>수트보다 진입이 쉬워 <b>실질적 관문 상품</b>. "퍼플라벨은 니트부터"라는 구매 경로가 형성돼 있음.</p>
+    </div>
+    <div class="sig"><b class="t">비스포크 / MTM</b> <span class="price">$10,000+</span>
+      <p>매출 기여보다 <b>라인의 지위를 증명하는 장치</b>. 플래그십에만 존재한다는 사실이 브랜드 서열을 시각화함.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●○</span><span class="sum">소재보다 '생산지'를 앞세우는 방식</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>소재명이 아니라 산지·공방이 스펙</b>: 나폴리 테일러링, 베네토 니트. 로로피아나가 '원료의 희소성', 웨어하우스가 '원사의 정확성'이라면 퍼플라벨은 <b>'만든 사람의 지역'</b>으로 설득</li>
+          <li>이탈리아 최상급 밀(로로피아나·제냐 등)의 원단을 구매해 사용 — <b>소재를 소유하지 않고 조달</b>하는 구조</li>
+          <li>핸드 스티치·반구조 캔버스 등 <b>공정을 상품 설명에 노출</b></li>
+          <li>⚠️ 소재 자체의 독점성은 없음 — 원단만 놓고 보면 동급 이탈리아 브랜드와 차별점이 크지 않음</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●○○</span><span class="sum">'올드 머니'라는 세계관의 상품화</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>랄프 로렌 전체가 <b>실재하지 않는 미국 상류층의 이미지를 만들어낸</b> 브랜드 — 퍼플라벨은 그 이미지의 최상단 구현</li>
+          <li>디자인 혁신은 없고 <b>'변하지 않는 정장'</b>을 유지. 유행 대신 계급 기호를 제공</li>
+          <li>로고 노출 최소(폴로 로고 없음) — 조용한 럭셔리 문법을 1994년부터 실행</li>
+          <li>⚠️ 세계관이 강력한 만큼 <b>브랜드 이미지가 특정 계층·연령대에 고착</b>될 위험</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●●●</span><span class="sum">★ 라벨 아키텍처 — 한 세계관 안의 다층 가격대</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>폴로 / RRL / 퍼플라벨의 3층 구조</b>: 같은 아메리칸 클래식 세계관을 공유하면서 가격·유통·고객층이 완전히 다름. 고객이 소득이 올라가도 <b>브랜드를 떠나지 않게</b> 설계됨</li>
+          <li>최상위 라인이 존재한다는 사실만으로 <b>하위 라인의 인식 품질이 올라감</b>(헤일로 효과) — 실제 매출 기여보다 이 효과가 더 큼</li>
+          <li>비스포크·MTM은 <b>매출이 아니라 서열의 증거</b>로 운영</li>
+          <li>라이프스타일(Home·카페)을 라인이 아니라 <b>그룹 차원에서 담당</b> — 서브 라인이 무리하게 확장하지 않아도 세계관이 완성됨</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●○○</span><span class="sum">그룹 자산에 올라타되, 노출은 분리</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>독립 캠페인이 적고 <b>플래그십 공간·프라이빗 응대</b>가 마케팅의 본체</li>
+          <li>그룹의 거대한 인지도를 활용하면서도 <b>광고·SNS에서는 폴로와 분리</b> — 같이 노출되면 라인 지위가 훼손되기 때문</li>
+          <li>비스포크 고객을 통한 1:1 관계가 사실상의 CRM</li>
+          <li>⚠️ <b>세일·아울렛 유입이 가장 큰 약점</b> — 시즌오프 할인이 정가 신뢰를 흔들고, "세일 때 사는 라인"이라는 인식이 굳음</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●○</span><span class="sum">유통 제한 자체가 상품 스펙</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>선별 부티크·플래그십에서만 판매</b> — "아무 데서나 살 수 없다"는 사실이 라인의 핵심 가치. 유통 제한을 <b>제품 사양처럼</b> 운영</li>
+          <li>매장 VMD는 <b>주택의 서재·드레스룸 문법</b>: 다크 우드, 가죽, 러그, 액자, 책. 상품이 상점이 아니라 <b>누군가의 집에 놓인 것처럼</b> 연출 — 랄프 로렌 그룹 VMD의 정수</li>
+          <li>폴로 플래그십 내 퍼플라벨 존은 <b>층·동선·마감재를 분리</b>해 별도 브랜드처럼 인식되게 함 (RRL과 동일한 원리)</li>
+          <li>테일러링 존에 <b>원단 북(bunch)과 재단 도구를 비치</b> — 맞춤 가능성을 시각화해 객단가 상단을 열어둠</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag fml">포멀</span><span class="tag all">공통</span></div>
+      <b>★ 최상위 라인을 만들어 브랜드 전체의 격을 올리기 (헤일로 효과)</b>
+      <p>퍼플라벨의 진짜 기여는 매출이 아니라 <b>폴로의 인식 품질을 올린 것</b>. 포터리도 포멀 라인을 낼 때 '비싼 옷 몇 개'가 아니라 <b>명시적으로 최상위 라인</b>으로 설계하면(생산지·공정·유통 제한을 명시), 기존 스탠다드 라인의 인식 가격까지 함께 올라감. 다중 라인 확장의 핵심 논리.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>유통 제한을 제품 사양처럼 쓰기</b>
+      <p>"이 라인은 성수 플래그십과 ○○점에서만"이라고 <b>명시적으로 한정</b>하면 그 자체가 라인의 지위를 만듦. 백화점 8개점으로 확장하는 국면에서, 전 매장 동일 구색이 아니라 <b>라인별 취급 매장을 차등</b>하는 전략을 검토할 가치가 있음.</p></div>
+    <div class="ref"><div class="tags"><span class="tag fml">포멀</span><span class="tag std">스탠다드</span></div>
+      <b>고객이 소득이 올라도 브랜드를 떠나지 않게 하는 3층 구조</b>
+      <p>폴로 → RRL/퍼플라벨의 계단은 <b>같은 세계관 안에서 상향 이동</b>을 가능하게 함. 포터리의 4개 라인도 단순 카테고리 분할이 아니라 <b>가격·격식의 계단</b>으로 배치하면, 고객 생애가치가 길어짐.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>VMD — '상점'이 아니라 '누군가의 집'처럼</b>
+      <p>랄프 로렌 VMD의 핵심 문법. 집기를 판매 도구가 아니라 <b>생활 가구</b>(책상·책장·러그·액자)로 쓰면 상품이 라이프스타일 안에 놓임. 포터리의 '정돈된 일상'이라는 언어와 매우 잘 맞고, 제임스 펄스의 '집기=상품' 전략과 결합하면 강력함.</p></div>
+    <div class="ref"><div class="tags"><span class="tag fml">포멀</span></div>
+      <b>맞춤 가능성을 매장에 시각화</b>
+      <p>원단 북·재단 도구를 비치하는 것만으로 객단가 상단이 열림. 포터리가 포멀 라인에서 <b>소재 선택·기장 조정 정도의 경량 MTM</b>을 운영한다면, 서비스 자체보다 <b>매장에 보이게 두는 것</b>이 먼저.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① <b>세일이 최상위 라인을 가장 빠르게 무너뜨림</b> — 퍼플라벨의 최대 약점이 "세일 때 사는 라인"이라는 인식. 포터리의 노세일 원칙은 상위 라인을 만들수록 더 중요해짐.<br>
+    ② <b>모브랜드 후광은 양날</b> — "결국 랄프 로렌"이라는 인식이 프리미엄을 깎음. 포터리가 상위 라인을 낼 때도 <b>본체와의 거리(이름·매장·톤)를 어디까지 벌릴지</b>가 핵심 의사결정.<br>
+    ③ <b>소재를 소유하지 않으면 차별점이 약해짐</b> — 좋은 원단을 사서 쓰는 것만으로는 동급 경쟁자와 구분되지 않음. 로로피아나·웨어하우스와 비교하면 이 축이 명확히 약함.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://www.ralphlauren.com/brands-ralph-lauren-purple-label-hub" target="_blank">공식 퍼플라벨 허브</a>
+      <a href="https://www.mrporter.com/en-us/mens/designer/ralph-lauren-purple-label" target="_blank">MR PORTER (상품 컷·가격)</a>
+      <a href="https://therake.com/default/stories/the-distinctness-of-ralph-lauren-purple-label" target="_blank">The Rake — 라인 해설</a>
+      <a href="https://www.instagram.com/ralphlauren/" target="_blank">인스타그램 @ralphlauren</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>ralph lauren purple label store</b> · <b>ralph lauren mansion interior retail</b> · <b>library style menswear display</b> · <b>tailoring fabric bunch display</b> (<b>'집처럼 만든 매장'</b>이 이 브랜드 최대의 VMD 자산 — 랄프 로렌 맨션 매장 컷을 중심으로 수집할 것)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://therake.com/default/stories/the-distinctness-of-ralph-lauren-purple-label" target="_blank">The Rake — The distinctness of Ralph Lauren Purple Label</a> ·
+      <a href="https://www.gentlemansgazette.com/ralph-lauren-purple-label-to-buy/" target="_blank">Gentleman's Gazette — 구매 가이드·품질 리뷰</a> ·
+      <a href="https://thevou.com/blog/why-is-ralph-lauren-purple-label-so-expensive/" target="_blank">The VOU — 가격 구조 분석</a> ·
+      <a href="https://samtalksstyle.com/2022/06/08/ralph-lauren-purple-label-tailoring-is-it-worth-it/" target="_blank">SamTalksStyle — 테일러링 가치 검증</a> ·
+      <a href="https://valuesort.ai/blog/ralph_lauren_brands_guide" target="_blank">랄프 로렌 라벨 아키텍처 정리</a> ·
+      <a href="https://www.ralphlauren.com/brands-ralph-lauren-purple-label-hub" target="_blank">공식 사이트</a>
     </p>
   </div>
 </div>`;
