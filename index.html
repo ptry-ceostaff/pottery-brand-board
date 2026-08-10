@@ -39,6 +39,15 @@ body{font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;ba
 .chip.has{font-weight:700;color:#1d1a16}
 .chip.has::after{content:"→";color:var(--accent);font-size:11px;margin-left:5px}
 .chip.todo{color:#6b6257}
+/* 주요 브랜드 */
+.chip.key{background:rgba(178,91,42,.08);box-shadow:inset 2px 0 0 var(--accent);padding-left:8px}
+.chip.key:hover{background:rgba(178,91,42,.16)}
+.legend .keybox{display:inline-block;width:11px;height:11px;border-radius:2px;background:rgba(178,91,42,.14);box-shadow:inset 2px 0 0 var(--accent);margin-right:5px;vertical-align:-1px}
+.btn-key{background:none;border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:12.5px;color:var(--sub);cursor:pointer;font-family:inherit}
+.btn-key:hover{border-color:var(--accent);color:var(--accent)}
+.btn-key.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.matrix.only-key .chip:not(.key){display:none}
+.matrix.only-key .mx-cell{min-height:44px}
 /* row tint per band */
 .r-modern .mx-cell{background:var(--tint-modern)} .r-natmod .mx-cell{background:var(--tint-natmod)}
 .r-natural .mx-cell{background:var(--tint-natural)} .r-vinnat .mx-cell{background:var(--tint-vinnat)}
@@ -117,7 +126,9 @@ table.qf td{padding:7px 0;border-bottom:1px solid #efe9df}
       <div class="sub">감성(세로) × 격식·기능(가로) — 브랜드를 클릭하면 상세 분석 페이지가 열립니다</div>
     </div>
     <div class="legend">
+      <span><span class="keybox"></span>주요 브랜드</span>
       <span><b style="color:var(--ink)">굵은 글씨→</b> 상세 분석 완료</span>
+      <button class="btn-key" id="btn-key" onclick="toggleKey()">주요 브랜드만 보기</button>
       <button class="btn-pottery" onclick="openBrand('pottery')"><span class="logo">POTTERY</span> 자체 분석 보기 →</button>
     </div>
     <div class="matrix" id="matrix"></div>
@@ -148,30 +159,30 @@ const ROWS = [
   {k:'vinnat', t:'Vintage↔Natural', cls:'r-vinnat', color:'var(--row-vinnat)'},
   {k:'vintage', t:'Vintage', cls:'r-vintage', color:'var(--row-vintage)'}
 ];
-/* n=이름, id=상세 페이지 보유 시 */
+/* n=이름, id=상세 페이지 보유 시, key=주요 브랜드 */
 const CELLS = {
-  'modern|formal':[{n:'Theory'},{n:'Jil Sander'}],
-  'modern|f-s':[{n:'The Row'}],
-  'modern|standard':[{n:'Studio Nicholson'},{n:'COS'}],
-  'modern|s-c':[{n:'요크'},{n:'Lemaire'}],
+  'modern|formal':[{n:'Theory',key:1},{n:'Jil Sander'}],
+  'modern|f-s':[{n:'The Row',key:1}],
+  'modern|standard':[{n:'Studio Nicholson'},{n:'COS',key:1}],
+  'modern|s-c':[{n:'YOKE'},{n:'Lemaire',key:1}],
   'modern|casual':[{n:'Comoli'},{n:'Kith',id:'kith'}],
-  'modern|c-t':[{n:"Arc'teryx",id:'arcteryx'}],
-  'modern|tech':[{n:'Goldwin',id:'goldwin'},{n:'Portal',id:'portal'}],
+  'modern|c-t':[{n:"Arc'teryx",id:'arcteryx',key:1}],
+  'modern|tech':[{n:'Goldwin',id:'goldwin',key:1},{n:'Portal',id:'portal',key:1}],
   'natmod|standard':[{n:'Our Legacy',id:'our-legacy'},{n:'Auralee',id:'auralee'},{n:'ATON',id:'aton'}],
-  'natural|formal':[{n:'Loro Piana',id:'loro-piana'},{n:'Brunello Cucinelli'}],
+  'natural|formal':[{n:'Loro Piana',id:'loro-piana',key:1},{n:'Brunello Cucinelli'}],
   'natural|f-s':[{n:'Margaret Howell',id:'margaret-howell'}],
-  'natural|standard':[{n:'James Perse',id:'james-perse'},{n:'Sunspel',id:'sunspel'}],
-  'natural|s-c':[{n:'Kaptain Sunshine'},{n:'Danton'}],
-  'natural|casual':[{n:'Polo Ralph Lauren'}],
-  'natural|c-t':[{n:'Nanamica',id:'nanamica'},{n:'Polo Sport'}],
+  'natural|standard':[{n:'James Perse',id:'james-perse',key:1},{n:'Sunspel',id:'sunspel'}],
+  'natural|s-c':[{n:'Kaptain Sunshine',key:1},{n:'Danton'}],
+  'natural|casual':[{n:'Polo Ralph Lauren',key:1}],
+  'natural|c-t':[{n:'Nanamica',id:'nanamica',key:1},{n:'Polo Sport'}],
   'natural|tech':[{n:'Patagonia',id:'patagonia'}],
   'vinnat|casual':[{n:'Aimé Leon Dore',id:'aime-leon-dore'}],
   'vinnat|tech':[{n:'The North Face Purple Label',id:'tnf-purple-label'}],
-  'vintage|formal':[{n:"Drake's"},{n:'Ralph Lauren Purple Label',id:'rl-purple-label'}],
+  'vintage|formal':[{n:"Drake's",key:1},{n:'Ralph Lauren Purple Label',id:'rl-purple-label',key:1}],
   'vintage|f-s':[{n:'Beams Plus'}],
-  'vintage|standard':[{n:"Levi's"},{n:'Merz b. Schwanen'}],
-  'vintage|casual':[{n:'Warehouse',id:'warehouse'},{n:'A PRESSE'},{n:'RRL',id:'rrl'}],
-  'vintage|c-t':[{n:'Stone Island',id:'stone-island'},{n:'Nigel Cabourn',id:'nigel-cabourn'}]
+  'vintage|standard':[{n:"Levi's"},{n:'Merz b. Schwanen',key:1}],
+  'vintage|casual':[{n:'Warehouse',id:'warehouse',key:1},{n:'A PRESSE'},{n:'RRL',id:'rrl',key:1}],
+  'vintage|c-t':[{n:'Stone Island',id:'stone-island',key:1},{n:'Nigel Cabourn',id:'nigel-cabourn'}]
 };
 const HOME_CELLS = [];
 
@@ -188,12 +199,19 @@ function buildMatrix(){
       const cls = 'mx-cell '+r.cls+(c.bridge?' bridge':'')+(HOME_CELLS.includes(key)?' home':'');
       let inner = brands.map(b=>{
         const has = !!b.id;
-        return '<button class="chip '+(has?'has':'todo')+'" onclick="'+(has?("openBrand('"+b.id+"')"):("todoBrand('"+b.n.replace(/'/g,"\\'")+"')"))+'">'+b.n+'</button>';
+        return '<button class="chip '+(has?'has':'todo')+(b.key?' key':'')+'" onclick="'+(has?("openBrand('"+b.id+"')"):("todoBrand('"+b.n.replace(/'/g,"\\'")+"')"))+'">'+b.n+'</button>';
       }).join('');
       h += '<div class="'+cls+'">'+inner+'</div>';
     });
   });
   m.innerHTML = h;
+}
+function toggleKey(){
+  const m = document.getElementById('matrix');
+  const b = document.getElementById('btn-key');
+  const on = m.classList.toggle('only-key');
+  b.classList.toggle('on', on);
+  b.textContent = on ? '전체 브랜드 보기' : '주요 브랜드만 보기';
 }
 function openBrand(id){
   const d = DETAILS[id];
