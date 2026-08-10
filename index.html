@@ -158,19 +158,19 @@ const CELLS = {
   'modern|c-t':[{n:"Arc'teryx"}],
   'modern|tech':[{n:'Goldwin'},{n:'Portal'}],
   'natmod|standard':[{n:'Our Legacy'},{n:'Auralee'},{n:'ATON'}],
-  'natural|formal':[{n:'Loro Piana'},{n:'Brunello Cucinelli'}],
+  'natural|formal':[{n:'Loro Piana',id:'loro-piana'},{n:'Brunello Cucinelli'}],
   'natural|f-s':[{n:'Margaret Howell'}],
-  'natural|standard':[{n:'James Perse',id:'james-perse'},{n:'Sunspel'}],
+  'natural|standard':[{n:'James Perse',id:'james-perse'},{n:'Sunspel',id:'sunspel'}],
   'natural|s-c':[{n:'Kaptain Sunshine'},{n:'Danton'}],
   'natural|casual':[{n:'Polo Ralph Lauren'}],
   'natural|c-t':[{n:'Nanamica'},{n:'Polo Sport'}],
-  'natural|tech':[{n:'Patagonia'}],
+  'natural|tech':[{n:'Patagonia',id:'patagonia'}],
   'vinnat|casual':[{n:'Aimé Leon Dore'}],
   'vinnat|tech':[{n:'The North Face Purple Label'}],
   'vintage|formal':[{n:"Drake's"},{n:'Ralph Lauren Purple Label'}],
   'vintage|f-s':[{n:'Beams Plus'}],
   'vintage|standard':[{n:"Levi's"},{n:'Merz b. Schwanen'}],
-  'vintage|casual':[{n:'Warehouse'},{n:'A PRESSE'},{n:'RRL'}],
+  'vintage|casual':[{n:'Warehouse'},{n:'A PRESSE'},{n:'RRL',id:'rrl'}],
   'vintage|c-t':[{n:'Stone Island'},{n:'Nigel Cabourn'}]
 };
 const HOME_CELLS = [];
@@ -397,6 +397,687 @@ DETAILS['james-perse'] = `
       <a href="https://www.hanwhagalleria.co.kr/promotion/news/id/6a0cdeaa-939d-460a-b2d1-c0ca573286f7" target="_blank">한화갤러리아 — 남성 단독매장 오픈</a> ·
       <a href="https://m.apparelnews.co.kr/news/news_view/?idx=197759" target="_blank">어패럴뉴스 — 갤러리아 매장 확대</a> ·
       국내 브랜드 분석 블로그("부자들의 유니클로") · 소비자 착용 후기(The Mom Edit 외)
+    </p>
+  </div>
+</div>`;
+
+DETAILS['loro-piana'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Natural × Formal</span>
+    <h2>로로피아나 <span class="en">Loro Piana · Quarona, Italy</span></h2>
+    <p class="oneline">"옷을 팔기 전에 원재료를 지배한 회사 — 비쿠냐·베이비캐시미어라는 희소 섬유의 공급망 자체를 소유해서, 로고 없이도 최상위 가격을 정당화하는 '조용한 럭셔리'의 원본"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>론칭</th><td>1924년 회사 설립 (가문의 양모 거래는 1812년까지 거슬러 올라감), 이탈리아 콰로나</td></tr>
+      <tr><th>창업자</th><td>피에트로 로로피아나 — 6대째 이어진 가족 경영. 2013년 LVMH가 지분 80% 인수 후에도 가문이 경영 참여</td></tr>
+      <tr><th>포지셔닝</th><td>조용한 럭셔리의 원조. 로고 대신 '소재 등급'이 신분 표식. 초고자산가(UHNW) 타깃</td></tr>
+      <tr><th>주력</th><td>캐시미어·베이비캐시미어·비쿠냐 니트와 아우터, 서머워크 로퍼</td></tr>
+      <tr><th>가격대</th><td>니트 200~400만원대, 스카프 $1,000~4,650, 비쿠냐 재킷 $15,000~21,500, 비쿠냐 케이프 $31,750</td></tr>
+      <tr><th>라인</th><td>의류 · 슈즈 · 가방 · 스카프 · <b>Loro Piana Interiors(인테리어 패브릭)</b> · 골프/세일링 등 상황별 라인</td></tr>
+      <tr><th>채널</th><td>전 세계 부티크 180개+. 한국은 로로피아나코리아 직접 전개, 갤러리아 명품관·신세계·현대 등 VIP 백화점 중심</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>비쿠냐 의류는 연간 약 1,000벌, 베이비캐시미어는 연간 약 2,000벌만 생산</b> — 수요가 아니라 원료가 생산량을 결정하는 구조</li>
+      <li>비쿠냐 1마리는 <b>2년에 한 번, 250g</b>의 원모만 제공 — 재킷 한 벌에 수십 마리분. 브랜드가 페루 야생 비쿠냐 보호·독점 협약으로 공급망을 직접 확보</li>
+      <li>최상급 원모에 <b>시장가보다 최대 25% 높은 가격을 지불</b> — 원가를 낮추는 대신 최고 등급을 선점하는 역방향 구매 전략</li>
+      <li>호주·뉴질랜드 목장 대상으로 <b>'Gift of Kings' 초극세 울 품평회를 브랜드가 직접 주최</b> — 생산자를 브랜드 생태계로 편입시킨 사례</li>
+      <li>2023년 드라마 '석세션' 발 조용한 럭셔리 붐으로 <b>서머워크 로퍼가 의류가 아닌 잡화에서 브랜드 아이콘</b>이 됨 — 진입 가격대 상품이 브랜드를 대중에 각인</li>
+      <li>⚠️ 2024~25년 페루 비쿠냐 공급망의 원주민 커뮤니티 보상 문제가 외신에 보도되며 명성 리스크 발생 — 소재 서사가 강할수록 공급망 실사 리스크도 커짐</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">1812</span>로로피아나 가문, 이탈리아 북부에서 양모 거래 시작 — 회사가 아니라 '원료 상인'이 기원</div>
+      <div class="ev"><span class="y">1924</span>피에트로 로로피아나가 콰로나에 회사 설립. 방직 공장으로 출발</div>
+      <div class="ev"><span class="y">1980s</span>페루 정부와 비쿠냐 보호 협약 — 밀렵으로 멸종위기였던 종을 보호하며 사실상 독점 공급권 확보</div>
+      <div class="ev"><span class="y">2009</span>베이비캐시미어(생후 첫 털) 상품화 — 새로운 최상위 등급을 스스로 창조</div>
+      <div class="ev"><span class="y">2013</span>LVMH가 지분 80% 인수 (약 20억 유로) — 유통·글로벌 확장 가속</div>
+      <div class="ev"><span class="y">2023~</span>조용한 럭셔리 신드롬 — 서머워크 로퍼·볼캡이 대중적 인지도를 폭발시킴</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: 원료 상인 → 방직 → 완제품 → 부티크 → 인테리어까지, <b>공급망을 아래에서 위로 거슬러 올라가며 통합</b>. 제임스 펄스가 '감성의 인접 확장'이라면 로로피아나는 '원재료의 수직 통합'.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>니트 — 브랜드의 심장</h4>
+    <p>베이비캐시미어 크루넥·터틀넥이 핵심. 같은 디자인이라도 <b>캐시미어 → 베이비캐시미어 → 비쿠냐</b>로 소재 등급이 올라가며 가격이 몇 배씩 뛰는 구조. 제임스 펄스의 '원단 가격 사다리'와 같은 원리지만 폭이 10배 이상.</p>
+    <h4>아우터 — 기능을 소재로 푸는 방식</h4>
+    <p>Storm System(방수 가공 캐시미어), Rain System 등 <b>가공 기술에 이름을 붙여 상품화</b>. 테크 브랜드가 소재로 기능을 말한다면, 로로피아나는 기능을 럭셔리 소재 위에 얹어서 말함.</p>
+    <h4>슈즈 — 잡화가 브랜드 관문이 된 사례 ★</h4>
+    <p><b>서머워크(Summer Walk) 로퍼</b>가 100만원 안팎으로 브랜드 최저 진입선을 형성하며 신규 고객 유입의 관문 역할. 오픈워크(Open Walk) 부츠도 같은 구조. 옷은 못 사도 신발은 사는 고객을 대량 확보한 것이 최근 성장의 실질적 동력.</p>
+    <h4>가방·스카프</h4>
+    <p>Extra Bag(폴딩 토트), Sesia, Bale 등 — 금속 로고·장식 없이 가죽·캐시미어 물성만으로 승부. 스카프는 선물 수요를 흡수하는 진입 카테고리.</p>
+    <h4>Loro Piana Interiors — 라이프스타일 ★</h4>
+    <p>가구용 패브릭, 러그, 블랭킷, 쿠션 등 <b>인테리어 원단 사업을 별도로 전개</b>. 옷을 안 파는 고객(가구 브랜드·요트·호텔)에게 원단을 파는 B2B 채널이자, 고객의 집 안까지 브랜드 물성을 침투시키는 장치. 옷 → 공간 확장을 '완제품'이 아니라 '소재'로 해낸 점이 독특함.</p>
+    <h4>상황별 라인</h4>
+    <p>골프, 세일링(요트), 승마 등 특정 라이프스타일 캡슐을 상시 운영 — 고객의 '취미 지출'을 브랜드 안에서 흡수.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">서머워크 로퍼</b> <span class="price">약 100~130만원</span>
+      <p>인기 포인트: 스웨이드 질감, 사각거리는 밑창, 로고 없이도 아는 사람은 아는 실루엣.</p>
+      <p class="voice">소비자 반응 — "브랜드를 처음 사는 사람은 거의 이걸로 시작한다"는 관문 상품 인식이 확고. 동시에 <b>"비 오면 못 신는다", "밑창이 빨리 닳는다"</b>는 내구성 불만이 가장 많이 언급되는 아이템이기도 함. 가격 대비 소모품이라는 냉소와 그럼에도 재구매가 공존.</p>
+    </div>
+    <div class="sig"><b class="t">베이비캐시미어 니트</b> <span class="price">200~400만원대</span>
+      <p>"입어보면 다르다"는 촉감 중심 호평. 로고가 없어 <b>아는 사람끼리만 알아본다는 점 자체가 구매 이유</b>로 언급되는 전형적 조용한 럭셔리 소비.</p>
+    </div>
+    <div class="sig"><b class="t">Extra Bag / 볼캡</b> <span class="price">50~200만원대</span>
+      <p>가방·모자 같은 잡화가 의류보다 먼저 팔리는 현상 — 잡화가 브랜드 인지의 최전선이라는 증거.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●●</span><span class="sum">소재를 사는 게 아니라 공급망을 소유하는 수준</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>업계 유일한 수직 통합</b>: 원모 조달 → 방적 → 방직 → 완제품 → 소매까지 전 단계 보유. 경쟁사가 따라올 수 없는 건 디자인이 아니라 원료 접근권</li>
+          <li><b>희소 소재를 브랜드 자산으로 등록</b>: 비쿠냐·베이비캐시미어·Gift of Kings 모두 로로피아나가 사실상 정의한 카테고리 — 소재명이 곧 상표처럼 작동</li>
+          <li><b>원가 절감이 아니라 원가 상승 전략</b>: 최고 등급 원모에 시장가 +25%를 지불해 경쟁사가 살 물량 자체를 없앰</li>
+          <li>가공 기술(Storm System 등)에도 네이밍 — 기능조차 소재 언어로 번역</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●○○○</span><span class="sum">의도적으로 디자인을 하지 않는 디자인</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>실루엣·컬러 모두 극도로 보수적 — 10년 전 상품과 올해 상품의 구분이 어려움. 이것이 중고 가치와 재구매를 지탱</li>
+          <li>컬러 팔레트가 <b>원재료의 자연색(언다이드)</b>에 기반 — 염색하지 않는 것 자체가 소재 자랑</li>
+          <li>로고 노출 최소화. 다만 최근 볼캡·니트에 작은 로고를 넣은 상품이 늘며 <b>조용한 럭셔리의 자기모순</b>이라는 지적도 나옴</li>
+          <li>⚠️ 디자인 주도력은 사실상 없음 — 트렌드를 만들지 않고 트렌드가 자기 쪽으로 오기를 기다리는 포지션</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●●○</span><span class="sum">잡화를 진입 관문으로 쓰는 가격 사다리</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>진입 → 주력 → 최상위의 3단 사다리가 명확</b>: 볼캡/스카프(50만원대) → 로퍼(100만원대) → 니트(300만원대) → 비쿠냐(3,000만원대)</li>
+          <li><b>잡화가 신규 고객 획득 채널</b> — 의류 브랜드가 잡화를 '부가'로 두는 것과 정반대. 포터리가 잡화를 보강할 때 가장 참고할 구조</li>
+          <li>인테리어 패브릭이라는 B2B 라인으로 <b>의류 경기와 무관한 매출축</b>을 하나 더 가짐</li>
+          <li>골프·세일링 등 상황별 캡슐로 같은 고객의 지출 빈도를 늘림</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●●○</span><span class="sum">광고 대신 '소재 교육' — 팔지 않고 가르친다</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>콘텐츠의 주인공이 상품이 아니라 원재료</b>: 안데스 고원의 비쿠냐, 몽골 염소, 호주 목장 — 다큐멘터리형 브랜드 필름이 핵심 자산</li>
+          <li>가격을 설명하지 않고 <b>원료의 희소성을 설명해 가격이 스스로 납득되게</b> 만듦 — "비싸다"가 아니라 "이만큼밖에 없다"</li>
+          <li>프라이빗 클라이언트 서비스 — 부티크 단위의 1:1 응대, 초대제 이벤트가 CRM의 본체. 매스 캠페인 거의 없음</li>
+          <li>⚠️ 디지털·D2C 운영은 상대적으로 보수적 — 온라인몰 경험 자체는 강점이 아님</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●○</span><span class="sum">소재를 만질 수밖에 없게 만드는 매장 설계</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>부티크 180개+ 를 <b>직영 중심</b>으로 운영, 백화점도 최상위 명품관에만 선별 입점 — 브랜드가 놓이는 '옆자리'를 통제</li>
+          <li><b>VMD의 핵심은 촉각 유도</b>: 니트를 접어 쌓아 단면(두께·결)을 보이게 하고, 손이 자연스럽게 닿는 높이에 배치. 걸어두면 소재가 안 팔리고 쌓아두면 팔린다는 원리</li>
+          <li>우드·리넨·언다이드 톤의 매장 마감재가 상품 컬러와 동일 계열 — <b>매장 자체가 소재 팔레트의 확장</b></li>
+          <li>한국은 갤러리아 명품관 등 VIP 백화점에 집중 — 소비 연령대가 높고 수요가 한정적이라 트래픽보다 <b>구매력 밀도</b>를 택한 입지 전략</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag fml">포멀</span><span class="tag std">스탠다드</span></div>
+      <b>가격을 설명하지 말고 희소성을 설명하기</b>
+      <p>포터리가 '80수 타입라이터'를 쓴다면 스펙(80수)만 말하지 말고 <b>그 원사가 왜 흔치 않은지, 연간 얼마나 확보 가능한지</b>를 콘텐츠로 만들어야 가격이 납득됨. 로로피아나 방식의 핵심은 소재 자랑이 아니라 '한정된 양'의 서사.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>잡화를 부가가 아니라 신규 고객 관문으로 설계</b>
+      <p>서머워크 로퍼가 로로피아나의 최대 유입 경로가 된 것처럼, 포터리도 <b>모자·가방을 '옷 사는 김에'가 아니라 '이것만 사러 오는' 상품</b>으로 기획해야 함. 의류 최저가보다 낮은 진입 가격 + 브랜드 식별성이 조건. 잡화 보강 중인 지금 가장 직접적인 레퍼런스.</p></div>
+    <div class="ref"><div class="tags"><span class="tag std">스탠다드</span><span class="tag fml">포멀</span></div>
+      <b>같은 디자인, 소재 등급으로만 라인 나누기</b>
+      <p>디자인을 늘리지 않고 소재 등급만 올려 상위 라인을 만드는 방식. 포터리의 대표 셔츠/니트를 그대로 두고 상위 원사 버전을 얹으면, 개발 부담 없이 객단가 상단을 열 수 있음. 제임스 펄스의 가격 사다리와 같은 처방이지만 <b>포멀 라인에서는 이쪽이 더 정석</b>.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>VMD — 니트는 걸지 말고 쌓아라</b>
+      <p>소재가 강점인 상품은 행잉보다 <b>폴딩 진열이 촉각 접근을 유도</b>함. 단면이 보이게 접고, 손 닿는 높이(85~110cm)에 두고, 조명은 소재 결이 드러나는 각도로. 성수 플래그십의 니트·셔츠 존에 바로 적용 가능한 원칙.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>매장 마감재를 상품 컬러 팔레트와 일치시키기</b>
+      <p>로로피아나 매장의 우드·언다이드 톤은 상품 색과 같은 계열이라 상품이 공간에서 튀지 않고 '원래 거기 있던 것'처럼 보임. 포터리의 정돈된 톤을 매장 마감재까지 밀어붙이면 같은 효과.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① 소재 서사가 강할수록 <b>공급망 실사 리스크도 커짐</b> — 2024~25년 비쿠냐 공급망 노동 이슈 보도가 브랜드에 직접 타격. 포터리도 원사·봉제 협력사 서사를 쓸 거라면 사실 확인이 선행돼야 함.<br>
+    ② 진입 상품(로퍼)의 <b>내구성 불만이 브랜드 전체 신뢰로 번짐</b> — 관문 상품일수록 품질 관리가 더 중요.<br>
+    ③ 로고 노출을 늘리는 순간 '조용한 럭셔리' 서사가 흔들림 — 인지도와 정체성의 트레이드오프를 의식할 것.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://kr.loropiana.com/ko/" target="_blank">공식몰 (한국)</a>
+      <a href="https://us.loropiana.com/en/c/man/vicuna" target="_blank">비쿠냐 컬렉션 (남성)</a>
+      <a href="https://us.loropiana.com/en/c/woman/vicuna" target="_blank">비쿠냐 컬렉션 (여성)</a>
+      <a href="https://kr.loropiana.com/ko/stores-south-korea-south-korea-seoul" target="_blank">서울 매장 목록</a>
+      <a href="https://www.instagram.com/loropiana/" target="_blank">인스타그램 @loropiana</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>loro piana store interior</b> · <b>cashmere folded display retail</b> · <b>quiet luxury undyed palette</b> · <b>summer walk loafer styling</b> (런웨이 규모는 작음 — <b>매장 폴딩 진열</b>과 <b>소재 다큐 스틸</b>이 이미지 축)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://www.latterly.org/loro-piana-marketing-strategy/" target="_blank">Latterly — Loro Piana 마케팅 전략 분석</a> ·
+      <a href="https://www.selvane.co/blogs/knowledge/loro-piana-how-material-sourcing-became-a-luxury-strategy" target="_blank">Selvane — 소재 소싱이 럭셔리 전략이 된 과정</a> ·
+      <a href="https://thevou.com/blog/why-loro-piana-so-expensive/" target="_blank">The VOU — 가격 구조 해설</a> ·
+      <a href="https://grokipedia.com/page/Loro_Piana" target="_blank">브랜드 연혁</a> ·
+      <a href="https://kr.loropiana.com/ko/" target="_blank">공식몰</a> ·
+      <a href="https://namu.wiki/w/%EB%A1%9C%EB%A1%9C%ED%94%BC%EC%95%84%EB%82%98" target="_blank">국내 유통 현황</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['sunspel'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Natural × Standard</span>
+    <h2>선스펠 <span class="en">Sunspel · Long Eaton, England</span></h2>
+    <p class="oneline">"세계 최초의 럭셔리 티셔츠를 만든 165년 된 영국 공장 — 카테고리를 늘리지 않고 '기본 아이템 몇 개'만 극단적으로 오래 갈고닦아 살아남은 브랜드"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>론칭</th><td>1860년, 영국 노팅엄 (창업자 토머스 힐). 1937년부터 롱이튼 공장에 정착 — 현재까지 동일 부지</td></tr>
+      <tr><th>창업자</th><td>토머스 힐 — 섬유 기술자 출신. '가장 좋은 실로 속옷을 만든다'는 출발점</td></tr>
+      <tr><th>포지셔닝</th><td>영국식 럭셔리 베이직. 로고 없음, 유행 없음, 카테고리 확장 최소</td></tr>
+      <tr><th>주력</th><td>씨아일랜드 코튼 티셔츠, 복서 쇼츠, 리비에라 폴로, 로브</td></tr>
+      <tr><th>가격대</th><td>티셔츠 £75~110 (한국 15~25만원대), 폴로 £145~, 니트 £200~</td></tr>
+      <tr><th>생산</th><td><b>핵심 상품은 여전히 롱이튼 자사 공장에서 생산</b> (80년 이상) — 영국 제조를 유지하는 소수 브랜드</td></tr>
+      <tr><th>채널</th><td>영국·미국 직영 + 파리 부티크, 도쿄 플래그십. 전 세계 200개국 배송. <b>한국은 현지 파트너십 추진 단계</b></td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>세계 최초의 '럭셔리 티셔츠'를 만든 브랜드</b>로 인정받음 — 티셔츠가 속옷에서 겉옷이 되는 과정의 원점</li>
+      <li><b>영국에 복서 쇼츠를 처음 도입</b>(1947년경) — 미국 복싱 선수 트렁크에서 착안. 중앙 솔기를 없앤 백패널 재단, 이중 접어박기 등 <b>불편함 제거를 설계로 해결</b>한 초기 사례</li>
+      <li>1932년 대공황 시기 사명을 잠시 <b>'Sea Island Cotton Ltd.'</b>로 변경할 만큼 원사에 회사를 걸었음. 1935년부터 속옷 라인명을 '선스펠'로 — 카리브해의 <b>'sunny spells(볕 드는 날)'</b>에서 온 이름</li>
+      <li><b>007 효과</b>: 2006년 '카지노 로얄'의 Q10 폴로/티셔츠, 리비에라 폴로가 제임스 본드 착장으로 사용되며 브랜드가 세계적으로 재발견됨 — 광고가 아닌 <b>스타일링 노출 한 번이 만든 전환점</b></li>
+      <li>씨아일랜드 코튼 캐시미어 원단은 <b>개발에 3년</b>이 걸림 — 신소재 하나에 3년을 쓰는 개발 속도</li>
+      <li>2025~26년 파리·도쿄 매장 오픈과 미국 비스포크 서비스 시작 — 165년 만에 본격 글로벌 리테일 확장</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">1860</span>토머스 힐, 노팅엄에서 창업 — 캐시미어·실크·메리노·씨아일랜드 코튼으로 최고급 속옷 제작</div>
+      <div class="ev"><span class="y">1930s</span>대공황으로 수출 붕괴 → 씨아일랜드 코튼 럭셔리 속옷의 내수로 생존. 1935년 '선스펠' 라인명 확립</div>
+      <div class="ev"><span class="y">1937</span>롱이튼 공장으로 이전 — 현재까지 같은 공장에서 핵심 상품 생산</div>
+      <div class="ev"><span class="y">1947~</span>영국 최초로 복서 쇼츠 도입 · 이후 티셔츠를 겉옷 카테고리로 확립</div>
+      <div class="ev"><span class="y">2006</span>'카지노 로얄' 제임스 본드 착용 — 리비에라 폴로가 글로벌 아이콘화</div>
+      <div class="ev"><span class="y">2025~26</span>파리 부티크, 도쿄 플래그십, 미국 서부 확장 · 한국 파트너십 모색</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: <b>165년 동안 카테고리를 거의 늘리지 않음</b>. 속옷 → 티셔츠 → 폴로/니트 정도가 전부. 제임스 펄스·로로피아나가 '확장'의 교과서라면, 선스펠은 <b>'확장하지 않고 버티는 법'</b>의 교과서.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>티셔츠 — 브랜드의 원점</h4>
+    <p>클래식 티셔츠(£75~)와 씨아일랜드 코튼 티셔츠(£110~)의 2단 구조. 차이는 오직 <b>원사 등급</b>. 실루엣과 패턴은 수십 년째 거의 동일 — "작년 것과 올해 것이 같다"가 결함이 아니라 판매 논리.</p>
+    <h4>복서 쇼츠 · 언더웨어</h4>
+    <p>브랜드의 뿌리이자 지금도 스테디셀러. 티셔츠 고객이 자연스럽게 넘어오는 <b>재구매 주기가 가장 짧은 카테고리</b> — 언더웨어를 '싸구려 부가상품'이 아니라 정가 프리미엄 상품으로 유지한 드문 사례.</p>
+    <h4>리비에라 폴로 ★</h4>
+    <p>메시가 아닌 <b>부드러운 니트 코튼</b>(수피마)으로 짠 폴로. 007 착장으로 아이콘이 된 단일 상품이 브랜드 인지의 절반을 담당. 단일 상품이 브랜드를 대표할 때의 힘을 보여줌.</p>
+    <h4>니트 · 로브 · 아우터</h4>
+    <p>메리노·캐시미어 니트, 타월링 로브, 최근 울 블레이저까지 조심스럽게 확장. 다만 <b>전체 SKU 수는 동종 브랜드 대비 현저히 적음</b> — 의도적 절제.</p>
+    <h4>잡화</h4>
+    <p>⚠️ <b>거의 없음.</b> 양말·소품 수준. 잡화 확장의 레퍼런스로는 부적합하며, 오히려 "잡화 없이도 브랜드가 성립하는가"의 반례로 볼 것 — 성립은 하지만 <b>객단가와 확장성의 천장이 낮다</b>.</p>
+    <h4>라이프스타일</h4>
+    <p>없음. 공간·리빙으로 나가지 않고 <b>옷 안에 머무는 전략</b>. 대신 롱이튼 공장 자체를 브랜드 콘텐츠(공장 투어·제조 스토리)로 활용.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">클래식 / 씨아일랜드 코튼 티셔츠</b> <span class="price">£75~110</span>
+      <p>인기 포인트: 목 리브가 늘어나지 않는 마감, 세탁 후에도 유지되는 형태, 비치지 않는 적당한 두께.</p>
+      <p class="voice">소비자 반응 — <b>"몇 년을 입어도 목이 안 늘어난다"</b>는 내구성 호평이 압도적. 제임스 펄스가 "구멍이 난다"로 비판받는 지점에서 정반대 평판을 가짐. 반면 <b>"핏이 보수적이다", "가격 대비 재미가 없다"</b>는 반응도 많음 — 감탄이 아니라 신뢰를 사는 브랜드.</p>
+    </div>
+    <div class="sig"><b class="t">리비에라 폴로</b> <span class="price">£145~</span>
+      <p>007 착용 이후 "본드 폴로"로 검색되는 상품. <b>영화 스타일링 한 번의 자산 수명이 20년</b>이라는 것을 보여줌.</p>
+    </div>
+    <div class="sig"><b class="t">복서 쇼츠</b> <span class="price">£30~55</span>
+      <p>선물 수요와 재구매가 동시에 발생하는 진입 카테고리. "선스펠은 속옷부터 시작한다"는 구매 경로가 형성돼 있음.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●●</span><span class="sum">원사 하나에 사명까지 걸었던 브랜드</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>씨아일랜드 코튼</b> — 초장섬유 면화. 1932년 사명을 'Sea Island Cotton Ltd.'로 바꿀 만큼 원사가 브랜드 정체성 그 자체</li>
+          <li>브랜드명 자체가 원사 산지 서사에서 나옴('sunny spells') — <b>이름 → 원사 → 상품이 하나의 이야기로 연결</b>된 드문 구조</li>
+          <li>신소재 개발에 3년(씨아일랜드 코튼 캐시미어) — 시즌 단위가 아니라 <b>연 단위 개발 사이클</b></li>
+          <li>원사 등급으로만 라인을 나눔(클래식 vs 씨아일랜드) — 가장 단순한 형태의 가격 사다리</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●○○○</span><span class="sum">디자인을 바꾸지 않는 것이 디자인</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>패턴을 수십 년 유지 — 소비자가 <b>사이즈를 기억해서 재주문</b>하는 구조를 만듦(반품률·CS 비용 절감으로도 이어짐)</li>
+          <li>로고 없음. 식별점은 목 리브의 마감과 소매 기장 정도</li>
+          <li>⚠️ 명백한 한계: <b>"재미없다"는 평가</b>가 고착. 신규 고객 유입이 느리고, 젊은 층 인지도가 약함. 최근 매장 확장·비스포크는 이 한계를 뚫으려는 시도로 보임</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●○○○</span><span class="sum">극단적 절제 — 강점이자 성장의 천장</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>SKU가 매우 적음 — 재고 리스크가 낮고 공장 가동이 안정적. <b>자사 공장을 유지할 수 있는 이유가 곧 좁은 상품 구성</b></li>
+          <li>언더웨어를 정가 프리미엄으로 유지 — 재구매 주기가 짧은 카테고리를 브랜드 안에 확보</li>
+          <li>⚠️ <b>잡화·라이프스타일이 사실상 없음</b> → 객단가 상단이 막혀 있고, 매장 평당 매출을 올릴 수단이 부족. 포터리 관점에서는 "이 길로 가면 어디서 막히는가"를 보여주는 사례</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●○○</span><span class="sum">공장이 콘텐츠, 영화가 광고</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>롱이튼 공장 자체가 최대 콘텐츠 자산</b> — 제조 공정, 장인, 80년 된 기계를 저널 형식으로 상시 발행. 만들어낸 서사가 아니라 실재하는 장소라는 점이 신뢰의 근거</li>
+          <li>007 협업은 광고비가 아니라 <b>스타일링 채택</b>으로 얻은 노출 — 20년째 검색 유입을 만들어내는 자산</li>
+          <li>⚠️ 데이터 CRM·개인화는 약함. 이메일 중심의 전통적 운영</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●○○</span><span class="sum">상품이 말하게 두는 미니멀 리테일 — 이제야 확장 중</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>매장 수가 적고 최근에야 확장(파리·도쿄·미국 서부) — <b>165년 브랜드가 리테일은 이제 시작</b>이라는 비대칭</li>
+          <li>VMD는 극도로 절제된 현대적 마감 — 상품 수가 적으므로 <b>여백과 폴딩 진열</b>로 각 아이템의 존재감을 키움. 컬러 웨이를 색상 그러데이션으로 쌓는 진열이 전형</li>
+          <li>도매(편집샵) 비중이 높음 — 브랜드 통제력은 약하지만 저비용으로 글로벌 도달</li>
+          <li>한국은 <b>아직 정식 진출 전</b> — 현재 국내에서는 병행·해외직구 중심. 진입 초기 브랜드의 한국 시장 접근 방식을 실시간으로 관찰할 수 있는 케이스</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag std">스탠다드</span></div>
+      <b>패턴을 고정해서 '사이즈 기억'을 자산으로 만들기</b>
+      <p>선스펠은 수십 년간 패턴을 바꾸지 않아 고객이 자기 사이즈를 외운 채 재주문함. 포터리도 <b>대표 셔츠·티셔츠의 패턴을 시즌마다 손대지 않고 고정 선언</b>하면 온라인 재구매율과 반품률 양쪽에서 이득. 자사몰 비중이 높은 포터리에 특히 유효.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>공장을 콘텐츠로 — 만들어낸 서사가 아니라 실재하는 장소</b>
+      <p>롱이튼 공장 저널처럼, 포터리도 협력 봉제공장·원단 산지를 정기 콘텐츠로 발행하면 '정돈된 기본'이라는 주장에 물리적 근거가 생김. 브랜드 필름보다 <b>공정·사람·기계의 기록</b>이 신뢰를 만듦.</p></div>
+    <div class="ref"><div class="tags"><span class="tag std">스탠다드</span><span class="tag cas">캐주얼</span></div>
+      <b>언더웨어/이너를 정가 프리미엄 카테고리로 운영</b>
+      <p>선스펠은 재구매 주기가 가장 짧은 속옷을 할인 상품이 아니라 정가 상품으로 유지해 <b>고객 접촉 빈도</b>를 확보함. 포터리도 이너·양말류를 '끼워파는 것'이 아니라 독립된 품질 서사를 가진 라인으로 두면 재방문 주기가 짧아짐.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>VMD — 상품 수가 적을 때는 여백과 컬러 그러데이션</b>
+      <p>SKU가 적은 존(예: 티셔츠·이너)은 채우려 하지 말고 <b>같은 아이템의 컬러를 그러데이션으로 쌓아</b> 하나의 색면으로 보이게 하는 것이 정석. 빈약해 보이는 대신 '선택지가 정돈되어 있다'로 읽힘.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>단일 상품 하나에 브랜드를 걸어보기</b>
+      <p>리비에라 폴로 하나가 20년째 브랜드 인지를 담당함. 포터리도 <b>'이 브랜드는 이 옷'이라고 외부에서 지목되는 단일 상품</b>이 있는지 점검할 필요. 없다면 그것부터 만드는 게 라인 확장보다 우선.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① <b>절제는 성장의 천장이 됨</b> — 잡화·라이프스타일이 없어 객단가와 평당 매출 상단이 막힘. 포터리가 잡화를 보강하는 방향은 옳으며, 선스펠은 그 반대 사례로 읽을 것.<br>
+    ② <b>"재미없다"는 평판의 비용</b> — 변하지 않는 것이 신뢰를 주지만 신규 유입은 느려짐. 기본을 지키되 유입 장치(협업·단일 히트상품·공간)는 따로 설계해야 함.<br>
+    ③ 도매 의존은 저비용 확장이지만 <b>브랜드 경험 통제력을 잃음</b> — 포터리의 자사몰·직영 중심 구조가 오히려 우위.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://us.sunspel.com/" target="_blank">공식몰</a>
+      <a href="https://us.sunspel.com/pages/our-history" target="_blank">브랜드 히스토리</a>
+      <a href="https://info.sunspel.com/inside-sunspel/the-story-of-long-eaton" target="_blank">롱이튼 공장 이야기</a>
+      <a href="https://us.sunspel.com/pages/sunspel-upper-east-side" target="_blank">뉴욕 매장 (VMD 참고)</a>
+      <a href="https://www.instagram.com/sunspel/" target="_blank">인스타그램 @sunspel</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>sunspel store interior</b> · <b>british factory knitwear making</b> <b>· folded tee color gradient display</b> · <b>casino royale bond polo</b> (런웨이 미운영 — <b>공장 공정 사진</b>과 <b>영화 스틸</b>이 이미지 축)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://us.sunspel.com/pages/our-history" target="_blank">Sunspel 공식 히스토리</a> ·
+      <a href="https://info.sunspel.com/inside-sunspel/the-story-of-long-eaton" target="_blank">The story of Long Eaton</a> ·
+      <a href="https://en.wikipedia.org/wiki/Sunspel" target="_blank">Wikipedia — Sunspel</a> ·
+      <a href="https://wwd.com/menswear-news/mens-retail-business/sunspel-global-expansion-paris-tokyo-us-bespoke-1238316513/" target="_blank">WWD — 파리·도쿄 확장 및 한국 파트너십 언급</a> ·
+      <a href="https://wwd.com/business-news/retail/sunspel-west-coast-new-store-marin-country-mart-raul-verdicchi-1236023644/" target="_blank">WWD — 미국 서부 리테일 전략</a> ·
+      <a href="https://www.upscalelivingmag.com/style/men-fashion/sunspels-sea-island-cotton-cashmere-three-years-in-the-making/" target="_blank">Upscale Living — 씨아일랜드 코튼 캐시미어 3년 개발</a> ·
+      <a href="https://www.thesportinglodge.com/blogs/journal/the-magic-of-sunspel" target="_blank">The Sporting Lodge — 리비에라 폴로와 007</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['rrl'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Vintage × Casual</span>
+    <h2>더블 알엘 <span class="en">RRL / Double RL · Ralph Lauren</span></h2>
+    <p class="oneline">"랄프 로렌이 자기 목장 이름을 붙여 만든 아카이브 재현 라인 — 상품보다 <b>매장이 먼저 브랜드를 설명하는</b>, VMD가 곧 제품력인 희귀한 사례"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>론칭</th><td>1993년. 브랜드명은 랄프 & 리키 로렌 부부의 콜로라도 목장 <b>Double RL Ranch(약 22,000에이커)</b>에서</td></tr>
+      <tr><th>창업자</th><td>랄프 로렌 — 폴로 랄프 로렌의 서브 브랜드이지만 <b>본인이 가장 애착을 갖는 라인</b>으로 알려짐</td></tr>
+      <tr><th>포지셔닝</th><td>아메리칸 워크웨어·웨스턴의 고증 재현. 빈티지를 '흉내'가 아니라 <b>구조까지 복각</b>하는 방향</td></tr>
+      <tr><th>주력</th><td>셀비지 데님, 선페이드 플란넬, 레더 재킷, 워크셔츠, 니트</td></tr>
+      <tr><th>가격대</th><td>진 $290~450, 플란넬 $200~350, 레더 재킷 $1,500~5,000+ — 폴로 본체보다 명확히 상위</td></tr>
+      <tr><th>생산</th><td>일본·미국 방직의 셀비지 데님, 손마감 레더. 워싱·페이딩 가공에 공정 대부분이 투입</td></tr>
+      <tr><th>채널</th><td>단독 부티크(뉴욕·도쿄·LA 등) + 폴로 플래그십 내 숍인숍 + 소수 편집샵. 한국은 정식 단독 매장 없음(병행·해외 구매 중심)</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>매장이 상품보다 유명한 브랜드</b> — 빈티지 담요, 길들여진 가죽 소파, 앤티크 목재 집기, 벽에 걸린 <b>판매하지 않는</b> 60년대 롤렉스와 50년대 리 라이더 재킷. 매장 자체가 큐레이션된 아카이브</li>
+      <li>랄프 로렌 본인의 <b>개인 빈티지 컬렉션이 상품 기획의 원본</b> — 실물 아카이브를 뜯어 패턴·스티치·부자재까지 복각</li>
+      <li>같은 그룹 안에서 <b>폴로(대중)와 RRL(고증)이 정반대 가격·유통 정책</b>으로 공존 — 서브 브랜드 분리 운영의 교과서</li>
+      <li>세일·아울렛 노출이 폴로 대비 훨씬 제한적 — 그룹 브랜드지만 <b>할인 정책을 분리</b>해 정가 신뢰를 지킴</li>
+      <li>진의 페이딩·리페어 문화가 형성돼 <b>중고 시세가 유지</b>되는 몇 안 되는 대형 그룹 브랜드</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">1993</span>RRL 론칭 — 콜로라도 목장 이름을 그대로 브랜드명으로</div>
+      <div class="ev"><span class="y">1990s 후반</span>초기엔 축소·정리되었다가 아메리카나 수요와 함께 재정비</div>
+      <div class="ev"><span class="y">2000s</span>일본 셀비지 데님 도입·고증 강화. 도쿄를 중심으로 마니아층 형성</div>
+      <div class="ev"><span class="y">2010s</span>단독 부티크 확장 — <b>매장 VMD가 브랜드 정체성의 중심</b>으로 자리잡음</div>
+      <div class="ev"><span class="y">2020s</span>아메리카나·워크웨어 리바이벌로 재조명. 여성 라인·액세서리 확대</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: 카테고리를 넓히기보다 <b>고증의 깊이</b>를 늘려온 브랜드. 매출 확장은 상품 수가 아니라 매장 수와 단가로 해결.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>데님 — 브랜드의 축</h4>
+    <p>일본·미국산 셀비지 원단, 시대별 리벳·스티치·포켓 형태를 구분해 복각. 로우(생지)부터 강한 워싱까지 <b>같은 모델을 페이딩 단계별로 동시 판매</b> — 고객이 '길들이는 과정'을 살 것인지 '이미 길들여진 결과'를 살 것인지 선택하게 함.</p>
+    <h4>플란넬 · 워크셔츠</h4>
+    <p>선페이드(태양에 바랜) 가공이 핵심. 신품인데 <b>10년 입은 것처럼 보이게 만드는 가공 자체가 상품 가치</b>.</p>
+    <h4>레더 · 아우터</h4>
+    <p>손마감 레더 재킷이 최상위 가격대($1,500~5,000+). 브랜드의 가격 천장을 담당하며, 매장에서는 대체로 <b>판매용과 아카이브(비매품)를 나란히 걸어</b> 고증의 근거를 시각화.</p>
+    <h4>잡화 ★</h4>
+    <p>벨트, 캡, 워크부츠, 뱅크시계·주얼리, 소가죽 소품, 셀렉트한 백. <b>잡화가 세계관 완성의 필수 부품</b>으로 기획됨 — 옷만으로는 '목장 생활'이 완성되지 않기 때문. 포터리 잡화 확장 관점에서 제임스 펄스보다 훨씬 유효한 레퍼런스.</p>
+    <h4>라이프스타일 / 아카이브 오브제</h4>
+    <p>담요, 러그, 빈티지 오브제 등을 매장에 배치. 판매 상품과 비매 소품의 경계를 의도적으로 흐려 <b>매장 전체를 하나의 세계로</b> 만듦.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">셀비지 데님 (Slim Fit / Straight)</b> <span class="price">$290~450</span>
+      <p>인기 포인트: 원단 밀도, 시간이 지날수록 살아나는 페이딩, 고증된 부자재.</p>
+      <p class="voice">소비자 반응 — <b>"랄프 로렌 그룹 제품인데 일본 리프로덕션 브랜드와 겨룰 수준"</b>이라는 놀람이 전형적 반응. 마니아층은 워싱 강도와 고증 정확도를 세부적으로 비교함. 반면 <b>"폴로 로고 브랜드에 이 돈을 쓰긴 애매하다"</b>는 그룹 후광의 역효과, 그리고 사이즈 편차 지적도 존재.</p>
+    </div>
+    <div class="sig"><b class="t">선페이드 플란넬 셔츠</b> <span class="price">$200~350</span>
+      <p>"새 옷인데 낡아 보이는 것"에 돈을 지불하는 소비. 가공이 곧 부가가치라는 것을 가장 직접적으로 보여주는 상품.</p>
+    </div>
+    <div class="sig"><b class="t">레더 재킷</b> <span class="price">$1,500~5,000+</span>
+      <p>브랜드 가격 천장이자 매장의 시각적 앵커. 실제 판매량보다 <b>매장에 걸려 있음으로써 다른 상품의 가격을 정당화</b>하는 역할이 큼.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●●</span><span class="sum">고증이 곧 소재 스펙 — 시대를 복각한다</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>일본·미국 셀비지 방직 원단 — 대형 그룹이 <b>마니아 시장의 소재 기준</b>을 그대로 채택한 드문 경우</li>
+          <li><b>가공(워싱·선페이드·리페어 디테일)이 소재 이상의 원가 비중</b>을 차지. 신품에 시간을 입히는 기술 자체가 진입장벽</li>
+          <li>리벳·버튼·라벨 등 부자재를 시대별로 재현 — 눈에 안 보이는 곳의 고증이 마니아 신뢰를 만듦</li>
+          <li>⚠️ 소재 서사가 '희소성'(로로피아나)이 아니라 <b>'정확성'</b>에 기반 — 설명 방식이 완전히 다름</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●○○</span><span class="sum">창작이 아니라 편집 — 아카이브를 고르는 눈</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>새로운 실루엣을 만들지 않음. <b>어떤 시대의 어떤 옷을 고를 것인가</b>가 디자인 행위의 전부</li>
+          <li>컬러·톤이 인디고·에크루·브라운·올리브로 고정 — 전 상품이 한 화면에 놓여도 어긋나지 않음</li>
+          <li>로고는 있으나 빈티지 라벨 형태로 상품에 녹아듦 — 로고리스는 아니지만 '시대의 일부'로 처리</li>
+          <li>⚠️ 트렌드 대응력은 0에 가까움. 아메리카나 붐이 식으면 취약</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●●○</span><span class="sum">잡화가 세계관의 필수 부품</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>잡화 없이는 세계관이 성립하지 않는 구조</b>: 벨트·부츠·모자·주얼리가 있어야 '목장 생활'이 완성됨 → 잡화가 부가가 아니라 필수재로 기획됨</li>
+          <li>같은 모델을 <b>워싱 단계별로 병렬 판매</b> — SKU를 늘리지 않고 선택지를 늘리는 방법</li>
+          <li>그룹 내 폴로와 <b>가격·유통·할인 정책을 완전히 분리</b> — 서브 브랜드가 본체에 잡아먹히지 않게 하는 운영 설계</li>
+          <li>라이프스타일 오브제를 판매·비매 섞어 배치해 <b>매장 체류시간</b>을 늘림</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●○○</span><span class="sum">광고 대신 공간 — 매장이 캠페인</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>독립 광고 캠페인이 거의 없음. <b>매장 사진이 그대로 브랜드 이미지로 유통</b>됨(방문객이 찍어서 확산)</li>
+          <li>고증 스토리텔링이 콘텐츠의 축 — "이 재킷의 원본은 1940년대 ○○"라는 설명이 상품 페이지에 들어감</li>
+          <li>마니아 커뮤니티(데님 포럼·헤델스 등)에서의 평판이 실질 마케팅 채널</li>
+          <li>⚠️ 그룹 CRM에 종속 — 독자적 고객 데이터 운영은 약함</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●●</span><span class="sum">★ VMD가 제품력 — 매장을 아카이브로 만든다</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>판매하지 않는 물건을 의도적으로 배치</b>: 빈티지 시계, 원본 재킷, 낡은 트렁크, 옛 사진. 고객은 이것들 때문에 상품을 '진짜'로 인식 — <b>비매품이 판매를 만든다</b></li>
+          <li><b>집기가 전부 시대 소품</b>: 앤티크 목재 캐비닛, 길들여진 가죽 소파, 낡은 러그. 신품 집기가 거의 없어 상품의 '낡음'이 어색해지지 않음</li>
+          <li><b>조명이 어둡고 따뜻함</b> — 일반 리테일의 균일 조명과 정반대. 밝기 대신 <b>스팟 대비</b>로 시선을 유도하며, 워싱·페이딩의 음영이 살아남</li>
+          <li>진열 밀도가 높음 — 여백 중심의 미니멀 리테일과 정반대로 <b>꽉 채워서 '축적된 시간'</b>을 표현. 다만 통로와 포컬 포인트는 명확히 구획</li>
+          <li>폴로 플래그십 안의 숍인숍도 <b>바닥재·조명·집기를 완전히 분리</b>해 다른 브랜드처럼 보이게 함</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>비매품을 매장에 두어 상품을 정당화하기 ★</b>
+      <p>RRL의 핵심 장치. 포터리도 <b>판매하지 않는 원단 스와치 아카이브, 초기 샘플, 도자기 오브제, 공정 도구</b>를 성수 플래그십에 배치하면 '정돈된 기본'이라는 주장에 물증이 생김. 비용은 낮고 체류시간·SNS 확산 효과는 큼. VMD 관점에서 즉시 실행 가능한 항목.</p></div>
+    <div class="ref"><div class="tags"><span class="tag cas">캐주얼</span></div>
+      <b>같은 모델을 '가공 단계별'로 병렬 판매</b>
+      <p>SKU를 늘리지 않고 선택지를 늘리는 방법. 포터리 캐주얼 라인에서 <b>같은 팬츠를 워싱 강도 2~3단계로</b> 내놓으면 개발 부담 없이 매대가 풍성해지고 객단가 폭이 생김.</p></div>
+    <div class="ref"><div class="tags"><span class="tag cas">캐주얼</span><span class="tag all">공통</span></div>
+      <b>잡화를 '부가'가 아니라 '세계관 필수재'로 기획</b>
+      <p>RRL은 벨트·모자·부츠가 없으면 스타일이 완성되지 않도록 설계함. 포터리도 잡화를 단품으로 늘리기 전에 <b>"이 옷의 착장을 완성하는 데 반드시 필요한 잡화가 무엇인가"</b>부터 정의해야 함 — 그래야 세트 구매가 발생.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>조명: 균일 조도 대신 스팟 대비</b>
+      <p>RRL 매장은 어둡고 따뜻하다. 소재의 요철·음영을 보여주는 데는 <b>전체 조도를 낮추고 상품에 스팟</b>을 주는 편이 유리. 포터리가 소재를 강점으로 내세운다면, 백화점 표준 조명 그대로가 아니라 존별 조도 차이를 설계할 가치가 있음.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>서브 라인은 정책까지 분리해야 산다</b>
+      <p>RRL은 폴로와 <b>가격·유통·할인 정책을 완전히 분리</b>해 본체에 흡수되지 않음. 포터리가 포멀/테크 라인을 낼 때도 이름만 나누지 말고 <b>할인 정책·채널·매장 존까지</b> 분리해야 라인이 인식됨.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① <b>고증은 트렌드 의존적</b> — 아메리카나 붐이 식으면 대체 수요가 없음. 포터리는 시대 재현이 아니라 '현재의 정돈'이 축이므로 이 리스크는 낮지만, 특정 무드에 과몰입하는 것의 위험은 동일.<br>
+    ② <b>모브랜드 후광의 양면</b> — "결국 폴로잖아"라는 인식이 프리미엄을 깎음. 서브 라인은 본체와의 거리 조절이 관건.<br>
+    ③ <b>꽉 찬 진열은 난이도가 높음</b> — RRL의 고밀도 VMD는 소품 퀄리티가 받쳐줄 때만 '축적'으로 읽히고, 아니면 그냥 어수선해 보임. 흉내낼 때는 밀도보다 <b>소품 하나하나의 진정성</b>이 먼저.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://www.ralphlauren.com/brands-rrl" target="_blank">공식 RRL 페이지</a>
+      <a href="https://www.theavantmag.com/rrl-ralph-lauren" target="_blank">AVANT — RRL 가이드</a>
+      <a href="https://www.heddels.com/2018/06/rrl-history-philosophy-and-iconic-products/" target="_blank">Heddels — 역사·철학·아이코닉 제품</a>
+      <a href="https://sonofastag.com/collections/rrl" target="_blank">Son of a Stag (편집샵 상품 컷)</a>
+      <a href="https://www.instagram.com/rrl/" target="_blank">인스타그램 @rrl</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>rrl store interior</b> · <b>double rl shop display</b> · <b>vintage americana retail vignette</b> · <b>antique cabinet clothing display</b> (런웨이 미운영 — <b>매장 인테리어 컷이 이 브랜드의 최대 이미지 자산</b>. VMD 스터디용으로 가장 수확이 큰 브랜드)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://www.heddels.com/2018/06/rrl-history-philosophy-and-iconic-products/" target="_blank">Heddels — RRL History, Philosophy, Iconic Products</a> ·
+      <a href="https://www.theavantmag.com/stories/exploring-the-heritage-of-rrl-ralph-laurens-iconic-western-and-workwear-inspired-brand" target="_blank">AVANT — RRL 헤리티지</a> ·
+      <a href="https://www.thesportinglodge.com/blogs/journal/the-story-of-double-rl-by-ralph-lauren" target="_blank">The Sporting Lodge — Double RL 스토리</a> ·
+      <a href="https://noahbest.substack.com/p/too-big-to-fail-rrl" target="_blank">Slow Fashion — Too Big To Fail: RRL</a> ·
+      <a href="https://www.ralphlauren.com/brands-rrl" target="_blank">공식 사이트</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['patagonia'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Natural × Tech / Sports</span>
+    <h2>파타고니아 <span class="en">Patagonia · Ventura, California</span></h2>
+    <p class="oneline">"'이 재킷을 사지 마세요'라고 광고한 브랜드 — 수선·중고·기부를 <b>비용이 아니라 고객 관계의 인프라</b>로 바꿔서, 안 팔수록 더 팔리는 구조를 만든 회사"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>론칭</th><td>1973년, 캘리포니아 벤투라 (기원은 1957년 이본 취나드의 등반 장비 대장간)</td></tr>
+      <tr><th>창업자</th><td>이본 취나드 — 등반가 출신. 2022년 <b>회사 지분 전체를 환경 목적 신탁·비영리에 이전</b>("지구가 우리의 유일한 주주")</td></tr>
+      <tr><th>포지셔닝</th><td>아웃도어 기능성 + 환경 행동주의. 옷을 파는 게 아니라 <b>가치관 소속감</b>을 파는 구조</td></tr>
+      <tr><th>주력</th><td>플리스(신칠라·레트로X), 방수 셸(H2No·고어텍스), 배기스 쇼츠, 다운</td></tr>
+      <tr><th>가격대</th><td>티셔츠 $45~, 플리스 $150~280, 셸 재킷 $300~700 — 아웃도어 중상위</td></tr>
+      <tr><th>규모</th><td>연매출 약 <b>15억 달러</b>, 전 세계 매장 70개+, 물류센터 2곳</td></tr>
+      <tr><th>채널</th><td>직영 매장 + 자사몰 + 아웃도어 리테일러. 한국은 파타고니아코리아 직접 전개(직영·백화점)</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>1985년부터 매출의 1%를 환경 단체에 기부</b>('1% for the Planet') — 이익이 아니라 <b>매출</b> 기준. 누적 1억 4천만 달러 이상 집행</li>
+      <li><b>2011년 블랙프라이데이에 "Don't Buy This Jacket" 전면 광고</b> — 사지 말라는 광고 이후 오히려 매출이 크게 증가한 역설의 대표 사례</li>
+      <li><b>2022년 창업자 일가가 회사 소유권 전체를 이전</b> — 의결권은 Patagonia Purpose Trust, 이익은 Holdfast Collective(비영리)로. 상장·매각 대신 택한 승계 방식</li>
+      <li><b>Worn Wear(2017~)</b>: 중고 상품을 회수해 <b>MSRP의 약 25%를 크레딧으로 지급</b>, 세척·수선 후 재판매. 반품이 아니라 <b>재유입 채널</b></li>
+      <li>무료 수선 가이드 공개 + 매장·투어 트럭에서 수선 이벤트 운영 — <b>수선을 서비스가 아니라 마케팅 채널로</b> 씀</li>
+      <li>평생 보증(Ironclad Guarantee) — 사유 불문 수선·교환·환불</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">1957</span>이본 취나드, 직접 등반용 피톤을 만들어 팔기 시작 — 장비 대장간이 기원</div>
+      <div class="ev"><span class="y">1973</span>파타고니아 의류 브랜드 설립. 등반 장비에서 의류로 전환</div>
+      <div class="ev"><span class="y">1985</span>매출 1% 환경 기부 시작 — 이후 '1% for the Planet' 운동으로 확산</div>
+      <div class="ev"><span class="y">1996</span>전 코튼 제품을 유기농 목화로 전환 — 원가 상승을 감수한 공급망 전환</div>
+      <div class="ev"><span class="y">2011</span>"Don't Buy This Jacket" 캠페인 — 반소비 메시지가 최대 성장 동력이 됨</div>
+      <div class="ev"><span class="y">2017</span>Worn Wear 중고·수선 프로그램 본격화</div>
+      <div class="ev"><span class="y">2022</span>소유권 이전 — "지구가 우리의 유일한 주주"</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: 카테고리 확장이 아니라 <b>'제품 수명 주기 전체'로 사업 영역을 확장</b>. 판매 → 수선 → 회수 → 재판매까지 브랜드가 소유. 다른 브랜드가 '무엇을 더 팔까'를 고민할 때 '판 것을 어떻게 계속 붙들까'를 설계함.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>플리스 — 브랜드의 상징</h4>
+    <p>신칠라(Synchilla), 레트로X 등. <b>재생 폴리에스터 사용을 90년대부터 상품 설명의 전면에</b> 배치. 기능성 소재를 환경 서사와 묶은 최초 사례군에 속함.</p>
+    <h4>셸 · 다운 — 기술 라인</h4>
+    <p>고어텍스와 자체 개발 H2No를 병행. <b>기술 스펙을 등급명으로 노출</b>해 고객이 스스로 용도를 선택하게 함(도심용/알파인용 구분).</p>
+    <h4>배기스 쇼츠 · 라이프스타일 의류</h4>
+    <p>등반·서핑에서 출발했지만 실제로는 <b>도심 캐주얼로 대량 소비</b>됨. 기능 브랜드가 일상복 시장을 흡수한 전형 — 나나미카·골드윈과 같은 칸에서 비교할 지점.</p>
+    <h4>잡화</h4>
+    <p>백팩·더플·토트(블랙홀 시리즈), 캡, 비니. <b>가방이 강력한 진입 상품</b> — 옷보다 먼저 사는 고객이 많고, 로고 노출 면적이 커서 브랜드 인지 효율이 높음.</p>
+    <h4>Worn Wear — 중고라는 하나의 상품 라인 ★</h4>
+    <p>회수·수선한 중고를 <b>별도 브랜딩과 별도 스토어</b>로 판매. 신품을 잠식하는 게 아니라 <b>신품을 살 수 없던 고객층을 브랜드 안으로 데려오는 관문</b>. 나중에 이 고객이 신품 고객이 됨.</p>
+    <h4>Provisions — 식품</h4>
+    <p>연어·맥주·곡물 등 식품 사업까지 전개. 옷과 무관해 보이지만 <b>'농업·어업 방식을 바꾼다'는 동일한 명분</b>으로 묶여 세계관이 흔들리지 않음.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">레트로X / 신칠라 플리스</b> <span class="price">$150~280</span>
+      <p>인기 포인트: 오래 입어도 형태가 유지되는 파일 원단, 세대를 넘겨 입는 내구성, 명확한 실루엣.</p>
+      <p class="voice">소비자 반응 — <b>"10년 넘게 입고 있다", "아버지 것을 물려받았다"</b>는 수명 중심의 발화가 브랜드 평판의 핵심. 이런 후기가 곧 광고. 반면 <b>"환경을 말하면서 결국 옷을 판다"</b>는 위선 지적과, 로고 티셔츠가 도심 유행이 되며 <b>"등산 안 하는 사람의 유니폼"</b>이 됐다는 냉소도 함께 존재.</p>
+    </div>
+    <div class="sig"><b class="t">블랙홀 더플 / 백팩</b> <span class="price">$99~199</span>
+      <p>잡화 진입 상품의 교과서. 내구성·방수·평생 보증이 결합돼 <b>"한 번 사면 끝"</b>이라는 구매 명분을 제공.</p>
+    </div>
+    <div class="sig"><b class="t">Worn Wear 중고</b> <span class="price">정가의 40~60%</span>
+      <p>중고 구매자가 브랜드에 <b>죄책감 없이 진입</b>하는 경로. "환경을 생각해서 중고를 샀다"가 브랜드 충성으로 전환되는 구조.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●○</span><span class="sum">소재를 '성능'이 아니라 '출처'로 설명한다</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>재생 폴리에스터·유기농 코튼·리사이클 나일론 — <b>소재 설명의 첫 줄이 성능이 아니라 원료의 출처</b></li>
+          <li>1996년 전 코튼의 유기농 전환처럼 <b>원가 상승을 감수한 공급망 결정</b>을 브랜드 서사로 전환</li>
+          <li>H2No 등 자체 기술을 보유하되 고어텍스도 병행 — 기술 독점보다 <b>용도 적합성</b> 우선</li>
+          <li>⚠️ 합성섬유 미세플라스틱 문제는 브랜드 스스로도 해결 못한 모순으로 남아 있음</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●○○</span><span class="sum">기능이 형태를 결정 — 그런데 그게 유행이 됨</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>디자인 언어가 <b>용도에서 역산</b>됨 — 장식 요소가 거의 없고 포켓·시밍이 모두 이유를 가짐</li>
+          <li>로고(피츠로이 산 실루엣)의 인지력이 매우 강함 — <b>로고리스 전략의 정반대</b>인데도 고급 인식을 유지한 사례</li>
+          <li>컬러는 아웃도어 톤(어스·비비드 혼합)으로 폭이 넓음 — 정돈된 톤 브랜드와 정면 대비</li>
+          <li>⚠️ 도심 유행으로 흡수되며 <b>'기능 브랜드'라는 정체성이 희석</b>되는 중 — 골드윈·나나미카가 같은 딜레마를 다르게 푼 것과 비교 가치 있음</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●●○</span><span class="sum">중고·수선을 정식 라인으로 편입</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>제품 수명 주기 전체가 상품 구성</b>: 신품 → 수선 → 중고(Worn Wear) → 재활용. 경쟁사는 첫 단계만 판매함</li>
+          <li>가방·잡화가 <b>강력한 진입 상품</b>이자 로고 노출 매체 — 옷보다 잡화가 먼저 팔리는 구조를 의도적으로 활용</li>
+          <li>식품(Provisions)까지 확장했지만 <b>명분이 같아서 어색하지 않음</b> — 확장의 기준이 카테고리 인접성이 아니라 <b>명분 일관성</b></li>
+          <li>⚠️ SKU가 많고 시즌 폭이 넓어 재고 부담은 큼</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●●●</span><span class="sum">★ 안 팔겠다는 광고로 파는 법</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>"Don't Buy This Jacket"</b> — 반소비 메시지가 신뢰를 만들고 그 신뢰가 매출이 됨. 브랜드가 자기 이익에 반하는 말을 할 때 발생하는 설득력을 극대화</li>
+          <li><b>수선 = CRM</b>: 수선 접수는 고객과 다시 만나는 접점이자 데이터. 판매 후 관계가 끊기지 않음</li>
+          <li>Worn Wear 크레딧(MSRP 25%)은 <b>현금이 아니라 브랜드 안에서만 쓰이는 화폐</b> — 회수와 재구매를 한 번에 해결</li>
+          <li>행동주의(소송·캠페인·투표 독려)가 고객을 <b>소비자가 아니라 동조자</b>로 만듦 — 가격 민감도를 낮추는 가장 강력한 장치</li>
+          <li>⚠️ 가치관 마케팅은 <b>일관성이 깨지는 순간 역풍</b>이 가장 큰 방식</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●○</span><span class="sum">매장이 수선소이자 커뮤니티 거점</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>매장 안에 수선 카운터·Worn Wear 코너를 상설 배치</b> — 판매 공간의 일부를 '안 파는 기능'에 내줌. 이것이 재방문을 만드는 장치</li>
+          <li>매장을 <b>커뮤니티 허브</b>로 운영: 상영회, 환경 강연, 수선 워크숍. 구매 없이도 오는 이유를 설계</li>
+          <li>집기·마감재에 재생 목재·재활용 소재를 사용하고 <b>그 사실을 사이니지로 명시</b> — VMD 자체가 메시지 매체</li>
+          <li>중고(Worn Wear) 진열을 신품과 같은 공간에 두어 <b>중고를 부끄럽지 않게</b> 만듦 — 진열 위치가 곧 태도 표명</li>
+          <li>한국은 직영·백화점 병행. 도심 고객 비중이 높아 <b>기능 소구와 일상 착장 제안의 균형</b>이 매장별 과제</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>수선 서비스를 CRM 인프라로 ★</b>
+      <p>파타고니아의 핵심. 포터리도 <b>구매 후 무료 수선(단추·밑단·소매)을 상설 서비스로</b> 두면, 판매 후 끊기던 접점이 재방문·데이터·재구매로 이어짐. '정돈된 기본 = 오래 입는 옷'이라는 주장과도 논리적으로 맞물림. 자사몰 비중이 높은 포터리에서 <b>오프라인 매장에 사람을 다시 부르는 가장 저렴한 장치</b>.</p></div>
+    <div class="ref"><div class="tags"><span class="tag tech">테크</span></div>
+      <b>테크 라인은 '성능'이 아니라 '용도'로 설명하기</b>
+      <p>파타고니아는 스펙을 나열하지 않고 <b>어떤 상황을 위한 옷인지</b>로 등급을 나눔. 포터리 테크 라인도 방수 등급 숫자가 아니라 '출퇴근용/주말 이동용' 식의 상황 언어로 구성해야 기존 고객이 이해함.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>중고·리세일을 브랜드가 직접 운영</b>
+      <p>Worn Wear처럼 포터리가 중고를 직접 회수·판매하면, ① 리셀 시장의 가격·이미지를 통제하고 ② 신품을 못 사는 고객을 브랜드로 데려오고 ③ 크레딧으로 재구매를 유도할 수 있음. 노세일 원칙을 지키면서 <b>가격 진입장벽을 낮추는 유일한 합법적 통로</b>이기도 함.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>VMD — 판매 공간의 일부를 '안 파는 기능'에 내주기</b>
+      <p>수선 카운터, 아카이브, 워크숍 테이블처럼 매출을 직접 만들지 않는 존을 매장에 두면 체류시간과 재방문이 오름. 성수 플래그십(80평) 규모라면 <b>5~8평 정도를 비판매 기능</b>에 배정해볼 만함.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span><span class="tag cas">캐주얼</span></div>
+      <b>확장의 기준을 '카테고리 인접성'이 아니라 '명분 일관성'으로</b>
+      <p>파타고니아가 식품까지 가도 어색하지 않은 이유는 명분이 같기 때문. 포터리도 잡화·리빙을 확장할 때 <b>"같은 물성인가"가 아니라 "같은 태도인가"</b>를 기준으로 삼으면 확장 폭이 훨씬 넓어짐.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① <b>가치관 마케팅은 되돌릴 수 없음</b> — 한 번 내세우면 모든 의사결정이 그 기준으로 검증당함. 포터리가 지속가능성을 말하려면 원사·봉제·포장까지 감당할 수 있을 때 시작해야 함.<br>
+    ② <b>로고가 유행하면 정체성이 희석됨</b> — 파타고니아 로고 플리스가 '등산 안 하는 사람의 유니폼'이 된 것처럼, 인지도 상승이 브랜드 의미를 지울 수 있음.<br>
+    ③ <b>수선·중고는 실제 운영 비용이 큼</b> — 인력·공간·물류가 필요. 명분만 보고 시작하면 서비스 품질이 무너지고 오히려 신뢰를 깎음. 소규모(단추·밑단)부터 단계적으로.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://www.patagonia.com/" target="_blank">공식몰</a>
+      <a href="https://wornwear.patagonia.com/" target="_blank">Worn Wear (중고 스토어)</a>
+      <a href="https://www.patagonia.com/one-percent-for-the-planet.html" target="_blank">1% for the Planet</a>
+      <a href="https://www.patagonia.co.kr/" target="_blank">파타고니아 코리아</a>
+      <a href="https://www.instagram.com/patagonia/" target="_blank">인스타그램 @patagonia</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>patagonia store interior repair counter</b> · <b>worn wear pop up</b> · <b>reclaimed wood retail fixture</b> · <b>outdoor brand community event store</b> (<b>수선 카운터·커뮤니티 이벤트 공간</b>이 VMD 스터디 포인트)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://www.patagonia.com/one-percent-for-the-planet.html" target="_blank">Patagonia — 1% for the Planet 공식</a> ·
+      <a href="https://www.causeartist.com/case-studies/patagonia" target="_blank">Causeartist — 비즈니스 케이스 스터디</a> ·
+      <a href="https://www.forbes.com/sites/shephyken/2025/03/16/why-customers-pay-more-for-brands-with-purpose-the-patagonia-model/" target="_blank">Forbes — 목적 기반 브랜드에 더 지불하는 이유</a> ·
+      <a href="https://circle-economy.com/knowledge-hub/article/28920" target="_blank">Circle Economy — 수선 인센티브 구조</a> ·
+      <a href="https://www.projectpractical.com/patagonia-branding-strategy/" target="_blank">Patagonia 브랜딩 전략 2025</a> ·
+      <a href="https://reflawn.com/articles/how-patagonia-turned-sustainability-into-a-business-model-that-works/61" target="_blank">지속가능성의 사업 모델화</a>
     </p>
   </div>
 </div>`;
