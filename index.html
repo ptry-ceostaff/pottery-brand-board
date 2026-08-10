@@ -169,16 +169,16 @@ const CELLS = {
   'modern|c-t':[{n:"Arc'teryx",id:'arcteryx',key:1}],
   'modern|tech':[{n:'Goldwin',id:'goldwin',key:1},{n:'Portal',id:'portal',key:1}],
   'natmod|standard':[{n:'Our Legacy',id:'our-legacy'},{n:'Auralee',id:'auralee'},{n:'ATON',id:'aton'}],
-  'natural|formal':[{n:'Loro Piana',id:'loro-piana',key:1},{n:'Brunello Cucinelli'}],
+  'natural|formal':[{n:'Loro Piana',id:'loro-piana',key:1},{n:'Brunello Cucinelli',id:'brunello-cucinelli'}],
   'natural|f-s':[{n:'Margaret Howell',id:'margaret-howell'}],
   'natural|standard':[{n:'James Perse',id:'james-perse',key:1},{n:'Sunspel',id:'sunspel'}],
   'natural|s-c':[{n:'Kaptain Sunshine',key:1},{n:'Danton'}],
-  'natural|casual':[{n:'Polo Ralph Lauren',key:1}],
-  'natural|c-t':[{n:'Nanamica',id:'nanamica',key:1},{n:'Polo Sport'}],
+  'natural|casual':[{n:'Polo Ralph Lauren',id:'polo-ralph-lauren',key:1}],
+  'natural|c-t':[{n:'Nanamica',id:'nanamica',key:1},{n:'Polo Sport',id:'polo-sport'}],
   'natural|tech':[{n:'Patagonia',id:'patagonia'}],
   'vinnat|casual':[{n:'Aimé Leon Dore',id:'aime-leon-dore'}],
   'vinnat|tech':[{n:'The North Face Purple Label',id:'tnf-purple-label'}],
-  'vintage|formal':[{n:"Drake's",key:1},{n:'Ralph Lauren Purple Label',id:'rl-purple-label',key:1}],
+  'vintage|formal':[{n:"Drake's",id:'drakes',key:1},{n:'Ralph Lauren Purple Label',id:'rl-purple-label',key:1}],
   'vintage|f-s':[{n:'Beams Plus'}],
   'vintage|standard':[{n:"Levi's"},{n:'Merz b. Schwanen',key:1}],
   'vintage|casual':[{n:'Warehouse',id:'warehouse',key:1},{n:'A PRESSE'},{n:'RRL',id:'rrl',key:1}],
@@ -4853,6 +4853,639 @@ DETAILS['yoke'] = `
       <a href="https://www.ssense.com/en-us/men/designers/yoke/clothing" target="_blank">SSENSE — 브랜드 소개</a> ·
       <a href="https://www.thecoolhour.com/mens/shop-yoke/" target="_blank">The Coolhour — 브랜드 개요</a> ·
       <a href="https://www.instagram.com/yoke_tokyo/" target="_blank">공식 인스타그램</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['drakes'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Vintage × Formal</span>
+    <h2>드레익스 <span class="en">Drake's · London</span></h2>
+    <p class="oneline">"<b>넥타이 공장이 라이프스타일 브랜드가 된</b> 런던 사례 — 공장·디자인스튜디오·쇼룸·매장을 한 건물에 모으고, 정장이 사라지는 시대에 <b>격식을 캐주얼 쪽으로 옮겨</b> 살아남았다"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>창업</th><td>1977년, 런던 — <b>아쿠아스큐텀 출신 3인</b>(마이클 드레익, 제레미 헐, 이자벨 딕슨)이 창업</td></tr>
+      <tr><th>시작 품목</th><td><b>남성 스카프</b> → 이후 핸드메이드 넥타이·포켓스퀘어로 정착</td></tr>
+      <tr><th>현 경영</th><td>2010년 창업자 은퇴 후 <b>마이클 힐</b>(수석 디자이너·후계자) + <b>마크 초</b>(홍콩 The Armoury 공동창업자)가 인수</td></tr>
+      <tr><th>포지셔닝</th><td>영국 클래식의 캐주얼 전환. <b>'현대적 해버대셔리'</b></td></tr>
+      <tr><th>주력</th><td>넥타이·스카프 → 현재는 셔츠·니트·재킷·아우터까지 풀 웨어드로브</td></tr>
+      <tr><th>가격대</th><td>타이 £120~180, 셔츠 £150~250, 재킷 £600~1,200</td></tr>
+      <tr><th>거점</th><td><b>3 Haberdasher Street</b>(2013~) — 공장·디자인스튜디오·쇼룸·창고·본사·팩토리샵을 <b>한 건물에</b> 통합. 매장은 새빌로와 본드 스트리트 사이 클리퍼드 스트리트(2011~)</td></tr>
+      <tr><th>채널</th><td>런던 직영 + 뉴욕 소호·긴자 등 해외 매장 + 자사몰. 한국은 편집샵·온라인</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>주소가 곧 정체성</b> — 2013년 타이 공장을 <b>Haberdasher Street</b>(직역: 잡화상 거리)로 옮김. 브랜드 성격과 지명이 일치하는 우연을 자산으로 씀</li>
+      <li><b>공장·디자인·쇼룸·매장·본사를 한 건물에 통합</b> — 제조와 브랜딩이 물리적으로 붙어 있는 구조. 선스펠(롱이튼)·골드윈(도야마)과 같은 '제조 거점 서사'인데, <b>도심 한복판에 있다는 점</b>이 다름</li>
+      <li><b>정장 시장이 축소되는 흐름에 정면 대응</b> — 넥타이 브랜드였는데 셔츠·니트·아우터로 확장하며 <b>격식을 캐주얼 쪽으로 이동</b>. 이 보드에서 <b>카테고리 위기를 확장으로 돌파한</b> 대표 사례</li>
+      <li>인수자 중 한 명이 <b>홍콩 편집샵(The Armoury) 창업자</b> — 유통 감각을 가진 사람이 제조 브랜드를 인수한 구조</li>
+      <li><b>팩토리샵을 매장으로 운영</b> — 생산 현장이 판매 공간을 겸함. 방문 자체가 브랜드 경험</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">1977</span>아쿠아스큐텀 출신 3인이 런던에서 창업 — <b>남성 스카프</b>로 시작</div>
+      <div class="ev"><span class="y">1980s~2000s</span>핸드메이드 넥타이·포켓스퀘어로 명성 확립 — 다른 브랜드의 PL 생산도 병행</div>
+      <div class="ev"><span class="y">2010</span>창업자 은퇴, <b>마이클 힐 + 마크 초</b>가 인수 — 브랜드 방향 전환의 분기점</div>
+      <div class="ev"><span class="y">2011</span>클리퍼드 스트리트 매장 오픈(새빌로 인근) — 제조업체에서 리테일 브랜드로</div>
+      <div class="ev"><span class="y">2013</span><b>Haberdasher Street로 이전</b> — 공장·스튜디오·쇼룸·매장을 한 건물에 통합</div>
+      <div class="ev"><span class="y">2010s~20s</span>셔츠·니트·아우터로 풀 웨어드로브 확장. 뉴욕 소호·긴자 등 해외 진출</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: <b>단일 품목(타이) → 풀 웨어드로브</b>. 주력 카테고리가 시장에서 사라지는 상황에서 <b>같은 고객의 다른 옷</b>으로 넓혀 생존함. 포터리가 라인을 확장하는 이유와 구조적으로 같은 동기.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>넥타이 · 스카프 · 포켓스퀘어 — 원점이자 여전한 잡화 축 ★</h4>
+    <p>핸드메이드 타이가 브랜드의 기원. <b>잡화에서 시작해 의류로 확장한 역방향 브랜드</b>로, 이 보드에서 <b>유일한 순서</b>. 그래서 잡화가 부가가 아니라 <b>본체</b>임 — 소재 중심 브랜드들의 잡화 공백과 정반대 구조.</p>
+    <h4>셔츠</h4>
+    <p>옥스퍼드·리넨·플란넬. 격식과 캐주얼의 경계에 놓인 핵심 확장 카테고리.</p>
+    <h4>니트 · 재킷 · 아우터</h4>
+    <p>언스트럭처드 재킷, 게임 재킷 등 <b>구조를 뺀 테일러링</b>. 정장의 격식을 유지하되 편안함을 넣는 방향 — <b>포터리 포멀 라인과 같은 문제의식</b>.</p>
+    <h4>라이프스타일</h4>
+    <p>본격 리빙은 없으나 <b>팩토리샵·공장 견학이 경험 자산</b>. 저널·아카이브 콘텐츠가 두터움.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">핸드메이드 넥타이</b> <span class="price">£120~180</span>
+      <p>인기 포인트: 손으로 만든 매듭감, 실크·울·리넨의 계절별 소재 폭.</p>
+      <p class="voice">소비자 반응 — <b>"타이를 안 매는 시대에도 드레익스 타이는 산다"</b>는 상징적 소비. 다만 이 카테고리 자체가 축소 중이라, 브랜드도 그 사실을 전제로 움직임. <b>"요즘은 타이보다 셔츠·니트를 산다"</b>는 고객 발화가 브랜드 전환의 성공을 보여줌.</p>
+    </div>
+    <div class="sig"><b class="t">언스트럭처드 재킷</b> <span class="price">£600~1,200</span>
+      <p>구조를 뺀 테일러링. <b>격식을 유지하면서 편안함을 넣는</b> 방향의 대표 상품.</p>
+    </div>
+    <div class="sig"><b class="t">옥스퍼드 셔츠</b> <span class="price">£150~250</span>
+      <p>확장의 성공을 상징하는 카테고리. 타이 고객이 자연스럽게 넘어온 경로.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●○</span><span class="sum">영국·이탈리아 원단 선별 + 자사 생산</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>실크·울·리넨을 계절별로 운용. <b>타이 제조 노하우</b>가 원단 취급의 기반</li>
+          <li><b>자사 공장 보유</b> — 마가렛 호웰(공장을 빌림)과 달리 직접 만듦. 선스펠·웨어하우스와 같은 계열</li>
+          <li>⚠️ 원단 개발 수준은 오라리·스톤 아일랜드에 못 미침. <b>선별과 봉제</b>가 강점</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●○○</span><span class="sum">격식을 캐주얼 쪽으로 옮기는 조정 능력</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>구조를 빼는 방향의 테일러링</b> — 정장의 형태는 유지하되 캔버스·패딩을 줄여 편안하게. 나나미카가 기능을 감춘 것과 유사한 '빼기의 설계'</li>
+          <li>영국 클래식의 컬러·패턴 아카이브를 현대 비례로 재조정</li>
+          <li>⚠️ 독자적 실루엣 언어는 약함 — 클래식의 재해석 범위 안에 머묾</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●●●</span><span class="sum">★ 잡화에서 시작해 의류로 — 이 보드 유일한 역방향</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>타이(잡화) → 셔츠·니트·재킷(의류)</b>의 확장 순서. 이 보드의 다른 모든 브랜드가 의류→잡화인 것과 정반대</li>
+          <li>그 결과 <b>잡화가 부가가 아니라 정체성</b> — 소재 중심 브랜드들이 겪는 잡화 공백이 구조적으로 발생하지 않음</li>
+          <li><b>주력 카테고리 축소에 확장으로 대응</b> — 타이 시장이 줄어드는데 고객을 잃지 않음. 카테고리 위기 대응의 교본</li>
+          <li>가격대가 £120~1,200으로 넓어 진입과 객단가 상단이 모두 확보됨</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●●○</span><span class="sum">공장이 콘텐츠, 저널이 채널</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>Haberdasher Street 건물 자체가 브랜드 서사</b> — 공장·스튜디오·매장이 한 곳에 있다는 사실이 콘텐츠</li>
+          <li>저널·아카이브 콘텐츠가 두터움. 스타일링 제안이 곧 카테고리 확장 설득</li>
+          <li>인수자가 <b>편집샵 운영자 출신</b>이라 고객 관점의 큐레이션 감각이 반영됨</li>
+          <li>⚠️ 규모는 크지 않음. 마니아 시장 중심</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●○</span><span class="sum">★ 공장과 매장을 한 건물에 — 생산이 곧 진열</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>공장·디자인스튜디오·쇼룸·창고·본사·팩토리샵이 한 건물</b> — 고객이 만드는 현장 옆에서 물건을 삼. 웨어하우스의 공방 문법을 <b>실제로 구현</b>한 형태</li>
+          <li>매장 위치가 <b>새빌로와 본드 스트리트 사이</b> — 격식의 성지 옆에 캐주얼한 해석을 놓아 <b>대비로 포지션을 설명</b>함</li>
+          <li>VMD는 영국 해버대셔리 문법: 목재 캐비닛, 서랍식 타이 진열, 패턴과 컬러의 밀도 있는 배치. <b>잡화를 서랍에 넣어 꺼내 보게 하는</b> 접객이 핵심</li>
+          <li>뉴욕 소호·긴자 등 해외 매장도 같은 문법 유지</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>★ 잡화가 본체인 브랜드는 잡화 공백이 없다 — 순서의 문제</b>
+      <p>이 보드에서 <b>유일하게 잡화(타이)에서 시작해 의류로 확장한</b> 브랜드. 그래서 소재 중심 브랜드 다섯 곳(오라리·ATON·선스펠·웨어하우스·코모리)이 겪는 잡화 공백이 구조적으로 없음. 포터리가 잡화를 붙일 때 <b>'의류의 부가'로 두면 결국 COS처럼 되고, '독립된 정체성'으로 두면 드레익스처럼 됨</b>. 조직·기획 단위를 어떻게 둘 것인가의 문제이기도 함.</p></div>
+    <div class="ref"><div class="tags"><span class="tag fml">포멀</span></div>
+      <b>★ 격식을 '빼기'로 조정하기 — 포터리 포멀 라인과 같은 문제의식</b>
+      <p>언스트럭처드 재킷처럼 <b>정장의 형태는 유지하되 구조를 덜어내는</b> 방향. 골드윈(기능을 뺌)·나나미카(기능을 감춤)와 같은 '빼기의 설계'가 포멀 영역에서 나타난 형태. 포터리 포멀 라인이 띠어리(신축성)와 다른 길을 가려면 <b>구조를 덜어내는 쪽</b>이 유력한 대안.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>주력 카테고리가 줄어들 때 확장으로 대응하기</b>
+      <p>타이 시장이 축소되는데 <b>같은 고객의 다른 옷</b>으로 넓혀 고객을 지킴. 포터리의 다중 라인 확장도 같은 논리로 설명 가능 — <b>새 고객을 찾는 게 아니라 기존 고객의 다른 상황을 여는 것</b>. 나나미카의 '기존 고객의 새 상황' 제안과 같은 결론.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>VMD — 잡화를 서랍에 넣어 꺼내 보게 하기</b>
+      <p>해버대셔리 문법의 핵심. 타이·스카프·소품을 <b>서랍식 캐비닛에 넣고 직원이 꺼내 펼쳐 보이는</b> 접객은 체류시간과 객단가를 동시에 올림. 포터리가 잡화를 강화한다면 <b>걸어두거나 쌓아두는 것 외의 세 번째 진열법</b>으로 검토할 가치가 있음.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>제조 거점 서사 — 네 번째 확인, 그리고 도심형 변주</b>
+      <p>선스펠(롱이튼)·웨어하우스(와카야마)·골드윈(도야마)에 이어 네 번째. 다만 드레익스는 <b>도심 한복판에 공장과 매장을 함께</b> 둠. 포터리가 성수에 <b>소규모 작업 공간(샘플실·수선실)을 매장과 함께</b> 두면 같은 효과를 낼 수 있음 — 지방 공장 견학보다 실행이 쉬움.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① <b>기원 카테고리가 사라지면 정체성 재정의가 필요함</b> — 드레익스는 아직 '타이 브랜드'로 기억되는데 매출은 의류에서 나옴. 확장 후 <b>브랜드를 뭐라고 부를 것인가</b>가 남는 문제.<br>
+    ② <b>규모가 작아 확장 속도가 느림</b> — 자사 공장 유지의 대가.<br>
+    ③ <b>클래식 재해석은 독자성이 약함</b> — 영국 클래식이라는 공유 자산 위에 있어 차별점이 흐려질 수 있음.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://www.drakes.com/" target="_blank">공식몰</a>
+      <a href="https://www.drakes.com/blogs/journal" target="_blank">저널 (콘텐츠 운영 참고)</a>
+      <a href="https://www.instagram.com/drakes/" target="_blank">인스타그램 @drakes</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>drakes london store interior</b> · <b>haberdashery drawer display</b> · <b>tie cabinet retail</b> · <b>factory shop menswear</b> (<b>서랍식 잡화 진열</b>과 <b>공장+매장 통합 공간</b>이 스터디 포인트)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://en.wikipedia.org/wiki/Drake's_(haberdashers)" target="_blank">Wikipedia — Drake's (창업·인수·이전 연혁)</a> ·
+      <a href="https://wwd.com/menswear-news/mens-retail-business/drakes-michael-hill-london-furnishings-ties-soho-ginza-10516296/" target="_blank">WWD — 미국 1호점 및 확장 전략</a> ·
+      <a href="https://www.thearmoury.com/journal/10-questions-with-michael-hill" target="_blank">The Armoury — 마이클 힐 인터뷰</a> ·
+      <a href="https://www.merchantandmakers.com/drakes-london/" target="_blank">Merchant &amp; Makers — 제조 현장 취재</a> ·
+      <a href="https://thewatchlounge.com/drakes-london-sartorial-beacon/" target="_blank">브랜드 해설</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['brunello-cucinelli'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Natural × Formal</span>
+    <h2>브루넬로 쿠치넬리 <span class="en">Brunello Cucinelli · Solomeo, Italy</span></h2>
+    <p class="oneline">"<b>중세 마을 하나를 사서 본사로 만든</b> 브랜드 — '인간주의적 자본주의'라는 경영 철학 자체를 상품 가치로 전환했고, 2025년 매출 14억 유로에 <b>직영 비중 67%</b>를 달성했다"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>창업</th><td>1978년, 이탈리아 움브리아 — <b>캐시미어에 색을 입힌 것</b>이 창업 아이디어</td></tr>
+      <tr><th>창업자</th><td>브루넬로 쿠치넬리 — 농민 가정 출신. <b>'인간주의적 자본주의(humanistic capitalism)'</b> 제창</td></tr>
+      <tr><th>본사</th><td><b>솔로메오</b> — 중세 움브리아 마을을 매입·복원해 본사·공방·극장·도서관으로 조성</td></tr>
+      <tr><th>포지셔닝</th><td>이탈리아 캐시미어 럭셔리. 로로피아나와 같은 좌표에서 <b>철학으로 차별화</b></td></tr>
+      <tr><th>주력</th><td>캐시미어 니트, 테일러링, 아우터, 슈즈</td></tr>
+      <tr><th>가격대</th><td>니트 €1,000~3,000, 재킷 €3,000~6,000 — 로로피아나와 동급</td></tr>
+      <tr><th>실적</th><td><b>2025년 매출 14.08억 유로(+10.1%), 순이익 1.42억 유로</b>. 2028년 18억 유로 목표</td></tr>
+      <tr><th>유통 구조</th><td><b>직영 67.3% : 도매 32.7%</b> (2012년 직영 27.5%에서 대전환) — 코로나 시기에 오히려 매장을 늘림</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>중세 마을을 사서 본사로 만듦</b> — 솔로메오를 매입해 공방·극장·도서관·정원을 조성. 제조 거점 서사(선스펠·골드윈·드레익스)의 <b>가장 극단적 형태</b>이며, 여기서는 <b>마을 자체가 브랜드</b></li>
+      <li><b>'인간주의적 자본주의'</b> — 이익을 어떻게 내는가, 가치사슬을 어떻게 존중하는가를 경영 원칙으로 선언. 직원은 <b>90분 점심과 오후 5시 30분 정시 퇴근</b>이 보장됨. 이 사실 자체가 브랜드 콘텐츠</li>
+      <li><b>창업 아이디어가 '캐시미어에 색을 입히는 것'</b> — 당시 캐시미어는 베이지·그레이뿐이었고, 색을 넣어 <b>격식 있는 소재를 살아있게</b> 만든 것이 사업의 출발</li>
+      <li><b>코로나 시기에 온라인이 아니라 매장을 늘림</b> — 업계 흐름과 정반대 선택. 그 결과 직영 비중이 2012년 27.5%에서 <b>2025년 67.3%</b>로 역전</li>
+      <li>⚠️ 2020년대 들어 <b>공매도 리포트 등 서사의 검증 요구</b>가 제기된 바 있음 — 철학을 전면에 내세운 브랜드가 받는 구조적 압력</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">1978</span>움브리아에서 창업 — <b>염색 캐시미어</b>라는 단일 아이디어로 시작</div>
+      <div class="ev"><span class="y">1980s~90s</span>솔로메오 마을 매입·복원 시작 — 본사이자 공방이자 문화 공간으로 조성</div>
+      <div class="ev"><span class="y">2012</span>밀라노 증시 상장. 당시 직영 비중 27.5%</div>
+      <div class="ev"><span class="y">2020~21</span>코로나 국면에 <b>매장 확대</b>와 기부 프로젝트('Brunello Cucinelli for Humanity') 동시 진행</div>
+      <div class="ev"><span class="y">2025</span>매출 <b>14.08억 유로(+10.1%)</b>, 직영 비중 <b>67.3%</b> 달성</div>
+      <div class="ev"><span class="y">2028</span>매출 18억 유로 목표</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: <b>단일 소재 아이디어 → 마을 조성 → 철학의 제도화 → 직영 전환</b>. 확장의 축이 상품이 아니라 <b>브랜드가 존재하는 방식</b>이며, 그 방식 자체가 프리미엄의 근거가 됨.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>캐시미어 니트 — 브랜드의 원점</h4>
+    <p>염색 캐시미어가 창업 아이디어. 로로피아나가 <b>원료의 희소성</b>으로 설득한다면 쿠치넬리는 <b>색과 표정</b>으로 설득 — 같은 소재, 다른 논리.</p>
+    <h4>테일러링 · 아우터</h4>
+    <p>이탈리아 소프트 테일러링. 격식과 편안함의 균형에서 랄프 로렌 퍼플라벨과 같은 구간을 점유.</p>
+    <h4>슈즈 · 잡화</h4>
+    <p>스니커·로퍼·가방. <b>로로피아나의 서머워크와 같은 진입 상품 구조</b>가 여기서도 작동 — 잡화가 브랜드 관문 역할.</p>
+    <h4>라이프스타일 — 마을 그 자체 ★</h4>
+    <p>솔로메오의 극장·도서관·정원·와이너리. <b>상품이 아니라 장소를 만든</b> 라이프스타일 확장이며, 제임스 펄스(호스피탈리티)보다 더 근본적. 고객이 아니라 <b>직원과 지역을 위해 만든 것</b>이 결과적으로 브랜드 자산이 된 구조.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">캐시미어 니트</b> <span class="price">€1,000~3,000</span>
+      <p>인기 포인트: 색의 깊이와 미묘한 톤, 로로피아나와 다른 '온기 있는' 표정.</p>
+      <p class="voice">소비자 반응 — <b>"철학까지 같이 사는 느낌"</b>이라는 서사 소비가 뚜렷. 같은 가격대 로로피아나가 '희소성'을 판다면 여기는 <b>'좋은 회사'</b>를 팖. 반면 <b>"철학이 가격의 근거가 될 수 있나"</b>라는 회의와, 최근 <b>서사의 진위를 검증하려는 압력</b>이 함께 존재.</p>
+    </div>
+    <div class="sig"><b class="t">소프트 테일러링 재킷</b> <span class="price">€3,000~6,000</span>
+      <p>이탈리아 재단. 랄프 로렌 퍼플라벨과 정면 경쟁하는 구간.</p>
+    </div>
+    <div class="sig"><b class="t">스니커 · 로퍼</b> <span class="price">€600~1,200</span>
+      <p>브랜드 진입 상품. <b>로로피아나 서머워크와 같은 위치</b> — 잡화가 관문이라는 패턴이 또 확인됨.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●○</span><span class="sum">희소성이 아니라 '색'으로 차별화</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>캐시미어에 색을 입힌 것이 창업 아이디어</b> — 소재를 새로 찾은 게 아니라 <b>기존 소재의 표현을 바꿈</b>. 스톤 아일랜드(염색)와 같은 발상이 럭셔리 영역에서 나타난 형태</li>
+          <li>로로피아나(원료 희소성)·오라리(원단 개발)와 <b>같은 소재로 다른 논리</b>를 씀 — 소재 차별화의 제3의 경로</li>
+          <li>⚠️ 원료 독점성은 없음 — 로로피아나 대비 이 축은 명확히 얕음</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●○○</span><span class="sum">이탈리아 클래식의 온기 있는 버전</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>소프트 테일러링 + 부드러운 컬러 팔레트. <b>럭셔리 미니멀에 온기를 넣은</b> 포지션</li>
+          <li>로고 최소, 형태 보수적 — 조용한 럭셔리 문법</li>
+          <li>⚠️ 디자인 자체의 혁신은 없음. 차별점이 디자인이 아니라 <b>철학과 색</b>에 있음</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●●○</span><span class="sum">잡화가 관문, 마을이 라이프스타일</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>니트(주력) → 테일러링(객단가) → 스니커·잡화(진입)의 3단 구조</li>
+          <li><b>라이프스타일을 상품이 아니라 장소로</b> 구현 — 솔로메오. 제임스 펄스(가구·호텔)보다 근본적이며 모방이 사실상 불가능</li>
+          <li>⚠️ 카테고리 폭은 럭셔리 표준 수준</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●●●</span><span class="sum">★ 경영 방식 자체를 상품 가치로</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>'인간주의적 자본주의'가 최대 마케팅 자산</b> — 90분 점심, 5시 30분 퇴근, 마을 복원. <b>직원 대우가 브랜드 콘텐츠</b>가 된 유일한 사례</li>
+          <li>파타고니아(환경)와 같은 가치관 마케팅이되, <b>대상이 지구가 아니라 사람</b>. 럭셔리 가격을 도덕적으로 정당화하는 드문 구조</li>
+          <li>창업자 개인의 언어(철학·인문학 인용)가 브랜드 톤을 만듦</li>
+          <li>⚠️ <b>서사가 강할수록 검증 압력도 커짐</b> — 공매도 리포트 등으로 실체를 의심받은 이력. 파타고니아의 '가치관 마케팅은 되돌릴 수 없다'는 경고와 같은 구조</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●●</span><span class="sum">★ 도매에서 직영으로 — 13년간 27%→67% 역전</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>직영 비중 27.5%(2012) → 67.3%(2025)</b> — 이 보드에서 유통 구조 전환을 수치로 보여주는 유일한 사례. <b>도매 의존의 문제(고객 데이터·브랜드 문맥 상실)를 실제로 해결한</b> 브랜드</li>
+          <li><b>코로나 시기에 매장을 늘림</b> — 온라인으로 몰려간 업계와 반대. 결과적으로 이 판단이 직영 전환을 가속</li>
+          <li>VMD는 <b>이탈리아 저택 문법</b>: 석재·목재·앤티크 가구·자연광. <b>매장을 '집'으로 만드는</b> 패턴의 다섯 번째 사례</li>
+          <li>솔로메오가 <b>순례지 역할</b> — 방문 자체가 브랜드 경험이 되는 구조</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>★ 도매 → 직영 전환은 실제로 가능하다 (27%→67%, 13년)</b>
+      <p>이 보드에서 <b>도매 의존의 폐해</b>(고객 데이터 없음, 브랜드 문맥 상실)를 웨어하우스·오라리·ATON·코모리에서 반복 확인했는데, 쿠치넬리는 그것을 <b>실제로 뒤집은 유일한 사례</b>입니다. 13년이 걸렸다는 것도 중요한 정보 — 포터리가 자사몰 70% 구조를 이미 갖고 있다는 것이 <b>얼마나 앞서 있는 것인지</b>를 보여줌.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>소재 차별화의 제3의 경로 — '색'</b>
+      <p>로로피아나는 <b>원료 희소성</b>, 오라리는 <b>원단 개발</b>, 쿠치넬리는 <b>색</b>으로 같은 캐시미어를 차별화함. 스톤 아일랜드(가먼트 다잉)와 함께, <b>색은 개발비가 가장 적게 드는 차별화 축</b>. 포터리가 원단 개발 여력이 제한적일 때 후염·컬러 전개가 현실적 대안이라는 근거가 또 하나 추가됨.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>매장을 '집'으로 — 다섯 번째 확인</b>
+      <p>랄프 로렌 퍼플라벨·ALD·더 로우·마가렛 호웰에 이어 쿠치넬리(이탈리아 저택). <b>고가 브랜드는 예외 없이 매장을 상점처럼 보이지 않게 만듭니다.</b> 성수 플래그십 방향에 대한 근거가 다섯 개로 늘어남.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>⚠️ 철학을 상품 가치로 쓸 때의 조건</b>
+      <p>쿠치넬리의 철학이 작동하는 이유는 <b>실제로 그렇게 운영하기 때문</b>(90분 점심, 정시 퇴근, 마을 복원). 파타고니아의 경고("가치관 마케팅은 되돌릴 수 없다")와 같은 구조이며, 여기서는 <b>검증 압력까지 실제로 발생</b>했음. 포터리가 브랜드 철학을 전면에 내세우려면 <b>내부 운영이 먼저 그것을 증명할 수 있어야</b> 함 — 순서를 뒤집으면 리스크만 남음.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>라이프스타일을 '상품'이 아니라 '장소'로</b>
+      <p>솔로메오는 고객을 위해 만든 게 아니라 직원과 지역을 위해 만든 것이 <b>결과적으로</b> 브랜드 자산이 됨. 포터리가 성수라는 장소를 가진 것을 <b>매장 이상의 무엇</b>으로 만들 수 있는지 — 규모는 다르지만 발상의 방향은 참고 가능.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① <b>강한 서사는 검증 압력을 부름</b> — 공매도 리포트 등으로 실체를 의심받은 이력. 철학이 강할수록 작은 불일치도 크게 문제됨.<br>
+    ② <b>창업자 개인의 언어에 의존</b> — 나이젤 카본·마가렛 호웰과 같은 승계 리스크. 질 샌더(원칙 문서화)와 대비해서 볼 것.<br>
+    ③ <b>직영 전환은 13년이 걸렸음</b> — 자본과 시간이 모두 필요한 구조 변경. 단기 전략이 아님.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://www.brunellocucinelli.com/en/home.html" target="_blank">공식 사이트 (솔로메오·철학)</a>
+      <a href="https://investor.brunellocucinelli.com/" target="_blank">IR 자료 (유통 구조·실적 수치)</a>
+      <a href="https://www.instagram.com/brunellocucinelli/" target="_blank">인스타그램</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>brunello cucinelli store interior</b> · <b>solomeo village</b> · <b>italian villa retail design</b> · <b>cashmere color range display</b> (<b>이탈리아 저택형 매장</b>과 <b>솔로메오 마을</b>이 스터디 포인트. 컬러 전개 진열도 참고)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://investor.brunellocucinelli.com/yep-content/media/Presentation_FY_2024_Results.pdf" target="_blank">공식 IR — 실적·유통 구조</a> ·
+      <a href="https://www.cnbc.com/2026/05/28/brunello-cucinelli-ceo-bc-luxury-stock-greedy-king-cashmere.html" target="_blank">CNBC — CEO 인터뷰 (2026)</a> ·
+      <a href="https://theownersedge.substack.com/p/humanistic-capitalism-brunello-cucinelli" target="_blank">인간주의적 자본주의 분석</a> ·
+      <a href="https://www.modaes.com/global/back-stage/brunello-cucinelli-humanist-luxury-that-also-has-a-price-tag" target="_blank">Modaes — 철학과 가격표</a> ·
+      <a href="https://www.objectsofaffectioncollection.com/studies/anatomy-of-a-collapse-the-brunello-cucinelli-short-seller-report-and-the-post-luxury-future" target="_blank">서사 검증 압력에 대한 비판적 분석</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['polo-ralph-lauren'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Natural × Casual</span>
+    <h2>폴로 랄프 로렌 <span class="en">Polo Ralph Lauren · New York</span></h2>
+    <p class="oneline">"넥타이 하나로 시작해 <b>실재하지 않는 미국 상류층의 이미지를 만들어 판</b> 브랜드 — 그룹 연매출 81억 달러이며, 이 보드에서 <b>라인 아키텍처 전체를 볼 수 있는 유일한 기준점</b>"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>창업</th><td>1967년 — 28세의 랄프 로렌이 <b>5만 달러를 대출받아 넥타이 라인</b>으로 시작. 'Polo'를 붙인 이유는 <b>영국식으로 들려서</b></td></tr>
+      <tr><th>결정적 상품</th><td><b>1972년 폴로 셔츠</b> — 미국 프레피 스타일의 초석이 됨</td></tr>
+      <tr><th>포지셔닝</th><td>아메리칸 프레피의 정의자. <b>없던 계급 이미지를 만들어 파는</b> 브랜드</td></tr>
+      <tr><th>주력</th><td>폴로 셔츠, 옥스퍼드 셔츠, 니트, 치노 — 남녀·키즈 전 라인</td></tr>
+      <tr><th>가격대</th><td>폴로 셔츠 $100~150, 셔츠 $120~180, 니트 $150~400</td></tr>
+      <tr><th>그룹 실적</th><td><b>FY2025~26 매출 81.1억 달러(+15%)</b> — 사상 첫 80억 달러 돌파</td></tr>
+      <tr><th>라인 구조</th><td><b>Purple Label</b>(럭셔리) · <b>RRL</b>(고증 워크웨어) · <b>Polo</b>(주력) · <b>Polo Sport</b>(스포츠) · Lauren 등</td></tr>
+      <tr><th>채널</th><td>전 세계 직영·백화점·아울렛. 한국은 백화점·가두점·아울렛 전 채널</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>창업이 넥타이였다는 것</b> — 드레익스와 같은 출발점. 잡화에서 시작해 의류로 확장한 두 번째 사례이며, 이후 <b>세계관 전체</b>로 확장함</li>
+      <li><b>'Polo'라는 이름을 고른 이유가 "영국식으로 들려서"</b> — 실체가 아니라 <b>연상되는 이미지</b>를 먼저 설계한 것. 브랜드 네이밍이 곧 포지셔닝인 사례</li>
+      <li><b>1972년 폴로 셔츠</b>가 미국 프레피의 초석 — 단일 상품이 문화적 카테고리를 만든 드문 경우</li>
+      <li><b>라인 아키텍처가 이 보드의 기준점</b> — Purple Label(최상위)·RRL(고증)·Polo(주력)·Polo Sport(스포츠)가 <b>같은 세계관 안에서 가격·유통·할인 정책을 완전히 분리</b>해 운영됨. 포터리 4개 라인 확장의 <b>완성형 참조 모델</b></li>
+      <li>⚠️ <b>아울렛·상시 할인 노출이 큼</b> — 규모의 대가. 정가 신뢰가 이 보드에서 가장 약한 축에 속하며, RRL·Purple Label을 별도 정책으로 분리한 이유가 여기 있음</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">1967</span>넥타이 라인으로 창업 — 5만 달러 대출, 'Polo' 네이밍</div>
+      <div class="ev"><span class="y">1972</span><b>폴로 셔츠 출시</b> — 미국 프레피 스타일의 초석</div>
+      <div class="ev"><span class="y">1980s~90s</span>라이프스타일 전방위 확장(홈·향수·아동). <b>1992년 Polo Sport</b> 론칭</div>
+      <div class="ev"><span class="y">1993~94</span><b>RRL(고증)과 Purple Label(럭셔리)</b> 연속 론칭 — 상하 양방향 라벨 체계 완성</div>
+      <div class="ev"><span class="y">2000s~10s</span>글로벌 확장. 아울렛 채널 확대와 그에 따른 브랜드 희석 논쟁</div>
+      <div class="ev"><span class="y">2025~26</span>그룹 매출 <b>81.1억 달러(+15%)</b> — 사상 첫 80억 달러 돌파</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: <b>잡화(타이) → 단일 상품(폴로 셔츠) → 라이프스타일 → 라인 분화</b>. 이 보드에서 <b>확장의 전 단계를 다 밟은 유일한 브랜드</b>이며, 그래서 각 단계의 대가도 전부 드러남.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>폴로 셔츠 — 단일 상품이 브랜드가 된 사례 ★</h4>
+    <p>50년간 같은 상품을 팖. 컬러·핏 배리에이션으로 SKU를 무한 확장하는 구조 — <b>스톤 아일랜드(염색)와 같은 원리를 훨씬 큰 규모로</b>. 로고(폴로 플레이어)가 붙는 순간 상품이 되는 구조라 확장 비용이 극히 낮음.</p>
+    <h4>옥스퍼드 셔츠 · 니트 · 치노</h4>
+    <p>프레피 워드로브의 구성 요소. <b>세계관이 상품 구성을 결정</b>하는 전형 — 무엇을 만들지가 '그 사람이 무엇을 입는가'에서 도출됨.</p>
+    <h4>잡화 · 홈 · 향수</h4>
+    <p>가방·모자·향수·침구까지. <b>라이프스타일 확장을 가장 먼저, 가장 넓게</b> 한 브랜드이며 Ralph Lauren Home·랄프스 커피가 그룹 차원의 세계관을 완성.</p>
+    <h4>라인 아키텍처 ★</h4>
+    <p><b>Purple Label</b>(이탈리아 생산 럭셔리) · <b>RRL</b>(고증 워크웨어) · <b>Polo</b>(주력) · <b>Polo Sport</b>(스포츠). 같은 세계관, 다른 가격·유통·할인 정책. <b>이 보드에서 유일하게 4개 라인이 모두 분석된 브랜드 그룹</b>.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">폴로 셔츠</b> <span class="price">$100~150</span>
+      <p>인기 포인트: 로고, 컬러 폭, 세대를 넘는 익숙함.</p>
+      <p class="voice">소비자 반응 — <b>"실패하지 않는 선택"</b>이라는 기본값 인식. 동시에 <b>"아울렛에서 반값에 산다"</b>는 구매 팁 문화가 정착돼 있어 정가 구매층이 얇음. <b>규모와 정가 신뢰의 트레이드오프</b>를 가장 극명하게 보여주는 사례.</p>
+    </div>
+    <div class="sig"><b class="t">옥스퍼드 셔츠</b> <span class="price">$120~180</span>
+      <p>프레피 워드로브의 기본. 오래 입는 상품으로 신뢰가 높음.</p>
+    </div>
+    <div class="sig"><b class="t">로고 니트 · 케이블 스웨터</b> <span class="price">$150~400</span>
+      <p>브랜드 세계관이 가장 잘 드러나는 카테고리. 빈티지 시장에서도 수요가 유지됨.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●○○○</span><span class="sum">규모의 소재 — 서사는 상위 라인이 담당</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>주력 라인의 소재는 <b>가격대 대비 무난한 수준</b>. 소재 서사는 Purple Label(이탈리아 생산)·RRL(일본 셀비지)이 담당하는 <b>역할 분담 구조</b></li>
+          <li>대량 생산 규모에서 품질 편차를 관리하는 것이 실질 역량</li>
+          <li>⚠️ 이 보드의 소재파 브랜드들과 비교하면 명확히 얕음 — <b>의도된 포지션</b></li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●●○</span><span class="sum">★ 없던 세계관을 만들어낸 능력</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>실재하지 않는 미국 상류층 이미지를 창조</b> — 브랜드가 문화를 반영한 게 아니라 <b>문화를 만들어냄</b>. 이 보드에서 가장 독보적인 성취</li>
+          <li>50년간 같은 상품(폴로 셔츠)을 유지하며 <b>컬러·핏만 변주</b> — 디자인 개발 비용이 극히 낮은 구조</li>
+          <li>로고(폴로 플레이어)가 강력한 식별자. 스톤 아일랜드(컴퍼스)와 같은 유형</li>
+          <li>⚠️ 로고 의존도가 높아 <b>"로고 떼면 평범"</b>이라는 비판이 구조적</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●●●</span><span class="sum">★ 라인 아키텍처의 완성형 — 이 보드의 기준점</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>Purple Label / RRL / Polo / Polo Sport</b>가 같은 세계관 안에서 <b>가격·유통·할인 정책을 완전히 분리</b>해 공존</li>
+          <li>고객이 소득이 올라도 브랜드를 떠나지 않고 <b>위 라인으로 이동</b>하는 구조 — 고객 생애가치가 극대화됨</li>
+          <li>잡화·홈·향수까지 <b>라이프스타일 전 영역</b>을 그룹이 담당해 서브 라인이 무리하게 확장할 필요가 없음</li>
+          <li>포터리 4개 라인(스탠다드·캐주얼·포멀·테크) 확장의 <b>참조 모델로 가장 직접적</b></li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●●○</span><span class="sum">세계관을 이미지로 반복 각인</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>광고가 상품이 아니라 '장면'을 팖</b> — 저택, 승마, 가족, 여름 별장. 50년간 같은 장면을 반복해 세계관을 각인</li>
+          <li>로고의 인지도가 마케팅 비용을 대체</li>
+          <li>⚠️ <b>아울렛·상시 할인이 브랜드 서사를 갉아먹음</b> — 이 보드에서 정가 신뢰가 가장 약한 편이며, 그래서 RRL·Purple Label을 정책적으로 분리해야 했음</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●●</span><span class="sum">★ 매장을 '저택'으로 — 이 문법의 원조</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>매장을 상점이 아니라 저택·서재로 만드는 문법의 원조</b> — 다크 우드, 가죽, 러그, 액자, 책. ALD·더 로우·쿠치넬리가 따라간 길의 출발점</li>
+          <li>플래그십(맨션 스토어)은 <b>실제 저택을 개조</b>해 층별로 라인을 배치 — 공간으로 라벨 아키텍처를 표현</li>
+          <li><b>라인별로 층·동선·마감재를 분리</b> — RRL·Purple Label 존이 완전히 다른 브랜드처럼 보이게 설계</li>
+          <li>랄프스 커피 등 <b>식음료를 매장에 결합</b> — ALD·Kith의 카페 전략보다 앞선 사례</li>
+          <li>⚠️ 아울렛 채널의 VMD는 완전히 다름 — 같은 브랜드가 채널별로 다른 경험을 주는 문제</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>★ 라인 아키텍처의 완성형 — 포터리 4개 라인의 직접 참조 모델</b>
+      <p>이 보드에서 <b>한 그룹의 라인 4개(Polo·RRL·Purple Label·Polo Sport)를 모두 분석한 유일한 사례</b>입니다. 핵심은 이름만 나누는 게 아니라 <b>가격·유통·할인 정책·매장 존을 전부 분리</b>했다는 것. 포터리가 스탠다드·캐주얼·포멀·테크를 나눌 때 <b>네 브랜드를 나란히 놓고 각각이 어떻게 분리됐는지</b> 보면 됩니다. 이 보드에서 가장 실용적인 비교 자료.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>★ 매장을 '저택'으로 만드는 문법의 원조 — 여섯 번째이자 최초</b>
+      <p>ALD·더 로우·쿠치넬리·마가렛 호웰·퍼플라벨이 따라간 길의 <b>출발점</b>. 그리고 랄프 로렌은 <b>층별로 라인을 배치</b>해 공간으로 라벨 아키텍처를 표현함. 성수 플래그십(80평)에서 <b>층이나 존으로 라인을 구분</b>하는 설계의 원본 사례.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>단일 상품 하나를 50년 파는 구조</b>
+      <p>폴로 셔츠는 컬러·핏만 바꿔 50년간 팔림. <b>디자인 개발 비용이 거의 0</b>이면서 SKU는 무한. 선스펠(패턴 고정), 스톤 아일랜드(염색 변주)와 같은 결론이며, 포터리도 <b>대표 아이템 하나를 정하고 변주로만 운영</b>하는 축을 가질 필요가 있음.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>⚠️ 규모와 정가 신뢰는 반비례한다 — 노세일 원칙의 근거</b>
+      <p>랄프 로렌은 81억 달러 규모를 얻은 대신 <b>"아울렛에서 반값에 산다"</b>는 구매 문화를 얻었고, 그 때문에 RRL·Purple Label을 <b>정책적으로 분리해야만</b> 했습니다. 포터리의 노세일 원칙이 <b>규모를 키울수록 더 중요해진다</b>는 것을 이보다 명확히 보여주는 사례가 없음.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>세계관이 상품 구성을 결정한다</b>
+      <p>무엇을 만들지가 <b>"그 세계의 사람이 무엇을 입는가"</b>에서 도출됨. 포터리도 카테고리를 늘릴 때 시장 조사가 아니라 <b>'정돈된 일상을 사는 사람의 하루'</b>에서 역산하면 확장에 일관성이 생김. 나이젤 카본의 '잡화가 성립하는 조건' 논의와 같은 결론.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① <b>아울렛은 되돌리기 어려움</b> — 한 번 형성된 "세일 때 산다"는 문화는 브랜드가 통제할 수 없음. 포터리의 노세일은 지금 지켜야 할 자산.<br>
+    ② <b>로고 의존은 제품력 비판을 부름</b> — 스톤 아일랜드와 같은 문제. 포터리의 로고리스 포지션이 이 리스크를 원천 차단.<br>
+    ③ <b>채널마다 다른 경험은 브랜드를 분열시킴</b> — 백화점·가두점·아울렛의 VMD가 전부 다름. 포터리가 8개점으로 확장할 때 <b>채널별 경험 일관성</b>을 어떻게 지킬지가 과제.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://www.ralphlauren.com/" target="_blank">공식몰</a>
+      <a href="https://corporate.ralphlauren.com/" target="_blank">기업 사이트 (실적·라인 구조)</a>
+      <a href="https://www.instagram.com/polo/" target="_blank">인스타그램 @polo</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>ralph lauren mansion store</b> · <b>polo flagship interior</b> · <b>library style menswear retail</b> · <b>ralphs coffee</b> (<b>층별 라인 분리</b>와 <b>저택형 매장</b>이 스터디 포인트. 국내 청담 플래그십에서 실사 가능)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://www.ebsco.com/research-starters/history/lauren-creates-polo-clothing-line" target="_blank">EBSCO — 폴로 라인 창업 배경</a> ·
+      <a href="https://www.heddels.com/2020/02/ralphs-roster-the-many-faces-of-ralph-lauren/" target="_blank">Heddels — 랄프 로렌 라인 전체 정리</a> ·
+      <a href="https://valuesort.ai/blog/ralph_lauren_brands_guide" target="_blank">라벨 아키텍처 가이드</a> ·
+      <a href="https://luxus-plus.com/en/ralph-lauren-surpasses-8-billion-in-revenue-for-fiscal-year-2025-2026/" target="_blank">Luxus Plus — FY2025-26 매출 81.1억 달러</a> ·
+      <a href="https://investor.ralphlauren.com/news-releases/news-release-details/ralph-lauren-reports-fourth-quarter-and-full-year-fiscal-2025" target="_blank">공식 IR 발표</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['polo-sport'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Natural × Casual↔Tech</span>
+    <h2>폴로 스포츠 <span class="en">Polo Sport · Ralph Lauren</span></h2>
+    <p class="oneline">"1992년 <b>프레피 브랜드가 스포츠로 뻗어나간 서브 라인</b> — 요란한 로고와 원색으로 젊은 층·스트리트 문화를 흡수했고, 지금은 90년대 아카이브 자산으로 재소비된다"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>론칭</th><td><b>1992년</b> — 스포츠·피트니스용 액티브웨어 라인으로 출발</td></tr>
+      <tr><th>소속</th><td>랄프 로렌 그룹의 서브 라인. Polo(주력)의 <b>아래·옆 방향 확장</b></td></tr>
+      <tr><th>포지셔닝</th><td>프레피의 스포츠 버전. <b>크고 대담한 로고와 원색</b>이 정체성</td></tr>
+      <tr><th>주력</th><td>후디·스웨트·아노락·트랙탑 — 로고 그래픽 중심</td></tr>
+      <tr><th>가격대</th><td>주력 라인과 유사하거나 약간 낮은 대</td></tr>
+      <tr><th>문화적 위치</th><td>90년대 <b>청소년·스트리트 문화</b>에서 폭발적 인기 — 브랜드가 의도하지 않은 수용</td></tr>
+      <tr><th>현재</th><td>아카이브 재해석·복각 중심으로 소비됨. <b>빈티지 시장이 활발</b></td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>같은 그룹 안에서 정반대 방향의 라인</b> — 1992년 Polo Sport(요란한 로고·원색)와 1993~94년 RRL·Purple Label(로고 없는 고증·럭셔리)이 <b>거의 동시에</b> 만들어짐. 하나의 세계관 안에서 <b>극단적으로 다른 표현</b>을 병행한 사례</li>
+      <li><b>스트리트 문화의 자발적 채택</b> — 브랜드가 겨냥한 것은 스포츠·피트니스였는데 실제로는 힙합·스트리트 문화가 가져감. <b>스톤 아일랜드(영국 축구 카주얼)와 같은 구조</b>의 비의도적 수용</li>
+      <li><b>로고를 크게 쓰는 것이 전략</b> — 조용한 럭셔리의 정반대. 같은 그룹의 Purple Label이 로고를 지운 것과 대비하면, <b>랄프 로렌이 로고의 크기로 시장을 나눈</b> 것을 알 수 있음</li>
+      <li>현재는 <b>90년대 아카이브 자산</b>으로 재소비 — 빈티지 시장과 복각 라인이 브랜드를 유지</li>
+      <li>⚠️ 독립 브랜드라기보다 <b>그룹의 아카이브 자산에 가까움</b>. 이 보드의 다른 브랜드와 같은 층위로 보기 어려운 면이 있음</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">1992</span>Polo Sport 론칭 — 스포츠·피트니스 액티브웨어</div>
+      <div class="ev"><span class="y">1990s</span>청소년·스트리트 문화에서 폭발적 인기 — <b>의도하지 않은 수용</b></div>
+      <div class="ev"><span class="y">1993~94</span>같은 그룹에서 <b>RRL·Purple Label</b>이 정반대 방향으로 론칭 — 라벨 체계 완성</div>
+      <div class="ev"><span class="y">2000s</span>라인 축소·통합 국면</div>
+      <div class="ev"><span class="y">2010s~20s</span>90년대 리바이벌과 함께 <b>아카이브 복각</b>으로 재등장. 빈티지 시장 활성화</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: <b>확장했다가 축소되고 아카이브로 되살아난</b> 사례. 라인이 반드시 성장만 하는 것은 아니며, <b>과거의 라인이 자산으로 남을 수 있다</b>는 것을 보여줌.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>로고 후디 · 스웨트 · 아노락</h4>
+    <p>큰 로고 그래픽이 상품의 전부에 가까움. <b>그래픽이 상품이 되는</b> 구조라 개발 비용이 낮고 변주가 쉬움.</p>
+    <h4>트랙탑 · 액티브웨어</h4>
+    <p>원래 목적이었던 스포츠 카테고리. 실제 기능성보다 <b>스포츠의 외형</b>이 핵심.</p>
+    <h4>잡화</h4>
+    <p>캡·백팩 등. 로고 노출 면적이 커서 <b>진입 상품으로 강하게 작동</b> — 나나미카와 같은 칸에 있지만 성격은 정반대.</p>
+    <h4>아카이브 · 복각 ★</h4>
+    <p>현재 이 라인의 실질적 상품 구성. <b>과거 컬렉션이 원본이 되는</b> 구조로, RRL(빈티지 복각)·TNF Purple Label(TNF 아카이브 재해석)과 같은 방식이되 <b>자사의 과거</b>를 원본으로 삼음.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">대형 로고 후디 · 스웨트</b> <span class="price">주력 라인과 유사</span>
+      <p>인기 포인트: 90년대 그래픽, 원색, 향수(nostalgia).</p>
+      <p class="voice">소비자 반응 — <b>"90년대 그 느낌"</b>이라는 향수 소비가 핵심. 빈티지 실물의 시세가 유지되며 복각품보다 오리지널을 선호하는 경향. ⚠️ 다만 현재는 독립 라인의 존재감보다 <b>아카이브 자산</b>으로 소비되는 측면이 큼.</p>
+    </div>
+    <div class="sig"><b class="t">캡 · 백팩</b> <span class="price">저가 진입대</span>
+      <p>로고 노출 면적이 커 <b>브랜드 인지 효율이 높은</b> 진입 상품.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다. ⚠️ 서브 라인 특성상 일부 축은 그룹에 종속됩니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●○○○</span><span class="sum">소재보다 그래픽이 상품</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>기능성보다 <b>스포츠의 외형</b>이 목적이라 소재 서사가 거의 없음</li>
+          <li>그룹의 대량 조달 역량에 의존</li>
+          <li>⚠️ 같은 칸의 나나미카(고어텍스 셋업)와 비교하면 <b>기능 축은 사실상 없음</b> — 매트릭스상 Casual↔Tech에 있지만 실제로는 Tech 성격이 약함</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●○○</span><span class="sum">★ 로고 크기로 시장을 나눈 사례</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>같은 그룹이 로고를 지우고(Purple Label) 동시에 키움(Polo Sport)</b> — 로고의 크기와 노출이 곧 타깃 세분화 수단임을 보여줌</li>
+          <li>90년대 그래픽·원색이 지금은 <b>아카이브 자산</b>으로 전환됨</li>
+          <li>⚠️ 독자적 실루엣 언어는 없음 — 그래픽 의존</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●○○○</span><span class="sum">현재는 아카이브 중심</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>후디·스웨트·트랙탑·잡화의 좁은 구성</li>
+          <li><b>자사 과거를 원본으로 삼는 복각 구조</b> — 개발 비용이 극히 낮은 확장</li>
+          <li>⚠️ 독립 라인으로서의 확장 의지는 낮아 보임</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●○○</span><span class="sum">문화가 가져간 브랜드 — 향수가 자산</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>스트리트 문화의 자발적 채택</b>이 브랜드를 만듦 — 스톤 아일랜드와 같은 구조이며, 브랜드가 통제하지 못한 성공</li>
+          <li>현재는 <b>90년대 향수</b>가 유일하고 강력한 마케팅 자산</li>
+          <li>⚠️ 그룹 마케팅에 종속. 독자적 서사 생산은 없음</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●○○○</span><span class="sum">그룹 채널에 종속 — 독자 매장 없음</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>독립 매장 없이 <b>Polo 매장 내 존</b>이나 온라인 카테고리로 운영</li>
+          <li>⚠️ RRL·Purple Label이 <b>층·동선·마감재를 분리</b>한 것과 달리 Polo Sport는 그런 분리가 없음 — <b>같은 그룹 안에서도 라인마다 분리 수준이 다르다</b>는 것을 보여주는 대비 사례</li>
+          <li><b>시사점</b>: 라인을 만든다고 다 분리되는 게 아니라, <b>분리에 투자한 라인만 별도 브랜드로 인식됨</b></li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>★ 라인을 만든다고 다 분리되는 게 아니다 — 같은 그룹 안의 대비</b>
+      <p>RRL·Purple Label은 <b>매장 층·동선·마감재·할인 정책까지 분리</b>해 별도 브랜드로 인식되지만, Polo Sport는 그런 투자가 없어 <b>Polo의 한 카테고리로 남음</b>. 포터리가 4개 라인을 낼 때 <b>어느 라인에 분리 투자를 할 것인지</b>를 선택해야 한다는 뜻 — 전부 분리하는 것은 비용상 불가능하고, 분리하지 않은 라인은 카테고리로 인식됨. <b>이 보드에서 가장 실무적인 라인 전략 시사점</b>.</p></div>
+    <div class="ref"><div class="tags"><span class="tag cas">캐주얼</span><span class="tag all">공통</span></div>
+      <b>로고의 크기로 시장을 나누는 방법</b>
+      <p>같은 그룹이 로고를 지우고(Purple Label) 동시에 키움(Polo Sport). 포터리는 로고리스 진영이지만, <b>라인별로 브랜드 표기의 노출 정도를 달리하는 것</b>은 검토할 수 있음 — 캐주얼 라인만 표기를 조금 더 드러내는 식.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>자사 과거를 아카이브 자산으로 쓰기</b>
+      <p>Polo Sport는 현재 <b>자기 과거를 원본으로 복각</b>하는 구조. 나이젤 카본 분석에서 제안한 <b>"지금부터 아카이브를 축적하라"</b>가 왜 중요한지 보여주는 실증 — 30년 뒤 그 자산으로 라인을 하나 만들 수 있음. 포터리도 초기 샘플·시즌 기록을 지금 보관해야 하는 이유.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>⚠️ 매트릭스 배치 재검토 제안</b>
+      <p>Polo Sport는 현재 <b>Natural × Casual↔Tech</b>에 나나미카와 같은 칸입니다. 그런데 나나미카는 고어텍스 셋업을 만드는 기능 브랜드이고 Polo Sport는 <b>기능 축이 사실상 없는</b> 그래픽 중심 라인입니다. 좌표를 <b>Casual 쪽으로 옮기거나</b>, 독립 브랜드가 아닌 <b>서브 라인 표시</b>를 하는 편이 매트릭스의 정확도를 높일 수 있습니다. Portal·YOKE와 함께 <b>셀 배치 재검토 대상 3건</b>으로 묶어 판단해 주세요.</p></div>
+    <div class="warnbox"><b>⚠️ 이 페이지의 한계</b><br>
+    Polo Sport는 독립 브랜드가 아니라 <b>랄프 로렌 그룹의 서브 라인</b>이며, 현재는 아카이브 자산으로 소비되는 성격이 강합니다. 원단·유통·마케팅 축이 대부분 그룹에 종속되어 있어, 이 보드의 다른 브랜드와 <b>같은 층위로 비교하기 어렵습니다</b>.<br>
+    이 페이지의 가치는 개별 브랜드 분석보다 <b>같은 그룹 안에서 라인마다 분리 수준이 다르다는 대비</b>(RRL·Purple Label과의 비교)에 있습니다. 그 관점으로 읽어 주세요.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://www.ralphlauren.com/" target="_blank">랄프 로렌 공식몰</a>
+      <a href="https://graduatestore.fr/en/content/69-ralph-lauren-sport" target="_blank">Polo Sport 라인 해설</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">⚠️ 독립 매장·공식 채널 없음. 핀터레스트 검색어: <b>polo sport 90s</b> · <b>vintage polo sport archive</b> · <b>90s sportswear graphic</b> (<b>90년대 아카이브 이미지</b>가 자산의 전부)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://www.heddels.com/2020/02/ralphs-roster-the-many-faces-of-ralph-lauren/" target="_blank">Heddels — Ralph's Roster (라인 전체 정리)</a> ·
+      <a href="https://graduatestore.fr/en/content/69-ralph-lauren-sport" target="_blank">Ralph Lauren and Sport — 라인 역사</a> ·
+      <a href="https://valuesort.ai/blog/ralph_lauren_brands_guide" target="_blank">랄프 로렌 서브 브랜드 가이드</a>
     </p>
   </div>
 </div>`;
