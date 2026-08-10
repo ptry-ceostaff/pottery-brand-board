@@ -104,6 +104,27 @@ table.qf td{padding:7px 0;border-bottom:1px solid #efe9df}
 .cmp .gap{color:var(--accent);font-weight:700}
 .cmp .none{color:#a99e90}
 .cmp caption{caption-side:bottom;text-align:left;font-size:12.5px;color:var(--sub);padding-top:8px;line-height:1.6}
+/* ---- v4.3: 제안 카드 ---- */
+.props{display:grid;gap:14px;margin-top:14px}
+.prop{border:1px solid var(--line);border-radius:12px;background:#fffefb;overflow:hidden}
+.prop>.hd{background:var(--dark);color:#f4efe7;padding:11px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.prop>.hd .t{font-size:14.5px;font-weight:800}
+.prop>.hd .rank{font-size:11.5px;font-weight:700;background:var(--accent);color:#fff;border-radius:999px;padding:2px 9px}
+.prop>.hd .coord{font-size:11.5px;color:#cfc7ba;margin-left:auto}
+.prop .bd{padding:14px 16px}
+.prop dl{display:grid;grid-template-columns:96px 1fr;gap:6px 12px;margin:0 0 12px;font-size:13px}
+.prop dt{color:var(--sub);font-weight:700}
+.prop dd{margin:0;line-height:1.6}
+.prop dd a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(178,91,42,.35)}
+.prop dd a:hover{border-bottom-style:solid;color:#8c451f}
+.prop .take{margin:0;padding-left:19px;font-size:13.5px;line-height:1.7}
+.prop .take li{margin-bottom:7px}
+.prop .take li:last-child{margin-bottom:0}
+.prop .foot{margin-top:12px;padding-top:11px;border-top:1px dashed var(--line);font-size:13px;color:#4a423a;line-height:1.7}
+.prop .foot b{color:var(--accent)}
+.prop.na>.hd{background:#6f665b}
+.prop.na>.hd .rank{background:#9c9287}
+@media(max-width:640px){ .prop dl{grid-template-columns:1fr;gap:2px 0} .prop dt{margin-top:6px} }
 /* ---- v4: 5축 안의 포터리 적용 블록 ---- */
 .pot-apply{margin-top:11px;padding:11px 13px;background:#fbf4ec;border-left:3px solid var(--accent);border-radius:0 8px 8px 0}
 .pot-apply .h{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.3px;display:block;margin-bottom:5px}
@@ -3707,88 +3728,110 @@ DETAILS['theory'] = `
   </div>
 
   <div class="sec">
-    <h3>3. 상품 라인업 × 포터리 대응</h3>
-    <p class="hint"><b>굵은 상품명</b>을 클릭하면 시그니처 상세가 열립니다 · <span class="gap">주황색</span>은 포터리에 대응 상품이 없는 <b>확장 포인트</b></p>
+    <h3>3. 포터리 카테고리 × 띠어리 대응</h3>
+    <p class="hint"><b>포터리 카테고리를 기준축</b>으로 두고 띠어리가 그 칸에 무엇을 갖고 있는지 대응 · <b>굵은 상품명</b>을 클릭하면 시그니처 상세가 열립니다</p>
     <div class="cmpwrap">
     <table class="cmp">
-      <tr><th>띠어리 분류</th><th>대표 상품 · 네이밍</th><th>포터리 대응</th><th>격차 · 시사점</th></tr>
+      <tr><th>#</th><th>포터리 카테고리</th><th>포터리 현황</th><th>띠어리 대응</th><th>차이 · 시사점</th></tr>
 
       <tr>
-        <td>T-Shirts + Polos</td>
-        <td><span class="sig-t">Precise Tee in Luxe Cotton Jersey</span><br><span class="none">Precise Tee in Cotton Jersey / Precise Long-Sleeve Tee</span></td>
-        <td>파인 코튼 반팔 베이직 티셔츠 (₩69,000)<br>2pack 수피마 컴포트 티셔츠</td>
-        <td>대응됨. 다만 띠어리는 <b>Precise 하나를 두 원단 등급</b>으로 운영하는데 포터리 티셔츠는 <b>'베이직' 하나뿐</b> — <span class="gap">핏 변주가 없는 구간</span></td>
+        <td>1</td><td><b>셔츠</b></td>
+        <td>컴포트 / 스탠다드 / 레귤러 / 버튼다운 / 루즈드 5개 모델 × 원단 변주. 브랜드의 심장</td>
+        <td><span class="sig-t">Sylvain Shirt in Structure Knit</span><br><span class="none">in Good Cotton / in Striped Cotton Blend</span></td>
+        <td><b>구조는 같고 순서가 반대.</b> 띠어리 <b>[모델]in[원단]</b> ↔ 포터리 <b>[원단]+[모델]</b>. 모델 수는 포터리가 많지만(5 vs 1), 띠어리는 <b>Sylvain 하나에 집중</b>해 고객 어휘로 만듦</td>
       </tr>
-      <tr class="sig-row"><td colspan="4"><b>Precise Tee</b> — 머서라이즈 이집트 코튼(Luxe Cotton Jersey). 가슴·암홀·옆선이 붙는 슬림 핏이라 <b>재킷 안에 입어도 뜨지 않는 것</b>이 인기 포인트. 같은 Precise가 일반 Cotton Jersey 버전으로도 있어 <b>티셔츠 한 장에 두 가격대</b>가 존재.
-      <span class="voice">소비자 반응 — "정장 안에 입을 티셔츠는 이것밖에 없다"는 용도 특정형 구매가 전형. 반면 "흰 티에 이 가격"이라는 저항도 꾸준하며, 세일 시점에 몰려 사는 패턴이 관찰됨.</span></td></tr>
+      <tr class="sig-row"><td colspan="5"><b>Sylvain Shirt</b> — 테일러드 셔츠 모델. Structure Knit(일본 밀 초고밀도 니트, 자체 신축) · Good Cotton(미국산 SUPIMA 스트레치) · Striped Cotton Blend로 <b>원단만 바꿔 계속 전개</b>. 니트 원단 셔츠라 다림질 부담이 적은 것이 실사용 강점.
+      <span class="voice">소비자 반응 — "셔츠인데 티셔츠처럼 편하다"가 핵심. 포터리 컴포트 셔츠의 '재킷 대용 구조적 실루엣'과는 <b>편안함에 도달하는 경로가 다름</b>(띠어리=원단 신축, 포터리=패턴 설계).</span></td></tr>
 
       <tr>
-        <td>Shirts</td>
-        <td><span class="sig-t">Sylvain Shirt in Structure Knit</span><br><span class="none">Sylvain Shirt in Good Cotton / in Striped Cotton Blend</span></td>
-        <td>컴포트 / 스탠다드 / 레귤러 / 버튼다운 / 루즈드 셔츠<br><span class="none">고밀도 코튼·텐셀 코튼·컴펙트 코튼·오가닉 코튼·코튼 코드 보일</span></td>
-        <td><b>정면 경쟁이자 정확한 거울상</b> — 띠어리 <b>[모델] in [원단]</b> ↔ 포터리 <b>[원단] + [모델] + 품목</b>. 구조는 같고 <b>어느 쪽을 앞에 두느냐</b>만 다름. 모델 수는 오히려 포터리가 더 많음(5종)</td>
-      </tr>
-      <tr class="sig-row"><td colspan="4"><b>Sylvain Shirt</b> — 테일러드 셔츠 모델. Structure Knit(일본 밀의 초고밀도 니트, 자체 신축), Good Cotton(미국산 SUPIMA 스트레치), Striped Cotton Blend 등 <b>원단만 바꿔 계속 전개</b>. 니트 원단 셔츠라 다림질 부담이 적은 것이 실사용 강점.
-      <span class="voice">소비자 반응 — "셔츠인데 티셔츠처럼 편하다"는 반응이 핵심. 포터리 컴포트 셔츠의 '재킷 대용 구조적 실루엣'과는 <b>편안함에 도달하는 경로가 다름</b>(띠어리=원단 신축, 포터리=패턴 설계).</span></td></tr>
-
-      <tr>
-        <td>Blazers · Suiting</td>
-        <td><span class="sig-t">Chambers Blazer in Stretch Wool</span></td>
-        <td>비즈니스 수트 (₩459,000)<br>울 스포츠 자켓 (₩359,000)<br>워시드 스포츠 자켓 (₩298,000)</td>
-        <td>포터리가 <b>3단 가격대로 더 두터움</b>. 띠어리는 신축성이 기본 사양, 포터리는 소재 등급(Superior Wool / Hard Twist Wool Gabardine / KAYANU Cotton)이 소구점 — <b>다른 논리로 같은 칸</b></td>
-      </tr>
-      <tr class="sig-row"><td colspan="4"><b>Chambers Blazer</b> <span class="none">· $600~1,200</span> — 스트레치 울 블레이저. 브랜드의 창업 명제(<b>'정장인데 편하다'</b>)가 가장 직접 구현된 상품. 앉아 있어도 당기지 않는 신축성, 세탁 후 형태 유지, 무난하게 좋은 핏.
-      <span class="voice">소비자 반응 — <b>"출근복은 그냥 띠어리 사면 된다"</b>는 기본값 인식이 최대 자산. 고민 없이 선택하게 만드는 브랜드. 반면 "특별할 게 없다", "감동은 없지만 실패도 없다"는 평가가 정확히 이 브랜드의 성격 — 서사 없이 기능으로만 산 브랜드의 도달점.</span></td></tr>
-
-      <tr>
-        <td>Pants</td>
-        <td>Mayer Pant in Stretch Wool<br><span class="none">(슬림 레그 트라우저)</span></td>
-        <td>울 테이퍼드 팬츠 (₩209,000)<br>워시드 테이퍼드 팬츠 (₩198,000)<br>비즈니스 팬츠 (₩229,000) · 오피서 치노 쇼츠<br>원워시드 데님 — 와이드/컴포트/스트레이트</td>
-        <td>포터리가 <b>핏 어휘가 훨씬 많음</b>(테이퍼드·와이드·컴포트·스트레이트·세미부츠컷). 띠어리는 Mayer 하나에 원단 변주. <b>이 칸은 포터리 우위</b></td>
+        <td>2</td><td><b>데님 · 팬츠</b></td>
+        <td>원워시드 데님 3핏 · 울/워시드 테이퍼드 팬츠 · 오피서 치노. <b>핏 어휘가 풍부</b></td>
+        <td>Mayer Pant in Stretch Wool<br>Raffi (5-pocket) · Zaine Pant in Precision Ponte<br>jeans 카테고리 별도</td>
+        <td><b>포터리 우위 칸.</b> 다만 띠어리는 <b>5포켓 팬츠를 데님이 아닌 소재로</b> 냄(Raffi). 포터리엔 '출근 가능한 데님'은 있는데 <b>그 반대편(주말에도 입는 슬랙스)</b>이 비어 있음</td>
       </tr>
 
       <tr>
-        <td>Sweaters · Knitwear</td>
-        <td>원단 등급별 니트 전개</td>
-        <td>니트</td>
-        <td>양쪽 모두 보유. 포터리는 <b>모델 네이밍 체계가 없어</b> 재구매 시 지목이 어려움</td>
+        <td>3</td><td><b>수트 · 자켓</b></td>
+        <td>비즈니스 수트 ₩459,000 · 울 스포츠 자켓 ₩359,000 · 워시드 스포츠 자켓 ₩298,000 — 3단</td>
+        <td><span class="sig-t">Chambers Blazer in Stretch Wool</span><br><b>the Classic Suit</b> / <b>the Performance Suit</b> 2종 체계</td>
+        <td>가격 단은 포터리가 두터움. 그러나 띠어리는 수트를 <b>'클래식 vs 퍼포먼스' 성격으로 이름 붙여</b> 나눔 — 포터리는 소재로만 구분해 <b>고객이 용도로 고를 수 없음</b></td>
+      </tr>
+      <tr class="sig-row"><td colspan="5"><b>Chambers Blazer</b> <span class="none">· $600~1,200</span> — 스트레치 울 블레이저. 창업 명제(<b>'정장인데 편하다'</b>)가 가장 직접 구현된 상품. 앉아 있어도 당기지 않는 신축성, 세탁 후 형태 유지.
+      <span class="voice">소비자 반응 — <b>"출근복은 그냥 띠어리 사면 된다"</b>는 기본값 인식이 최대 자산. 반면 "특별할 게 없다", "감동은 없지만 실패도 없다"가 정확히 이 브랜드의 성격 — 서사 없이 기능으로만 산 브랜드의 도달점.</span></td></tr>
+
+      <tr>
+        <td>4</td><td><b>니트</b></td>
+        <td>컴포트 폴로 니트 · 크루넥 · 브이넥 · 가디건 · 터틀넥 · 반팔 니트</td>
+        <td>sweaters-and-cardigans → <b>pullovers · cardigans · polos · quarter-zips · full-zips</b><br>cashmere-shop 별도</td>
+        <td>양쪽 다 두터움. 띠어리는 <b>넥·여밈 형태를 URL 단위 하위 카테고리로</b> 승격시켰고, <b>소재(캐시미어) 전용 매대</b>를 따로 둠 — 포터리는 니트에 소재축 매대가 없음</td>
       </tr>
 
       <tr>
-        <td>Outerwear</td>
-        <td>코트·아우터 (원단 기준 전개)</td>
-        <td>아우터 (소진율 90% 확인 후 2~3배 확대 중)</td>
-        <td>대응됨. 포터리가 <b>확대 국면</b>이라 네이밍 체계를 지금 잡으면 유리</td>
+        <td>5</td><td><b>아우터</b></td>
+        <td>코트·다운·레더·재킷·블루종. 소진율 90% 확인 후 물량 2~3배 확대 중 — <span class="gap">기능 축 없음</span></td>
+        <td>blazers-and-jackets · sweaters-and-outerwear(bombers/wool coat) · cold-weather-shop</td>
+        <td><span class="gap">부분 공백</span> — 띠어리도 <b>기능 아우터가 없음</b>(도시 코트 중심). 확대 방향을 물량이 아니라 <b>등급·기능으로</b> 잡으려면 이 브랜드는 답이 없음 → 골드윈·나나미카·아크테릭스 참조</td>
       </tr>
 
       <tr>
-        <td>Good Wool (지속가능 라인)</td>
-        <td>공급망 선별 울 — <b>상품이 아니라 소재 등급이 라인</b></td>
-        <td class="gap">대응 없음</td>
-        <td><b class="gap">확장 포인트</b> — 포터리도 소재 서사가 강하므로 <b>상위 소재 등급을 별도 라인명으로</b> 세울 여지</td>
+        <td>6</td><td><b>이너 · 미드레이어</b></td>
+        <td class="gap">전무</td>
+        <td><span class="none">loungewear가 유일한 인접 카테고리 — 이너 기능 라인 없음</span></td>
+        <td><b class="gap">공백 큼 · 띠어리는 답 없음</b>. 셔츠 브랜드인데 <b>셔츠 안에 입는 것</b>이 양쪽 모두 비어 있음 → 아래 제안 카드 A</td>
       </tr>
 
       <tr>
-        <td>Accessories</td>
-        <td><span class="none">가방·슈즈 — 격자 체계 밖, 구색 수준</span></td>
-        <td>벨트 (₩159,000 · 이탈리안 카우/나파/스웨이드)<br>타이 (₩129,000 · 울 슬림/클래식 슬림)<br><span class="gap">가방 · 슈즈 없음</span></td>
-        <td><b>이 칸은 포터리가 앞섬</b> — 벨트·타이가 정가 프리미엄으로 존재(띠어리는 구색). <b class="gap">남은 공백은 가방·슈즈</b>이며, 그 참고는 띠어리가 아니라 <b>로로피아나·르메르·드레익스</b>를 볼 것</td>
+        <td>7</td><td><b>티셔츠</b></td>
+        <td>파인 코튼 반팔 베이직 ₩69,000 · 2pack 수피마 컴포트 — <span class="gap">핏 변주 없음</span></td>
+        <td><span class="sig-t">Precise Tee in Luxe Cotton Jersey</span><br><span class="none">in Cotton Jersey · Precise Long-Sleeve Tee · Kolben Tee</span></td>
+        <td><b>띠어리가 답을 갖고 있음 ★</b> — 같은 Precise를 <b>두 원단 등급 + 소매 길이</b>로 전개. 포터리 티셔츠는 '베이직' 단일 → 제안 카드 A</td>
+      </tr>
+      <tr class="sig-row"><td colspan="5"><b>Precise Tee</b> — 머서라이즈 이집트 코튼(Luxe Cotton Jersey). 가슴·암홀·옆선이 붙는 슬림 핏이라 <b>재킷 안에 입어도 뜨지 않는 것</b>이 인기 포인트. 같은 Precise가 일반 Cotton Jersey 버전으로도 있어 <b>티셔츠 한 장에 두 가격대</b>가 존재.
+      <span class="voice">소비자 반응 — "정장 안에 입을 티셔츠는 이것밖에 없다"는 용도 특정형 구매가 전형. 반면 "흰 티에 이 가격"이라는 저항도 꾸준함.</span></td></tr>
+
+      <tr>
+        <td>8</td><td><b>백 · 캐리</b></td>
+        <td class="gap">전무 (중장기 과제로 공표)</td>
+        <td><span class="none">wallets만 존재 — 가방 없음</span></td>
+        <td><b class="gap">양쪽 모두 공백</b> — 참조 부적합. 로로피아나·르메르·드레익스를 볼 것</td>
       </tr>
 
       <tr>
-        <td>Lifestyle</td>
+        <td>9</td><td><b>소품 · 케어</b></td>
+        <td>벨트 ₩159,000(이탈리안 카우/나파/스웨이드) · 타이 ₩129,000 — <b>정가 프리미엄</b></td>
+        <td><span class="none">belts · wallets · cold-weather-accessories — 격자 밖 구색</span></td>
+        <td><b>포터리 우위 칸.</b> 띠어리 소품은 모델명도 원단 축도 없는 구색. <b>여기서 배울 것 없음</b></td>
+      </tr>
+
+      <tr>
+        <td>10</td><td><b>신발</b></td>
+        <td class="gap">전무</td>
+        <td><span class="none">Common Projects 편집 취급만</span></td>
+        <td><b>참고할 지점 하나</b> — 자체 개발 대신 <b>기존 브랜드를 편집 취급</b>. 개발 없이 칸을 채우는 최저 리스크 방식</td>
+      </tr>
+
+      <tr>
+        <td>11</td><td><b>리빙 · 라이프스타일</b></td>
+        <td class="gap">전무</td>
         <td class="none">없음</td>
-        <td class="none">없음</td>
-        <td>양쪽 모두 없음</td>
+        <td>양쪽 모두 없음 — 제임스 펄스·마가렛 호웰 영역</td>
+      </tr>
+
+      <tr>
+        <td>+</td><td><b>구매 프로그램</b></td>
+        <td>2pack 수피마 컴포트 티셔츠 (부분 운영)</td>
+        <td><b>Essential Trios</b> — 모델+원단 단위 전용 페이지 5종</td>
+        <td><b>띠어리가 답을 갖고 있음 ★</b> — 포터리도 2pack이 있으나 <b>일부 상품 한정</b>. 띠어리는 <b>격자의 대표 칸마다</b> 복수구매 페이지를 둠 → 제안 카드 C</td>
       </tr>
     </table>
-    <caption>포터리 대응은 <b>ptry.co.kr 카테고리·상품명 실측</b> 기준(2026-08-10 수집). 포터리몰이 개편되면 이 열을 먼저 갱신할 것.</caption>
+    <caption>포터리 현황은 <b>ptry.co.kr 실측</b>(2026-08-10), 띠어리는 <b>theory.com sitemap 전수 수집</b> 기준.</caption>
     </div>
+
   </div>
 
   <div class="sec">
-    <h3>4. 강점 분석 & 포터리 적용 (5축)</h3>
-    <p class="hint">각 줄을 클릭하면 분석과 <b>포터리 적용안</b>이 함께 펼쳐집니다</p>
+    <h3>4. 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세가 펼쳐집니다 · <b>포터리 적용안은 아래 5번에 모아 정리</b></p>
     <div class="acc">
 
       <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●○</span><span class="sum">소재 혁신으로 카테고리 자체를 만듦</span><span class="arr">▶</span></button>
@@ -3796,50 +3839,36 @@ DETAILS['theory'] = `
           <li><b>스트레치 원단 + 테일러드 실루엣</b> — 이 조합 하나가 창업 근거이자 30년 자산. 소재가 디자인이 아니라 <b>카테고리를 만든</b> 드문 사례</li>
           <li><b>Good Wool</b>: 농장·방적·봉제까지 직접 선별. 지속가능성을 캠페인이 아니라 <b>소재 스펙</b>으로 다룸</li>
           <li>패스트리테일링 산하라 원단 조달·생산 규모에서 동급 대비 우위</li>
-          <li>⚠️ 소재의 희소성·독점성은 없음 — 기능적 우수함이지 서사적 자산은 아님</li>
-        </ul>
-        <div class="pot-apply"><div class="tags"><span class="tag fml">포멀</span><span class="tag std">스탠다드</span></div>
-          <span class="h">포터리 적용</span>
-          <p>띠어리가 30년간 판 것은 <b>'앉아 있어도 불편하지 않은 정장'</b>. 포터리 포멀 라인도 실루엣 논쟁 이전에 <b>착용 지속시간(장시간 착석·이동)</b>을 설계 기준으로 삼을 것. 그리고 지속가능 소재를 도입한다면 파타고니아식 캠페인이 아니라 <b>Good Wool처럼 상위 라인의 스펙</b>으로 두는 편이 리스크가 낮고 객단가에도 기여함.</p></div>
-        </div>
+          <li>⚠️ 소재의 희소성·독점성은 없음 — 기능적 우수함이지 서사적 자산은 아님. 원단 스펙 표기의 상세함은 <b>포터리가 오히려 앞섬</b>(4단 표기 vs 원단명 단독)</li>
+        </ul></div>
       </div>
 
       <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●○○</span><span class="sum">무난함을 극단까지 밀어붙인 결과</span><span class="arr">▶</span></button>
         <div class="acc-body"><ul>
           <li>뉴트럴 팔레트, 군더더기 없는 라인 — <b>어떤 상황에서도 틀리지 않는 옷</b>이 설계 목표</li>
           <li>트렌드를 따르지도 만들지도 않음. 실루엣 변화가 매우 완만</li>
-          <li>⚠️ <b>"특별할 게 없다"는 것이 강점이자 한계</b> — 기본값 브랜드는 대체되기도 쉬움. 유니클로가 위로 올라오고 컨템포러리가 아래로 내려오면 가운데가 압박받는 구조</li>
-        </ul>
-        <div class="pot-apply"><div class="tags"><span class="tag fml">포멀</span><span class="tag std">스탠다드</span></div>
-          <span class="h">포터리 적용</span>
-          <p>띠어리의 명제 <b>'정장인데 편하다'</b>와 포터리의 <b>'정돈된 편안함'</b>은 사실상 같은 언어입니다. 국내 백화점에서 <b>실질 경쟁자가 이 브랜드</b>라는 뜻. 기능만으로는 규모의 브랜드를 이길 수 없으므로 차별점을 <b>소재 서사와 매장 경험</b>에 둬야 함 — 띠어리에 없는 두 가지가 정확히 그것.</p></div>
-        </div>
+          <li>창업 명제 <b>'정장인데 편하다'</b>는 포터리의 <b>'정돈된 편안함'</b>과 사실상 같은 언어 — 국내 백화점에서 <b>실질 경쟁자</b></li>
+          <li>⚠️ <b>"특별할 게 없다"는 것이 강점이자 한계</b> — 유니클로가 위로 올라오고 컨템포러리가 아래로 내려오면 가운데가 압박받는 구조</li>
+        </ul></div>
       </div>
 
       <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●●○</span><span class="sum">★ 모델명 × 원단명 2축 격자</span><span class="arr">▶</span></button>
         <div class="acc-body"><ul>
           <li><b>모델명이 핏, 원단명이 등급</b>인 2축 격자가 상품 체계의 전부 — 신상품은 격자에 원단을 하나 추가하는 일</li>
           <li>같은 모델의 원단 변형을 <b>연달아 배치</b>해 비교 구매를 유도. 고객이 "내 핏은 Precise"로 기억하고 원단만 바꿔 재구매</li>
-          <li>남녀 균형이 좋고 오피스 → 애프터아워로 이어지는 상황 커버가 명확</li>
+          <li><b>Theory Wardrobe</b>라는 대표 모델 전용 페이지를 상설 운영 — 모델명을 <b>문장에 넣어</b> 고객 어휘로 주입</li>
+          <li><b>Essential Trios</b>로 복수구매를 격자 단위 매대로 상품화</li>
           <li>⚠️ <b>잡화가 격자 밖에 있음</b> — 모델명도 원단 축도 적용되지 않아 구색에 머묾. 라이프스타일 없음</li>
-        </ul>
-        <div class="pot-apply"><div class="tags"><span class="tag all">공통</span><span class="tag std">스탠다드</span></div>
-          <span class="h">포터리 적용</span>
-          <p><b>포터리는 이미 같은 2축 격자를 갖고 있습니다</b> — 컴포트/스탠다드/레귤러/버튼다운/루즈드 5개 모델 × 고밀도 코튼·텐셀·컴펙트·오가닉 등 원단 변주. 모델 수는 오히려 띠어리보다 많고, 원단 스펙 표기(<span class="none">Cotton 80/1 Typewriter Cloth Resilient Finish</span>)도 훨씬 상세합니다.<br><br>
-          차이는 <b>순서 하나</b>입니다. 띠어리는 <b>모델명이 앞</b>이라 고객이 "내 핏은 Precise"로 기억하고, 포터리는 <b>소재가 앞</b>이라 기억 단위가 소재로 갑니다. 소재가 강점인 브랜드에는 자연스러운 선택이지만, <b>재구매 시 지목 단위가 매번 달라진다</b>는 비용이 있습니다("고밀도 코튼이었나 텐셀이었나"). 카테고리 필터에서 <b>핏을 1차 축으로 올리거나</b>, 같은 모델의 원단 변주를 <b>연달아 배치</b>하는 것만으로 이 비용이 줄어듭니다 — 상품을 바꾸지 않고 <b>노출 순서만 바꿔서</b> 얻는 효과.</p></div>
-        </div>
+        </ul></div>
       </div>
 
       <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●○○○</span><span class="sum">서사가 없는 것이 약점</span><span class="arr">▶</span></button>
         <div class="acc-body"><ul>
-          <li>창업 스토리·지역색·디자이너 인격이 <b>모두 없음</b>. 이 보드에서 가장 서사가 얇은 브랜드</li>
+          <li>창업 스토리·지역색·디자이너 인격이 <b>모두 없음</b>. <b>공개된 브랜드 선언문도 없음</b> — 이 보드에서 가장 서사가 얇은 브랜드</li>
           <li>기능적 신뢰로만 구매가 발생 — <b>충성도가 아니라 습관</b>에 기반</li>
           <li>⚠️ 서사가 없으면 <b>가격 방어력이 약함</b>. 더 싼 대체재가 나오면 이동이 쉬움</li>
-        </ul>
-        <div class="pot-apply"><div class="tags"><span class="tag all">공통</span></div>
-          <span class="h">포터리 적용</span>
-          <p>띠어리는 서사 없이도 규모에 도달했지만 <b>"감동은 없지만 실패도 없다"</b>는 평가에 갇혔습니다. 포터리는 이미 서사(도자기·서울·정돈된 일상)를 갖고 있으므로 <b>그것을 쓰지 않는 것이 가장 큰 낭비</b>. 제임스 펄스·ALD의 지역 서사 제안과 같은 결론에 <b>반대편에서</b> 도달함.</p></div>
-        </div>
+          <li><b>이 축은 포터리가 명확히 앞섬</b> — 도자기·서울·정돈된 일상이라는 서사를 이미 보유</li>
+        </ul></div>
       </div>
 
       <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●○○</span><span class="sum">백화점 표준 문법 — 넓게 깔리는 대신 특별하지 않음</span><span class="arr">▶</span></button>
@@ -3847,24 +3876,132 @@ DETAILS['theory'] = `
           <li>직영 + 백화점 광범위 유통. <b>접근성이 최우선</b>인 채널 전략</li>
           <li>VMD는 밝은 조명·화이트 톤·정갈한 행잉의 <b>컨템포러리 표준</b> — 특징이 없는 것이 특징</li>
           <li>같은 모델의 원단 변형을 <b>나란히 걸어 비교하게</b> 하는 진열은 격자 체계의 물리적 구현</li>
+          <li>신발은 자체 개발 대신 <b>Common Projects를 편집 취급</b> — 개발 없이 칸을 채우는 방식</li>
           <li>⚠️ 매장 경험에 브랜드 자산이 거의 없음 — RRL·ALD와 정반대 지점</li>
-        </ul>
-        <div class="pot-apply"><div class="tags"><span class="tag all">공통</span></div>
-          <span class="h">포터리 적용</span>
-          <p>진열에서 가져올 것은 하나: <b>같은 모델의 원단 변형을 나란히 걸어 비교하게 만드는 것</b>. 포터리 셔츠도 원단별로 흩어놓지 말고 한 행거에 모아 걸면 <b>가격 사다리가 눈에 보임</b>. 반대로 띠어리 매장에는 갈 이유가 없다는 사실이, 포터리가 <b>성수 플래그십에 투자하는 것의 정당성</b>을 역으로 증명합니다.</p></div>
-        </div>
+        </ul></div>
       </div>
 
     </div>
     <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
-    ① <b>가운데 포지션은 위아래에서 압박받음</b> — 유니클로가 올라오고 컨템포러리가 내려오면 '적당히 좋은 옷'은 설 자리가 좁아짐. 포터리도 스탠다드 라인의 <b>위아래 방어선</b>을 의식해야 함.<br>
+    ① <b>가운데 포지션은 위아래에서 압박받음</b> — '적당히 좋은 옷'은 설 자리가 좁아짐. 포터리도 스탠다드 라인의 <b>위아래 방어선</b>을 의식할 것.<br>
     ② <b>서사 없는 신뢰는 가격 방어력이 약함</b> — 습관은 더 싼 대체재로 쉽게 이동함.<br>
     ③ <b>격자 체계는 잡화에 적용되지 않음</b> — 모델명·원단 축이 옷에만 작동해 잡화가 구색에 머묾. 포터리가 잡화를 붙일 때 <b>옷의 분류 체계를 그대로 쓸 수 없다</b>는 뜻.</div>
   </div>
 
+  <div class="sec">
+    <h3>5. 포터리 적용 제안</h3>
+    <p class="hint">상품 단위 제안(A~C)과 운영 단위 제안(①~⑥)으로 나눠 정리 · <b>띠어리가 실제로 답을 갖고 있는 것만</b> 포함</p>
+
+    <h4 style="margin-top:16px">5-1. 상품 단위 — 무엇을 만들 것인가</h4>
+    <div class="props">
+
+      <div class="prop">
+        <div class="hd"><span class="rank">1순위</span><span class="t">카드 A — 티셔츠에 핏·등급 축 넣기</span><span class="coord">Modern × Standard</span></div>
+        <div class="bd">
+          <dl>
+            <dt>포터리 공백</dt><dd>파인 코튼 반팔 베이직 티셔츠 ₩69,000 단일. <b>핏 변주도 원단 등급도 없음</b>(2pack 수피마 컴포트가 유일한 확장)</dd>
+            <dt>참조 상품</dt><dd><a href="https://www.theory.com/precise-tee-in-luxe-cotton-jersey/J0194523_001.html" target="_blank">Precise Tee in Luxe Cotton Jersey</a> — 머서라이즈 이집트 코튼, 슬림 핏<br>
+            <a href="https://www.theory.com/men/t-shirts-and-polos/precise-tee-in-cotton-jersey/P0194511_001.html" target="_blank">Precise Tee in Cotton Jersey</a> — 같은 모델의 기본 등급<br>
+            <a href="https://www.theory.com/men/t-shirts-%2B-polos/precise-long-sleeve-tee-in-luxe-cotton-jersey/L0294518.html" target="_blank">Precise Long-Sleeve Tee</a> — 같은 모델의 소매 변형</dd>
+            <dt>참조 체계</dt><dd><a href="https://www.theory.com/men/theory-wardrobe/subcategories/our-go-to-t-shirt%3A-the-precise-tee/" target="_blank">Theory Wardrobe — "our go-to t-shirt: the Precise Tee"</a></dd>
+          </dl>
+          <ol class="take">
+            <li><b>모델 하나를 두 원단 등급으로.</b> 포터리는 이미 셔츠에서 이 구조를 쓰고 있음(고밀도/텐셀/컴펙트 코튼). <b>티셔츠에만 적용이 안 돼 있을 뿐</b>이라 새 기술이 아니라 <b>기존 방식의 이식</b>.</li>
+            <li><b>소매 길이를 같은 모델로 묶는다.</b> 포터리는 반팔·긴팔이 별개 상품으로 흩어져 있어 <b>같은 옷의 계절 변형</b>이라는 인식이 생기지 않음.</li>
+            <li><b>대표 모델 페이지를 만든다.</b> "우리의 기본 티셔츠는 ○○"라고 문장으로 노출 — 재구매 지목 단위가 소재가 아니라 모델이 됨.</li>
+          </ol>
+          <p class="foot"><b>예상 상품</b> — 컴포트 티셔츠(기본 원단) / 컴포트 티셔츠(상위 원단) / 컴포트 롱슬리브 3종 격자 · <b>유니클로 대응물</b> 수피마 코튼 크루넥 T · <b>왜 1순위인가</b> — 개발 리스크 사실상 0(패턴·원단 조달 역량 보유), 재구매 주기 최단, 셔츠 고객이 그대로 넘어옴.</p>
+        </div>
+      </div>
+
+      <div class="prop">
+        <div class="hd"><span class="rank">2순위</span><span class="t">카드 B — 수트를 '성격'으로 나누기</span><span class="coord">Modern × Formal</span></div>
+        <div class="bd">
+          <dl>
+            <dt>포터리 공백</dt><dd>비즈니스 수트 ₩459,000 · 울 스포츠 셋업 ₩359,000 · 워시드 스포츠 셋업 ₩298,000 — <b>가격·소재로는 3단인데 용도 구분이 이름에 없음</b></dd>
+            <dt>참조 상품</dt><dd><a href="https://www.theory.com/men/theory-wardrobe/subcategories/the-classic-suit/" target="_blank">the Classic Suit</a> · <a href="https://www.theory.com/men/theory-wardrobe/subcategories/the-performance-suit/" target="_blank">the Performance Suit</a><br>
+            <a href="https://www.theory.com/men/pants/mayer-pant-in-stretch-wool/I0271254_G0F.html" target="_blank">Mayer Pant in Stretch Wool</a> — 수트 팬츠를 <b>단품으로도</b> 판매</dd>
+            <dt>참조 체계</dt><dd><a href="https://www.theory.com/men/the-new-standard/" target="_blank">The New Standard</a> — Standard Jacket / Pant / Shirt 3종 캡슐</dd>
+          </dl>
+          <ol class="take">
+            <li><b>용도를 이름에 넣는다.</b> 포터리 수트는 지금 <b>소재로만 구분</b>돼 고객이 상황으로 고를 수 없음. 워시드 스포츠 셋업이 사실상 퍼포먼스 포지션인데 <b>이름이 그것을 말해주지 않음</b>.</li>
+            <li><b>재킷·팬츠·셔츠를 하나의 캡슐로.</b> 포터리 셋업도 <b>셔츠까지 포함한 3종 캡슐</b>로 제시하면 객단가가 올라감.</li>
+            <li><b>수트 팬츠를 단품 매대에도.</b> 포터리 비즈니스 팬츠(₩229,000)를 수트 안에만 두지 말 것.</li>
+          </ol>
+          <p class="foot"><b>예상 상품</b> — 클래식 셋업(Superior Wool) / 퍼포먼스 셋업(워시드·구김 회복) 네이밍 정리 + 셋업 캡슐 페이지 · <b>왜 2순위인가</b> — 상품을 새로 만들지 않고 <b>이름과 묶음만</b> 바꾸는 작업. 비용 대비 효과 최대.</p>
+        </div>
+      </div>
+
+      <div class="prop">
+        <div class="hd"><span class="rank">3순위</span><span class="t">카드 C — 복수구매를 격자 단위 매대로</span><span class="coord">공통</span></div>
+        <div class="bd">
+          <dl>
+            <dt>포터리 공백</dt><dd>"2장 이상 구매 시 10% 자동할인"이 <b>개별 상품 설명 안에 묻혀 있음</b>. 2pack 수피마 컴포트 티셔츠 등 일부만 운영</dd>
+            <dt>참조 상품</dt><dd><a href="https://www.theory.com/men/essential-trios/" target="_blank">Essential Trios</a> — 모델+원단 단위 전용 페이지<br><span class="none">Precise Tees in Luxe Cotton Jersey / Sylvain Shirt in Structure Knit / Tailored Shirt in Superior Cotton / Zaine Pant in Precision Ponte</span></dd>
+            <dt>참조 체계</dt><dd>같은 모델·같은 원단을 <b>2~3장 동시 구매</b>(컬러만 달리)하게 하는 별도 매대</dd>
+          </dl>
+          <ol class="take">
+            <li><b>할인 문구가 아니라 매대로.</b> 전용 페이지로 빼면 복수구매가 <b>기본 선택지</b>가 됨.</li>
+            <li><b>대표 칸마다 하나씩</b> — 컴포트 셔츠 / 컴포트 티셔츠 / 폴로 니트 세 칸에 우선 적용.</li>
+            <li><b>노세일 원칙과 충돌하지 않음.</b> 가격을 내리는 게 아니라 <b>수량 조건부</b>이므로 정가 신뢰를 해치지 않음.</li>
+          </ol>
+          <p class="foot"><b>왜 3순위인가</b> — 개발이 전혀 불필요하고 <b>페이지 구성만으로</b> 객단가가 오름. 다만 효과 크기가 앞의 둘보다 작고 재고 운영과 함께 설계해야 함.</p>
+        </div>
+      </div>
+
+      <div class="prop na">
+        <div class="hd"><span class="rank">참조 부적합</span><span class="t">이너·미드레이어 · 아우터 기능축 · 백/캐리 · 신발</span><span class="coord">—</span></div>
+        <div class="bd">
+          <p style="font-size:13.5px;line-height:1.75;margin:0">포터리 공백이 가장 큰 칸인데 <b>띠어리도 비어 있거나 약합니다.</b> 이 페이지에서 답을 찾지 말 것.</p>
+          <ul style="font-size:13.5px;line-height:1.75;margin:10px 0 0;padding-left:19px">
+            <li><b>이너·미드레이어</b> → 띠어리는 loungewear뿐. <b>아크테릭스</b>(베이스레이어 3패밀리)·<b>골드윈</b>(기능성 니트) 참조</li>
+            <li><b>아우터 기능축</b> → 띠어리는 도시 코트 중심으로 기능 등급 없음. <b>골드윈</b>(기능을 뺌)·<b>나나미카</b>(기능을 감춤) 참조</li>
+            <li><b>백 · 캐리</b> → 띠어리는 지갑만. <b>르메르</b>(잡화 매출 50%)·<b>로로피아나</b>(잡화가 진입 관문)·<b>드레익스</b>(잡화가 본체) 참조</li>
+            <li><b>신발</b> → 자체 개발 대신 <a href="https://www.theory.com/men/common-projects/" target="_blank">Common Projects를 편집 취급</a>. <b>개발 없이 칸을 채우는 최저 리스크 경로</b>가 있다는 것만 참고</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <h4 style="margin-top:22px">5-2. 운영 단위 — 어떻게 팔 것인가</h4>
+
+    <div class="ref"><div class="tags"><span class="tag all">공통</span><span class="tag std">스탠다드</span></div>
+      <b>① 네이밍 순서 — 모델을 앞으로 올리거나, 최소한 병기 ★</b>
+      <p>포터리는 이미 같은 2축 격자를 갖고 있습니다(컴포트/스탠다드/레귤러/버튼다운/루즈드 × 원단). 차이는 <b>순서 하나</b>입니다.</p>
+      <div class="cmpwrap" style="margin:8px 0">
+        <table class="cmp"><tr><th>축</th><th>띠어리</th><th>포터리 현재</th><th>제안</th></tr>
+          <tr><td>상품명</td><td>Precise Tee <b>in</b> Luxe Cotton Jersey</td><td>고밀도 코튼 <b>컴포트</b> 셔츠</td><td>병기 유지하되 <b>모델을 검색·필터 1차축</b>으로</td></tr>
+          <tr><td>기억 단위</td><td>모델("내 핏은 Precise")</td><td>소재("고밀도였나 텐셀이었나")</td><td>모델이 재구매 지목 단위가 되게</td></tr>
+          <tr><td>해설</td><td>Theory Wardrobe 상설 페이지</td><td class="gap">없음</td><td><b>"포터리의 대표 5모델" 페이지 신설</b></td></tr>
+        </table>
+      </div>
+      <p>소재를 앞에 두는 것은 소재가 강점인 브랜드에 자연스러운 선택이라 <b>바꿀 필요는 없습니다.</b> 다만 <b>모델명 해설 페이지를 함께 내야</b> 고객이 컴포트·스탠다드·레귤러의 차이를 알게 됩니다. 체계만 있고 해설이 없으면 입문 장벽만 생깁니다.</p></div>
+
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>② 자사몰 분류축 — 포터리에 이미 있는 강점과 없는 축</b>
+      <p>띠어리는 <b>품목·모델·소재·상황</b> 4축이 병렬로 돕니다. 포터리는 <b>품목·핏·소재·상황·촉감</b> 5축을 이미 갖고 있고, <b>촉감 축(린넨 터치·소프트 터치·드라이 터치·클라우드 터치)은 이 보드 어느 브랜드에도 없는 독자 자산</b>입니다. 비어 있는 것은 <b>모델 축</b> 하나입니다(①번과 연결). 그리고 띠어리의 <b>소재 전용 시즌 매대</b>(cashmere-shop / linen-shop, 리넨은 다시 품목으로 세분)는 포터리 촉감 축을 <b>계절 매대로 승격</b>시키는 방법으로 그대로 쓸 수 있습니다.</p></div>
+
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>③ 같은 상품을 다른 문맥에 반복 노출</b>
+      <p>띠어리는 <b>상황·시즌 에디트가 분류축 중 가장 수가 많습니다</b> — vacation-shop, cold-weather-shop, what-to-wear-to-graduation, gifts-for-him(가격대·품목·큐레이터 픽으로 재분류). 새 상품 없이 <b>기존 상품을 계속 다른 이름으로 다시 보여주는</b> 장치입니다. 포터리의 <b>'247 work-life' · 'city commuter' · '직장인을 위한 비즈니스 캐주얼'</b>이 이미 같은 계열이므로, <b>선물·출장·면접</b> 같은 축을 추가하면 됩니다.</p></div>
+
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>④ 빈 칸은 편집 취급으로 먼저 채운다</b>
+      <p>띠어리는 신발을 자체 개발하지 않고 <b>Common Projects를 편집 취급</b>합니다. 포터리의 신발·가방 칸도 자체 개발 전에 <b>브랜드 톤에 맞는 소수를 셀렉트</b>해 두면, 고객 반응을 확인한 뒤 개발 여부를 정할 수 있습니다 — 마가렛 호웰(가구 셀렉트)·Kith(편집 병치)와 같은 결론.</p></div>
+
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>⑤ 진열 — 같은 모델의 원단 변형을 나란히</b>
+      <p>띠어리 매장 VMD에서 가져올 것은 하나입니다. 원단별로 흩어놓지 말고 <b>같은 모델을 한 행거에 모아 걸어 가격 사다리가 눈에 보이게</b> 하는 것. 포터리 셔츠 존에 즉시 적용 가능하며, 로로피아나의 폴딩 진열(촉각 유도)과 결합하면 <b>소재 비교와 촉감 확인이 한 자리에서</b> 일어납니다.</p></div>
+
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>⑥ ⚠️ 서사는 띠어리에서 배우지 말 것 — 반대로 하기</b>
+      <p>띠어리는 <b>공개된 브랜드 선언문이 없고</b> 창업 스토리도 지역색도 쓰지 않습니다. 그 결과가 <b>"감동은 없지만 실패도 없다"</b>는 평가이고, 가격 방어력 부족으로 이어집니다. 포터리는 이미 <b>'Organized Comfort'</b>라는 슬로건과 도자기·서울·정돈된 일상이라는 서사를 갖고 있으므로, <b>이 축에서는 띠어리를 따라가면 손해</b>입니다. 제임스 펄스(캘리포니아)·ALD(퀸즈·그리스)의 지역 서사 방식을 참조할 것.</p></div>
+
+  </div>
 
   <div class="sec">
-    <h3>5. 레퍼런스 이미지 · 소스</h3>
+    <h3>6. 레퍼런스 이미지 · 소스</h3>
     <p class="imglinks">
       <a href="https://www.theory.com/" target="_blank">공식몰</a>
       <a href="https://www.instagram.com/theory/" target="_blank">인스타그램 @theory</a>
