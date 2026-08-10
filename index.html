@@ -5,41 +5,527 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>POTTERY 브랜드 레퍼런스 보드</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
-  :root {
-    --bg: #f5f1ea;
-    --ink: #2b2620;
-    --accent: #b25b2a;
-    --card: #ffffff;
-    --line: #e2dbd0;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-    background: var(--bg); color: var(--ink);
-    min-height: 100vh; display: flex; align-items: center; justify-content: center;
-  }
-  .placeholder {
-    text-align: center; padding: 48px; background: var(--card);
-    border: 1px solid var(--line); border-radius: 16px; max-width: 520px;
-  }
-  .placeholder h1 { font-size: 28px; margin-bottom: 8px; }
-  .placeholder h1 span { color: var(--accent); }
-  .placeholder p { color: #6b6257; line-height: 1.7; font-size: 15px; }
-  .badge {
-    display: inline-block; margin-top: 20px; padding: 6px 14px;
-    background: var(--bg); border: 1px solid var(--line);
-    border-radius: 999px; font-size: 13px; color: #6b6257;
-  }
+:root{
+  --bg:#f4efe7; --card:#fffdf9; --ink:#2b2620; --sub:#6b6257; --line:#e2dbd0;
+  --accent:#b25b2a; --dark:#1d1a16;
+  --row-modern:#37424d; --row-natmod:#3c4a3f; --row-natural:#41503a; --row-vinnat:#453a30; --row-vintage:#3f3128;
+  --tint-modern:#eef1f4; --tint-natmod:#edf1ec; --tint-natural:#eef1ea; --tint-vinnat:#f4eee6; --tint-vintage:#f8f1e4;
+  --tag-std:#5b7360; --tag-cas:#b25b2a; --tag-fml:#3d4a63; --tag-tech:#5a6570; --tag-all:#7a6a55;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+.wrap{max-width:1280px;margin:0 auto;padding:36px 28px 80px}
+/* ---------- header ---------- */
+.hd h1{font-size:30px;letter-spacing:-.5px;font-weight:800}
+.hd h1 .logo{font-family:Georgia,"Times New Roman",serif;color:var(--accent);letter-spacing:1px;font-weight:700}
+.hd .sub{color:var(--sub);font-size:14px;margin-top:6px}
+.legend{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin:18px 0 26px;font-size:12.5px;color:var(--sub)}
+.btn-pottery{margin-left:auto;background:var(--dark);color:#f4efe7;border:none;border-radius:999px;padding:9px 18px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit}
+.btn-pottery .logo{font-family:Georgia,serif;color:#e8a87c}
+.btn-pottery:hover{background:#000}
+/* ---------- matrix ---------- */
+.matrix{display:grid;grid-template-columns:110px repeat(7,1fr);gap:0;border-radius:14px;overflow:hidden;box-shadow:0 2px 14px rgba(43,38,32,.08);font-size:13px}
+.mx-corner{background:var(--dark);color:#cfc7ba;padding:14px 12px;font-size:12px;line-height:1.5}
+.mx-corner b{color:#f4efe7;font-size:13px}
+.mx-col{background:var(--dark);color:#f4efe7;padding:13px 8px;text-align:center;font-weight:700;font-size:13.5px}
+.mx-col.bridge{background:#463c30;color:#cfc7ba;font-weight:500;font-size:12px}
+.mx-row{color:#f4efe7;padding:12px 10px;font-weight:700;display:flex;align-items:center;font-size:13px;line-height:1.4}
+.mx-cell{background:var(--card);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 9px;min-height:64px}
+.mx-cell.bridge{filter:brightness(.972)}
+.chip{display:block;width:100%;text-align:left;background:none;border:none;font-family:inherit;font-size:13px;color:var(--ink);padding:2.5px 4px;border-radius:6px;cursor:pointer;line-height:1.45}
+.chip:hover{background:rgba(178,91,42,.09)}
+.chip.has{font-weight:700;color:#1d1a16}
+.chip.has::after{content:"→";color:var(--accent);font-size:11px;margin-left:5px}
+.chip.todo{color:#6b6257}
+/* row tint per band */
+.r-modern .mx-cell{background:var(--tint-modern)} .r-natmod .mx-cell{background:var(--tint-natmod)}
+.r-natural .mx-cell{background:var(--tint-natural)} .r-vinnat .mx-cell{background:var(--tint-vinnat)}
+.r-vintage .mx-cell{background:var(--tint-vintage)}
+.foot{margin-top:14px;color:var(--sub);font-size:12px}
+/* ---------- detail ---------- */
+.detail{max-width:880px;margin:0 auto}
+.back{background:none;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13px;color:var(--sub);cursor:pointer;font-family:inherit;margin-bottom:22px}
+.back:hover{border-color:var(--accent);color:var(--accent)}
+.d-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px 38px;box-shadow:0 2px 14px rgba(43,38,32,.06)}
+.d-head .cellpos{display:inline-block;font-size:12px;font-weight:700;color:#5b7360;border:1.5px solid #5b7360;border-radius:999px;padding:3px 12px;margin-bottom:12px}
+.d-head h2{font-size:28px;letter-spacing:-.5px}
+.d-head .en{color:var(--sub);font-size:14px;margin-left:8px;font-weight:400}
+.d-head .oneline{margin-top:12px;font-size:16.5px;font-weight:600;line-height:1.65;color:#3a332b;border-left:3px solid var(--accent);padding-left:14px}
+.sec{margin-top:34px}
+.sec>h3{font-size:15px;font-weight:800;color:var(--accent);letter-spacing:.3px;margin-bottom:12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.sec p{font-size:14.5px;margin:8px 0}
+.sec ul{padding-left:19px;font-size:14.5px}
+.sec li{margin:5px 0}
+table.qf{width:100%;border-collapse:collapse;font-size:13.5px}
+table.qf th{width:120px;text-align:left;color:var(--sub);font-weight:600;padding:7px 10px 7px 0;vertical-align:top;border-bottom:1px solid #efe9df}
+table.qf td{padding:7px 0;border-bottom:1px solid #efe9df}
+.tl{position:relative;padding-left:18px}
+.tl::before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl .ev{position:relative;margin:9px 0;font-size:14px}
+.tl .ev::before{content:"";position:absolute;left:-17.5px;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.tl .y{font-weight:800;margin-right:8px}
+.prod h4{font-size:14px;margin:15px 0 4px;font-weight:700}
+.prod h4:first-child{margin-top:0}
+.warnbox{background:#fbf4ec;border:1px solid #ecd9c6;border-radius:10px;padding:13px 16px;font-size:13.5px;margin-top:10px}
+.sig{border:1px solid var(--line);border-radius:12px;padding:15px 18px;margin:10px 0;background:#fffefb}
+.sig b.t{font-size:14.5px}
+.sig .price{color:var(--sub);font-weight:400;font-size:13px}
+.sig p{font-size:13.5px;margin:5px 0 0}
+.sig .voice{color:#7a5b3a;font-size:13px;margin-top:6px}
+/* strengths accordion */
+.acc{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.acc-item+.acc-item{border-top:1px solid var(--line)}
+.acc-btn{display:grid;grid-template-columns:130px 90px 1fr 22px;gap:10px;align-items:center;width:100%;background:#fffefb;border:none;font-family:inherit;text-align:left;padding:13px 16px;font-size:13.5px;cursor:pointer}
+.acc-btn:hover{background:#faf5ec}
+.acc-btn .ax{font-weight:800}
+.acc-btn .dots{color:var(--accent);letter-spacing:2px;font-size:12px}
+.acc-btn .sum{color:var(--sub)}
+.acc-btn .arr{color:var(--accent);transition:transform .18s;justify-self:end}
+.acc-item.open .acc-btn .arr{transform:rotate(90deg)}
+.acc-body{display:none;padding:6px 18px 16px;background:#fbf8f1;font-size:13.5px}
+.acc-item.open .acc-body{display:block}
+.acc-body ul{padding-left:18px}
+.acc-body li{margin:6px 0}
+.hint{font-size:12px;color:var(--sub);margin-bottom:8px}
+/* reference points */
+.ref{border-left:3px solid var(--line);padding:2px 0 2px 14px;margin:13px 0}
+.ref .tags{margin-bottom:3px}
+.tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;border-radius:999px;padding:2px 10px;margin-right:5px}
+.tag.std{background:var(--tag-std)} .tag.cas{background:var(--tag-cas)} .tag.fml{background:var(--tag-fml)} .tag.tech{background:var(--tag-tech)} .tag.all{background:var(--tag-all)}
+.ref b{font-size:14.5px}
+.ref p{font-size:13.5px;margin-top:3px}
+.srcs{font-size:12.5px;color:var(--sub);line-height:2}
+.srcs a{color:#7a5b3a}
+.imglinks a{display:inline-block;margin:3px 10px 3px 0;font-size:13.5px;color:#7a5b3a}
+.todo-note{background:#fffdf9;border:1px dashed var(--line);border-radius:14px;padding:40px;text-align:center;color:var(--sub)}
+@media (max-width:900px){
+  .matrix{font-size:11.5px;grid-template-columns:78px repeat(7,1fr)}
+  .chip{font-size:11.5px}
+  .d-card{padding:24px 20px}
+  .acc-btn{grid-template-columns:96px 70px 1fr 18px;font-size:12.5px}
+}
 </style>
 </head>
 <body>
-  <div class="placeholder">
-    <h1><span>POTTERY</span> 브랜드 레퍼런스 보드</h1>
-    <p>배포 확인용 플레이스홀더 페이지입니다.<br>
-    이 페이지가 보이면 깃허브 페이지 세팅이 완료된 것입니다.<br>
-    다음 단계에서 브랜드 매트릭스와 상세 페이지가 이 자리에 들어갑니다.</p>
-    <div class="badge">setup ok · v0</div>
+<div class="wrap">
+  <!-- ============ 보드(매트릭스) 뷰 ============ -->
+  <div id="view-board">
+    <div class="hd">
+      <h1><span class="logo">POTTERY</span> 브랜드 분류 매트릭스</h1>
+      <div class="sub">감성(세로) × 격식·기능(가로) — 브랜드를 클릭하면 상세 분석 페이지가 열립니다</div>
+    </div>
+    <div class="legend">
+      <span><b style="color:var(--ink)">굵은 글씨→</b> 상세 분석 완료</span>
+      <button class="btn-pottery" onclick="openBrand('pottery')"><span class="logo">POTTERY</span> 자체 분석 보기 →</button>
+    </div>
+    <div class="matrix" id="matrix"></div>
+    <div class="foot">감성 온도: Modern(쿨) → Vintage(웜) · 격식: Formal → Casual · 기능: → Tech/Sports · 브릿지 칸(↔)은 경계·전이 영역</div>
   </div>
+
+  <!-- ============ 상세 뷰 ============ -->
+  <div id="view-detail" style="display:none">
+    <div class="detail">
+      <button class="back" onclick="goBoard()">← 매트릭스로 돌아가기</button>
+      <div id="detail-body"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===================== 매트릭스 데이터 ===================== */
+const COLS = [
+  {k:'formal', t:'Formal'}, {k:'f-s', t:'Formal↔Standard', bridge:true},
+  {k:'standard', t:'Standard'}, {k:'s-c', t:'Standard↔Casual', bridge:true},
+  {k:'casual', t:'Casual'}, {k:'c-t', t:'Casual↔Tech', bridge:true},
+  {k:'tech', t:'Tech / Sports'}
+];
+const ROWS = [
+  {k:'modern', t:'Modern', cls:'r-modern', color:'var(--row-modern)'},
+  {k:'natmod', t:'Natural↔Modern', cls:'r-natmod', color:'var(--row-natmod)'},
+  {k:'natural', t:'Natural', cls:'r-natural', color:'var(--row-natural)'},
+  {k:'vinnat', t:'Vintage↔Natural', cls:'r-vinnat', color:'var(--row-vinnat)'},
+  {k:'vintage', t:'Vintage', cls:'r-vintage', color:'var(--row-vintage)'}
+];
+/* n=이름, id=상세 페이지 보유 시 */
+const CELLS = {
+  'modern|formal':[{n:'Theory'},{n:'Jil Sander'}],
+  'modern|f-s':[{n:'The Row'}],
+  'modern|standard':[{n:'Studio Nicholson'},{n:'COS'}],
+  'modern|s-c':[{n:'요크'},{n:'Lemaire'}],
+  'modern|casual':[{n:'Comoli'},{n:'Kith'}],
+  'modern|c-t':[{n:"Arc'teryx"}],
+  'modern|tech':[{n:'Goldwin'},{n:'Portal'}],
+  'natmod|standard':[{n:'Our Legacy'},{n:'Auralee'},{n:'ATON'}],
+  'natural|formal':[{n:'Loro Piana'},{n:'Brunello Cucinelli'}],
+  'natural|f-s':[{n:'Margaret Howell'}],
+  'natural|standard':[{n:'James Perse',id:'james-perse'},{n:'Sunspel'}],
+  'natural|s-c':[{n:'Kaptain Sunshine'},{n:'Danton'}],
+  'natural|casual':[{n:'Polo Ralph Lauren'}],
+  'natural|c-t':[{n:'Nanamica'},{n:'Polo Sport'}],
+  'natural|tech':[{n:'Patagonia'}],
+  'vinnat|casual':[{n:'Aimé Leon Dore'}],
+  'vinnat|tech':[{n:'The North Face Purple Label'}],
+  'vintage|formal':[{n:"Drake's"},{n:'Ralph Lauren Purple Label'}],
+  'vintage|f-s':[{n:'Beams Plus'}],
+  'vintage|standard':[{n:"Levi's"},{n:'Merz b. Schwanen'}],
+  'vintage|casual':[{n:'Warehouse'},{n:'A PRESSE'},{n:'RRL'}],
+  'vintage|c-t':[{n:'Stone Island'},{n:'Nigel Cabourn'}]
+};
+const HOME_CELLS = [];
+
+/* ===================== 렌더링 ===================== */
+function buildMatrix(){
+  const m = document.getElementById('matrix');
+  let h = '<div class="mx-corner"><b>감성 ↘ 격식</b><br>EMOTION / FORMALITY</div>';
+  COLS.forEach(c=> h += '<div class="mx-col'+(c.bridge?' bridge':'')+'">'+c.t+'</div>');
+  ROWS.forEach(r=>{
+    h += '<div class="mx-row '+r.cls+'" style="background:'+r.color+'">'+r.t.replace('↔','↔<br>')+'</div>';
+    COLS.forEach(c=>{
+      const key = r.k+'|'+c.k;
+      const brands = CELLS[key]||[];
+      const cls = 'mx-cell '+r.cls+(c.bridge?' bridge':'')+(HOME_CELLS.includes(key)?' home':'');
+      let inner = brands.map(b=>{
+        const has = !!b.id;
+        return '<button class="chip '+(has?'has':'todo')+'" onclick="'+(has?("openBrand('"+b.id+"')"):("todoBrand('"+b.n.replace(/'/g,"\\'")+"')"))+'">'+b.n+'</button>';
+      }).join('');
+      h += '<div class="'+cls+'">'+inner+'</div>';
+    });
+  });
+  m.innerHTML = h;
+}
+function openBrand(id){
+  const d = DETAILS[id];
+  const body = document.getElementById('detail-body');
+  body.innerHTML = d ? d : '<div class="todo-note">이 브랜드의 상세 분석은 준비 중입니다.</div>';
+  document.getElementById('view-board').style.display='none';
+  document.getElementById('view-detail').style.display='block';
+  location.hash = 'brand='+id;
+  window.scrollTo(0,0);
+}
+function todoBrand(name){
+  const body = document.getElementById('detail-body');
+  body.innerHTML = '<div class="d-card"><div class="d-head"><h2>'+name+'</h2><p class="oneline">상세 분석 준비 중입니다. 분석이 완료되면 이 자리에 템플릿(한 줄 정의 → 퀵팩트 → 특이사항 → 타임라인 → 상품 구성 → 시그니처 & 소비자 반응 → 강점 분석 → 포터리 레퍼런스 포인트 → 레퍼런스 이미지) 구조로 채워집니다.</p></div></div>';
+  document.getElementById('view-board').style.display='none';
+  document.getElementById('view-detail').style.display='block';
+  location.hash = '';
+  window.scrollTo(0,0);
+}
+function goBoard(){
+  document.getElementById('view-detail').style.display='none';
+  document.getElementById('view-board').style.display='block';
+  location.hash='';
+  window.scrollTo(0,0);
+}
+/* 강점 분석 아코디언 */
+document.addEventListener('click', e=>{
+  const btn = e.target.closest('.acc-btn');
+  if(btn) btn.parentElement.classList.toggle('open');
+});
+/* 해시 라우팅 (URL 공유 가능) */
+function route(){
+  const m = location.hash.match(/brand=([a-z-]+)/);
+  if(m && DETAILS[m[1]]) openBrand(m[1]);
+}
+/* ===================== 브랜드 상세 데이터 ===================== */
+const DETAILS = {};
+
+DETAILS['james-perse'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Natural × Standard</span>
+    <h2>제임스 펄스 <span class="en">James Perse · LA</span></h2>
+    <p class="oneline">"로고 없이 소재와 실루엣만으로 캘리포니아 라이프스타일 전체를 파는 브랜드 — 티셔츠에서 출발해 가구·침구·숙박 공간까지 확장한 '조용한 럭셔리'의 교과서"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>론칭</th><td>1991년 볼캡 → 1994년 의류 라인, 로스앤젤레스</td></tr>
+      <tr><th>창업자</th><td>제임스 펄스 — LA 전설의 편집샵 '맥스필드(Maxfield)' 창업자 토미 펄스의 아들. 매장 바닥에서 자란 2세</td></tr>
+      <tr><th>포지셔닝</th><td>조용한 럭셔리 × 웨스트코스트 베이직. 한국에선 "부자들의 유니클로"로 통칭</td></tr>
+      <tr><th>주력</th><td>프리미엄 코튼 저지 티셔츠·스웨트·캐시미어 니트 (남/여/키즈)</td></tr>
+      <tr><th>가격대</th><td>티셔츠 $80~250 (한국 15~30만원), 니트 70~80만원대</td></tr>
+      <tr><th>확장 라인</th><td>Y/OSEMITE(퍼포먼스) · HOME(가구·침구·리넨) · 카페/숙박(호스피탈리티)</td></tr>
+      <tr><th>채널</th><td>직영 55개+, 백화점 숍인숍. 한국은 2021년부터 한화갤러리아 단독 유통(명품관 중심 9개점)</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li>연매출 약 <b>2.5억 달러(약 3,400억원)</b>, 직원 400명+ — 광고 없이, 런웨이 없이, 로고 없이 도달한 규모</li>
+      <li>매장 집기로 만든 <b>핑퐁 테이블($25,000)을 고객들이 사겠다고 요청</b>하면서 가구 라인이 시작됨 — 핑퐁·풀 테이블만 누적 1,000만 달러 이상 판매</li>
+      <li>숙박 시설까지 운영: 카보산루카스 'Greycape' 에스테이트 <b>1박 $7,500~12,500</b>, 몬트리올 카페, LA 로버트슨 플래그십+카페</li>
+      <li>한국 갤러리아 매장 <b>월평균 매출 1억원 이상</b> — 2025년 국내 첫 남성 단독 매장 오픈</li>
+      <li>창업자가 모든 매장을 직접 디자인 — 건축가 루이스 바라간, 루이스 칸에서 영감</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">1991</span>"마음에 드는 볼캡이 없어서" 직접 제작 — 영화사·레코드사가 사가며 시작</div>
+      <div class="ev"><span class="y">1994</span>티셔츠 라인 론칭 — "럭셔리와 캐주얼의 완벽한 혼합"</div>
+      <div class="ev"><span class="y">1996~98</span>여성 니트 컬렉션 → 남성 컬렉션 확장 (이후 키즈 추가)</div>
+      <div class="ev"><span class="y">2000s~</span>직영 매장 확장 — 매장·가구를 창업자가 직접 디자인, 집기가 가구 라인(HOME)으로 발전</div>
+      <div class="ev"><span class="y">2010s~</span>Y/OSEMITE 퍼포먼스 라인 · 침구/리넨 · 카페·숙박 등 라이프스타일 전방위 확장</div>
+      <div class="ev"><span class="y">2021</span>한국 진출 — 한화갤러리아 단독 유통, '조용한 럭셔리' 붐과 함께 급성장</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: 한 가지 소재(코튼 저지)에서 시작 → 같은 감성의 인접 카테고리로 30년에 걸쳐 확장. 속도는 느리지만 한 번도 감성이 흔들린 적이 없음.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>티셔츠 — 브랜드의 심장</h4>
+    <p>같은 크루넥이라도 원단 등급으로 가격 사다리를 만듦: Classic Cotton Jersey($80) → Cotton Slub($150) → <b>Luxe Lotus Jersey($165, 대표 원단)</b> → Cotton Cashmere($250). 소재에 이름을 붙여 원단 자체를 상품화하는 방식.</p>
+    <h4>니트·스웨트·팬츠</h4>
+    <p>캐시미어 니트(한국가 70~80만원대), 프렌치테리 스웨트, 린넨 셔츠 등 — 전부 '집에서도 밖에서도'라는 하나의 상황 언어로 통일.</p>
+    <h4>Y/OSEMITE — 퍼포먼스 라인</h4>
+    <p>요가·트레일 등 액티브웨어를 별도 네이밍으로 분리 운영. 본체 감성을 해치지 않고 테크 수요를 흡수하는 구조.</p>
+    <h4>잡화</h4>
+    <p>출발점이었던 볼캡과 비치 타월, 백 등을 유지 — 다만 잡화는 '주력'이 아니라 라이프스타일 무드를 완성하는 소품 역할에 가까움.</p>
+    <h4>HOME — 가구·침구·리넨 ★</h4>
+    <p>티크 아웃도어 가구, 소파, 조명, 베딩 컬렉션, 하우스 리넨까지 전개. 기원이 중요함: <b>매장에 놓으려고 만든 집기(핑퐁 테이블)를 고객이 사겠다고 하면서 시작</b> — 매장 경험이 카테고리 확장의 테스트베드가 된 사례.</p>
+    <h4>호스피탈리티 — 공간 그 자체</h4>
+    <p>몬트리올 카페(Côté Cuisine), 카보산루카스 Greycape 에스테이트(1박 $7,500+), LA 로버트슨 11,000sqft 플래그십+카페, 말리부 푸드홀 계획. 옷 → 가구 → 공간으로, "브랜드의 세계에서 하루를 보내게 하는" 최종 단계.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">클래식/럭스 저지 티셔츠</b> <span class="price">$80~195</span>
+      <p>인기 포인트: 빗질한 고급 코튼의 드레이프, 몸을 가려주는 소매 기장과 바디 셰이프, 가먼트 다잉의 빈티지한 색감.</p>
+      <p class="voice">소비자 반응 — "다른 티셔츠보다 그냥 전부 다 멋져 보인다", "소매 길이가 유독 잘 어울린다"는 핏 중심 호평이 전형. 반면 "가격 대비 구멍이 잘 난다"는 내구성 지적과 비침 이슈도 꾸준함 → 그럼에도 재구매율이 높고, "세일 때 사라"는 구매 팁 문화가 형성돼 있음. 한국에선 송혜교·제니·BTS 등 셀럽 착용이 유기적 광고 역할.</p>
+    </div>
+    <div class="sig"><b class="t">캐시미어 니트</b> <span class="price">70~80만원대</span>
+      <p>고가에도 갤러리아 명품관 고객층의 재구매 카테고리. '티셔츠 신뢰 → 니트 업셀'의 객단가 사다리.</p>
+    </div>
+    <div class="sig"><b class="t">티크 가구 · 핑퐁 테이블</b> <span class="price">$25,000+</span>
+      <p>매장 집기에서 출발한 홈 라인의 아이콘. 옷과 같은 그레이·베이지 톤, 같은 감성의 물성 — "브랜드의 방"을 통째로 파는 상징.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●●</span><span class="sum">코튼 저지의 정점 + 소재 네이밍 자산화</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>원단에 이름을 붙여 자산으로 만듦</b>: Luxe Lotus, Vintage Cotton 등 자체 원단명이 상품명 앞에 붙음 — 소비자가 "로투스 저지 티셔츠"로 기억하고 재구매</li>
+          <li><b>같은 아이템, 원단 등급으로 가격 사다리</b>: $80 → $150 → $165 → $250까지 티셔츠 하나로 4개 가격대 운영</li>
+          <li>일본산 고기능 원단 도입 등 소재 소싱에 창업자가 직접 개입, 마음에 안 들면 전량 반려하는 완벽주의 품질 관리</li>
+          <li>가먼트 다잉·워싱으로 '입던 옷 같은 새 옷' 질감 — LA 감성의 물성적 표현</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●○○</span><span class="sum">로고리스 — 실루엣과 드레이프가 곧 로고</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>로고 완전 배제</b>: 소재·실루엣·색만으로 식별되는 디자인 — '조용한 럭셔리' 문법의 원형</li>
+          <li>디자인 변화를 최소화하고 같은 모델을 수십 년 유지 — 유행 대신 '나의 기본템'이라는 소유 언어를 만듦</li>
+          <li>컬러 팔레트(그레이·베이지·워싱된 파스텔)를 의류-가구-공간까지 동일하게 적용, 카테고리가 달라도 한 브랜드로 보이게 함</li>
+          <li>⚠️ 한계: 디자인 자체의 혁신은 없음 — 실험적 실루엣이나 트렌드 주도력은 의도적으로 포기한 포지션</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●●●</span><span class="sum">티셔츠→니트→테크→가구→공간, 확장 폭의 교과서</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>확장 순서가 정교함</b>: 티셔츠(신뢰) → 니트·팬츠(객단가) → Y/OSEMITE(상황 확장) → 가구·침구(생활 침투) → 카페·숙박(세계관 완성)</li>
+          <li>테크 라인을 <b>별도 네이밍(Y/OSEMITE)으로 분리</b>해 본체의 조용한 감성을 보호 — 폴로의 라인 분리와 같은 원리</li>
+          <li>가구 라인의 기원(매장 집기 → 고객 요청 → 상품화)은 <b>수요를 확인하고 확장하는</b> 저위험 확장 모델</li>
+          <li>⚠️ 잡화(백·모자)는 오히려 얇음 — 무드 소품 수준. 잡화 확장의 레퍼런스로는 부적합, 라이프스타일 확장의 레퍼런스로는 최상급</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●○○</span><span class="sum">광고 없는 유기적 노출 — 셀럽과 공간이 광고판</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>PR·광고를 거의 하지 않음 — 창업자 스스로 미디어 노출을 피함. 대신 <b>제품과 공간이 알아서 회자되게 하는</b> 구조</li>
+          <li>셀럽 착용(할리우드, 한국은 송혜교·제니·BTS)이 유기적으로 발생 — '아는 사람만 아는 브랜드' 서사가 희소성을 강화</li>
+          <li>"부자들의 유니클로"라는 소비자 발화가 그대로 포지셔닝이 된 사례 — 브랜드가 만든 말이 아니라 시장이 만든 말</li>
+          <li>⚠️ 데이터 기반 CRM·D2C 운영은 상대적 약점 — 이 축은 오히려 포터리가 앞서는 영역 (자사몰 70%, 세분화 CRM)</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●●</span><span class="sum">창업자가 직접 설계하는 매장 — 집기가 상품이 되는 공간</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>모든 매장을 창업자가 직접 디자인</b> — 루이스 바라간·루이스 칸의 건축에서 가져온 티크·콘크리트·어스톤. 매장이 곧 브랜드의 3D 카탈로그</li>
+          <li><b>매장 집기 = 판매 상품</b>: 진열대·테이블·소파가 전부 HOME 라인 상품 — VMD와 상품 개발이 하나의 루프</li>
+          <li>해외·한국은 <b>럭셔리 유통과의 독점 파트너십</b>(한화갤러리아)으로 프리미엄 문맥을 빌려서 진입 — 직접 진출 리스크 없이 명품관 옆자리 확보</li>
+          <li>2025년 한국 남성 단독 매장 분리 — 성별·라인별 매장 분리 실험 진행 중</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag std">스탠다드</span></div>
+      <b>원단 네이밍 + 같은 아이템의 가격 사다리</b>
+      <p>포터리의 '80수 타입라이터'를 제임스 펄스처럼 고유 원단명으로 브랜딩하고, 컴포트 셔츠를 원단 등급별 3~4개 가격대로 계층화하면 셔츠 카테고리 안에서 객단가를 올릴 수 있음. 포터리가 이미 잘하는 '소재 전면 노출'의 다음 단계.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span><span class="tag cas">캐주얼</span></div>
+      <b>매장 집기를 상품 테스트베드로</b>
+      <p>성수 플래그십(80평)의 집기·소품을 판매 가능성을 염두에 두고 기획 — 고객이 "이거 팔아요?"라고 묻는 것에서 잡화·리빙 확장의 수요를 검증. 가방·모자가 약한 포터리에게 저위험 확장 경로.</p></div>
+    <div class="ref"><div class="tags"><span class="tag tech">테크</span></div>
+      <b>테크 라인은 별도 네이밍으로 분리</b>
+      <p>Y/OSEMITE처럼 포터리 테크 라인도 본체와 다른 이름을 붙여 분리하면, '정돈된 편안함' 본체 감성을 희석하지 않고 기능성 수요를 흡수할 수 있음.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>지역 서사의 자산화 — '캘리포니아'의 포터리 버전</b>
+      <p>제임스 펄스는 LA의 빛·서핑·건축을 전 카테고리에 관통시킴. 포터리의 '도자기·서울의 정돈된 일상'도 같은 방식으로 의류→공간→콘텐츠를 관통하는 서사로 승격 가능. 외국인 매출 30% 목표와도 직결 — 외국인이 사는 건 옷이 아니라 '서울의 감성'.</p></div>
+    <div class="ref"><div class="tags"><span class="tag fml">포멀</span><span class="tag std">스탠다드</span></div>
+      <b>성별·라인 단독 매장 실험</b>
+      <p>한국 제임스 펄스가 2025년 남성 단독 매장을 분리했듯, 포터리도 백화점 8개점 확장 시 일부 매장을 라인 특화(포멀 강화점 등)로 실험해볼 수 있음.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① 세일 채널 노출 — 아울렛·해외 편집샵에서 70% 할인가가 검색되는 순간 정가 신뢰가 흔들림. 포터리의 노세일 원칙이 더 엄격하며, 이는 지켜야 할 우위.
+    ② 내구성 논란 — "가격 대비 구멍"이라는 불만이 계속 따라다님. 소재 서사가 강할수록 품질 클레임의 타격도 큼.
+    ③ 지역 서사는 번역이 필요 — 캘리포니아 무드를 그대로 흉내내는 게 아니라, 포터리만의 '서울' 버전을 만들어야 함.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://www.jamesperse.com/" target="_blank">공식몰 (룩북·전 상품)</a>
+      <a href="https://www.jamesperse.com/pages/furniture" target="_blank">가구 컬렉션</a>
+      <a href="https://www.jamesperse.com/collections/bedding" target="_blank">침구 컬렉션</a>
+      <a href="https://www.jamesperse.com/pages/robertson-house" target="_blank">Robertson House (공간)</a>
+      <a href="https://www.instagram.com/jamesperse/" target="_blank">인스타그램 @jamesperse</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>james perse store interior</b> · <b>quiet luxury california</b> · <b>teak concrete minimal retail</b> · <b>garment dye tee outfit</b> (런웨이 미운영 브랜드 — 매장·룩북·소재 클로즈업이 이미지 축)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://lamag.com/fashion/james-perse/" target="_blank">LA Magazine — James Perse 심층 인터뷰</a> ·
+      <a href="https://www.fineclothing.com/the-fine-line/james-perse-designer-biography.html" target="_blank">디자이너 전기</a> ·
+      <a href="https://www.jamesperse.com/" target="_blank">공식몰</a> ·
+      <a href="https://www.hanwhagalleria.co.kr/promotion/news/id/6a0cdeaa-939d-460a-b2d1-c0ca573286f7" target="_blank">한화갤러리아 — 남성 단독매장 오픈</a> ·
+      <a href="https://m.apparelnews.co.kr/news/news_view/?idx=197759" target="_blank">어패럴뉴스 — 갤러리아 매장 확대</a> ·
+      국내 브랜드 분석 블로그("부자들의 유니클로") · 소비자 착용 후기(The Mom Edit 외)
+    </p>
+  </div>
+</div>`;
+
+DETAILS['pottery'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Natural × Formal↔Standard (본체)</span>
+    <h2>포터리 <span class="en">POTTERY · Seoul — 자체 분석 (샘플)</span></h2>
+    <p class="oneline">"소재와 만듦새로 승부하는 '현대인의 유니폼' — 셔츠에서 출발해 뉴 비즈니스 캐주얼 전반으로 확장 중인 D2C 컨템포러리 브랜드"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>론칭</th><td>2017년, 서울 (창업자·디렉터 김건우)</td></tr>
+      <tr><th>슬로건</th><td>Organized Comfort (정돈된 편안함) · 현대인의 유니폼</td></tr>
+      <tr><th>네이밍</th><td>도자기(pottery) — "본질은 오래 변하지 않되, 쓰는 사람의 삶의 흔적이 남는다"</td></tr>
+      <tr><th>타깃</th><td>'마일러(Miler)' — 탁월한 업무 능력으로 동료에게 배울 점을 주는 직장인</td></tr>
+      <tr><th>주력</th><td>남성 뉴 비즈니스 캐주얼 (셔츠 중심) + 포터리우먼(2024~)</td></tr>
+      <tr><th>가격대</th><td>셔츠 10만원 후반 · 자켓/아우터 30만원대</td></tr>
+      <tr><th>채널</th><td>자사몰 중심 D2C + 직영(성수·합정·한남) + 백화점 + 국내외 편집샵</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li>첫해 매출 400만원 → 9년 만에 300억대 — 광고보다 제품·재구매로 큰 성장 곡선</li>
+      <li>셔츠 한 카테고리가 매출의 약 60% — 강점이자 최대 리스크</li>
+      <li>자사몰 매출 비중 70% 이상 · 한남 단일 직영점 연매출 40억대</li>
+      <li>2025년 투자조합 지분 인수 + 신세계인터내셔날 전략 투자 — 2026년 백화점 8개점 동시 확장 중</li>
+      <li>외국인 매출 비중 10%대 → 30% 목표</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">2017</span>온라인 D2C로 론칭, 셔츠 중심으로 성장</div>
+      <div class="ev"><span class="y">2022</span>오프라인 진출 — 합정 허브 스토어 · 한남 플래그십</div>
+      <div class="ev"><span class="y">2023</span>백화점 입점 (신세계 강남·센텀시티)</div>
+      <div class="ev"><span class="y">2024</span>여성 라인 '포터리우먼' 론칭</div>
+      <div class="ev"><span class="y">2025~26</span>투자 유치 후 전국 확장기 — 성수 플래그십, 백화점·아울렛 8개점, 해외 편집샵 홀세일</div>
+    </div>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성</h3>
+    <h4>셔츠 — 브랜드의 심장</h4>
+    <p>'컴포트 셔츠' 고유 카테고리: 재킷 패턴을 적용한 구조적 실루엣, 세미오버 핏. 소재 변주(80수 타입라이터·옥스포드·오가닉 코튼)로 SKU 확장. 대표가 약 18.9만원.</p>
+    <h4>데님 — '출근 가능한 데님'</h4>
+    <p>시그니처 '컴포트 데님': 옆 라인을 앞으로 비튼 입체 패턴, 슬랙스 같은 태. 컴포트/스트레이트/와이드 3핏 체계.</p>
+    <h4>수트·자켓 / 니트·아우터</h4>
+    <p>스탠다드 수트(미세 부츠컷 스트레이트), 울 스포츠 자켓(고밀도 울 개버딘, 35.9만). 아우터는 소진율 90% 확인 후 2~3배 확대 중.</p>
+    <h4>잡화·라이프스타일 — 가장 얇은 영역 ⚠️</h4>
+    <p>액세서리 카테고리는 볼캡 등 구색 수준. 가방·모자 시그니처 부재 — 남녀 가방·잡화 진출이 중장기 과제로 공표된 상태. 리빙·라이프스타일 전무.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">컴포트 셔츠</b> <span class="price">약 18.9만원</span>
+      <p>재킷 대용까지 되는 구조적 실루엣, 소재 질감, 미묘한 색감.</p>
+      <p class="voice">"셔츠 맛집이라 계속 구매" 류의 반복 구매 후기가 전형 — 첫 구매 후 50만원 이상 추가 구매 고객 다수.</p></div>
+    <div class="sig"><b class="t">컴포트 데님</b>
+      <p>비즈니스 캐주얼 문맥에서 입는 데님이라는 명확한 용도 제안. "하의로 확실한 포인트" 스타일링 공식.</p></div>
+    <div class="sig"><b class="t">울 스포츠 자켓 · 스탠다드 수트</b> <span class="price">30만원대</span>
+      <p>신입사원·면접 수요를 겨냥한 "단정함에서 오는 신뢰". 셔츠 고객의 객단가를 올리는 업셀 카테고리.</p></div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●○</span><span class="sum">소재가 개발 기준이자 판매 언어</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>소재·실루엣·만듦새를 개발 최우선 기준으로 명시 — 반복 테스트 후 의도와 다르면 폐기</li>
+          <li>원단명·혼용률·가공법을 상품명과 상세페이지 최상단에 배치 (80수 타입라이터, 레질리언트 가공, 일본 데님)</li>
+          <li>검증된 패턴 × 소재 변주로 SKU 확장 — 개발 리스크를 낮추며 재구매 유도</li>
+          <li>⚠️ 소재를 잘 '쓰는' 단계 — 소재 네이밍 자산화(제임스 펄스의 Luxe Lotus식)는 미도달</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●○○</span><span class="sum">기본 아이템의 패턴 재설계</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>셔츠에 재킷 패턴, 데님 옆선 비틀기, 수트의 미세 부츠컷 — "아는 옷의 골격을 다시 짜는" 방식</li>
+          <li>'컴포트 핏'이라는 카테고리 관통 실루엣 언어 확보</li>
+          <li>로고 배제 + 기능적 디테일(강화 칼라·커프스·거셋)로 완결성, "절제된 위트"</li>
+          <li>⚠️ 감성 확장(캐주얼·빈티지) 시 디자인 어휘 부족 가능</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●○○○</span><span class="sum">시그니처 집중 — 가장 약한 축</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>셔츠 60% 의존 — 신뢰 형성엔 유리했지만 성장의 병목</li>
+          <li>'검증 후 확대' 공식: 아우터 소진율 90% → 물량 2~3배, 우먼 100% 성장 → 스타일 2~3배</li>
+          <li>잡화·라이프스타일 부재 — 이번 확장 프로젝트가 보강할 지점</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●●●</span><span class="sum">국내 D2C 최상급 운영</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>자사몰 70%+ — 고객 데이터 직접 보유, 모든 CRM의 토대</li>
+          <li>노세일 아키텍처: 할인율 미노출, 구매지원금·쿠폰 우회, VIP 알림톡</li>
+          <li>VIP 3단계 멤버십(300/500/1,000만원) + 세분화 CRM 로드맵</li>
+          <li>자사몰 = 브랜드 미디어: 철학 페이지, 무진요 인터뷰, 수선·맞춤(REPAIRS & TAILORING) 메뉴, 영문 글로벌몰</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●○</span><span class="sum">매장 역할 분리와 공간 완성도</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>매장 역할 분리: 합정=허브(픽업·CS), 한남·성수=플래그십(브랜드 경험)</li>
+          <li>성수 플래그십(80평)을 커뮤니티 마케팅 거점으로 설계</li>
+          <li>한남점 인테리어가 핀터레스트에 수집(330핀+)될 정도의 공간 완성도</li>
+          <li>해외는 편집샵 홀세일(필라델피아 Totem, 방콕 FBT)로 저위험 테스트</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 확장 시사점 요약</h3>
+    <ul>
+      <li><b>강화할 것</b>: 상품구성의 폭(셔츠 의존 완화) · 주말/여가 감성 자산 · 소재의 자산화(네이밍)</li>
+      <li><b>본체 인접 확장(포멀·스탠다드)</b>: 실패 확률 낮음 ↔ 새로움 부족</li>
+      <li><b>감성 거리 있는 확장(레트로 캐주얼·테크)</b>: 신규 고객 유입 ↔ 아이덴티티 희석 위험, 별도 라인 분리 필요</li>
+      <li><b>노세일 유지 vs 백화점·아울렛 확장</b>의 긴장 관리가 과제</li>
+    </ul>
+  </div>
+</div>`;
+
+buildMatrix();
+route();
+</script>
 </body>
 </html>
