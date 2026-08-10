@@ -154,7 +154,7 @@ const CELLS = {
   'modern|f-s':[{n:'The Row'}],
   'modern|standard':[{n:'Studio Nicholson'},{n:'COS'}],
   'modern|s-c':[{n:'요크'},{n:'Lemaire'}],
-  'modern|casual':[{n:'Comoli'},{n:'Kith'}],
+  'modern|casual':[{n:'Comoli'},{n:'Kith',id:'kith'}],
   'modern|c-t':[{n:"Arc'teryx"}],
   'modern|tech':[{n:'Goldwin'},{n:'Portal'}],
   'natmod|standard':[{n:'Our Legacy',id:'our-legacy'},{n:'Auralee',id:'auralee'},{n:'ATON',id:'aton'}],
@@ -165,13 +165,13 @@ const CELLS = {
   'natural|casual':[{n:'Polo Ralph Lauren'}],
   'natural|c-t':[{n:'Nanamica'},{n:'Polo Sport'}],
   'natural|tech':[{n:'Patagonia',id:'patagonia'}],
-  'vinnat|casual':[{n:'Aimé Leon Dore'}],
+  'vinnat|casual':[{n:'Aimé Leon Dore',id:'aime-leon-dore'}],
   'vinnat|tech':[{n:'The North Face Purple Label'}],
   'vintage|formal':[{n:"Drake's"},{n:'Ralph Lauren Purple Label',id:'rl-purple-label'}],
   'vintage|f-s':[{n:'Beams Plus'}],
   'vintage|standard':[{n:"Levi's"},{n:'Merz b. Schwanen'}],
   'vintage|casual':[{n:'Warehouse',id:'warehouse'},{n:'A PRESSE'},{n:'RRL',id:'rrl'}],
-  'vintage|c-t':[{n:'Stone Island'},{n:'Nigel Cabourn'}]
+  'vintage|c-t':[{n:'Stone Island',id:'stone-island'},{n:'Nigel Cabourn',id:'nigel-cabourn'}]
 };
 const HOME_CELLS = [];
 
@@ -2085,6 +2085,676 @@ DETAILS['aton'] = `
       <a href="https://aton-tokyo.com/en" target="_blank">공식몰 (제품 구성·네이밍)</a> ·
       <a href="https://carrouselthestore.com/collections/aton" target="_blank">Carrousel — 브랜드 소개</a> ·
       <a href="https://cosimo.shop/brands/aton" target="_blank">Cosimo — 창업자·철학 해설</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['aime-leon-dore'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Vintage↔Natural × Casual</span>
+    <h2>에메 레온 도레 <span class="en">Aimé Leon Dore · New York</span></h2>
+    <p class="oneline">"창업자의 <b>개인사(퀸즈의 그리스 이민 2세)를 그대로 매장과 카페로 번역한</b> 브랜드 — 옷보다 '이 브랜드가 만든 공간에 있고 싶다'가 먼저 오는 구조를 만들었다"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>론칭</th><td>2014년, 뉴욕</td></tr>
+      <tr><th>창업자</th><td>테디 산티스 — <b>퀸즈에서 자란 그리스 이민 2세</b>. 뉴욕 문화와 그리스 유산을 결합하는 것이 브랜드의 출발점</td></tr>
+      <tr><th>포지셔닝</th><td>스트리트웨어 × 프레피 × 유러피언 클래식의 교차점. <b>'세련된 동네 사람'</b>이라는 정서</td></tr>
+      <tr><th>주력</th><td>니트, 스웨트, 아우터, 협업 스니커(뉴발란스)</td></tr>
+      <tr><th>가격대</th><td>티셔츠 $60~90, 니트 $200~400, 아우터 $400~900 — 스트리트 상위·컨템포러리 하위</td></tr>
+      <tr><th>특수 사업</th><td><b>Café Leon Dore</b> — 그리스풍 메뉴의 올데이 카페. 매장에 병설되어 브랜드의 핵심 자산</td></tr>
+      <tr><th>주요 협업</th><td><b>뉴발란스</b>(테디 산티스가 뉴발란스 Made in USA 라인 크리에이티브 디렉터 겸임), 포르쉐, 우블로 등</td></tr>
+      <tr><th>채널</th><td>뉴욕 플래그십 + 런던·마이애미·LA 등 소수 직영 + 자사몰. <b>한국 정식 매장 없음</b></td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>카페가 브랜드의 실질적 관문</b> — Café Leon Dore는 옷을 사지 않는 사람도 매일 오게 만드는 장치. 프랑스·그리스 카페 문화에서 착안했고, 창업자의 그리스 유산을 <b>메뉴로 번역</b>함</li>
+      <li><b>2023년 뉴욕 플래그십 리모델링</b> — 흰 벽을 걷어내고 <b>월넛 우드·미드센추리 조명·페르시안 러그</b>로 전환. 참조 대상이 소매점이 아니라 <b>런던 빅토리아 시대의 젠틀맨스 클럽</b>. 스트리트 브랜드가 '클럽'을 참조한 것 자체가 포지셔닝 선언</li>
+      <li>런던 부티크는 모더니즘 건축가 <b>아돌프 로스에 대한 오마주</b>로 설계(디자이너 사리타 포사다) — 도시마다 참조 대상을 바꾸는 방식</li>
+      <li>매장 입구에 뉴욕 아티스트 타이렐 윈스턴의 <b>'바람 빠진 농구공을 격자로 벽에 건' 작품</b> — 상품이 아닌 것이 브랜드의 첫인상을 담당</li>
+      <li><b>뉴발란스와의 관계가 이례적</b> — 협업을 넘어 창업자가 뉴발란스 Made in USA 라인의 크리에이티브 디렉터를 겸임. 협업의 최종 형태</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">2014</span>테디 산티스가 뉴욕에서 창업 — 퀸즈 출신 이민 2세의 개인 서사에서 출발</div>
+      <div class="ev"><span class="y">2018~</span>뉴욕 플래그십 + <b>Café Leon Dore</b> 오픈 — 카페 병설이 브랜드를 결정적으로 차별화</div>
+      <div class="ev"><span class="y">2019~</span>뉴발란스 협업 시작 — 스니커가 브랜드 인지의 최대 채널이 됨</div>
+      <div class="ev"><span class="y">2022</span>런던 부티크 오픈 (아돌프 로스 오마주 설계)</div>
+      <div class="ev"><span class="y">2023</span>뉴욕 플래그십 리모델링 — 젠틀맨스 클럽 참조로 전환, 브랜드 격 상승</div>
+      <div class="ev"><span class="y">2020s</span>포르쉐·우블로 등 이종 산업 협업으로 라이프스타일 확장</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: 10년 만에 <b>옷 → 카페 → 이종 산업 협업</b>으로 확장. 제임스 펄스가 30년에 걸쳐 한 일(옷→공간)을 압축해서 해냄. 차이는 <b>카페를 처음부터 옆에 붙였다는 것</b>.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>니트 · 스웨트 — 브랜드의 축</h4>
+    <p>로고 자수가 들어간 스웨트·니트가 주력. <b>로고를 적극 사용하되 폰트와 배치를 클래식하게</b> 처리 — 스트리트의 로고 문화와 프레피의 절제를 절충.</p>
+    <h4>아우터 · 셋업</h4>
+    <p>바시티 재킷, 코트, 트랙수트. 뉴욕 스트리트 문법에 유럽 클래식 소재를 얹는 방식.</p>
+    <h4>협업 스니커 ★</h4>
+    <p><b>뉴발란스 협업이 브랜드 인지도의 최대 원천</b>. 550, 993 등의 리이슈가 브랜드를 세계적으로 알림. <b>옷보다 신발이 먼저 알려진 브랜드</b>이며, 이는 로로피아나(로퍼)와 구조적으로 동일한 현상.</p>
+    <h4>잡화</h4>
+    <p>모자, 백, 양말, 소품. 로고 노출 면적이 크고 가격이 낮아 <b>진입 상품으로 강력하게 작동</b>. 이 구역에서 잡화가 가장 잘 작동하는 브랜드.</p>
+    <h4>Café Leon Dore — 라이프스타일 ★</h4>
+    <p>그리스풍 올데이 카페. 커피·페이스트리부터 식사까지. <b>카페 굿즈(머그·티셔츠·원두)가 별도 상품군</b>을 형성해, 옷을 안 사는 고객도 브랜드에 돈을 쓰게 만듦. 옷 매장의 부속이 아니라 <b>독립적으로 성립하는 사업</b>이라는 점이 핵심.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">로고 스웨트 · 니트</b> <span class="price">$150~400</span>
+      <p>인기 포인트: 클래식한 세리프 로고, 무게감 있는 원단, 뉴욕이라는 문맥.</p>
+      <p class="voice">소비자 반응 — <b>"옷 자체보다 브랜드가 만든 분위기를 산다"</b>는 자각적 소비가 특징. 카페 경험이 구매로 이어지는 경로가 뚜렷함. 반면 <b>"품질 대비 비싸다", "결국 로고값"</b>이라는 비판이 이 브랜드의 가장 큰 약점으로 반복 지적됨 — <b>소재 축이 이 보드의 다른 브랜드 대비 명백히 얕음</b>.</p>
+    </div>
+    <div class="sig"><b class="t">뉴발란스 협업 스니커</b> <span class="price">$130~180</span>
+      <p>발매 즉시 완판·리셀. <b>브랜드를 모르는 사람도 이 신발은 아는</b> 상태를 만들어냄 — 협업이 인지도를 역전시킨 사례.</p>
+    </div>
+    <div class="sig"><b class="t">Café Leon Dore 굿즈</b> <span class="price">$15~60</span>
+      <p>머그·원두·에코백. <b>가장 저렴한 브랜드 진입점</b>이며 여행자 기념품 수요를 흡수. 카페가 상품 채널로 작동하는 증거.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●○○○</span><span class="sum">이 보드에서 가장 약한 축 — 의도적 선택</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>소재 서사가 거의 없음. 원단 개발도 산지 서사도 없이 <b>일반적인 컨템포러리 수준</b></li>
+          <li>대신 <b>무게감·질감 등 '느낌'</b>에 집중 — 스펙이 아니라 인상으로 승부</li>
+          <li>⚠️ "품질 대비 비싸다"는 비판의 근원. 오라리·ATON과 정반대 지점에 있는 브랜드</li>
+          <li><b>시사점</b>: 소재가 약해도 공간과 서사가 강하면 브랜드가 성립한다는 반증. 다만 <b>가격 저항이 영구적으로 따라붙음</b></li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●●○</span><span class="sum">로고를 쓰되 클래식하게 — 절충의 기술</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>세리프 로고와 절제된 배치</b>로 스트리트의 로고 문화를 프레피 문맥으로 번역</li>
+          <li>컬러 팔레트가 뉴욕의 벽돌·아이비리그 톤(버건디·크림·네이비·브라운)으로 고정 — <b>지역색이 팔레트로 구현됨</b></li>
+          <li>그리스 유산이 패턴·컬러·카페 메뉴에 은근하게 반복 — <b>개인사가 디자인 언어가 된 사례</b></li>
+          <li>⚠️ 독창적 실루엣은 없음 — 기존 아이템의 재조합</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●●○</span><span class="sum">카페와 협업이 상품 구성의 절반</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>카페가 독립 사업이자 별도 상품군</b> — 옷을 안 사는 고객의 지출을 흡수하고, 방문 빈도를 주 단위로 끌어올림</li>
+          <li><b>협업 스니커가 인지도 엔진</b> — 자체 개발 없이 뉴발란스의 제품력을 빌려 브랜드를 알림</li>
+          <li>잡화(모자·백·소품)가 저가 진입 상품으로 강력하게 작동</li>
+          <li>⚠️ 의류 자체의 상품력은 상대적으로 평범 — <b>주변부가 중심을 먹여 살리는 구조</b></li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●●●</span><span class="sum">★ 창업자의 개인사가 마케팅의 전부</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>퀸즈·그리스 이민 2세라는 개인사</b>가 브랜드 서사 전체 — 지어낸 헤리티지가 아니라 실재하는 개인의 이야기라 반박 불가능</li>
+          <li>룩북·캠페인이 <b>동네·가족·일상</b>을 다룸. 패션 화보가 아니라 다큐멘터리 톤</li>
+          <li><b>카페가 곧 CRM</b> — 구매 없이도 매주 오는 고객이 생기고, 그 접촉 빈도가 결국 구매로 전환</li>
+          <li>협업이 신규 유입의 주 채널 — 뉴발란스·포르쉐 등 이종 산업으로 접점 확대</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●●</span><span class="sum">★ 매장이 상점이 아니라 '클럽'</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>참조 대상이 소매점이 아님</b> — 뉴욕 플래그십은 빅토리아 시대 젠틀맨스 클럽, 런던은 아돌프 로스 건축. 매장 설계의 출발점을 <b>다른 업종에서 가져오는 것</b>이 이 브랜드 VMD의 핵심 방법론</li>
+          <li>2023년 리모델링에서 <b>흰 벽 → 월넛 우드</b>로 전환. 밝고 미니멀한 리테일 표준을 버리고 <b>어둡고 따뜻한 방향</b>으로 감 (RRL과 같은 계열)</li>
+          <li>미드센추리 조명, 페르시안 러그, 가죽 뱅킷, 칼라카타 비올라 대리석 — <b>집기 하나하나가 소매용이 아니라 주거·클럽용</b></li>
+          <li><b>매장 입구에 예술 작품</b>(타이렐 윈스턴의 농구공 격자) — 첫인상을 상품이 아닌 것에 맡김. RRL의 비매품 아카이브와 같은 원리, 다른 표현</li>
+          <li><b>카페와 매장이 물리적으로 이어짐</b> — 커피를 들고 옷을 보는 동선. 체류시간이 리테일 평균의 몇 배</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>★ 매장 설계의 참조를 '다른 업종'에서 가져오기</b>
+      <p>ALD는 매장을 만들 때 다른 옷가게가 아니라 <b>젠틀맨스 클럽·모더니즘 주택</b>을 봤음. 포터리도 성수 플래그십을 기획할 때 경쟁사 매장이 아니라 <b>한옥·서재·도예 공방·다실</b> 같은 이종 공간을 참조점으로 삼으면 차별화가 구조적으로 발생함. VMD 벤치마킹의 방향 자체를 바꾸는 제안.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>★ 카페·비판매 공간을 '독립 사업'으로 붙이기</b>
+      <p>Café Leon Dore의 핵심은 옷 매장의 부속이 아니라 <b>그 자체로 성립하는 사업</b>이라는 점. 옷을 안 사는 사람도 매주 오게 만들어 접촉 빈도를 주 단위로 올림. 포터리가 성수에서 이걸 한다면 <b>카페 굿즈(원두·머그)가 최저가 진입 상품</b>이 되고, 외국인 매출 30% 목표와도 직결됨(여행자는 옷보다 기념품을 삼).</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>창업자·브랜드의 실재하는 개인사를 서사로</b>
+      <p>ALD의 그리스·퀸즈 서사는 <b>지어낸 게 아니라서 반박 불가능</b>. 포터리도 '도자기'라는 이름의 유래, 창업 배경, 성수라는 장소를 <b>구체적 개인사·지역사</b>로 풀면 카피보다 강한 서사가 됨. 제임스 펄스의 '캘리포니아'를 서울 버전으로 번역하는 작업과 같은 맥락.</p></div>
+    <div class="ref"><div class="tags"><span class="tag cas">캐주얼</span></div>
+      <b>협업을 '자체 개발 없이 카테고리를 얻는' 수단으로</b>
+      <p>ALD는 뉴발란스와의 협업으로 <b>신발을 개발하지 않고 신발 브랜드가 됨</b>. 포터리도 잡화(신발·가방)에서 국내 제조사와 협업하면, 개발 리스크 없이 카테고리를 확보하고 상대 브랜드의 고객까지 데려올 수 있음.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>매장 첫인상을 '상품이 아닌 것'에 맡기기</b>
+      <p>입구의 예술 작품 하나가 브랜드 성격을 규정함. RRL의 비매품 아카이브, 웨어하우스의 경년변화 샘플과 같은 원리. 포터리라면 <b>입구에 도자·공예 작품이나 원단 아카이브</b> — 저비용이면서 SNS 확산력이 가장 높은 지점.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① <b>소재가 약하면 "로고값"이라는 꼬리표가 영구히 붙음</b> — ALD의 최대 약점. 포터리는 소재가 강점이므로 이 함정은 피할 수 있으나, <b>공간·서사에 투자하면서 제품력을 방치하면 같은 비판을 받게 됨</b>.<br>
+    ② <b>카페는 운영 난이도가 매우 높음</b> — 식음료는 완전히 다른 사업이며, 품질이 떨어지면 브랜드 전체 이미지를 깎음. 직영이 어렵다면 <b>검증된 로스터리와의 협업 입점</b>이 현실적.<br>
+    ③ <b>협업 의존은 인지도를 빌려온 것</b> — 뉴발란스 없이 이 브랜드가 지금 위치에 있었을지는 불확실. 협업은 유입 장치이지 정체성이 될 수 없음.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://www.aimeleondore.com/" target="_blank">공식몰</a>
+      <a href="https://www.aimeleondore.com/pages/teddy-santis" target="_blank">창업자 소개 (서사 참고)</a>
+      <a href="https://sixtysixmag.com/aime-leon-dore-nyc/" target="_blank">Sixtysix — 뉴욕 플래그십 인테리어 상세</a>
+      <a href="https://www.dezeen.com/2022/07/18/aime-leon-dore-sarita-posada-london-store-interior/" target="_blank">Dezeen — 런던 부티크 설계</a>
+      <a href="https://www.instagram.com/aimeleondore/" target="_blank">인스타그램 @aimeleondore</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>aime leon dore store interior</b> · <b>cafe leon dore</b> · <b>gentlemens club retail design</b> · <b>walnut panelling shop</b> (<b>매장+카페 결합 동선</b>과 <b>주거형 집기</b>가 최대 스터디 포인트. Dezeen·Sixtysix 기사에 도면급 상세 컷 다수)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://sixtysixmag.com/aime-leon-dore-nyc/" target="_blank">Sixtysix Magazine — NYC 리모델 (젠틀맨스 클럽 참조)</a> ·
+      <a href="https://www.dezeen.com/2022/07/18/aime-leon-dore-sarita-posada-london-store-interior/" target="_blank">Dezeen — 런던 스토어 (아돌프 로스 오마주)</a> ·
+      <a href="https://hypebeast.com/2023/5/aime-leon-dore-new-york-flagship-reopening" target="_blank">Hypebeast — 플래그십 리오픈</a> ·
+      <a href="https://en.wikipedia.org/wiki/Aim%C3%A9_Leon_Dore" target="_blank">Wikipedia — 브랜드 연혁</a> ·
+      <a href="https://nbktimes.com/en/fashion/aimeleondore/" target="_blank">Café Leon Dore와 뉴욕 문화</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['kith'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Modern × Casual</span>
+    <h2>키스 <span class="en">Kith · New York</span></h2>
+    <p class="oneline">"<b>모든 매장을 아티스트 건축 스튜디오(스나키텍처)가 설계</b>하고, 매장 안에 시리얼 바를 넣은 브랜드 — 리테일을 '전시'로 재정의해 옷을 사지 않아도 방문하게 만든 실험실"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>론칭</th><td>2011년, 뉴욕</td></tr>
+      <tr><th>창업자</th><td>로니 피그 — 편집샵 아틀리에 뉴욕 출신. <b>바이어 → 협업 디자이너 → 브랜드 창업</b>의 경로</td></tr>
+      <tr><th>포지셔닝</th><td>라이프스타일 브랜드 <b>겸</b> 스페셜티 리테일러 — 자체 브랜드와 편집 유통을 동시에 하는 하이브리드</td></tr>
+      <tr><th>주력</th><td>자체 의류(Kith) + 협업 상품 + 셀렉트 브랜드 유통</td></tr>
+      <tr><th>가격대</th><td>티셔츠 $60~90, 후디 $150~250, 아우터 $300~800</td></tr>
+      <tr><th>매장</th><td><b>독립 매장 20개</b> + 허쉬라이퍼·셀프리지 등 숍인숍. <b>모든 매장을 스나키텍처(다니엘 아샴 설립)가 설계</b></td></tr>
+      <tr><th>특수 사업</th><td><b>Kith Treats</b> — 시리얼 바. 23종 시리얼 + 토핑·아이스크림. <b>17개 지점 + 독립 매장 1개</b></td></tr>
+      <tr><th>채널</th><td>직영 + 자사몰. <b>한국 정식 매장 없음</b>(과거 팝업 이력)</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>전 매장을 스나키텍처가 설계</b> — 예술과 건축의 경계를 다루는 스튜디오. 매장을 <b>소매점이 아니라 몰입형 전시</b>로 설계함. 다만 <b>도시마다 그 도시를 참조해 다르게</b> 지음 — 통일된 매뉴얼이 아니라 통일된 '설계자'로 일관성을 확보하는 방식</li>
+      <li><b>Kith Treats(시리얼 바)</b> — 창업자의 어린 시절 시리얼 사랑에서 출발. 옷 매장 안에 식음료를 넣어 <b>구매 목적이 없는 방문</b>을 만듦. ALD의 카페와 같은 기능, 훨씬 낮은 진입 가격</li>
+      <li><b>창업자가 "줄 서는 걸 싫어한다"고 공개적으로 말함</b> — 스트리트웨어의 상징인 대기줄을 오히려 <b>고객 경험의 실패로 규정</b>. 희소성 마케팅을 거부하고 서비스 품질을 택한 이례적 입장</li>
+      <li><b>브랜드이자 편집샵</b>이라는 이중 정체성 — 자체 상품과 타 브랜드를 같은 공간에서 팔며, 그 큐레이션 자체가 브랜드 가치</li>
+      <li>협업 범위가 극단적으로 넓음 — 신발·의류를 넘어 <b>만화책, BMW 차량</b>까지. 카테고리가 아니라 <b>문화적 소재</b>를 기준으로 확장</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">~2011</span>로니 피그, 편집샵 바이어로 경력 시작 — 협업 스니커로 이름을 알림</div>
+      <div class="ev"><span class="y">2011</span>Kith 창업 — 편집 유통과 자체 브랜드를 동시에 시작</div>
+      <div class="ev"><span class="y">2010s 중반</span>Kith Treats 도입 — 시리얼 바가 매장 방문 동기를 바꿈</div>
+      <div class="ev"><span class="y">2010s 후반</span>스나키텍처와의 전면 협업 체제 확립 — 매장이 브랜드의 핵심 자산으로</div>
+      <div class="ev"><span class="y">2020s</span>독립 매장 20개 + 숍인숍 확장, 이종 산업 협업(BMW 등)으로 문화적 영향력 확대</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: <b>매장 수를 늘리는 것이 곧 브랜드 확장</b>인 유일한 유형. 상품이 아니라 <b>공간과 큐레이션</b>이 브랜드의 본체이며, 그래서 온라인만으로는 성립하지 않음.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>자체 의류 (Kith)</h4>
+    <p>후디·스웨트·니트·아우터. 뉴욕 스포츠·영화 문화를 참조한 그래픽이 많음. <b>상품 자체보다 '어떤 컬렉션의 일부인가'</b>가 구매 이유가 되는 구조.</p>
+    <h4>협업 상품 ★</h4>
+    <p>나이키·아디다스·뉴발란스·클락스 등 스니커부터 <b>만화책·BMW</b>까지. 협업 상대를 카테고리가 아니라 <b>문화적 소재</b>로 고름 — 확장의 기준이 파타고니아의 '명분 일관성'과 유사하되, 여기서는 '문화적 취향 일관성'.</p>
+    <h4>편집 유통</h4>
+    <p>타 브랜드를 셀렉트해 판매. <b>큐레이션 자체가 상품</b>이며, 자체 브랜드와 병치되어 서로의 문맥을 강화.</p>
+    <h4>잡화 · 홈</h4>
+    <p>모자·백·양말·홈굿즈. 로고 노출이 큰 저가 진입 상품군이 두텁게 구성됨.</p>
+    <h4>Kith Treats — 식음료 ★</h4>
+    <p>23종 시리얼과 토핑을 조합하는 시리얼 바. <b>1만원 이하로 브랜드를 경험</b>할 수 있게 만든 최저가 진입점이며, 아이·가족 단위 방문을 유도해 고객층을 넓힘. 17개 지점 운영 = <b>실험이 아니라 검증된 사업</b>.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">협업 스니커</b> <span class="price">$120~250</span>
+      <p>발매마다 화제. <b>브랜드 인지의 핵심 채널</b>이며 ALD와 동일한 구조.</p>
+      <p class="voice">소비자 반응 — <b>"매장에 가는 것 자체가 목적"</b>이라는 반응이 이 브랜드의 정체성을 요약. 리셀 시장이 크게 형성돼 있음. 반면 <b>"협업이 없으면 살 이유가 없다", "자체 상품의 디자인이 평범하다"</b>는 지적이 지속적 — ALD와 같은 약점(제품력 < 문화력).</p>
+    </div>
+    <div class="sig"><b class="t">Kith Treats 시리얼</b> <span class="price">$5~12</span>
+      <p>가장 저렴한 브랜드 접점. <b>아이를 데려온 부모가 옷을 보는</b> 동선이 실제로 작동 — 고객 연령대를 확장하는 장치.</p>
+    </div>
+    <div class="sig"><b class="t">박스 로고 후디 · 니트</b> <span class="price">$150~300</span>
+      <p>자체 상품의 주력. 소재보다 <b>소속감</b>을 사는 소비.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●○○○</span><span class="sum">약한 축 — 소재로 경쟁하지 않는다</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>소재 서사가 거의 없음. 중상급 원단을 쓰되 <b>그것을 판매 논거로 쓰지 않음</b></li>
+          <li>ALD와 같은 유형 — 이 보드에서 <b>소재 축이 가장 얕은 두 브랜드</b></li>
+          <li>⚠️ "협업 아니면 살 이유가 없다"는 비판의 근원</li>
+          <li><b>시사점</b>: 소재를 포기하고 공간·큐레이션에 전부를 건 극단 사례. 포터리는 정반대 자산(소재)을 가졌으므로 <b>이 브랜드에서 배울 것은 상품이 아니라 리테일 방법론</b></li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●○○</span><span class="sum">디자인보다 '큐레이션'이 창작 행위</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>자체 상품 디자인은 무난한 편 — <b>무엇을 만드느냐보다 무엇과 함께 놓느냐</b>가 브랜드의 창작</li>
+          <li>뉴욕 스포츠·영화·음악을 참조한 그래픽이 문화적 소속감을 제공</li>
+          <li>⚠️ 독자적 디자인 언어는 약함. 협업 상대의 아이덴티티에 얹히는 구조</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●●●</span><span class="sum">★ 브랜드 + 편집샵 + 식음료의 하이브리드</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>자체 브랜드와 편집 유통을 한 공간에서</b> — 자체 상품이 약해도 매장 구색이 풍부하고, 타 브랜드 고객이 자연스럽게 유입됨</li>
+          <li><b>Kith Treats로 진입 가격을 $5까지 낮춤</b> — 의류 브랜드가 도달할 수 없는 가격대에 접점을 만듦</li>
+          <li>협업 범위를 카테고리가 아니라 <b>문화적 소재</b>로 정의해 확장 폭이 사실상 무제한</li>
+          <li>홈·잡화까지 포함해 <b>매장 평당 매출을 다층으로</b> 확보</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●●○</span><span class="sum">희소성 대신 서비스 — 줄을 없애겠다는 선언</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>"대기줄은 고객 경험의 실패"</b>라는 창업자의 입장 — 스트리트웨어의 표준 전술(한정·대기)을 거부하고 <b>서비스 품질로 차별화</b>. 업계 통념에 대한 정면 반박</li>
+          <li>커뮤니티 구축을 명시적 목표로 삼음 — 상품이 아니라 <b>소속감</b>을 판매</li>
+          <li>협업 발표 자체가 콘텐츠 — 광고비 없이 미디어 노출 확보</li>
+          <li>⚠️ 리셀 시장이 커서 <b>실수요자 접근성</b> 문제는 여전히 남아 있음</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●●</span><span class="sum">★ 전 매장을 아티스트 스튜디오가 설계 — 일관성을 '설계자'로 확보</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>스나키텍처(다니엘 아샴)가 전 매장 설계</b> — 매뉴얼로 통일하는 대신 <b>같은 설계자를 쓰는 것</b>으로 일관성 확보. 매장마다 달라도 한 브랜드로 읽히는 이유</li>
+          <li><b>매장을 몰입형 전시로 설계</b> — 상품 진열보다 공간 체험이 우선. 미니멀 화이트, 반복 패턴, 재료의 물성 실험 등 갤러리 문법</li>
+          <li><b>도시마다 그 도시를 참조</b> — 같은 브랜드지만 뉴욕·마이애미·파리 매장이 다른 이야기를 함. 관광 목적지가 되는 효과</li>
+          <li><b>Treats가 매장 동선의 앵커</b> — 시리얼 바가 안쪽에 있어 고객이 매장을 통과해야 함. 식음료를 <b>동선 설계 도구</b>로 쓴 사례</li>
+          <li>편집 상품과 자체 상품을 <b>같은 밀도로 병치</b> — 자체 브랜드의 격을 큐레이션으로 끌어올림</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>★ 매장 일관성을 '매뉴얼'이 아니라 '같은 설계자'로 확보하기</b>
+      <p>포터리가 백화점 8개점으로 확장할 때 가장 현실적인 문제가 <b>매장마다 톤이 달라지는 것</b>. Kith의 해법은 VMD 매뉴얼을 두껍게 만드는 게 아니라 <b>전 매장을 한 설계자에게 맡기는 것</b>. 매뉴얼은 지켜도 어색하지만 같은 손이 만들면 달라도 한 브랜드로 읽힘. 확장 국면에서 검토할 가치가 큼.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>★ 식음료를 '동선 설계 도구'로</b>
+      <p>Kith Treats가 매장 안쪽에 있어 고객이 <b>매장을 통과해야</b> 도달함. 카페를 넣는다면 위치가 매출을 좌우 — 입구가 아니라 <b>안쪽에 두어 상품 동선을 강제</b>하는 것이 정석. ALD의 '카페 병설'보다 한 단계 더 정교한 설계.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>진입 가격을 의류가 도달할 수 없는 곳까지 낮추기</b>
+      <p>$5 시리얼로 브랜드를 경험하게 함. 포터리도 <b>1만원 이하 접점</b>(음료, 소품, 굿즈)을 만들면 구매 부담 없는 첫 방문이 발생하고, 특히 <b>외국인 관광객·젊은 층</b>에게 유효. 로로피아나의 '잡화 관문'보다 더 아래 단계.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>도시마다 다른 매장 — 확장이 복제가 되지 않게</b>
+      <p>Kith는 매장마다 그 도시를 참조해 <b>방문할 이유를 만듦</b>. 포터리도 백화점 확장 시 전 매장 동일 구성이 아니라 <b>지점별로 하나씩 다른 요소</b>(지역 공예 셀렉트, 다른 아카이브 전시)를 두면 각 매장이 목적지가 됨.</p></div>
+    <div class="ref"><div class="tags"><span class="tag cas">캐주얼</span><span class="tag all">공통</span></div>
+      <b>편집 유통을 섞어 자체 상품의 격을 올리기</b>
+      <p>Kith는 좋은 타 브랜드 옆에 자체 상품을 놓아 <b>큐레이션으로 격을 빌려옴</b>. 포터리도 성수 플래그십에서 <b>브랜드 톤과 맞는 소수의 타 브랜드·공예품</b>을 함께 두면(마가렛 호웰의 셀렉트 방식과 결합), 자체 상품이 더 좋은 문맥에 놓임.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① <b>소재를 포기한 대가는 명확함</b> — "협업 없으면 살 이유가 없다"는 비판이 구조적으로 따라붙음. 포터리는 소재가 강점이므로 <b>Kith에서 배울 것은 상품이 아니라 리테일 방법론에 한정</b>해야 함.<br>
+    ② <b>공간 투자는 회수 기간이 김</b> — 아티스트 설계·전시형 매장은 초기 비용이 크고, 매장 수가 적을 때는 평당 효율이 나쁨. 성수 플래그십 한 곳에 집중하는 편이 합리적.<br>
+    ③ <b>협업 의존은 브랜드 자립도를 낮춤</b> — 협업이 끊기면 남는 게 없는 구조. 자체 상품력을 병행하지 않으면 위험.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://kith.com/pages/about" target="_blank">공식 About (매장·Treats 현황)</a>
+      <a href="https://kith.com/" target="_blank">공식몰</a>
+      <a href="https://www.highsnobiety.com/p/kith-store-history-interview/" target="_blank">Highsnobiety — 매장 역사 인터뷰 (VMD 필독)</a>
+      <a href="https://www.instagram.com/kith/" target="_blank">인스타그램 @kith</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>kith store snarkitecture</b> · <b>kith treats interior</b> · <b>immersive retail installation</b> · <b>monolithic white retail</b> (<b>스나키텍처 설계 매장</b>이 이 브랜드 최대 자산 — 도시별 매장 비교 컷을 모으면 '같은 브랜드, 다른 공간'의 교본이 됨)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://kith.com/pages/about" target="_blank">Kith 공식 About</a> ·
+      <a href="https://www.highsnobiety.com/p/kith-store-history-interview/" target="_blank">Highsnobiety — A Brief History of Kith's Retail Excellence</a> ·
+      <a href="https://wwd.com/business-news/business-features/feature/wwd-ceo-summit-ronnie-fieg-kith-1234988522/" target="_blank">WWD CEO Summit — 커뮤니티 구축</a> ·
+      <a href="https://www.papermag.com/ronnie-fieg-kith-guru" target="_blank">Paper — "줄 서는 걸 싫어한다" 인터뷰</a> ·
+      <a href="https://www.businessoffashion.com/people/ronnie-fieg/" target="_blank">BoF 500 — Ronnie Fieg</a> ·
+      <a href="https://theageofideas.com/kith-making-modern-brand/" target="_blank">브랜드 구축 방법론 분석</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['stone-island'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Vintage × Casual↔Tech</span>
+    <h2>스톤 아일랜드 <span class="en">Stone Island · Ravarino, Italy</span></h2>
+    <p class="oneline">"<b>염색 레시피 6만 종</b>을 축적한 원단 연구소가 브랜드가 된 사례 — 왼팔의 컴퍼스 배지 하나로 40년간 소속감을 판매했고, 소재 실험을 곧 디자인으로 만든 유일한 유형"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>론칭</th><td>1982년, 이탈리아 (마시모 오스티의 C.P. Company에서 파생)</td></tr>
+      <tr><th>창업자</th><td>마시모 오스티 — <b>그래픽 디자이너 출신</b>. 옷을 만든 게 아니라 <b>원단을 개발해 옷으로 증명</b>한 인물</td></tr>
+      <tr><th>포지셔닝</th><td>소재 연구 기반 스포츠웨어. 밀리터리·워크웨어의 기능을 실험실로 가져옴</td></tr>
+      <tr><th>주력</th><td>재킷·셸(가먼트 다이드), 니트, 스웨트 — <b>아우터가 절대적 축</b></td></tr>
+      <tr><th>가격대</th><td>스웨트 €250~400, 재킷 €500~1,500, 특수 소재 아우터 €2,000+</td></tr>
+      <tr><th>시그니처</th><td><b>왼팔의 컴퍼스 로즈 배지</b>(1983~) — 단추로 탈부착. 브랜드 식별의 거의 전부</td></tr>
+      <tr><th>기술 자산</th><td><b>6만 종 이상의 자체 염색 레시피</b>, 가먼트 다잉, 반사 원단, 열감응 소재 등</td></tr>
+      <tr><th>소유</th><td><b>2020년 몽클레르 그룹이 약 11.5억 유로에 인수</b> — 인수 후에도 원단 연구 방법론과 제품 우선주의는 유지</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>브랜드의 출발점이 옷이 아니라 원단</b> — 1982년 마시모 오스티가 개발한 <b>TELA STELLA</b>(수지 코팅 밀리터리 캔버스, 강하게 워싱한 원단)가 먼저 있었고, 그 원단을 증명하기 위해 <b>재킷 7벌짜리 캡슐</b>을 만든 것이 브랜드의 시작</li>
+      <li><b>염색 레시피 6만 종 이상 축적</b> — 완성된 옷을 통째로 염색하는 가먼트 다잉이 핵심 기술. 같은 옷이 염색에 따라 완전히 다른 상품이 됨</li>
+      <li><b>컴퍼스 배지는 단추로 탈부착</b>(1983~) — 로고를 봉제하지 않고 <b>떼었다 붙일 수 있게</b> 만든 것. 소유자가 로고 노출 여부를 선택하게 하는 드문 설계</li>
+      <li>영국 축구 서브컬처(카주얼)에서 <b>부족 표식</b>처럼 소비됨 — 브랜드가 의도하지 않은 소속감 문화가 40년간 브랜드를 지탱</li>
+      <li><b>2020년 몽클레르 인수(약 11.5억 유로)</b> — 대형 그룹 편입 후에도 R&amp;D 독립성을 유지한 사례로 평가됨</li>
+      <li>⚠️ 서브컬처 이미지 때문에 <b>지역·연령에 따라 브랜드 인식 편차가 큼</b> — 영국에서는 축구 문화, 한국에서는 하이엔드 아웃도어로 다르게 읽힘</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">1982</span>마시모 오스티, TELA STELLA 원단 개발 → 재킷 7벌 캡슐로 스톤 아일랜드 출범</div>
+      <div class="ev"><span class="y">1983</span><b>컴퍼스 로즈 배지</b> 도입 — 이후 40년간 브랜드 식별의 전부가 됨</div>
+      <div class="ev"><span class="y">1980s~90s</span>가먼트 다잉·반사 원단·열감응 소재 등 실험적 소재 연속 발표. 영국 카주얼 문화에 흡수</div>
+      <div class="ev"><span class="y">2000s~10s</span>스트리트·힙합 문화로 확산 — 서브컬처에서 글로벌 브랜드로</div>
+      <div class="ev"><span class="y">2020</span><b>몽클레르 그룹 인수</b> (약 11.5억 유로)</div>
+      <div class="ev"><span class="y">2020s</span>글로벌 리테일 확장, 소재 연구 계속 — 인수 후에도 제품 우선주의 유지</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: <b>소재 실험 → 옷 → 서브컬처 소속감 → 글로벌 브랜드</b>. 확장을 브랜드가 주도한 게 아니라 <b>문화가 브랜드를 데려간</b> 드문 경우. 이 보드에서 오라리·웨어하우스와 같은 '소재 중심'이지만, 유일하게 <b>대중적 성공</b>에 도달함.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>아우터 — 브랜드의 본체</h4>
+    <p>가먼트 다이드 재킷, 셸, 파카. <b>매 시즌 새로운 소재 실험을 아우터로 발표</b> — 상품 개발이 곧 R&amp;D 발표. 열에 반응해 색이 변하는 원단, 반사 원단, 유리섬유 코팅 등 실험작이 실제 판매 상품이 됨.</p>
+    <h4>니트 · 스웨트</h4>
+    <p>컴퍼스 배지가 붙은 스웨트가 <b>진입 상품</b>. 아우터를 못 사는 고객이 배지를 소유하는 경로 — <b>로고가 진입 상품을 만든 사례</b>.</p>
+    <h4>Shadow Project / 특수 라인</h4>
+    <p>실험적 소재·구조를 극단화한 상위 라인. <b>본체가 대중화되어도 기술적 정체성을 지키는 장치</b>.</p>
+    <h4>잡화</h4>
+    <p>모자·백·소품. 컴퍼스 배지가 붙는 모든 것이 상품이 되는 구조라 <b>잡화가 자연스럽게 성립</b>. 로고가 강한 브랜드의 이점.</p>
+    <h4>라이프스타일</h4>
+    <p>본격 리빙은 없음. 대신 <b>아카이브 전시·소재 아카이브 공개</b>가 브랜드의 문화적 자산 역할.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">컴퍼스 배지 스웨트 · 후디</b> <span class="price">€250~400</span>
+      <p>인기 포인트: 배지 자체, 가먼트 다이드 특유의 깊은 색감.</p>
+      <p class="voice">소비자 반응 — <b>"배지를 사는 것"</b>이라는 자각적 소비가 지배적. 영국권에서는 <b>세대를 잇는 소속 표식</b>으로 이야기됨. 반면 <b>"배지 떼면 평범한 옷", "가격이 로고값"</b>이라는 비판과, 서브컬처 이미지 때문에 <b>특정 집단의 옷으로 낙인</b>되는 문제도 함께 존재.</p>
+    </div>
+    <div class="sig"><b class="t">가먼트 다이드 재킷</b> <span class="price">€500~1,500</span>
+      <p>같은 패턴이라도 염색에 따라 전혀 다른 상품. <b>색이 곧 시즌 상품 기획</b>이라는 구조를 보여줌.</p>
+    </div>
+    <div class="sig"><b class="t">실험 소재 아우터 (열감응·반사)</b> <span class="price">€2,000+</span>
+      <p>판매량보다 <b>브랜드의 기술적 신뢰를 증명</b>하는 역할. RRL의 레더 재킷, 웨어하우스의 Heller's Café와 기능적으로 동일한 '증거 상품'.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●●</span><span class="sum">★ 염색 레시피 6만 종 — 소재 실험이 곧 상품 기획</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>브랜드가 원단에서 시작됨</b> — TELA STELLA 원단이 먼저, 옷은 그것을 증명하는 수단. 오라리의 '원단 우선' 철학의 40년 선배</li>
+          <li><b>6만 종 이상의 염색 레시피</b>가 축적 자산 — 경쟁사가 돈으로 살 수 없는 유일한 종류의 진입장벽</li>
+          <li><b>가먼트 다잉</b>: 완성된 옷을 통째로 염색해 봉제선·부자재까지 색이 배어듦. 같은 패턴으로 <b>수십 가지 상품</b>을 만드는 저비용 확장 수단</li>
+          <li>열감응·반사·코팅 등 실험 소재를 <b>실제 판매 상품으로</b> 출시 — R&amp;D가 마케팅과 분리되지 않음</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●○○</span><span class="sum">디자인은 소재가 결정 — 그리고 배지 하나</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>실루엣은 밀리터리·워크웨어 기반으로 보수적 — <b>변수는 소재와 색</b></li>
+          <li><b>컴퍼스 배지가 디자인의 전부</b>: 40년간 변하지 않은 단일 식별자. 로고리스 브랜드들과 정반대 전략인데 같은 수준의 인지를 확보</li>
+          <li><b>배지를 탈부착식으로</b> 만들어 소유자가 노출 여부를 선택 — 로고에 대한 태도까지 설계</li>
+          <li>⚠️ 배지 의존도가 지나쳐 <b>"떼면 평범하다"</b>는 비판이 구조적</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●●○</span><span class="sum">같은 패턴 × 다른 염색 = 무한 SKU</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>가먼트 다잉으로 SKU를 늘림</b> — 새 패턴을 만들지 않고 색만 바꿔 상품을 확장. 개발비 대비 상품 수가 압도적</li>
+          <li>배지가 붙는 모든 것이 상품이 되므로 <b>잡화 확장이 자연스러움</b> — 로고 자산이 있는 브랜드의 이점</li>
+          <li>Shadow Project 등 상위 라인으로 <b>기술 정체성을 방어</b></li>
+          <li>진입 상품(스웨트)과 증거 상품(실험 아우터)의 <b>가격 스펙트럼이 매우 넓음</b></li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●●○</span><span class="sum">문화가 브랜드를 데려갔다</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>영국 축구 카주얼 문화가 브랜드를 부족 표식으로 채택</b> — 브랜드가 만들지 않은 소속감. 광고로는 절대 만들 수 없는 종류의 충성도</li>
+          <li>소재 연구 자체를 콘텐츠화 — 아카이브 전시, 소재 다큐. <b>기술이 곧 스토리</b></li>
+          <li>⚠️ 서브컬처 이미지의 양면성 — <b>특정 집단의 옷으로 낙인</b>되면 다른 고객이 이탈. 브랜드가 통제할 수 없는 리스크</li>
+          <li>⚠️ 몽클레르 인수 후 대중화가 진행되며 <b>초기 팬층의 이탈</b> 조짐</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●○</span><span class="sum">실험실·격납고 문법 — 소재를 전시한다</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>VMD는 <b>산업·실험실 문법</b>: 금속, 콘크리트, 노출 구조, 차가운 조명. 로로피아나·오라리의 따뜻한 소재 진열과 정반대</li>
+          <li><b>소재 자체를 전시물로</b> — 원단 스와치, 염색 샘플, 아카이브 피스를 매장에 배치해 기술을 시각화. 웨어하우스의 페이딩 샘플과 같은 원리</li>
+          <li>컬러 배리에이션이 많아 <b>색 그러데이션 행잉</b>이 강력한 진열 수단 — 같은 재킷의 20가지 색이 벽면을 채우는 방식</li>
+          <li>몽클레르 인수 후 <b>글로벌 직영 확장</b> 가속 — 도매 중심에서 직영 중심으로 전환 중</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>★ 가먼트 다잉 — 패턴 하나로 상품 수를 늘리는 법</b>
+      <p>스톤 아일랜드는 새 패턴을 만들지 않고 <b>염색만 바꿔</b> 상품을 확장함. 포터리도 검증된 대표 아이템을 <b>가먼트 다잉·후염 컬러 배리에이션</b>으로 전개하면, 개발비 없이 신상품 명분과 SKU를 동시에 얻음. 오라리의 '원단 개발'보다 훨씬 저비용인 대안.</p></div>
+    <div class="ref"><div class="tags"><span class="tag tech">테크</span><span class="tag all">공통</span></div>
+      <b>소재 실험을 '상품'으로 출시하기 — R&amp;D와 마케팅을 합치기</b>
+      <p>실험 소재를 연구로만 두지 않고 <b>실제 판매 상품으로 내놓아</b> 기술을 증명함. 포터리 테크 라인도 소량의 <b>실험적 소재 상품</b>을 매 시즌 하나씩 내면, 판매량과 무관하게 브랜드의 기술 신뢰가 축적됨. RRL의 레더 재킷과 같은 '증거 상품' 역할.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>VMD — 색 그러데이션 행잉으로 벽면 만들기</b>
+      <p>같은 아이템의 컬러가 많을 때 <b>색 순서대로 벽면을 채우는</b> 진열은 그 자체로 강력한 시각 장치. 선스펠·ATON의 폴딩 그러데이션이 '정돈'이라면 이쪽은 <b>'풍부함'</b>. 포터리의 컬러 전개가 넓은 카테고리(니트·티셔츠)에 적용 가능.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>매장에 소재 아카이브를 전시하기</b>
+      <p>원단 스와치·염색 샘플을 진열해 기술을 시각화. 웨어하우스(경년변화), RRL(비매품 아카이브)과 같은 계열이며, <b>소재가 강점인 포터리에 가장 잘 맞는 형태</b>. 원단 스와치 월 하나면 충분함.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>⚠️ 로고 전략의 반대 사례로 읽을 것</b>
+      <p>이 보드 대부분(제임스 펄스·로로피아나·오라리)이 로고리스인데 스톤 아일랜드만 <b>로고 하나로 성공</b>함. 다만 대가가 명확함 — "떼면 평범하다"는 비판과 특정 집단 낙인. 포터리는 <b>로고리스 진영에 있으므로 이 길은 참고만</b> 하되, <b>탈부착 로고</b>라는 아이디어 자체는 흥미로움(고객이 노출 여부를 고르게 하는 것).</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① <b>서브컬처 채택은 통제 불가능</b> — 소속감을 만들어주지만, 특정 집단의 옷으로 낙인되면 다른 고객이 이탈함. 브랜드가 선택할 수 없는 리스크.<br>
+    ② <b>로고 의존은 제품력 비판을 부름</b> — "배지 떼면 평범"이라는 지적. 포터리처럼 소재가 강한 브랜드는 오히려 유리한 위치.<br>
+    ③ <b>그룹 인수 후 대중화는 초기 팬을 잃음</b> — 몽클레르 인수 후 진행 중인 현상. 성장과 정체성의 트레이드오프.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://www.stoneisland.com/" target="_blank">공식몰</a>
+      <a href="https://www.monclergroup.com/en/stone-island/history" target="_blank">몽클레르 그룹 — 브랜드 히스토리</a>
+      <a href="https://www.instagram.com/stoneisland_official/" target="_blank">인스타그램</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>stone island store interior</b> · <b>garment dye color range display</b> · <b>industrial retail concrete metal</b> · <b>fabric swatch wall display</b> (<b>색 그러데이션 행잉</b>과 <b>소재 아카이브 전시</b>가 스터디 포인트)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://www.monclergroup.com/en/stone-island/history" target="_blank">Moncler Group — Stone Island 공식 히스토리</a> ·
+      <a href="https://en.wikipedia.org/wiki/Stone_Island" target="_blank">Wikipedia — Stone Island</a> ·
+      <a href="https://en.wikipedia.org/wiki/Massimo_Osti" target="_blank">Wikipedia — Massimo Osti</a> ·
+      <a href="https://growyourclothingbrand.com/blog/case-studies/stone-island/" target="_blank">브랜드 전략 케이스 스터디 — 기술 원단으로 컬트를 만든 법</a> ·
+      <a href="https://vintageclothingguides.com/brand-history/the-history-of-stone-island/" target="_blank">VCG — 브랜드 역사</a>
+    </p>
+  </div>
+</div>`;
+
+DETAILS['nigel-cabourn'] = `
+<div class="d-card">
+  <div class="d-head">
+    <span class="cellpos">Vintage × Casual↔Tech</span>
+    <h2>나이젤 카본 <span class="en">Nigel Cabourn · Newcastle, UK</span></h2>
+    <p class="oneline">"<b>4,000점 이상의 빈티지 아카이브</b>를 개인이 수집해 그것을 컬렉션의 원본으로 삼은 브랜드 — 아카이브가 곧 자산이자 매장이자 브랜드 그 자체였던 사례"</p>
+  </div>
+
+  <div class="sec">
+    <h3>① 퀵팩트</h3>
+    <table class="qf">
+      <tr><th>활동</th><td>1970년대부터 활동, 영국 뉴캐슬(제스먼드)에 스튜디오·아카이브</td></tr>
+      <tr><th>창업자</th><td>나이젤 카본 — 디자이너이자 <b>세계 최대급 빈티지 수집가</b>. <b>2026년 6월 별세(향년 76세)</b></td></tr>
+      <tr><th>포지셔닝</th><td>20세기 밀리터리 유니폼과 탐험 장비의 고증 재해석. <b>'수집가가 만든 브랜드'</b></td></tr>
+      <tr><th>주력</th><td>밀리터리 아우터, 탐험 장비 기반 재킷, 워크웨어</td></tr>
+      <tr><th>가격대</th><td>재킷 £400~1,200, 상위 라인 £1,500+ — 고증 수준에 따라 라인이 나뉨</td></tr>
+      <tr><th>아카이브</th><td><b>4,000점 이상</b> — 2차대전 비행 재킷, 남극 탐험대의 울 서지, 에드워드 시대 등반가의 캔버스 스목, 북해 부두 노동자의 덩거리</td></tr>
+      <tr><th>참조 범위</th><td>미 해군·해병대, 영국 공군, 스웨덴군, 일본군 등 <b>국가를 가리지 않는 밀리터리 고증</b></td></tr>
+      <tr><th>채널</th><td>영국 직영(Army Gym) + <b>일본에서 특히 강력한 지지</b> + 글로벌 편집샵. 한국은 편집샵 중심</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <h3>② 특이사항</h3>
+    <ul>
+      <li><b>매장 이름이 'Army Gym'</b> — 상점이 아니라 <b>아카이브 전시장 겸 판매장</b>. 수집품과 판매 상품이 같은 공간에 놓임</li>
+      <li><b>개인 아카이브 4,000점이 브랜드의 유일한 원본</b> — 자료를 사서 보는 게 아니라 <b>실물을 소유하고 해체·측정</b>해 복각. RRL(랄프 로렌 개인 컬렉션)과 같은 구조지만 규모와 학술성이 더 극단적</li>
+      <li>참조 대상이 <b>특정 국가·시대에 갇히지 않음</b> — 미군·영공군·스웨덴군·일본군까지. '밀리터리'를 국적이 아니라 <b>기능의 아카이브</b>로 다룸</li>
+      <li>탐험 장비에 대한 집착 — 남극 탐험대, 에베레스트 원정대 복식 연구가 컬렉션의 핵심 축. <b>1953년 에베레스트 등정 복각</b>이 대표작</li>
+      <li><b>2026년 6월 별세</b> — 브랜드가 창업자 개인의 수집·안목에 거의 전적으로 의존했기 때문에, <b>아카이브와 방법론이 어떻게 승계되는지가 향후 관찰 포인트</b></li>
+      <li>⚠️ 규모는 작고 유통은 제한적 — 마니아 시장에 집중된 구조</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>③ 타임라인</h3>
+    <div class="tl">
+      <div class="ev"><span class="y">1970s</span>영국에서 디자이너로 활동 시작. 동시에 빈티지 수집 시작</div>
+      <div class="ev"><span class="y">1980s~90s</span>밀리터리·탐험 복식 아카이브 축적 — 수집이 사업의 기반이 됨</div>
+      <div class="ev"><span class="y">2000s</span>아카이브 기반 컬렉션 체계화. 일본 시장에서 강한 지지 확보</div>
+      <div class="ev"><span class="y">2010s</span>런던·뉴캐슬 <b>Army Gym</b> 매장 — 아카이브 전시와 판매를 결합한 공간 실험</div>
+      <div class="ev"><span class="y">2020s</span>아카이브 4,000점 규모로 성장, 컬트 브랜드 지위 확립</div>
+      <div class="ev"><span class="y">2026.6</span>창업자 별세 (향년 76세) — 브랜드 승계 국면</div>
+    </div>
+    <p style="color:var(--sub);font-size:13px">확장 패턴 요약: <b>확장하지 않은 브랜드</b>. 50년간 아카이브를 늘렸을 뿐 카테고리·매장·규모는 거의 그대로. 이 보드에서 <b>'개인의 안목이 곧 브랜드'</b>인 가장 극단적 사례이며, 그래서 승계 리스크도 가장 큼.</p>
+  </div>
+
+  <div class="sec prod">
+    <h3>④ 상품 구성 — 의류 · 잡화 · 라이프스타일</h3>
+    <h4>밀리터리 아우터 — 브랜드의 축</h4>
+    <p>2차대전 비행 재킷, 데크 재킷, 스목 등. <b>원본의 국적·연도·부대까지 명시</b>해 상품을 설명 — 웨어하우스가 '연도'로 나눈다면 여기는 <b>'부대와 임무'</b>로 나눔.</p>
+    <h4>탐험 장비 기반 라인 ★</h4>
+    <p>남극 탐험대 울 서지, 에베레스트 원정 복각. <b>극한 환경에서 검증된 기능</b>을 서사로 삼음 — 밀리터리보다 이쪽이 브랜드의 독자적 영역.</p>
+    <h4>라인 등급 구조</h4>
+    <p>고증 충실도와 소재 등급에 따라 라인이 나뉨(Authentic 계열 등). <b>같은 원본을 여러 가격대로</b> 전개하는 방식 — 웨어하우스의 서브 라인 분할과 같은 원리.</p>
+    <h4>잡화</h4>
+    <p>백팩, 캔버스 백, 모자, 소품. 밀리터리 문맥상 <b>가방이 자연스럽게 성립</b>하며 실제로 인기 카테고리. 워크웨어·밀리터리 계열 브랜드의 공통 이점.</p>
+    <h4>아카이브 — 판매하지 않는 자산 ★</h4>
+    <p>4,000점의 수집품 자체가 브랜드의 최대 자산. <b>Army Gym 매장에 전시</b>되어 상품의 근거를 시각적으로 증명. RRL의 비매품 전략을 <b>훨씬 큰 규모로, 그리고 진짜로</b> 실행한 것.</p>
+  </div>
+
+  <div class="sec">
+    <h3>⑤ 시그니처 & 소비자 반응</h3>
+    <div class="sig"><b class="t">에베레스트 / 탐험대 복각 재킷</b> <span class="price">£600~1,500</span>
+      <p>인기 포인트: 실제 역사적 사건과 연결된 서사, 두꺼운 울·캔버스의 물성.</p>
+      <p class="voice">소비자 반응 — <b>"옷을 사는 게 아니라 역사를 사는 것"</b>이라는 서사 중심 소비. 일본 마니아층의 지지가 특히 강하고, <b>수집가적 구매</b>(입기보다 소유) 비중이 높음. 반면 <b>"무겁고 실용성이 떨어진다", "일상에서 소화하기 어렵다"</b>는 지적이 명확 — 고증에 충실할수록 현대 착용성이 떨어지는 구조적 딜레마.</p>
+    </div>
+    <div class="sig"><b class="t">밀리터리 스목 · 데크 재킷</b> <span class="price">£400~800</span>
+      <p>브랜드의 주력. 원본의 부대·연도가 상품 설명에 명시되며, 그 정보가 <b>가격의 근거</b>가 됨.</p>
+    </div>
+    <div class="sig"><b class="t">캔버스 백팩 · 가방</b> <span class="price">£150~400</span>
+      <p>밀리터리 문맥에서 자연스럽게 성립하는 잡화. <b>진입 상품이자 실용 상품</b>으로 이중 역할.</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑥ 강점 분석 (5축)</h3>
+    <p class="hint">각 줄을 클릭하면 상세 설명이 펼쳐집니다</p>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-btn"><span class="ax">원단·소재</span><span class="dots">●●●●○</span><span class="sum">원본의 소재를 그대로 — 기능이 검증된 소재만</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li>울 서지, 헤비 캔버스, 벤타일 등 <b>극한 환경에서 검증된 소재</b>를 원본 그대로 사용</li>
+          <li>소재 서사의 근거가 희소성(로로피아나)도 정확성(웨어하우스)도 아닌 <b>'실제로 그 상황에서 쓰였다'는 사실</b> — 세 번째 유형의 소재 논리</li>
+          <li>영국·일본 방직과 협업해 단종된 원단을 재생산하기도 함</li>
+          <li>⚠️ 현대적 쾌적성은 포기 — 무겁고 뻣뻣함이 그대로 남음</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●○○</span><span class="sum">수집이 곧 디자인 — 안목이 유일한 자산</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>4,000점 중 무엇을 고를 것인가</b>가 디자인 행위의 전부. RRL·웨어하우스와 같은 계열의 극단</li>
+          <li>원본을 그대로 복각하기보다 <b>현대 사이즈로 조정</b>하는 정도의 개입 — 웨어하우스보다는 유연</li>
+          <li>⚠️ <b>디자이너 개인의 안목에 100% 의존</b> — 2026년 별세로 이 축의 지속 가능성이 최대 불확실 요소</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">상품구성</span><span class="dots">●●●○○</span><span class="sum">라인 등급으로 가격대를 나눔, 잡화는 자연 성립</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>고증 충실도에 따라 라인 등급</b>을 나눠 같은 원본을 여러 가격대로 전개</li>
+          <li>밀리터리 문맥 덕분에 <b>가방·모자 등 잡화가 억지스럽지 않게 성립</b> — RRL과 같은 이점이며, 소재파 브랜드(오라리·ATON)가 갖지 못한 강점</li>
+          <li>⚠️ 카테고리 폭은 좁음. 아우터에 과도하게 집중돼 시즌 편차가 큼(여름 취약)</li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">마케팅·CRM</span><span class="dots">●●●○○</span><span class="sum">아카이브 자체가 콘텐츠이자 권위</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>4,000점의 수집품이 반박 불가능한 권위</b> — "이 사람이 말하면 맞다"는 신뢰가 마케팅의 본체</li>
+          <li>원본 사진·역사적 사건과 상품을 병치하는 콘텐츠가 표준 포맷</li>
+          <li>일본 미디어·편집샵의 지지가 브랜드를 지탱 — <b>본국보다 해외에서 더 강한</b> 마가렛 호웰형 구조</li>
+          <li>⚠️ 창업자 개인 인격에 완전히 종속 — <b>승계가 가장 어려운 유형</b></li>
+        </ul></div>
+      </div>
+      <div class="acc-item"><button class="acc-btn"><span class="ax">유통·채널·VMD</span><span class="dots">●●●●●</span><span class="sum">★ 'Army Gym' — 매장을 박물관으로 만든 극단</span><span class="arr">▶</span></button>
+        <div class="acc-body"><ul>
+          <li><b>매장 이름부터 상점이 아님</b> — Army Gym. 수집품과 판매 상품이 <b>구분 없이 같은 공간</b>에 놓여, 고객이 무엇이 파는 물건인지 헷갈리게 만드는 것이 의도</li>
+          <li><b>비매품 아카이브의 밀도가 판매 상품보다 높음</b> — RRL이 '연출된 아카이브'라면 여기는 <b>진짜 아카이브를 매장에 넣은 것</b>. 진정성의 차이가 공간에서 드러남</li>
+          <li>군용 트렁크, 철제 선반, 작업대, 원본 사진 액자 — <b>집기 전부가 시대 소품</b></li>
+          <li>조명은 어둡고 낮게 — 웨어하우스(공방), RRL(빈티지 상점)과 같은 계열의 어두운 리테일</li>
+          <li>⚠️ 이 방식은 <b>실제 아카이브를 소유해야만</b> 가능. 흉내내면 즉시 가짜로 보임</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3>⑦ 포터리 레퍼런스 포인트</h3>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>★ 아카이브를 '지금부터' 축적하기 — 가장 중요한 시사점</b>
+      <p>나이젤 카본의 4,000점은 50년에 걸쳐 모은 것. 포터리는 지금 아카이브가 없지만, <b>지금부터 자사 상품의 초기 샘플·원단 스와치·시즌 룩북·매장 사진을 체계적으로 보관</b>하면 10년 뒤 이것이 브랜드의 방어 자산이 됨. 비용은 보관 공간뿐. <b>VMD 담당 업무와 직결</b> — 매장 사진·집기 기록을 지금 체계화해둘 것.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>상품 설명에 '출처'를 명시하는 방식</b>
+      <p>원본의 부대·연도를 명시해 가격의 근거로 삼음. 포터리도 <b>디자인의 참조점(어떤 옷·어떤 시대·어떤 작업복에서 왔는지)</b>을 상품 설명에 명시하면, 기본 아이템에 서사가 생기고 "왜 이 형태인가"에 답이 됨.</p></div>
+    <div class="ref"><div class="tags"><span class="tag cas">캐주얼</span><span class="tag tech">테크</span></div>
+      <b>기능의 근거를 '실제 사용 이력'에서 찾기</b>
+      <p>희소성(로로피아나)·정확성(웨어하우스)이 아닌 <b>'실제로 그 환경에서 쓰였다'</b>는 제3의 소재 논리. 포터리 테크 라인도 스펙 숫자가 아니라 <b>실제 사용 맥락</b>(어떤 상황에서 검증했는지)으로 설명하면 설득력이 다름.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>잡화가 '억지스럽지 않게' 성립하는 조건</b>
+      <p>밀리터리·워크웨어 문맥에서는 가방이 자연스럽게 성립함(RRL·나이젤 카본 공통). 반면 소재 중심 브랜드(오라리·ATON)는 잡화가 안 붙음. <b>차이는 세계관에 잡화가 필요한가</b>임. 포터리가 잡화를 확장하려면 먼저 <b>"우리 옷의 착장에 무엇이 반드시 필요한가"</b>를 정의해야 함 — 물건을 늘리는 게 아니라 문맥을 만드는 문제.</p></div>
+    <div class="ref"><div class="tags"><span class="tag all">공통</span></div>
+      <b>⚠️ 창업자 의존 리스크를 지금 대비하기</b>
+      <p>2026년 창업자 별세로 브랜드가 승계 국면에 들어감. <b>개인의 안목이 곧 브랜드</b>인 구조의 최대 약점이 실시간으로 드러나는 사례. 포터리도 브랜드 판단 기준(무엇을 만들고 무엇을 안 만드는가)을 <b>개인이 아니라 문서화된 원칙</b>으로 옮겨두는 작업이 필요. 아워 레가시(3인 체제)와 비교해서 볼 것.</p></div>
+    <div class="warnbox"><b>⚠️ 주의점 (반면교사)</b><br>
+    ① <b>아카이브 없이 아카이브형 VMD를 흉내내면 즉시 가짜로 보임</b> — Army Gym이 성립하는 이유는 실물이 진짜이기 때문. 포터리가 이 방향으로 간다면 <b>자사 아카이브(초기 샘플·원단)</b>로 해야 하며, 사온 빈티지 소품으로는 안 됨.<br>
+    ② <b>고증에 충실할수록 착용성이 떨어짐</b> — "무겁고 일상에서 못 입는다"는 지적. 포터리의 '정돈된 편안함'과는 정반대 트레이드오프이며, 이 브랜드에서 배울 것은 <b>상품이 아니라 아카이브 방법론</b>.<br>
+    ③ <b>아우터 편중은 계절 편차를 만듦</b> — 여름 매출 취약. 카테고리 균형의 중요성.</div>
+  </div>
+
+  <div class="sec">
+    <h3>⑧ 레퍼런스 이미지 · 소스</h3>
+    <p class="imglinks">
+      <a href="https://www.cabourn.com/" target="_blank">공식몰</a>
+      <a href="https://www.cabourn.com/en-us/blogs/journal/vintage-nigel-cabourn-the-biography" target="_blank">공식 저널 — 빈티지 아카이브 이야기</a>
+      <a href="https://www.port-magazine.com/fashion/nigel-cabourns-army-gym/" target="_blank">PORT — Army Gym 매장 (VMD 필독)</a>
+      <a href="https://www.carryology.com/liking/industry/nigel-cabourn-the-archivist/" target="_blank">Carryology — The Archivist</a>
+    </p>
+    <p style="font-size:13px;color:var(--sub)">핀터레스트 무드 검색어: <b>nigel cabourn army gym</b> · <b>vintage archive display retail</b> · <b>military trunk shop fixture</b> · <b>museum style clothing store</b> (<b>매장을 박물관으로 만든 사례</b> — 아카이브 진열 방법론 스터디에 가장 수확이 큼)</p>
+  </div>
+
+  <div class="sec">
+    <h3>출처</h3>
+    <p class="srcs">
+      <a href="https://wwd.com/eye/people/nigel-cabourn-designer-vintage-military-uniforms-dead-76-1239008298/" target="_blank">WWD — 부고 및 아카이브 규모(2026.6)</a> ·
+      <a href="https://www.port-magazine.com/fashion/nigel-cabourns-army-gym/" target="_blank">PORT Magazine — Nigel Cabourn's Army Gym</a> ·
+      <a href="https://www.carryology.com/liking/industry/nigel-cabourn-the-archivist/" target="_blank">Carryology — The Archivist 인터뷰</a> ·
+      <a href="https://www.cabourn.com/en-us/blogs/journal/vintage-nigel-cabourn-the-biography" target="_blank">공식 저널 — 수집 이력</a> ·
+      <a href="https://david-hellqvist.squarespace.com/new-blog/2015/3/7/nigel-cabourn-and-his-london-army-gym" target="_blank">런던 Army Gym 취재</a>
     </p>
   </div>
 </div>`;
