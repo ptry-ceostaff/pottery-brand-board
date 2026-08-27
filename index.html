@@ -29,7 +29,7 @@ body{font-family:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;font-weight:400
 .btn-pottery:hover{background:#000}
 /* ---------- matrix ---------- */
 .matrix{display:grid;grid-template-columns:110px repeat(7,1fr);gap:0;overflow:hidden;font-size:13px}
-.mx-corner{background:var(--dark);background-image:linear-gradient(to bottom right,transparent calc(50% - .6px),rgba(255,255,255,.45) calc(50% - .6px),rgba(255,255,255,.45) calc(50% + .6px),transparent calc(50% + .6px));padding:14px 12px}
+.mx-corner{background:var(--dark);background-image:linear-gradient(to top right,transparent calc(50% - .6px),rgba(255,255,255,.45) calc(50% - .6px),rgba(255,255,255,.45) calc(50% + .6px),transparent calc(50% + .6px));padding:14px 12px}
 .mx-corner b{color:#f2f2f0;font-size:13px}
 .mx-col{background:var(--dark);color:#f2f2f0;padding:13px 8px;text-align:center;font-weight:700;font-size:13.5px}
 .mx-col.bridge{background:#3a3a3a;color:#c8c8c8;font-weight:500;font-size:12px}
@@ -297,6 +297,28 @@ figcaption{font-size:12.5px;color:var(--sub);letter-spacing:.01em}
 .d-head h2{margin:0}
 .acc-btn,.acc-btn *{cursor:default}
 @media(max-width:700px){ .d-head .brandlogo{height:30px;max-width:140px} }
+
+/* ---------- v6: 정리 ---------- */
+/* 제안 카드: 왼쪽 세로선 제거 */
+.ref{border-left:none;padding-left:0;margin:26px 0}
+.ref b{display:block;margin-bottom:4px}
+/* 브랜드 선언문: 회색 사각 박스, 선 없음 */
+.manifesto{background:#f0f0ee;border:none;border-left:none;padding:20px 24px;margin:22px 0}
+.manifesto blockquote{font-size:15px;line-height:1.85;color:var(--ink)}
+/* 강점 분석: 줄 하나만, 정갈한 행 */
+.sec>h3{border-bottom:1px solid var(--ink);margin-bottom:6px}
+.acc{border:none;margin-top:0}
+.acc-item{border-top:1px solid var(--line);padding:20px 0 6px}
+.acc-item:first-child{border-top:none;padding-top:14px}
+.acc-item+.acc-item{border-top:1px solid var(--line)}
+.acc-btn{display:flex;align-items:baseline;gap:16px;padding:0 0 6px;background:transparent;font-size:14.5px}
+.acc-btn .ax{font-weight:700;font-size:14.5px;min-width:104px;letter-spacing:.01em}
+.acc-btn .dots{font-size:10.5px;letter-spacing:3px;color:var(--ink);position:relative;top:-1px}
+.acc-body{padding:0;background:transparent}
+.acc-body ul{padding-left:18px;margin:0}
+.acc-body li{margin:7px 0;line-height:1.85}
+.acc-body figure{margin:16px 0 4px}
+@media(max-width:700px){ .acc-btn{gap:10px} .acc-btn .ax{min-width:88px} }
 </style>
 </head>
 <body>
@@ -866,7 +888,6 @@ DETAILS['warehouse'] = `
       <tr><th>채널</th><td>일본 직영 소수 + 편집샵 도매. 한국 정식 유통 없음(병행, 직구)</td></tr>
     </table>
     <div class="manifesto">
-      <span class="h">브랜드 철학</span>
       <blockquote>"Faithful Reproduction of Authentic Vintage Garments"</blockquote>
     </div>
     <p>브랜드 철학은 대표 원단인 Banner Denim 하나에 다 담겨 있다. 1930년대 리바이스 광고용 배너를 실제로 해체해 원사 단위로 분석하고, 40년대 리바이스의 워싱과 페이딩이 그대로 나오도록 역설계한 원단이다. 복원하려는 대상이 원단의 색이 아니라 시간이 지난 뒤의 모습인 셈이다. 티셔츠도 옆솔기 없는 튜블라 몸판을 구형 편기로 짜는데, 이렇게 원단만이 아니라 기계까지 복각 대상에 들어간다. 확장은 Duck Digger, Heller's Café, Dubbleworks 같은 서브 라인으로 복각하는 시대와 장르를 늘리는 방식인데, 그 대신 대중 인지도는 사실상 없다. 깊이와 규모를 맞바꾼 전형적인 사례라고 할 수 있다.</p>
@@ -1256,7 +1277,6 @@ DETAILS['arcteryx'] = `
     <p class="ovw">1989년 캐나다 노스밴쿠버에서 데이브 레인이 암벽등반 장비 회사로 세웠다. 하네스에서 출발해 배낭과 하드셸로 영역을 넓혔고, 봉제 대신 열 접합(테이프 심)을 표준화하고 고어텍스와 멤브레인을 공동 개발하면서 기술 중심 아웃도어 브랜드로 성장하였다. 이후에는 도시형 서브브랜드 베일런스(2009~)로 패션과 아웃도어 시장을 모두 잡았다. 국내에서는 '이재용 패딩'으로 알려지기도 하였다.</p>
 
     <div class="manifesto">
-      <span class="h">브랜드 철학</span>
       <blockquote>"Obsessively designed gear for mountain athletes."<br>"Worn when it counts."</blockquote>
     </div>
     <p class="ovw" style="margin-top:10px">아웃도어 용품을 벗어난 제품들도 성공한 현재에도 브랜드 철학은 산악을 위한 제품이라는 본질에서 벗어나지 않고 있다.</p>
@@ -1403,7 +1423,6 @@ DETAILS['nanamica'] = `
       <tr><th>채널</th><td>일본 직영 6곳(다이칸야마, D.W.S., 마운틴, 교토, 고베, 후쿠오카)과 뉴욕, 상하이 직영. 그 외 24~28개국 편집샵 도매, 한국은 편집샵 취급</td></tr>
     </table>
     <div class="manifesto">
-      <span class="h">브랜드 철학</span>
       <blockquote>"One Ocean, All Lands"</blockquote>
     </div>
   </div>
@@ -1546,7 +1565,6 @@ DETAILS['theory'] = `
     <p class="ovw">1997년 뉴욕에서 앤드루 로젠과 엘리 타하리가 창업했다. 당시 늘어나던 직장인 여성을 위한 워크웨어 브랜드로 출발해, 핵심은 디자인이 아니라 소재였다. 정장 원단에 라이크라를 넣은 여성 스트레치 팬츠가 첫 상품이었고, 브랜드명도 "Stretch Theory"에서 한 단어를 뺀 것이다. '정장인데 편하다'를 30년간 반복해 '모던 워크웨어'의 대표가 됐고, '컨템포러리'라는 개념을 시작한 브랜드이기도 하다. 포터리가 지향하는 현대 직장인의 출근룩과 유니폼 스타일을 선도해왔다. 2004년 패스트리테일링(유니클로 모기업)에 인수되었다. 한국에서는 백화점 중심으로 유통돼 포터리 포멀 라인의 실질적인 경쟁자라고 할 수도 있다.</p>
 
     <div class="manifesto">
-      <span class="h">브랜드 철학</span>
       <blockquote>"자신만의 길을 개척하고자 하는 모든 분들을 위해, 저희는 일상 속에서도 자신감을 불어넣어 줄 옷을 만들어 여러분이 당당하게 자신의 존재감을 드러낼 수 있도록 돕고자 합니다."</blockquote>
     </div>
 
@@ -1698,7 +1716,6 @@ DETAILS['the-row'] = `
     <p class="ovw">2005년, 아역 배우 출신의 메리케이트, 애슐리 올슨 자매가 '완벽한 티셔츠 한 장' 프로젝트로 시작했다(2006년 뉴욕 론칭). 이름은 영국의 정장 거리 새빌로(Savile Row)에 대한 경의로, 비스포크 테일러링의 기준을 가져오겠다는 뜻이다. 광고도 SNS 판매도 로고 플레이도 하지 않고 창업자의 유명세까지 지워, 보이지 않는 방식으로 가치를 만들어 조용한 럭셔리의 최상단에 올랐다. 16년간 같은 방식을 지켰고, 2022~23년의 '올드머니' 신드롬이 뒤따라왔다. 초고가지만 라인 대부분은 일상적인 제품으로, 로고리스와 노출 최소화 계열의 브랜드 중 가장 성공한 브랜드에 해당한다.</p>
 
     <div class="manifesto">
-      <span class="h">브랜드 철학</span>
       <blockquote>"뛰어난 원단, 흠잡을 데 없는 디테일, 정밀한 테일러링에 중점을 둔 이 하우스는 시대를 초월한 관점과 미묘한 태도를 결합합니다."</blockquote>
     </div>
 
@@ -1849,7 +1866,6 @@ DETAILS['lemaire'] = `
     <p class="ovw" style="margin-top:10px">사업 규모는 2019년 연매출 약 1천만 유로에서 2024년 약 1억 유로로 6년 만에 열 배가 됐다. 2018년 패스트리테일링이 소수 지분(약 450만 유로)을 투자했고, 두 디렉터는 파리의 유니클로 R&amp;D 센터를 함께 이끈다. 광고와 인플루언서 협찬 없이 입소문으로 컸다는 점, 매장을 상업 지구가 아니라 옛 주택을 고쳐 여는 점(도쿄 에비스는 1960년대 주택, 서울 한남은 1970년대 한옥풍 주택을 개조해 2023년 11월 개점)이 브랜드가 커진 방식이다. 파리 보주 광장 11번지의 본점 옆에는 잡화만 다루는 콘셉트 스토어를 따로 냈다.</p>
 
     <div class="manifesto">
-      <span class="h">브랜드 철학</span>
       <blockquote>컬렉션은 일상을 위해 설계된 사려 깊은 옷과 액세서리 안에서 형태와 기능의 균형을 잡는다. 각 피스는 겹쳐 입고, 다시 해석하고, 오랜 시간에 걸쳐 살아내도록 설계된다.</blockquote>
     </div>
 
@@ -2003,7 +2019,6 @@ DETAILS['drakes'] = `
       <tr><th>가격대</th><td>타이 £120~180, 셔츠 £150~250, 재킷 £600~1,200</td></tr>
     </table>
     <div class="manifesto">
-      <span class="h">브랜드 철학</span>
       <blockquote>"Relaxed Elegance Since 1977"</blockquote>
     </div>
     <p>격식에서 딱딱함만 덜어내는 것이 설계의 기준이고, 그 결과물이 Games다. 스테디셀러 축 Perennials까지 포함하면 "오래 입는 옷"이라는 강령이 카테고리 구조에 그대로 반영돼 있다.</p>
@@ -2131,7 +2146,6 @@ DETAILS['polo-ralph-lauren'] = `
     <h3>① 브랜드 개요</h3>
     <p>1967년 뉴욕에서 넥타이 세일즈맨 랄프 리프시츠가 창업했다. 폴로 경기를 해본 적 없는 그가 "폴로"라는 단어가 환기하는 상속받은 부, 저택, 여유를 상품명으로 삼았다. 자기에게 없던 삶을 상상해 파는 것, 이것이 60년간 변치 않은 원리다. 선언문 "나는 옷을 디자인하지 않는다. 꿈을 디자인한다"가 옷에서 가구, 카페, 레스토랑으로 이어진 확장의 명분 그 자체였고, 이처럼 서사가 확장 허가증이 된 것은 보드에서 유일한 사례다.</p>
     <div class="manifesto">
-      <span class="h">브랜드 철학</span>
       <blockquote>"나는 옷을 디자인하지 않는다. 꿈을 디자인한다."</blockquote>
     </div>
     <table class="qf">
