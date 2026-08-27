@@ -35,6 +35,8 @@ body{font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;ba
 .mx-cell{background:var(--card);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 9px;min-height:64px}
 .mx-cell.bridge{filter:brightness(.972)}
 .chip{display:block;width:100%;text-align:left;background:none;border:none;font-family:inherit;font-size:13px;color:var(--ink);padding:2.5px 4px;border-radius:6px;cursor:pointer;line-height:1.45}
+.chip.todo{cursor:default}
+.chip.todo:hover{background:none}
 .chip:hover{background:rgba(178,91,42,.09)}
 .chip.has{font-weight:700;color:#1d1a16}
 .chip.has::after{content:"→";color:var(--accent);font-size:11px;margin-left:5px}
@@ -312,7 +314,8 @@ function buildMatrix(){
       const cls = 'mx-cell '+r.cls+(c.bridge?' bridge':'')+(HOME_CELLS.includes(key)?' home':'');
       let inner = brands.map(b=>{
         const has = !!b.id;
-        return '<button class="chip '+(has?'has':'todo')+(b.key?' key':'')+'" onclick="'+(has?("openBrand('"+b.id+"')"):("todoBrand('"+b.n.replace(/'/g,"\\'")+"')"))+'">'+b.n+'</button>';
+        if(!has) return '<span class="chip todo'+(b.key?' key':'')+'">'+b.n+'</span>';
+        return '<button class="chip has'+(b.key?' key':'')+'" onclick="openBrand(\''+b.id+'\')">'+b.n+'</button>';
       }).join('');
       h += '<div class="'+cls+'">'+inner+'</div>';
     });
@@ -333,14 +336,6 @@ function openBrand(id){
   document.getElementById('view-board').style.display='none';
   document.getElementById('view-detail').style.display='block';
   location.hash = 'brand='+id;
-  window.scrollTo(0,0);
-}
-function todoBrand(name){
-  const body = document.getElementById('detail-body');
-  body.innerHTML = '<div class="d-card"><div class="d-head"><h2>'+name+'</h2><p class="oneline">상세 분석 준비 중입니다. 분석이 완료되면 이 자리에 템플릿(한 줄 정의 → 퀵팩트 → 특이사항 → 타임라인 → 상품 구성 → 시그니처 & 소비자 반응 → 강점 분석 → 포터리 레퍼런스 포인트 → 레퍼런스 이미지) 구조로 채워집니다.</p></div></div>';
-  document.getElementById('view-board').style.display='none';
-  document.getElementById('view-detail').style.display='block';
-  location.hash = '';
   window.scrollTo(0,0);
 }
 function goBoard(){
