@@ -320,17 +320,16 @@ figcaption{font-size:12.5px;color:var(--sub);letter-spacing:.01em}
 .acc-body figure{margin:16px 0 4px}
 @media(max-width:700px){ .acc-btn{gap:10px} .acc-btn .ax{min-width:88px} }
 
-/* ---------- v7: 전수조사 원본(피그마) 확대 뷰어 ---------- */
+/* ---------- v7: 전수조사 원본 (피그마 임베드) ---------- */
 .rawwrap{margin:18px 0 6px;border:1px solid var(--line);background:#fff}
 .rawbar{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--sub)}
 .rawbar .t{font-weight:700;color:var(--ink)}
-.rawbar .sp{margin-left:auto;display:flex;gap:6px}
-.rawbar button{font-family:inherit;font-size:12px;border:1px solid var(--line);background:#fff;color:var(--ink);padding:4px 10px;cursor:pointer}
-.rawbar button:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
-.rawstage{position:relative;overflow:hidden;height:560px;background:#f7f7f7;cursor:grab;touch-action:none}
-.rawstage.drag{cursor:grabbing}
-.rawstage img{position:absolute;top:0;left:0;transform-origin:0 0;max-width:none;user-select:none;-webkit-user-drag:none}
-.rawstage iframe{width:100%;height:100%;border:none;display:block}
+.rawbar .sp{margin-left:auto}
+.rawbar a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.rawbar a:hover{border-color:var(--ink)}
+.rawframe{height:620px;background:#f7f7f7}
+.rawframe iframe{display:block;width:100%;height:100%;border:0}
+@media(max-width:700px){ .rawframe{height:420px} }
 .rawnote{font-size:12px;color:var(--sub);padding:7px 12px;border-top:1px solid var(--line)}
 @media(max-width:700px){ .rawstage{height:380px} }
 </style>
@@ -428,47 +427,12 @@ function toggleKey(){
   b.textContent = on ? '전체 브랜드 보기' : '주요 브랜드만 보기';
 }
 
-/* ---------- 전수조사 원본 확대 뷰어 (휠 확대, 드래그 이동) ---------- */
-function initRawViewers(root){
-  (root||document).querySelectorAll('.rawstage:not([data-init])').forEach(st=>{
-    st.dataset.init='1';
-    const img=st.querySelector('img'); if(!img) return;
-    let s=1,x=0,y=0,drag=false,px=0,py=0;
-    const apply=()=>{ img.style.transform='translate('+x+'px,'+y+'px) scale('+s+')'; };
-    const fit=()=>{ const iw=img.naturalWidth||1, ih=img.naturalHeight||1;
-      s=Math.min(st.clientWidth/iw, st.clientHeight/ih); if(!isFinite(s)||s<=0) s=1;
-      x=(st.clientWidth-iw*s)/2; y=(st.clientHeight-ih*s)/2; apply(); };
-    st.__fit=fit; st.__zoom=(f)=>{ const cx=st.clientWidth/2, cy=st.clientHeight/2;
-      const ns=Math.min(12,Math.max(0.05,s*f)); x=cx-(cx-x)*(ns/s); y=cy-(cy-y)*(ns/s); s=ns; apply(); };
-    if(img.complete && img.naturalWidth) fit(); else img.addEventListener('load',fit);
-    st.addEventListener('wheel',e=>{ e.preventDefault();
-      const r=st.getBoundingClientRect(), mx=e.clientX-r.left, my=e.clientY-r.top;
-      const ns=Math.min(12,Math.max(0.05,s*(e.deltaY<0?1.12:1/1.12)));
-      x=mx-(mx-x)*(ns/s); y=my-(my-y)*(ns/s); s=ns; apply(); },{passive:false});
-    st.addEventListener('mousedown',e=>{ drag=true; st.classList.add('drag'); px=e.clientX; py=e.clientY; });
-    window.addEventListener('mousemove',e=>{ if(!drag)return; x+=e.clientX-px; y+=e.clientY-py; px=e.clientX; py=e.clientY; apply(); });
-    window.addEventListener('mouseup',()=>{ drag=false; st.classList.remove('drag'); });
-    st.addEventListener('dblclick',fit);
-    let pd=null;
-    st.addEventListener('touchstart',e=>{ if(e.touches.length===1){drag=true;px=e.touches[0].clientX;py=e.touches[0].clientY;}
-      else if(e.touches.length===2){drag=false;pd=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);} },{passive:true});
-    st.addEventListener('touchmove',e=>{
-      if(e.touches.length===1&&drag){ x+=e.touches[0].clientX-px; y+=e.touches[0].clientY-py; px=e.touches[0].clientX; py=e.touches[0].clientY; apply(); e.preventDefault(); }
-      else if(e.touches.length===2&&pd){ const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
-        const r=st.getBoundingClientRect(); const mx=(e.touches[0].clientX+e.touches[1].clientX)/2-r.left, my=(e.touches[0].clientY+e.touches[1].clientY)/2-r.top;
-        const ns=Math.min(12,Math.max(0.05,s*(d/pd))); x=mx-(mx-x)*(ns/s); y=my-(my-y)*(ns/s); s=ns; pd=d; apply(); e.preventDefault(); } },{passive:false});
-    st.addEventListener('touchend',()=>{ drag=false; pd=null; },{passive:true});
-  });
-}
-function rawZoom(btn,f){ const st=btn.closest('.rawwrap').querySelector('.rawstage'); if(f===0) st.__fit(); else st.__zoom(f); }
-
 function openBrand(id){
   const d = DETAILS[id];
   const body = document.getElementById('detail-body');
   body.innerHTML = d ? d : '<div class="todo-note">이 브랜드의 상세 분석은 준비 중입니다.</div>';
   document.getElementById('view-board').style.display='none';
   document.getElementById('view-detail').style.display='block';
-  initRawViewers(body);
   location.hash = 'brand='+id;
   window.scrollTo(0,0);
 }
@@ -594,6 +558,11 @@ DETAILS['james-perse'] = `
 <tr style="background:#fff3c4"><td style="font-weight:800;background:#f1f1f1;white-space:nowrap" rowspan="1">LIFESTYLE</td><td>LIFESTYLE</td><td>40</td><td>40</td><td>4.5%</td></tr>
       <tr style="background:#f1f1f1;border-top:2px solid #1a1a1a"><td colspan="2"><b>합계</b></td><td><b>888</b></td><td><b>890</b></td><td>100%</td></tr>
     </table></div>
+<div class="rawwrap">
+  <div class="rawbar"><span class="t">전수조사 원본 (제임스펄스 남성복)</span><span>휠로 확대, 끌어서 이동</span><span class="sp"><a href="https://www.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=14322-3" target="_blank" rel="noopener">피그마에서 열기</a></span></div>
+  <div class="rawframe"><iframe loading="lazy" src="https://embed.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=14322-3&embed-host=share&footer=false&theme=light" allowfullscreen></iframe></div>
+  <div class="rawnote">피그마에 정리해 둔 원본 표입니다. 시즌과 가격대별로 실제 상품 이미지가 그대로 들어 있습니다.</div>
+</div>
 <div class="pottery-float">
 <p style="font-weight:700;margin:0 0 4px">포터리 현황 (같은 기준 전수조사)</p>
 <p style="font-size:12px;font-weight:700;color:#9c2b21;margin:0 0 8px">이 브랜드에서 주로 보완할 포터리 공백: LEATHER JACKET, JACKET, DENIM JACKET, TOP(etc.), BAG, SHOES, LIFESTYLE</p>
@@ -853,6 +822,11 @@ DETAILS['rrl'] = `
 <tr><td style="font-weight:800;background:#f1f1f1;white-space:nowrap" rowspan="1">LIFESTYLE</td><td>LIFESTYLE</td><td>0</td><td>0</td><td>0.0%</td></tr>
       <tr style="background:#f1f1f1;border-top:2px solid #1a1a1a"><td colspan="2"><b>합계</b></td><td><b>288</b></td><td><b>310</b></td><td>100%</td></tr>
     </table></div>
+<div class="rawwrap">
+  <div class="rawbar"><span class="t">전수조사 원본 (더블알엘 남성복)</span><span>휠로 확대, 끌어서 이동</span><span class="sp"><a href="https://www.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=14443-3" target="_blank" rel="noopener">피그마에서 열기</a></span></div>
+  <div class="rawframe"><iframe loading="lazy" src="https://embed.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=14443-3&embed-host=share&footer=false&theme=light" allowfullscreen></iframe></div>
+  <div class="rawnote">피그마에 정리해 둔 원본 표입니다. 시즌과 가격대별로 실제 상품 이미지가 그대로 들어 있습니다.</div>
+</div>
 <div class="pottery-float">
 <p style="font-weight:700;margin:0 0 4px">포터리 현황 (같은 기준 전수조사)</p>
 <p style="font-size:12px;font-weight:700;color:#9c2b21;margin:0 0 8px">이 브랜드에서 주로 보완할 포터리 공백: LEATHER JACKET, JACKET, DENIM JACKET, TOP(etc.), BAG, SHOES</p>
@@ -1390,6 +1364,11 @@ DETAILS['arcteryx'] = `
 <tr><td style="font-weight:800;background:#f1f1f1;white-space:nowrap" rowspan="1">LIFESTYLE</td><td>LIFESTYLE</td><td>0</td><td>0</td><td>0.0%</td></tr>
       <tr style="background:#f1f1f1;border-top:2px solid #1a1a1a"><td colspan="2"><b>합계</b></td><td><b>580</b></td><td><b>1738</b></td><td>100%</td></tr>
     </table></div>
+<div class="rawwrap">
+  <div class="rawbar"><span class="t">전수조사 원본 (아크테릭스 남성복)</span><span>휠로 확대, 끌어서 이동</span><span class="sp"><a href="https://www.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=14364-3" target="_blank" rel="noopener">피그마에서 열기</a></span></div>
+  <div class="rawframe"><iframe loading="lazy" src="https://embed.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=14364-3&embed-host=share&footer=false&theme=light" allowfullscreen></iframe></div>
+  <div class="rawnote">피그마에 정리해 둔 원본 표입니다. 시즌과 가격대별로 실제 상품 이미지가 그대로 들어 있습니다.</div>
+</div>
 <div class="pottery-float">
 <p style="font-weight:700;margin:0 0 4px">포터리 현황 (같은 기준 전수조사)</p>
 <p style="font-size:12px;font-weight:700;color:#9c2b21;margin:0 0 8px">이 브랜드에서 주로 보완할 포터리 공백: JACKET, COAT, DOWN JACKET, TOP(etc.), BAG, SHOES</p>
@@ -1670,9 +1649,15 @@ DETAILS['theory'] = `
       <tr style="background:#f1f1f1;border-top:2px solid #1a1a1a"><td colspan="2"><b>합계</b></td><td><b>187</b></td><td><b>435</b></td><td>100%</td></tr>
     </table></div>
 <div class="rawwrap">
-  <div class="rawbar"><span class="t">전수조사 원본 (피그마 로우데이터)</span><span>휠로 확대, 드래그로 이동, 더블클릭하면 처음 크기</span><span class="sp"><button onclick="rawZoom(this,1.3)">+</button><button onclick="rawZoom(this,0.77)">−</button><button onclick="rawZoom(this,0)">전체</button></span></div>
-  <div class="rawstage"><img src="img/figma-theory.png" alt="" onerror="this.closest('.rawwrap').style.display='none'"></div>
-  <div class="rawnote">피그마 보드에서 내보낸 원본입니다. 카테고리별 상품 이미지와 링크가 그대로 들어 있습니다.</div>
+  <div class="rawbar"><span class="t">전수조사 원본 (띠어리 남성복)</span><span>휠로 확대, 끌어서 이동</span><span class="sp"><a href="https://www.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=14188-2" target="_blank" rel="noopener">피그마에서 열기</a></span></div>
+  <div class="rawframe"><iframe loading="lazy" src="https://embed.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=14188-2&embed-host=share&footer=false&theme=light" allowfullscreen></iframe></div>
+  <div class="rawnote">피그마에 정리해 둔 원본 표입니다. 시즌과 가격대별로 실제 상품 이미지가 그대로 들어 있습니다.</div>
+</div>
+<div class="rawwrap">
+  <div class="rawbar"><span class="t">전수조사 원본 (띠어리 여성복)</span><span>휠로 확대, 끌어서 이동</span><span class="sp"><a href="https://www.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=12513-3" target="_blank" rel="noopener">피그마에서 열기</a></span></div>
+  <div class="rawframe"><iframe loading="lazy" src="https://embed.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=12513-3&embed-host=share&footer=false&theme=light" allowfullscreen></iframe></div>
+  <div class="rawnote">피그마에 정리해 둔 원본 표입니다. 시즌과 가격대별로 실제 상품 이미지가 그대로 들어 있습니다.</div>
+</div>
 </div>
 
 <div class="pottery-float">
@@ -1828,6 +1813,11 @@ DETAILS['the-row'] = `
 <tr><td style="font-weight:800;background:#f1f1f1;white-space:nowrap" rowspan="1">LIFESTYLE</td><td>LIFESTYLE</td><td>0</td><td>0</td><td>0.0%</td></tr>
       <tr style="background:#f1f1f1;border-top:2px solid #1a1a1a"><td colspan="2"><b>합계</b></td><td><b>240</b></td><td><b>386</b></td><td>100%</td></tr>
     </table></div>
+<div class="rawwrap">
+  <div class="rawbar"><span class="t">전수조사 원본 (더로우 남성복)</span><span>휠로 확대, 끌어서 이동</span><span class="sp"><a href="https://www.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=14274-2" target="_blank" rel="noopener">피그마에서 열기</a></span></div>
+  <div class="rawframe"><iframe loading="lazy" src="https://embed.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=14274-2&embed-host=share&footer=false&theme=light" allowfullscreen></iframe></div>
+  <div class="rawnote">피그마에 정리해 둔 원본 표입니다. 시즌과 가격대별로 실제 상품 이미지가 그대로 들어 있습니다.</div>
+</div>
 <div class="pottery-float">
 <p style="font-weight:700;margin:0 0 4px">포터리 현황 (같은 기준 전수조사)</p>
 <p style="font-size:12px;font-weight:700;color:#9c2b21;margin:0 0 8px">이 브랜드에서 주로 보완할 포터리 공백: JACKET, COAT, TOP(etc.), SHOES</p>
@@ -2259,6 +2249,11 @@ DETAILS['polo-ralph-lauren'] = `
 <tr><td style="font-weight:800;background:#f1f1f1;white-space:nowrap" rowspan="1">LIFESTYLE</td><td>LIFESTYLE</td><td>0</td><td>0</td><td>0.0%</td></tr>
       <tr style="background:#f1f1f1;border-top:2px solid #1a1a1a"><td colspan="2"><b>합계</b></td><td><b>656</b></td><td><b>1036</b></td><td>100%</td></tr>
     </table></div>
+<div class="rawwrap">
+  <div class="rawbar"><span class="t">전수조사 원본 (폴로 랄프로렌 남성복)</span><span>휠로 확대, 끌어서 이동</span><span class="sp"><a href="https://www.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=12412-3" target="_blank" rel="noopener">피그마에서 열기</a></span></div>
+  <div class="rawframe"><iframe loading="lazy" src="https://embed.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=12412-3&embed-host=share&footer=false&theme=light" allowfullscreen></iframe></div>
+  <div class="rawnote">피그마에 정리해 둔 원본 표입니다. 시즌과 가격대별로 실제 상품 이미지가 그대로 들어 있습니다.</div>
+</div>
 <div class="pottery-float">
 <p style="font-weight:700;margin:0 0 4px">포터리 현황 (같은 기준 전수조사)</p>
 <p style="font-size:12px;font-weight:700;color:#9c2b21;margin:0 0 8px">이 브랜드에서 주로 보완할 포터리 공백: LEATHER JACKET, JACKET, COAT, DENIM JACKET, DOWN JACKET, TOP(etc.), BAG, SHOES</p>
