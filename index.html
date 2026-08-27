@@ -343,8 +343,14 @@ figcaption{font-size:12.5px;color:var(--sub);letter-spacing:.01em}
     </div>
     <div class="legend">
       <button class="btn-key" id="btn-key" onclick="toggleKey()">주요 브랜드만 보기</button>
+      <button class="btn-key" id="btn-master" onclick="toggleMaster()">전체 상품 마스터 보드 펼치기</button>
     </div>
     <div class="matrix" id="matrix"></div>
+
+    <div class="rawwrap" id="masterwrap" style="display:none">
+      <div class="rawbar"><span class="t">전체 상품 마스터 보드</span><span>휠로 확대, 끌어서 이동</span><span class="sp"><a href="https://www.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=13436-2" target="_blank" rel="noopener">피그마에서 열기</a></span></div>
+      <div class="rawframe" id="masterframe"></div>
+    </div>
   </div>
 
   <!-- ============ 상세 뷰 ============ -->
@@ -425,6 +431,20 @@ function toggleKey(){
   const on = m.classList.toggle('only-key');
   b.classList.toggle('on', on);
   b.textContent = on ? '전체 브랜드 보기' : '주요 브랜드만 보기';
+}
+
+function toggleMaster(){
+  const w=document.getElementById('masterwrap'), f=document.getElementById('masterframe'), b=document.getElementById('btn-master');
+  const on = w.style.display==='none';
+  if(on && !f.firstChild){
+    const i=document.createElement('iframe');
+    i.setAttribute('allowfullscreen','');
+    i.src='https://embed.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=13436-2&embed-host=share&footer=false&theme=light';
+    f.appendChild(i);
+  }
+  w.style.display = on ? 'block' : 'none';
+  b.textContent = on ? '전체 상품 마스터 보드 접기' : '전체 상품 마스터 보드 펼치기';
+  if(on) w.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
 function openBrand(id){
@@ -1672,7 +1692,6 @@ DETAILS['theory'] = `
   <div class="rawbar"><span class="t">전수조사 원본 (띠어리 여성복)</span><span>휠로 확대, 끌어서 이동</span><span class="sp"><a href="https://www.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=12513-3" target="_blank" rel="noopener">피그마에서 열기</a></span></div>
   <div class="rawframe"><iframe loading="lazy" src="https://embed.figma.com/design/jiJZ9wZIcTiGcYVjANlUuV/POTTERY-MASTER-PRODUCT?node-id=12513-3&embed-host=share&footer=false&theme=light" allowfullscreen></iframe></div>
   <div class="rawnote">피그마에 정리해 둔 원본 표입니다. 시즌과 가격대별로 실제 상품 이미지가 그대로 들어 있습니다.</div>
-</div>
 </div>
 
 <div class="pottery-float">
