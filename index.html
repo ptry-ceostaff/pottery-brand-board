@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>POTTERY 브랜드 레퍼런스 보드</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#f2f2f0; --card:#ffffff; --ink:#1f1f1f; --sub:#6e6e6e; --line:#dedede;
@@ -15,18 +17,18 @@
   --tag-std:#5a5a5a; --tag-cas:#6e6e6e; --tag-fml:#4a4a4a; --tag-tech:#7a7a7a; --tag-all:#8a8a8a;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+body{font-family:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;font-weight:400;background:var(--bg);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1280px;margin:0 auto;padding:36px 28px 80px}
 /* ---------- header ---------- */
 .hd h1{font-size:30px;letter-spacing:-.5px;font-weight:800}
 .hd h1 .logo{font-family:Georgia,"Times New Roman",serif;color:var(--accent);letter-spacing:1px;font-weight:700}
 .hd .sub{color:var(--sub);font-size:14px;margin-top:6px}
 .legend{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin:18px 0 26px;font-size:12.5px;color:var(--sub)}
-.btn-pottery{margin-left:auto;background:var(--dark);color:#f2f2f0;border:none;border-radius:999px;padding:9px 18px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit}
+.btn-pottery{margin-left:auto;background:var(--dark);color:#f2f2f0;border:none;padding:9px 18px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit}
 .btn-pottery .logo{font-family:Georgia,serif;color:#cccccc}
 .btn-pottery:hover{background:#000}
 /* ---------- matrix ---------- */
-.matrix{display:grid;grid-template-columns:110px repeat(7,1fr);gap:0;border-radius:14px;overflow:hidden;box-shadow:0 2px 14px rgba(0,0,0,.08);font-size:13px}
+.matrix{display:grid;grid-template-columns:110px repeat(7,1fr);gap:0;overflow:hidden;font-size:13px}
 .mx-corner{background:var(--dark);background-image:linear-gradient(to bottom right,transparent calc(50% - .6px),rgba(255,255,255,.45) calc(50% - .6px),rgba(255,255,255,.45) calc(50% + .6px),transparent calc(50% + .6px));padding:14px 12px}
 .mx-corner b{color:#f2f2f0;font-size:13px}
 .mx-col{background:var(--dark);color:#f2f2f0;padding:13px 8px;text-align:center;font-weight:700;font-size:13.5px}
@@ -34,7 +36,7 @@ body{font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;ba
 .mx-row{color:#f2f2f0;padding:12px 10px;font-weight:700;display:flex;align-items:center;font-size:13px;line-height:1.4}
 .mx-cell{background:var(--card);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 9px;min-height:64px}
 .mx-cell.bridge{filter:brightness(.972)}
-.chip{display:block;width:100%;text-align:left;background:none;border:none;font-family:inherit;font-size:13px;color:var(--ink);padding:2.5px 4px;border-radius:6px;cursor:pointer;line-height:1.45}
+.chip{display:block;width:100%;text-align:left;background:none;border:none;font-family:inherit;font-size:13px;color:var(--ink);padding:2.5px 4px;cursor:pointer;line-height:1.45}
 .chip.todo{cursor:default}
 .chip.todo:hover{background:none}
 .chip:hover{background:rgba(0,0,0,0.081)}
@@ -44,8 +46,8 @@ body{font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;ba
 /* 주요 브랜드 */
 .chip.key{background:rgba(0,0,0,0.07200000000000001);box-shadow:inset 2px 0 0 var(--accent);padding-left:8px}
 .chip.key:hover{background:rgba(0,0,0,0.14400000000000002)}
-.legend .keybox{display:inline-block;width:11px;height:11px;border-radius:2px;background:rgba(0,0,0,0.12600000000000003);box-shadow:inset 2px 0 0 var(--accent);margin-right:5px;vertical-align:-1px}
-.btn-key{background:none;border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:12.5px;color:var(--sub);cursor:pointer;font-family:inherit}
+.legend .keybox{display:inline-block;width:11px;height:11px;background:rgba(0,0,0,0.12600000000000003);box-shadow:inset 2px 0 0 var(--accent);margin-right:5px;vertical-align:-1px}
+.btn-key{background:none;border:1px solid var(--line);padding:6px 13px;font-size:12.5px;color:var(--sub);cursor:pointer;font-family:inherit}
 .btn-key:hover{border-color:var(--accent);color:var(--accent)}
 .btn-key.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
 .matrix.only-key .chip:not(.key){display:none}
@@ -57,10 +59,10 @@ body{font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;ba
 .foot{margin-top:14px;color:var(--sub);font-size:12px}
 /* ---------- detail ---------- */
 .detail{max-width:880px;margin:0 auto}
-.back{background:none;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13px;color:var(--sub);cursor:pointer;font-family:inherit;margin-bottom:22px}
+.back{background:none;border:1px solid var(--line);padding:8px 16px;font-size:13px;color:var(--sub);cursor:pointer;font-family:inherit;margin-bottom:22px}
 .back:hover{border-color:var(--accent);color:var(--accent)}
-.d-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px 38px;box-shadow:0 2px 14px rgba(0,0,0,.06)}
-.d-head .cellpos{display:inline-block;font-size:12px;font-weight:700;color:#4a4a4a;border:1.5px solid #4a4a4a;border-radius:999px;padding:3px 12px;margin-bottom:12px}
+.d-card{background:var(--card);border:1px solid var(--line);padding:34px 38px;}
+.d-head .cellpos{display:inline-block;font-size:12px;font-weight:700;color:#4a4a4a;border:1.5px solid #4a4a4a;padding:3px 12px;margin-bottom:12px}
 .d-head h2{font-size:28px;letter-spacing:-.5px}
 .d-head .en{color:var(--sub);font-size:14px;margin-left:8px;font-weight:400}
 .d-head .oneline{margin-top:12px;font-size:16.5px;font-weight:600;line-height:1.65;color:#333333;border-left:3px solid var(--accent);padding-left:14px}
@@ -75,15 +77,15 @@ table.qf td{padding:7px 0;border-bottom:1px solid #ededed}
 .tl{position:relative;padding-left:18px}
 .tl::before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:2px;background:var(--line)}
 .tl .ev{position:relative;margin:9px 0;font-size:14px}
-.tl .ev::before{content:"";position:absolute;left:-17.5px;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.tl .ev::before{content:"";position:absolute;left:-17.5px;top:7px;width:7px;height:7px;background:var(--accent)}
 .tl .y{font-weight:800;margin-right:8px}
 .prod h4{font-size:14px;margin:15px 0 4px;font-weight:700}
 .prod h4:first-child{margin-top:0}
-.warnbox{background:#f7f7f7;border:1px solid #e2e2e2;border-radius:10px;padding:13px 16px;font-size:13.5px;margin-top:10px}
+.warnbox{background:#f7f7f7;border:1px solid #e2e2e2;padding:13px 16px;font-size:13.5px;margin-top:10px}
 /* ---- v4.1: 브랜드 개요 · 선언문 ---- */
 .ovw{font-size:14.5px;line-height:1.85;margin:2px 0 0}
 .ovw b{color:#1a1a1a}
-.manifesto{margin-top:16px;padding:16px 20px;background:#ffffff;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 10px 10px 0}
+.manifesto{margin-top:16px;padding:16px 20px;background:#ffffff;border:1px solid var(--line);border-left:3px solid var(--accent);}
 .manifesto .h{display:block;font-size:11.5px;font-weight:800;color:var(--accent);letter-spacing:.6px;margin-bottom:8px}
 .manifesto blockquote{margin:0;font-size:13.5px;line-height:1.85;color:#454545}
 .manifesto blockquote .en{display:block;margin-top:8px;font-size:12.5px;color:#858585;font-style:italic;line-height:1.7}
@@ -111,8 +113,8 @@ table.qf td{padding:7px 0;border-bottom:1px solid #ededed}
 .diag{margin:14px 0}
 .diag .cap{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.3px;margin-bottom:7px}
 /* 네이밍 공식 */
-.formula{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:14px 16px;background:var(--dark);border-radius:12px}
-.formula .tok{background:#ffffff;color:var(--ink);border-radius:8px;padding:7px 13px;font-size:13.5px;font-weight:700;line-height:1.35;text-align:center}
+.formula{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:14px 16px;background:var(--dark);}
+.formula .tok{background:#ffffff;color:var(--ink);padding:7px 13px;font-size:13.5px;font-weight:700;line-height:1.35;text-align:center}
 .formula .tok small{display:block;font-size:11px;font-weight:500;color:var(--sub);margin-top:2px}
 .formula .op{color:#c8c8c8;font-size:13px;font-weight:700}
 .formula .tok.a{box-shadow:inset 0 -3px 0 var(--accent)}
@@ -128,7 +130,7 @@ table.qf td{padding:7px 0;border-bottom:1px solid #ededed}
 .mgrid .note{font-size:11.5px;color:var(--sub);text-align:left;background:transparent;border:none}
 /* 분류축 레인 */
 .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:10px;margin-top:4px}
-.lane{border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--card)}
+.lane{border:1px solid var(--line);overflow:hidden;background:var(--card)}
 .lane>.h{background:#eeeeee;padding:8px 11px;font-size:12.5px;font-weight:800;color:#454545;display:flex;gap:6px;align-items:baseline}
 .lane>.h .n{color:var(--accent);font-size:13px}
 .lane.star>.h{background:var(--accent);color:#fff}
@@ -138,24 +140,24 @@ table.qf td{padding:7px 0;border-bottom:1px solid #ededed}
 .lane .b .step::before{content:"→";position:absolute;left:0;color:var(--accent);font-size:10px;top:2px}
 .lane .b .step:first-child::before{content:"·"}
 .lane .b em{font-style:normal;color:var(--sub)}
-.lane .tag2{display:inline-block;margin-top:7px;font-size:11px;background:#f2f2f2;border-radius:999px;padding:2px 8px;color:var(--sub)}
+.lane .tag2{display:inline-block;margin-top:7px;font-size:11px;background:#f2f2f2;padding:2px 8px;color:var(--sub)}
 /* ---- v4.5: 분석 → 제안 점프 ---- */
-.jump{display:inline-block;margin-top:6px;background:none;border:1px solid var(--accent);color:var(--accent);border-radius:999px;padding:3px 11px;font-size:11.5px;font-weight:700;font-family:inherit;cursor:pointer;white-space:nowrap;line-height:1.5}
+.jump{display:inline-block;margin-top:6px;background:none;border:1px solid var(--accent);color:var(--accent);padding:3px 11px;font-size:11.5px;font-weight:700;font-family:inherit;cursor:pointer;white-space:nowrap;line-height:1.5}
 .jump:hover{background:var(--accent);color:#fff}
 .verdict{font-weight:700;display:block;margin-bottom:2px}
 .verdict.ok{color:#4a4a4a}
 .verdict.gapv{color:var(--accent)}
 .verdict.na{color:#858585}
 .prop.flash{animation:flash 1.5s ease}
-@keyframes flash{0%{box-shadow:0 0 0 0 rgba(0,0,0,0.49500000000000005)}40%{box-shadow:0 0 0 7px rgba(0,0,0,0.108)}100%{box-shadow:0 0 0 0 rgba(0,0,0,0.0)}}
+@keyframes flash{0%{}40%{}100%{}}
 .backtop{display:inline-block;margin-top:4px;background:none;border:none;color:var(--sub);font-family:inherit;font-size:12px;cursor:pointer;padding:0;text-decoration:underline}
 .backtop:hover{color:var(--accent)}
 /* ---- v4.3: 제안 카드 ---- */
 .props{display:grid;gap:14px;margin-top:14px}
-.prop{border:1px solid var(--line);border-radius:12px;background:#ffffff;overflow:hidden}
+.prop{border:1px solid var(--line);background:#ffffff;overflow:hidden}
 .prop>.hd{background:var(--dark);color:#f2f2f0;padding:11px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
 .prop>.hd .t{font-size:14.5px;font-weight:800}
-.prop>.hd .rank{font-size:11.5px;font-weight:700;background:var(--accent);color:#fff;border-radius:999px;padding:2px 9px}
+.prop>.hd .rank{font-size:11.5px;font-weight:700;background:var(--accent);color:#fff;padding:2px 9px}
 .prop>.hd .coord{font-size:11.5px;color:#c8c8c8;margin-left:auto}
 .prop .bd{padding:14px 16px}
 .prop dl{display:grid;grid-template-columns:96px 1fr;gap:6px 12px;margin:0 0 12px;font-size:13px}
@@ -172,17 +174,17 @@ table.qf td{padding:7px 0;border-bottom:1px solid #ededed}
 .prop.na>.hd .rank{background:#949494}
 @media(max-width:640px){ .prop dl{grid-template-columns:1fr;gap:2px 0} .prop dt{margin-top:6px} }
 /* ---- v4: 5축 안의 포터리 적용 블록 ---- */
-.pot-apply{margin-top:11px;padding:11px 13px;background:#f7f7f7;border-left:3px solid var(--accent);border-radius:0 8px 8px 0}
+.pot-apply{margin-top:11px;padding:11px 13px;background:#f7f7f7;border-left:3px solid var(--accent);}
 .pot-apply .h{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.3px;display:block;margin-bottom:5px}
 .pot-apply p{font-size:13.5px;margin:0;line-height:1.65}
 .pot-apply .tags{margin-bottom:5px}
-.sig{border:1px solid var(--line);border-radius:12px;padding:15px 18px;margin:10px 0;background:#ffffff}
+.sig{border:1px solid var(--line);padding:15px 18px;margin:10px 0;background:#ffffff}
 .sig b.t{font-size:14.5px}
 .sig .price{color:var(--sub);font-weight:400;font-size:13px}
 .sig p{font-size:13.5px;margin:5px 0 0}
 .sig .voice{color:#555555;font-size:13px;margin-top:6px}
 /* strengths accordion */
-.acc{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.acc{border:1px solid var(--line);overflow:hidden}
 .acc-item+.acc-item{border-top:1px solid var(--line)}
 .acc-btn{display:grid;grid-template-columns:130px 1fr;cursor:default;gap:10px;align-items:center;width:100%;background:#ffffff;border:none;font-family:inherit;text-align:left;padding:13px 16px;font-size:13.5px;cursor:pointer}
 .acc-btn .ax{font-weight:800}
@@ -198,14 +200,14 @@ table.qf td{padding:7px 0;border-bottom:1px solid #ededed}
 /* reference points */
 .ref{border-left:3px solid var(--line);padding:2px 0 2px 14px;margin:13px 0}
 .ref .tags{margin-bottom:3px}
-.tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;border-radius:999px;padding:2px 10px;margin-right:5px}
+.tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;padding:2px 10px;margin-right:5px}
 .tag.std{background:var(--tag-std)} .tag.cas{background:var(--tag-cas)} .tag.fml{background:var(--tag-fml)} .tag.tech{background:var(--tag-tech)} .tag.all{background:var(--tag-all)}
 .ref b{font-size:14.5px}
 .ref p{font-size:13.5px;margin-top:3px}
 .srcs{font-size:12.5px;color:var(--sub);line-height:2}
 .srcs a{color:#555555}
 .imglinks a{display:inline-block;margin:3px 10px 3px 0;font-size:13.5px;color:#555555}
-.todo-note{background:#ffffff;border:1px dashed var(--line);border-radius:14px;padding:40px;text-align:center;color:var(--sub)}
+.todo-note{background:#ffffff;border:1px dashed var(--line);padding:40px;text-align:center;color:var(--sub)}
 @media (max-width:900px){
   .matrix{font-size:11.5px;grid-template-columns:78px repeat(7,1fr)}
   .chip{font-size:11.5px}
@@ -213,23 +215,82 @@ table.qf td{padding:7px 0;border-bottom:1px solid #ededed}
   .acc-btn{grid-template-columns:96px 1fr;font-size:12.5px}
 }
 
-.pottery-float{position:fixed;top:86px;left:calc(50% + 648px);width:370px;box-sizing:border-box;max-height:calc(100vh - 110px);overflow-y:auto;overflow-x:hidden;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;box-shadow:0 6px 24px rgba(0,0,0,.08);z-index:50}
+.pottery-float{position:fixed;top:86px;left:calc(50% + 648px);width:370px;box-sizing:border-box;max-height:calc(100vh - 110px);overflow-y:auto;overflow-x:hidden;background:#fff;border:1px solid var(--line);padding:14px;z-index:50}
 .pottery-float table{min-width:0 !important;width:100%;table-layout:fixed}
 .pottery-float .cmp th{padding:6px 6px;font-size:11.5px;white-space:normal}
 .pottery-float .cmp td{padding:5px 6px;font-size:12px;line-height:1.35}
 .pottery-float .cmp th:nth-child(1){width:21%}
 .pottery-float .cmp th:nth-child(2){width:45%}
 .pottery-float .cmp th:nth-child(3),.pottery-float .cmp th:nth-child(4){width:17%}
-.pottery-btn{display:none;position:fixed;right:18px;bottom:20px;z-index:60;background:#1a1a1a;color:#f2f2f0;border:none;border-radius:999px;padding:12px 20px;font-weight:800;font-size:13px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.pottery-btn{display:none;position:fixed;right:18px;bottom:20px;z-index:60;background:#1a1a1a;color:#f2f2f0;border:none;padding:12px 20px;font-weight:800;font-size:13px;cursor:pointer;}
 @media(max-width:1679px){
 .pottery-float{display:none;left:auto;right:16px;top:auto;bottom:78px;width:min(380px,92vw);max-height:68vh}
 .pottery-float.open{display:block}
 .pottery-btn{display:inline-flex}
 }
-.brandlogo{float:right;height:40px;width:auto;border-radius:8px;margin-left:12px;background:#fff;padding:4px;border:1px solid var(--line)}
+.brandlogo{float:right;height:40px;width:auto;margin-left:12px;background:#fff;padding:4px;border:1px solid var(--line)}
 .heroimgs{columns:3;column-gap:10px;margin:16px 0 4px}
-.heroimgs img{width:100%;height:auto;display:block;margin-bottom:10px;border-radius:10px;border:1px solid var(--line);background:#f0f0f0;break-inside:avoid}
+.heroimgs img{width:100%;height:auto;display:block;margin-bottom:10px;border:1px solid var(--line);background:#f0f0f0;break-inside:avoid}
 @media(max-width:700px){.heroimgs{columns:2}}
+
+/* ---------- v5: 미니멀 타이포그래피 ---------- */
+h1,h2,h3,h4,.mx-col,.mx-row,.acc-btn .ax,.cmp th,.d-head h2,.hd h1{font-family:"Noto Serif KR","EB Garamond",Georgia,serif}
+.hd h1{font-size:34px;font-weight:600;letter-spacing:-.2px;line-height:1.35}
+.wrap{max-width:1180px;padding:64px 32px 120px}
+.legend{margin:26px 0 34px}
+.btn-key{border:1px solid var(--ink);padding:7px 16px;font-size:12px;color:var(--ink);letter-spacing:.02em}
+.btn-key:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn-key.on{background:var(--ink);color:#fff;border-color:var(--ink);font-weight:500}
+/* matrix: 선만 남기는 격식 */
+.matrix{border:1px solid var(--ink);font-size:13px}
+.mx-col{font-weight:500;font-size:13.5px;letter-spacing:.02em}
+.mx-col.bridge{font-weight:400}
+.mx-row{font-weight:500;letter-spacing:.02em}
+.mx-cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.chip{padding:3px 5px;font-size:13px}
+.chip.has{font-weight:500}
+.chip.key{background:transparent;box-shadow:inset 2px 0 0 var(--ink);padding-left:9px}
+.chip.key:hover{background:rgba(0,0,0,.05)}
+/* detail: 종이 같은 여백 */
+.detail{max-width:820px}
+.back{border:1px solid var(--line);padding:8px 16px;letter-spacing:.02em}
+.d-card{background:var(--card);border:1px solid var(--line);padding:56px 60px}
+.d-head h2{font-size:32px;font-weight:600;letter-spacing:-.2px}
+.d-head .en{font-family:"EB Garamond",Georgia,serif;font-size:15px;font-style:italic}
+.d-head .cellpos{border:1px solid var(--sub);color:var(--sub);font-weight:400;font-size:11.5px;letter-spacing:.06em;padding:4px 12px}
+.sec{margin-top:52px}
+.sec>h3{font-size:17px;font-weight:600;color:var(--ink);letter-spacing:.01em;padding-bottom:10px;margin-bottom:18px;border-bottom:1px solid var(--ink)}
+.sec p{font-size:15px;line-height:1.9;margin:14px 0}
+.sec li{margin:8px 0;line-height:1.85}
+.acc{border:none}
+.acc-item+.acc-item{border-top:1px solid var(--line)}
+.acc-item:first-child{border-top:1px solid var(--line)}
+.acc-btn{background:transparent;padding:18px 2px 8px;font-size:14px}
+.acc-btn .ax{font-weight:600;font-size:14.5px}
+.acc-btn .dots{color:var(--ink);font-size:11px}
+.acc-body{background:transparent;padding:0 2px 18px;font-size:14.5px}
+.acc-body ul{padding-left:17px}
+.ref{border-left:1px solid var(--ink);padding-left:18px;margin:22px 0}
+.ref b{font-family:"Noto Serif KR",serif;font-weight:600;font-size:15.5px}
+.ref p{font-size:14.5px;line-height:1.9;margin-top:6px}
+.manifesto{border:none;border-left:1px solid var(--ink);padding:4px 0 4px 18px;background:transparent;margin:22px 0}
+.manifesto .h{font-size:11px;letter-spacing:.14em;font-weight:400;color:var(--sub);margin-bottom:8px}
+.manifesto blockquote{font-family:"Noto Serif KR","EB Garamond",Georgia,serif;font-size:16px;line-height:1.9;color:var(--ink)}
+table.qf{font-size:14px}
+table.qf th{font-weight:400;color:var(--sub);width:130px;padding:10px 14px 10px 0;letter-spacing:.02em}
+table.qf td{padding:10px 0;line-height:1.8}
+.cmp th{font-weight:500;letter-spacing:.02em}
+.warnbox{background:transparent;border:1px solid var(--line);padding:16px 18px}
+.pottery-float{border:1px solid var(--ink);padding:16px}
+.pottery-btn{background:var(--ink);padding:12px 20px;font-weight:500;letter-spacing:.02em}
+/* 이미지: 테두리 없이 종이 위에 놓인 사진처럼 */
+.heroimgs{columns:3;column-gap:14px;margin:26px 0 6px}
+.heroimgs img{border:none;margin-bottom:14px;background:#eee}
+.brandlogo{border:none;background:transparent;padding:0;height:34px}
+figure img{border:none !important}
+figcaption{font-size:12.5px;color:var(--sub);letter-spacing:.01em}
+@media(max-width:900px){ .wrap{padding:40px 18px 80px} .d-card{padding:28px 22px} .hd h1{font-size:26px} }
+
 </style>
 </head>
 <body>
@@ -409,24 +470,24 @@ DETAILS['james-perse'] = `
   <div class="sec">
     <h3>② 자사몰 상품 구성 체계</h3>
     <p class="ovw">자사몰의 메뉴는 Men, Women, House, Properties다. 집과 별장 메뉴가 옷과 동급으로 올라와 있어, 라이프스타일 브랜드를 지향한다는 것이 드러난다. House 칸에는 아래 블랭킷처럼 옷과 같은 소재 감도로 만든 리빙 상품이 실제 판매 상품으로 들어 있다.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.jamesperse.com/products/baja-stripe-knit-blanket-black-heather-grey" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0498/5713/4756/files/HCG9862_BKHG_1279c.jpg?v=1783462884&width=560" alt="Baja Stripe Knit Blanket" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.jamesperse.com/products/baja-stripe-knit-blanket-black-heather-grey" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0498/5713/4756/files/HCG9862_BKHG_1279c.jpg?v=1783462884&width=560" alt="Baja Stripe Knit Blanket" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Baja Stripe Knit Blanket</b><br><span style="color:var(--sub)">₩3,973,600</span><br>Indulge in luxury with our Baja Stripe Knit Blanket. Crafted from double-faced cashmere knit jacquard, this premium throw features a reversible design with our signature Baja Stripe. Designed for versatile elegance year-round, whether draped over a sofa or folded at the foot of a bed, this blanket elevates any living space.<br><a href="https://www.jamesperse.com/products/baja-stripe-knit-blanket-black-heather-grey" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.jamesperse.com/products/cozy-full-zip-sweatshirt-heather-grey-mvns2239" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0498/5713/4756/files/MVNS2239_HGY_0113_91722e64-892c-499c-bacf-42e7794f1d53.jpg?v=1783464885&width=560" alt="Cozy Full Zip Sweatshirt" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.jamesperse.com/products/cozy-full-zip-sweatshirt-heather-grey-mvns2239" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0498/5713/4756/files/MVNS2239_HGY_0113_91722e64-892c-499c-bacf-42e7794f1d53.jpg?v=1783464885&width=560" alt="Cozy Full Zip Sweatshirt" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Cozy Full Zip Sweatshirt</b><br><span style="color:var(--sub)">₩678,200</span><br>Made of warm but lightweight cotton fleece blend from Italy. Funnel neck with full zipper closure. Full length raglan sleeves &amp; cuffed sleeves and bottom hem. Kangaroo pocket with binding.<br><a href="https://www.jamesperse.com/products/cozy-full-zip-sweatshirt-heather-grey-mvns2239" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
     <p class="ovw" style="margin-top:10px">또한 제품들을 별장 두 가지의 컨셉에 맞추어 출시해, 그것도 홈페이지에서 볼 수 있다. Properties 메뉴에는 멕시코에 직접 지은 별장 두 곳이 올라와 있다. 하나는 푼타 미타의 브란딜레라(Brandílera)로, 열대 정원 안에 두꺼운 벽과 둥근 돔 천장, 긴 회랑을 둔 저택이고, 다른 하나는 카보 산 루카스의 그레이 케이프(Grey Cape)로, 스위트 5개에 야외 피트니스와 미디어 룸, 전용 해변, 집사와 셰프가 딸린 임대 저택이다. 두 곳 다 제임스 펄스가 직접 설계와 인테리어를 했고, 그레이 케이프 안에는 그 집에서만 파는 옷과 가구를 둔 매장이 있다.</p>
     <p class="ovw" style="margin-top:10px">자사몰은 이 두 집을 각각 컬렉션으로 만들어 판다. Brandílera Collection에는 그 집에 실제 놓인 티크 데이베드와 테이블(Punta Mita Daybed, Punta Mita Tables), 티크 체스 세트, 황마 러너와 바구니, 브러시드 저지 침구가 리넨 드레스, 보드쇼츠, 포플린 반팔 셔츠, 나일론 토트, 모자와 한 묶음으로 올라와 있다. Grey Cape Collection도 같은 식으로 티크 체어(Cabo Chair, Colony Chair), 롱보드, 리넨 베개와 코튼 이불, 목욕 타월에 슬럽 저지 티, 리넨 셔츠와 팬츠, 캐시미어 가디건, 스웨이드 슬라이드와 토트, 야구모자까지 묶여 있다. 즉 별장 하나가 그 집에서 입는 옷, 그 집에 놓인 가구, 그 집에서 쓰는 침구와 수건으로 통째로 상품화돼 있고, 손님은 묵고 나서 그 집을 부분적으로 사 갈 수 있다. 집이 쇼룸이고 컬렉션이 기념품인 구조다.</p>
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 6px"><img src="img/jamesperse-brandilera-terrace.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/jamesperse-brandilera-hall.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/jamesperse-brandilera-dome.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/jamesperse-brandilera-bar.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"></div><p style="font-size:12px;color:var(--sub);margin:0 0 10px">푼타 미타의 브란딜레라. 테라스, 회랑, 돔 천장의 라운지, 바.</p>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0 6px"><img src="img/jamesperse-brandilera-collection.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/jamesperse-brandilera-products.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/jamesperse-furniture.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"></div><p style="font-size:12px;color:var(--sub);margin:0 0 10px">자사몰의 Brandílera Collection 페이지와 그 안의 상품들, 그리고 Furniture 페이지.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.jamesperse.com/products/short-sleeve-crew-neck-mlj3311-white" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0498/5713/4756/files/MLJ3311_WHT_0567_hero_999f404f-d705-4103-9c55-b70da2b2b3ce.jpg?width=560" alt="Short Sleeve Crew Neck" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 6px"><img src="img/jamesperse-brandilera-terrace.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/jamesperse-brandilera-hall.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/jamesperse-brandilera-dome.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/jamesperse-brandilera-bar.jpg" alt="" style="width:100%;border:1px solid var(--line)"></div><p style="font-size:12px;color:var(--sub);margin:0 0 10px">푼타 미타의 브란딜레라. 테라스, 회랑, 돔 천장의 라운지, 바.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0 6px"><img src="img/jamesperse-brandilera-collection.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/jamesperse-brandilera-products.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/jamesperse-furniture.jpg" alt="" style="width:100%;border:1px solid var(--line)"></div><p style="font-size:12px;color:var(--sub);margin:0 0 10px">자사몰의 Brandílera Collection 페이지와 그 안의 상품들, 그리고 Furniture 페이지.</p>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.jamesperse.com/products/short-sleeve-crew-neck-mlj3311-white" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0498/5713/4756/files/MLJ3311_WHT_0567_hero_999f404f-d705-4103-9c55-b70da2b2b3ce.jpg?width=560" alt="Short Sleeve Crew Neck" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Short Sleeve Crew Neck</b><br><span style="color:var(--sub)">₩127,100</span><br>A soft, vintage character defines this midweight tee, achieved through garment dyeing and a matte 100% cotton jersey. Made in the USA, it is detailed with a finished neckline designed to hold its shape, while precisely constructed hems maintain a clean, considered line.<br><a href="https://www.jamesperse.com/products/short-sleeve-crew-neck-mlj3311-white" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
     <p class="ovw" style="margin-top:10px">역시나 소재 기획 창이 따로 있다. "Linen Shop"처럼 시즌 원단으로 옷을 분류하고, 같은 코튼이라도 'Luxe Lotus Jersey', 'Cotton Slub Jersey' 같은 고유 원단명을 붙인다. 서브라인 Y/OSEMITE는 별도 컬렉션과 단독 매장으로 떼어내 본체의 조용한 감성을 지킨다.</p>
-  <figure style="margin:14px 0"><img src="img/jamesperse-beachtowns.jpg" alt="자사몰 메인의 The Beach Towns 컬렉션. 상단 메뉴에 HOUSE와 PROPERTIES가 의류와 나란히 있다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 메인의 The Beach Towns 컬렉션. 상단 메뉴에 HOUSE와 PROPERTIES가 의류와 나란히 있다.</figcaption></figure>
+  <figure style="margin:14px 0"><img src="img/jamesperse-beachtowns.jpg" alt="자사몰 메인의 The Beach Towns 컬렉션. 상단 메뉴에 HOUSE와 PROPERTIES가 의류와 나란히 있다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 메인의 The Beach Towns 컬렉션. 상단 메뉴에 HOUSE와 PROPERTIES가 의류와 나란히 있다.</figcaption></figure>
 </div>
 
   <div class="sec">
@@ -498,7 +559,7 @@ DETAILS['james-perse'] = `
           <li>서핑보드와 롱보드를 매장 한가운데 세우는 것도 반복되는 장치다. 옷을 팔면서 캘리포니아 해변의 생활을 파는 것이고, 실제로 Y/OSEMITE 보드와 패들볼 세트가 판매 품목이다. 매장 이름도 로버트슨 하우스, 말리부처럼 지명과 집으로 붙여 매장을 상점이 아니라 장소로 다룬다.</li>
           <li>한국은 2021년부터 한화갤러리아 단독 유통이고, 2025년 세계 첫 남성 단독 매장을 서울에 열었다. 직영 55개 이상을 두면서도 백화점 명품관 안에서는 같은 오크와 흰색 세트를 그대로 옮겨 놓는다.</li>
         </ul>
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 6px"><img src="img/jamesperse-store-01.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/jamesperse-store-02.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/jamesperse-store-03.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/jamesperse-store-04.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"></div><p style="font-size:12px;color:var(--sub);margin:0 0 10px">제임스 펄스 매장. 오크와 흰색, 티크 가구, 리넨 소파, 서핑보드가 어느 매장에나 반복된다.</p>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 6px"><img src="img/jamesperse-store-01.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/jamesperse-store-02.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/jamesperse-store-03.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/jamesperse-store-04.jpg" alt="" style="width:100%;border:1px solid var(--line)"></div><p style="font-size:12px;color:var(--sub);margin:0 0 10px">제임스 펄스 매장. 오크와 흰색, 티크 가구, 리넨 소파, 서핑보드가 어느 매장에나 반복된다.</p>
 </div>
       </div>
     </div>
@@ -543,21 +604,21 @@ DETAILS['loro-piana'] = `
     <h3>② 자사몰 상품 구성 체계</h3>
     <p class="ovw">자사몰의 상설매대는 Icons다. 특정 활동을 위해 만들었다가 일상복이 된 제품들을 모은 매대로, 랄프로렌에서 'all year'에 해당하는 항목이라고 할 수 있다. 최초의 완제품인 Grande Unita 스카프, 스키 재킷 Icer, 비행 중에 구상했다는 Voyager, 승마에서 기원한 Horsey, Sergio 로퍼, 워킹화에서 도시 신발이 된 Open Walk / Summer Walk가 여기 속한다. 이름의 출처가 핏이 아니라 장면과 사람이라는 점이 포터리의 네이밍과 다르다.</p>
     <p class="ovw" style="margin-top:10px">Grande Unita 스카프($725)가 "입문에 가장 좋은 상품"으로 통하고, Open Walk 부츠와 Summer Walk 로퍼가 뒤를 잇는다. 회사의 첫 완제품이 스카프였는데 그 이유는 패턴이 필요 없고 원단의 질이 그대로 드러나는 품목이기 때문이라고 설명할 수 있겠다.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://kr.loropiana.com/en/woman/accessories/scarves/extra-grande-unita-scarf-FXW0301_R0B2.html" target="_blank"><img src="https://media.loropiana.com/dam/PRODUCTS/HYBRIS/FXW/FXW0301/R0B2/FR/4A622464-D9FC-4C8D-B810-09C115572C4E_FXW0301_R0B2_MEDIUM.jpg" alt="Extra Grande Unita Scarf" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://kr.loropiana.com/en/woman/accessories/scarves/extra-grande-unita-scarf-FXW0301_R0B2.html" target="_blank"><img src="https://media.loropiana.com/dam/PRODUCTS/HYBRIS/FXW/FXW0301/R0B2/FR/4A622464-D9FC-4C8D-B810-09C115572C4E_FXW0301_R0B2_MEDIUM.jpg" alt="Extra Grande Unita Scarf" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Extra Grande Unita Scarf</b><br><span style="color:var(--sub)">₩1,410,000</span><br>A generously sized take on a Loro Piana Icon, the Extra Grande Unita combines sensory warmth with timeless charm. It is crafted from a precious blend of new and restored cashmere fibres, preserving their softness and resilience in a mélange of muted hues. The short ends are tipped with twisted fringes, adding a touch of movement.<br><a href="https://kr.loropiana.com/en/woman/accessories/scarves/extra-grande-unita-scarf-FXW0301_R0B2.html" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
     <p class="ovw" style="margin-top:10px">기능 소재에도 자기 이름을 붙인다. 방풍, 방수 가공을 Storm System이라는 자체 브랜드로 운영한다. 라이프스타일 축은 인테리어 패브릭과 골프, 세일링 라인이 담당하는데, 의류 원단을 그대로 홈 텍스타일로 확장하는 방식이다. 아래 블랭킷이 그 예다.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://kr.loropiana.com/en/at-home/textile/plaids-and-cushions/woven-stripe-intarsia-plaid-FAP8896_F8OM.html" target="_blank"><img src="https://media.loropiana.com/dam/PRODUCTS/HYBRIS/FAP/FAP8896/F8OM/FR/2FD0911A-151A-443F-B257-118BC3D10251_FAP8896_F8OM_SMALL.jpg" alt="Woven Stripe Intarsia Plaid (블랭킷)" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://kr.loropiana.com/en/at-home/textile/plaids-and-cushions/woven-stripe-intarsia-plaid-FAP8896_F8OM.html" target="_blank"><img src="https://media.loropiana.com/dam/PRODUCTS/HYBRIS/FAP/FAP8896/F8OM/FR/2FD0911A-151A-443F-B257-118BC3D10251_FAP8896_F8OM_SMALL.jpg" alt="Woven Stripe Intarsia Plaid (블랭킷)" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Woven Stripe Intarsia Plaid (블랭킷)</b><br><span style="color:var(--sub)">₩3,050,000</span><br>With its sumptuous fabric and inimitable softness, this blanket is ideal for lending a signature Loro Piana touch to any home. It is woven on a jacquard loom from wool and preciously soft cashmere for a snug, cosy feel. Its refined take on the Suitcase Stripe motif is arranged to simulate a classic weaving pattern.<br><a href="https://kr.loropiana.com/en/at-home/textile/plaids-and-cushions/woven-stripe-intarsia-plaid-FAP8896_F8OM.html" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://kr.loropiana.com/en/man/knitwear/st.-andrews-polo-sweater-FAP5523_B5H6.html" target="_blank"><img src="https://media.loropiana.com/HYBRIS/FAP/FAP5523/9F48CE04-C098-4BFA-A5C3-8580DD8EA292/FAP5523_B5H6_SMALL.jpg" alt="St. Andrews Polo Sweater" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://kr.loropiana.com/en/man/knitwear/st.-andrews-polo-sweater-FAP5523_B5H6.html" target="_blank"><img src="https://media.loropiana.com/HYBRIS/FAP/FAP5523/9F48CE04-C098-4BFA-A5C3-8580DD8EA292/FAP5523_B5H6_SMALL.jpg" alt="St. Andrews Polo Sweater" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>St. Andrews Polo Sweater</b><br><span style="color:var(--sub)">코튼 GG18</span><br>The epitome of summer knitwear, part of the Road to Golf Capsule, the St. Andrews sweater is finely knitted using Sea Island cotton, the finest of its kind, and has an incredibly refined sensorial touch. It is inspired by classic polo styles, with a signature neckline to match, and comes emblazoned with a jacquard stripe across the chest height for a contemporary colour-block effect.<br><a href="https://kr.loropiana.com/en/man/knitwear/st.-andrews-polo-sweater-FAP5523_B5H6.html" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<figure style="margin:14px 0"><img src="img/loropiana-athome.jpg" alt="자사몰 At Home 메뉴. 홈 텍스타일 상품 132개가 의류와 같은 층위에 올라와 있다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 At Home 메뉴. 홈 텍스타일 상품 132개가 의류와 같은 층위에 올라와 있다.</figcaption></figure>
-  <figure style="margin:14px 0"><img src="img/loropiana-vicuna.jpg" alt="Our World의 비쿠냐 페이지. 원료 이야기를 브랜드의 최상위 콘텐츠로 다룬다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">Our World의 비쿠냐 페이지. 원료 이야기를 브랜드의 최상위 콘텐츠로 다룬다.</figcaption></figure>
+<figure style="margin:14px 0"><img src="img/loropiana-athome.jpg" alt="자사몰 At Home 메뉴. 홈 텍스타일 상품 132개가 의류와 같은 층위에 올라와 있다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 At Home 메뉴. 홈 텍스타일 상품 132개가 의류와 같은 층위에 올라와 있다.</figcaption></figure>
+  <figure style="margin:14px 0"><img src="img/loropiana-vicuna.jpg" alt="Our World의 비쿠냐 페이지. 원료 이야기를 브랜드의 최상위 콘텐츠로 다룬다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">Our World의 비쿠냐 페이지. 원료 이야기를 브랜드의 최상위 콘텐츠로 다룬다.</figcaption></figure>
 </div>
 
   <div class="sec">
@@ -627,7 +688,7 @@ DETAILS['loro-piana'] = `
           <li>직영 중심이고, 백화점도 최상위 명품관에만 선별 입점한다. 자기 상품이 놓이는 '옆자리'까지 통제한다는 뜻이다</li>
           <li>VMD는 촉각 유도에 맞춰져 있다. 니트를 접어 쌓아 단면이 보이게 하고 손 닿는 높이에 둔다. 걸면 안 팔리고 쌓으면 팔린다는 원칙이다. 우드와 언다이드 마감재를 써서 매장 자체가 소재 팔레트의 확장이 된다</li>
         </ul>
-<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:10px 0 6px"><img src="img/loropiana-store-alpine.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/loropiana-store-wood.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"></div><p style="font-size:12px;color:var(--sub);margin:0 0 6px">알프스 리조트 매장과 목재 카운터 매장. 니트를 접어 쌓아 단면이 보이게 두는 진열이다.</p></div>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:10px 0 6px"><img src="img/loropiana-store-alpine.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/loropiana-store-wood.jpg" alt="" style="width:100%;border:1px solid var(--line)"></div><p style="font-size:12px;color:var(--sub);margin:0 0 6px">알프스 리조트 매장과 목재 카운터 매장. 니트를 접어 쌓아 단면이 보이게 두는 진열이다.</p></div>
       </div>
     </div>
   </div>
@@ -674,16 +735,16 @@ DETAILS['rrl'] = `
   <div class="sec">
     <h3>② 자사몰 상품 구성 체계</h3>
     <p>독립 자사몰 없이 ralphlauren.co.kr 폴로 공식몰 안의 브랜드 필터로 전개된다. 표준 카테고리 체계를 공유하되 상품, 가격, 할인 정책은 분리해 운영한다. 구성의 특징은 두 가지다. 첫째로 같은 데님 모델을 리지드, 원워시, 리페어드처럼 워싱(가공) 단계별로 병렬 판매해 SKU를 늘리지 않고 선택지를 늘린다. 둘째로 벨트, 모자, 주얼리 같은 잡화를 '부가'가 아니라 세계관을 완성하는 필수 부품으로 편성한다.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.ralphlauren.co.kr/straight-fit-once-washed-selvedge-jean-323169.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1064514_lifestyle?wid=560" alt="스트레이트핏 원스 워시 셀비지 진" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.ralphlauren.co.kr/straight-fit-once-washed-selvedge-jean-323169.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1064514_lifestyle?wid=560" alt="스트레이트핏 원스 워시 셀비지 진" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>스트레이트핏 원스 워시 셀비지 진</b><br><span style="color:var(--sub)">국내 공식몰 판매</span><br>일본산 15.3온스 셀비지 데님 소재로 미국에서 제작되었습니다. 스트레이트레그 실루엣으로 디자인되었고, 더블 RL 전용으로 개발된 커스텀 다크 인디고 색상을 사용했습니다. 수작업으로 마무리되었으며, 깨끗한 물로 워싱 및 베이크드라이 처리했습니다. 수축을 방지하는 Sanforized® 기술 적용<br><a href="https://www.ralphlauren.co.kr/straight-fit-once-washed-selvedge-jean-323169.html" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-  <div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.ralphlauren.co.kr/%EC%9D%B8%EB%94%94%EA%B3%A0-%EB%8D%B0%EB%8B%98-%EC%9B%8C%ED%81%AC%EC%85%94%EC%B8%A0-100094149.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-AI782P14813001_lifestyle?wid=560" alt="인디고 데님 워크셔츠" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+  <div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.ralphlauren.co.kr/%EC%9D%B8%EB%94%94%EA%B3%A0-%EB%8D%B0%EB%8B%98-%EC%9B%8C%ED%81%AC%EC%85%94%EC%B8%A0-100094149.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-AI782P14813001_lifestyle?wid=560" alt="인디고 데님 워크셔츠" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>인디고 데님 워크셔츠</b><br><span style="color:var(--sub)">₩519,000</span><br>은은한 네프 질감이 있는 데님 소재, 인디고 염색 및 린스 처리, 왼쪽 체스트 포켓에 스티칭 처리된 펜 포켓 디테일, 1920년대와 1930년대 워크셔츠에서 영감을 얻은 사이드 심의 정통 런오프 체인 스티치 구조, 빈티지 스타일 버튼<br><a href="https://www.ralphlauren.co.kr/%EC%9D%B8%EB%94%94%EA%B3%A0-%EB%8D%B0%EB%8B%98-%EC%9B%8C%ED%81%AC%EC%85%94%EC%B8%A0-100094149.html" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.ralphlauren.co.kr/%EC%BA%94%EB%B2%84%EC%8A%A4-%EC%BD%94%EB%93%80%EB%A1%9C%EC%9D%B4-%EC%B9%BC%EB%9D%BC-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4-%EC%9E%AC%ED%82%B7-100094143.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-AI782P14815001_lifestyle?wid=560" alt="캔버스 코듀로이 칼라 엔지니어 재킷" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.ralphlauren.co.kr/%EC%BA%94%EB%B2%84%EC%8A%A4-%EC%BD%94%EB%93%80%EB%A1%9C%EC%9D%B4-%EC%B9%BC%EB%9D%BC-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4-%EC%9E%AC%ED%82%B7-100094143.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-AI782P14815001_lifestyle?wid=560" alt="캔버스 코듀로이 칼라 엔지니어 재킷" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>캔버스 코듀로이 칼라 엔지니어 재킷</b><br><span style="color:var(--sub)">₩1,050,000</span><br>12온스 코튼 캔버스로 제작, 1950~1960년대 워크웨어 재킷에서 영감을 받은 구조 디테일, 코듀로이 칼라로 마무리, 버튼이 달린 스로트 래치, 강한 워싱 가공 및 염료 처리로 오래 즐겨 착용한 듯한 빈티지 룩 연출<br><a href="https://www.ralphlauren.co.kr/%EC%BA%94%EB%B2%84%EC%8A%A4-%EC%BD%94%EB%93%80%EB%A1%9C%EC%9D%B4-%EC%B9%BC%EB%9D%BC-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4-%EC%9E%AC%ED%82%B7-100094143.html" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
 </div>
@@ -757,7 +818,7 @@ DETAILS['rrl'] = `
         <div class="acc-body"><ul>
           <li>판매하지 않는 물건을 의도적으로 배치한다. 빈티지 시계, 원본 재킷 같은 비매품이 판매를 만든다</li>
           <li>집기 전부가 시대 소품이고, 어둡고 따뜻한 스팟 조명으로 워싱과 페이딩의 음영을 살린다. 고밀도 진열로 축적된 시간을 표현한다</li>
-        </ul><figure style="margin:14px 0"><img src="https://www.ralphlauren.co.kr/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/ko_KR/v1786999484340/img/202410/20241015-kr-garosu-flagship-lp-cafe-refresh/1015_kr_garosu_flagship_lp_cafe_refresh_c02_img.jpg" alt="" style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">가로수길 플래그십의 더블알엘 존. 매장 자체가 아카이브처럼 꾸며져 있다.</figcaption></figure></div>
+        </ul><figure style="margin:14px 0"><img src="https://www.ralphlauren.co.kr/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/ko_KR/v1786999484340/img/202410/20241015-kr-garosu-flagship-lp-cafe-refresh/1015_kr_garosu_flagship_lp_cafe_refresh_c02_img.jpg" alt="" style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">가로수길 플래그십의 더블알엘 존. 매장 자체가 아카이브처럼 꾸며져 있다.</figcaption></figure></div>
       </div>
     </div>
   </div>
@@ -808,15 +869,15 @@ DETAILS['warehouse'] = `
   <div class="sec">
     <h3>② 자사몰 상품 구성 체계</h3>
     <p>공식 온라인숍(warehouse-shop.jp)은 전체 등록 650개 중 169개만 노출한다. 데님 핵심 롯트가 매장과 시즌 단위로 팔리기 때문에 온라인이 브랜드 전체를 대표하지 않는다. 분류의 실질적인 축은 롯트(Lot 1001, 800XX 같은 연도와 모델)와 서브 라인이다. 리바이스가 501, 505 같은 모델 번호로 상품을 나누는 체계를 연도까지 확장한 것이라고 보면 되는데, 그래서 고객은 핏이 아니라 연도를 고르게 된다. 특징적으로 데님 전용 세제 같은 케어 상품도 판다. 오래 입는 문화까지 상품 구성에 넣은 셈이다.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://warehouse-shop.jp/products/deadstock-blue-lot-1001xx1000xx-1947model" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0970/9620/4606/files/167689815.webp?v=1767845861&width=560" alt="Lot 1001XX (1947 Model) 데님" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://warehouse-shop.jp/products/deadstock-blue-lot-1001xx1000xx-1947model" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0970/9620/4606/files/167689815.webp?v=1767845861&width=560" alt="Lot 1001XX (1947 Model) 데님" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Lot 1001XX (1947 Model) 데님</b><br><span style="color:var(--sub)">¥35,200</span><br>＜Dead Stock Blue＞「時間」の経過に裏打ちされたデニム生地に宿る独特の佇まいを25年積み上げてきた全ての技術を駆使して再現しました。革ラベル、ボタン、リベットから縫い糸、そして縫製に必要なミシンのセットアップまでも、「これ以上はない」と言い切ることができるまでに、心血を注いで作り上げた最高峰のレーベルです。“1947モデル XX” デッドストックブルーから待望の「1947モデル」の登場です。<br><a href="https://warehouse-shop.jp/products/deadstock-blue-lot-1001xx1000xx-1947model" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://warehouse-shop.jp/products/lot-483-rw-style-sweatshirts-%E7%84%A1%E5%9C%B0" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0970/9620/4606/files/P4240903.jpg?v=1784709992&width=560" alt="Lot 483 RW Style Sweatshirts" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://warehouse-shop.jp/products/lot-483-rw-style-sweatshirts-%E7%84%A1%E5%9C%B0" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0970/9620/4606/files/P4240903.jpg?v=1784709992&width=560" alt="Lot 483 RW Style Sweatshirts" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Lot 483 RW Style Sweatshirts</b><br><span style="color:var(--sub)">¥21,450</span><br>このスウェットシャツを手に取ってみると、まずは、その「重さ」に驚くことでしょう。1960年代のRWタイプを再現するために試行錯誤を繰り返した新開発のスウェットシャツ。縮みを軽減するために生地をヨコ使いした画期的なこのアスレチックスウェットは、サイドのパネル使いなどに目をとられがちであるが、その特性は「糸」にあります。<br><a href="https://warehouse-shop.jp/products/lot-483-rw-style-sweatshirts-%E7%84%A1%E5%9C%B0" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-  <figure style="margin:14px 0"><img src="img/warehouse-brands.jpg" alt="자사몰 BRAND 메뉴. 웨어하우스 외에 DENIME, JOHN GLUCKOW 같은 복각 라인을 나란히 운영한다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 BRAND 메뉴. 웨어하우스 외에 DENIME, JOHN GLUCKOW 같은 복각 라인을 나란히 운영한다.</figcaption></figure>
+  <figure style="margin:14px 0"><img src="img/warehouse-brands.jpg" alt="자사몰 BRAND 메뉴. 웨어하우스 외에 DENIME, JOHN GLUCKOW 같은 복각 라인을 나란히 운영한다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 BRAND 메뉴. 웨어하우스 외에 DENIME, JOHN GLUCKOW 같은 복각 라인을 나란히 운영한다.</figcaption></figure>
 </div>
 
   <div class="sec">
@@ -864,7 +925,7 @@ DETAILS['warehouse'] = `
         <div class="acc-body"><ul>
           <li>복원 대상이 원단이 아니라 원사다. 실물을 해체해 꼬임과 불균일도를 분석하고 방적 단계부터 재현한다</li>
           <li>목표는 신품이 아니라 5년 뒤의 모습이다. 페이딩 결과를 역산해 원사를 설계하고, 직기와 편기 같은 기계까지 복각 대상에 넣는다</li>
-        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"><img src="https://ware-house.co.jp/wp-content/themes/warehouse2026/images/news/denim/img_g3.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="https://ware-house.co.jp/wp-content/themes/warehouse2026/images/news/denim/img_main.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">도요타 G3 셔틀 직기로 짜는 데님. 직기까지 복각 대상에 들어간다.</figcaption></figure></div>
+        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"><img src="https://ware-house.co.jp/wp-content/themes/warehouse2026/images/news/denim/img_g3.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="https://ware-house.co.jp/wp-content/themes/warehouse2026/images/news/denim/img_main.jpg" alt="" style="width:100%;border:1px solid var(--line);"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">도요타 G3 셔틀 직기로 짜는 데님. 직기까지 복각 대상에 들어간다.</figcaption></figure></div>
       </div>
       <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●○○○</span><span class="arr">▶</span></button>
         <div class="acc-body"><ul>
@@ -888,7 +949,7 @@ DETAILS['warehouse'] = `
         <div class="acc-body"><ul>
           <li>채널은 직영 극소수에 도매 중심이다. 통제력은 낮지만 저비용으로 글로벌 시장에 도달한다</li>
           <li>매장은 공방과 창고의 문법을 따른다. 원단 롤과 직기 부품을 전시하고, 신품 옆에 3년, 5년 착용본을 거는 페이딩 샘플 진열로 입은 뒤의 모습까지 판다</li>
-        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px"><img src="https://ware-house.co.jp/wp-content/themes/warehouse2026/images/shoplist/osaka2.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="https://ware-house.co.jp/wp-content/themes/warehouse2026/images/shoplist/tokyo2.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="https://ware-house.co.jp/wp-content/themes/warehouse2026/images/shoplist/nagoya.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">오사카, 도쿄, 나고야 직영점. 공방과 창고의 문법을 따르는 고밀도 진열.</figcaption></figure></div>
+        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px"><img src="https://ware-house.co.jp/wp-content/themes/warehouse2026/images/shoplist/osaka2.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="https://ware-house.co.jp/wp-content/themes/warehouse2026/images/shoplist/tokyo2.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="https://ware-house.co.jp/wp-content/themes/warehouse2026/images/shoplist/nagoya.jpg" alt="" style="width:100%;border:1px solid var(--line);"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">오사카, 도쿄, 나고야 직영점. 공방과 창고의 문법을 따르는 고밀도 진열.</figcaption></figure></div>
       </div>
     </div>
   </div>
@@ -933,19 +994,19 @@ DETAILS['rl-purple-label'] = `
   <div class="sec">
     <h3>② 자사몰 상품 구성 체계</h3>
       <p>테일러링이 이 라인의 존재 이유에 해당하는 핵심이라고 할 수 있다. 나폴리 공방의 소프트 숄더 수트가 중심으로 공정을 상품 설명에 명시하고, 비스포크와 MTM은 플래그십에서만 운영해 서열을 시각화한다. 다만 가격대 때문에 접근이 어려운 탓에, 입문템은 니트라고 흔히 이야기한다. 베네토의 파인게이지와 캐시미어로 구성된다. 이후 셔츠나 아우터로 확장하고, 잡화 또한 슈즈, 레더, 넥타이 정도가 있어서 큰 비중은 아니다.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.ralphlauren.co.kr/%EA%B7%B8%EB%A0%88%EA%B3%A0%EB%A6%AC-%ED%95%B8%EB%93%9C%EB%A9%94%EC%9D%B4%EB%93%9C-%EC%9A%B8-%EA%B0%9C%EB%B2%84%EB%94%98-%EC%88%98%ED%8A%B8-491559.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1339419_alternate10?wid=560" alt="그레고리 핸드메이드 울 개버딘 수트" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.ralphlauren.co.kr/%EA%B7%B8%EB%A0%88%EA%B3%A0%EB%A6%AC-%ED%95%B8%EB%93%9C%EB%A9%94%EC%9D%B4%EB%93%9C-%EC%9A%B8-%EA%B0%9C%EB%B2%84%EB%94%98-%EC%88%98%ED%8A%B8-491559.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1339419_alternate10?wid=560" alt="그레고리 핸드메이드 울 개버딘 수트" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>그레고리 핸드메이드 울 개버딘 수트</b><br><span style="color:var(--sub)">국내 공식몰 판매</span><br>Purple Label의 탁월한 품질과 훌륭한 장인정신을 통해 현대적인 실루엣과 가벼운 풀 캔버싱을 결합한 그레고리 수트입니다. 이탈리아 전문 테일러가 수작업으로 패턴을 재단하는 단계로 시작하여 최고의 정밀성을 보장하며, 독점 울 개버딘에 수작업 재봉 처리한 버튼홀 및 에지와 같은 섬세한 디테일을 더하여 시그니처 수트를 완성했습니다.<br><a href="https://www.ralphlauren.co.kr/%EA%B7%B8%EB%A0%88%EA%B3%A0%EB%A6%AC-%ED%95%B8%EB%93%9C%EB%A9%94%EC%9D%B4%EB%93%9C-%EC%9A%B8-%EA%B0%9C%EB%B2%84%EB%94%98-%EC%88%98%ED%8A%B8-491559.html" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.ralphlauren.co.kr/%ED%95%B4%EB%93%A4%EB%A6%AC-%ED%95%B8%EB%93%9C%ED%85%8C%EC%9D%BC%EB%9F%AC%EB%93%9C-%EC%8B%A4%ED%81%AC-%EB%A6%AC%EB%84%A8-%EC%9E%AC%ED%82%B7-640488.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-AI798857651014_lifestyle?wid=560" alt="해들리 핸드테일러드 실크 리넨 재킷" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.ralphlauren.co.kr/%ED%95%B4%EB%93%A4%EB%A6%AC-%ED%95%B8%EB%93%9C%ED%85%8C%EC%9D%BC%EB%9F%AC%EB%93%9C-%EC%8B%A4%ED%81%AC-%EB%A6%AC%EB%84%A8-%EC%9E%AC%ED%82%B7-640488.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-AI798857651014_lifestyle?wid=560" alt="해들리 핸드테일러드 실크 리넨 재킷" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>해들리 핸드테일러드 실크 리넨 재킷</b><br><span style="color:var(--sub)">₩3,550,000</span><br>이탈리아에서 수작업으로 테일러링한 해들리 재킷으로, 부드러운 숄더와 매우 가벼운 소재가 특징입니다. 질감 있는 터서 실크와 고급 리넨을 혼방한 소재로 제작되었습니다. Ralph Lauren을 위해 맞춤 개발되었으며 은은한 슬러브 텍스처를 선사하는 고급스러운 패브릭을 사용했습니다.<br><a href="https://www.ralphlauren.co.kr/%ED%95%B4%EB%93%A4%EB%A6%AC-%ED%95%B8%EB%93%9C%ED%85%8C%EC%9D%BC%EB%9F%AC%EB%93%9C-%EC%8B%A4%ED%81%AC-%EB%A6%AC%EB%84%A8-%EC%9E%AC%ED%82%B7-640488.html" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.ralphlauren.co.kr/%ED%95%B8%EB%93%9C%ED%85%8C%EC%9D%BC%EB%9F%AC%EB%93%9C-%EA%B0%80%EB%A8%BC%ED%8A%B8-%EB%8B%A4%EC%9D%B4-%EC%B9%98%EB%85%B8-%ED%8A%B8%EB%9D%BC%EC%9A%B0%EC%A0%80-100098424.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-AI798P17603001_alternate10?wid=560" alt="핸드테일러드 가먼트 다이 치노 트라우저" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.ralphlauren.co.kr/%ED%95%B8%EB%93%9C%ED%85%8C%EC%9D%BC%EB%9F%AC%EB%93%9C-%EA%B0%80%EB%A8%BC%ED%8A%B8-%EB%8B%A4%EC%9D%B4-%EC%B9%98%EB%85%B8-%ED%8A%B8%EB%9D%BC%EC%9A%B0%EC%A0%80-100098424.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-AI798P17603001_alternate10?wid=560" alt="핸드테일러드 가먼트 다이 치노 트라우저" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>핸드테일러드 가먼트 다이 치노 트라우저</b><br><span style="color:var(--sub)">₩1,350,000</span><br>Purple Label의 탁월한 품질과 타임리스 룩을 담아낸 수트 트라우저로, 프랑스산 비스포크 스트레치 치노 패브릭을 사용하여 이탈리아에서 전문가의 수작업으로 테일러링되었습니다. 후염 처리 및 커스텀 워시를 통해 결정형 프로스트 표면을 연출했으며 부드러운 질감과 구조가 섬세하게 균형을 이루어 패브릭 본연의 입체적인 톤을 강조합니다.<br><a href="https://www.ralphlauren.co.kr/%ED%95%B8%EB%93%9C%ED%85%8C%EC%9D%BC%EB%9F%AC%EB%93%9C-%EA%B0%80%EB%A8%BC%ED%8A%B8-%EB%8B%A4%EC%9D%B4-%EC%B9%98%EB%85%B8-%ED%8A%B8%EB%9D%BC%EC%9A%B0%EC%A0%80-100098424.html" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<figure style="margin:14px 0"><img src="img/purplelabel-landing.jpg" alt="퍼플 라벨 랜딩 페이지. Made in Italy 라벨을 전면에 내세운다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">퍼플 라벨 랜딩 페이지. Made in Italy 라벨을 전면에 내세운다.</figcaption></figure>
+<figure style="margin:14px 0"><img src="img/purplelabel-landing.jpg" alt="퍼플 라벨 랜딩 페이지. Made in Italy 라벨을 전면에 내세운다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">퍼플 라벨 랜딩 페이지. Made in Italy 라벨을 전면에 내세운다.</figcaption></figure>
 </div>
 
   <div class="sec">
@@ -1021,7 +1082,7 @@ DETAILS['rl-purple-label'] = `
           <li>선별 부티크와 플래그십만 취급한다. 뉴욕 매디슨가의 저택형 플래그십(맨션)이 원형이고, 층과 방 단위로 라인을 나눠 공간이 라벨 서열을 그대로 보여준다</li>
           <li>VMD는 주택의 서재와 드레스룸 문법을 따른다. 원단 북과 재단 도구를 보이게 두어 맞춤 가능성을 암시하고, 비스포크 상담은 매장 안쪽의 별도 공간에서 이뤄진다</li>
           <li>온라인은 폴로와 한 몰을 쓰지만 오프라인은 엄격히 분리한다. 오프라인의 격이 온라인 노출보다 우선이라는 뜻이다</li>
-        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"><img src="https://www.ralphlauren.co.kr/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/ko_KR/v1786999484340/img/202008/store-flagship-lp/202008_flagship_lp_apac_c02_banner.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="https://www.ralphlauren.co.kr/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/ko_KR/v1786999484340/img/202008/store-flagship-lp/202008_flagship_lp_apac_c03_banner.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">플래그십 매장. 주택의 서재와 드레스룸 문법을 따르는 진열.</figcaption></figure></div>
+        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"><img src="https://www.ralphlauren.co.kr/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/ko_KR/v1786999484340/img/202008/store-flagship-lp/202008_flagship_lp_apac_c02_banner.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="https://www.ralphlauren.co.kr/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/ko_KR/v1786999484340/img/202008/store-flagship-lp/202008_flagship_lp_apac_c03_banner.jpg" alt="" style="width:100%;border:1px solid var(--line);"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">플래그십 매장. 주택의 서재와 드레스룸 문법을 따르는 진열.</figcaption></figure></div>
       </div>
     </div>
   </div>
@@ -1067,16 +1128,16 @@ DETAILS['auralee'] = `
   <div class="sec">
     <h3>② 자사몰 상품 구성 체계</h3>
     <p>오라리는 상시 라인업을 쌓아두지 않고 현재 시즌 발매분 위주로 운영해 온라인 상품의 절대량 자체가 작다. made-to-order 생산으로, 한 몸인 구조라, 할인할 재고를 애초에 만들지 않는 것도 특징이다.</p>
-    <p>당연히 원단명이 상품명에 들어가고(예: Baby Cashmere Knit), 카테고리를 늘리는 대신 같은 카테고리에서 원단만 바꿔 시즌을 구성한다. 남녀 비중은 같고, 컬러는 뉴트럴 중심이며, 로고는 쓰지 않는다. 잡화와 라이프스타일은 사실상 전개하지 않는다.</p><figure style="margin:14px 0"><img src="img/auralee-check-shirt.jpg" alt="" style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">원단명이 그대로 상품명이 되는 방식. 같은 셔츠에서 원단만 바꿔 시즌을 구성한다.</figcaption></figure>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://auralee.jp/item/detail/1_1_A26AB01CB_1/2000" target="_blank"><img src="https://auralee.jp/photo/2026AW/A26AB01CB/z-A26AB01CB_2000-1.jpg" alt="Fine Calf Leather Down Blouson" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+    <p>당연히 원단명이 상품명에 들어가고(예: Baby Cashmere Knit), 카테고리를 늘리는 대신 같은 카테고리에서 원단만 바꿔 시즌을 구성한다. 남녀 비중은 같고, 컬러는 뉴트럴 중심이며, 로고는 쓰지 않는다. 잡화와 라이프스타일은 사실상 전개하지 않는다.</p><figure style="margin:14px 0"><img src="img/auralee-check-shirt.jpg" alt="" style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">원단명이 그대로 상품명이 되는 방식. 같은 셔츠에서 원단만 바꿔 시즌을 구성한다.</figcaption></figure>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://auralee.jp/item/detail/1_1_A26AB01CB_1/2000" target="_blank"><img src="https://auralee.jp/photo/2026AW/A26AB01CB/z-A26AB01CB_2000-1.jpg" alt="Fine Calf Leather Down Blouson" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Fine Calf Leather Down Blouson</b><br><span style="color:var(--sub)">26AW 신상</span><br>Leather crafted from the finest baby calf, and finished to an exceptionally thin, supple, and lightweight quality. Within its finely uniform surface, a smooth, almost clinging touch harmonizes with elegant drape and a subtle sheen. A distinctive material that combines delicacy with quiet elegance. Slim fit / Full lining / Down-filled<br><a href="https://auralee.jp/item/detail/1_1_A26AB01CB_1/2000" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://auralee.jp/item/detail/1_1_A26AS02OS_1/2500" target="_blank"><img src="https://auralee.jp/photo/2026AW/A26AS02OS/z-A26AS02OS_2500-1.jpg" alt="Super Light Wool Shirt" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://auralee.jp/item/detail/1_1_A26AS02OS_1/2500" target="_blank"><img src="https://auralee.jp/photo/2026AW/A26AS02OS/z-A26AS02OS_2500-1.jpg" alt="Super Light Wool Shirt" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Super Light Wool Shirt</b><br><span style="color:var(--sub)">26AW 신상</span><br>An AURALEE Autumn Winter staple, a wool velvet made from high-quality wool yarns, spun into ultra-fine combed fibers, and treated with an eco-friendly shrinkage-resistant process. The result is a fabric with a unique, understated texture, a beautiful, subtle luster, and a smooth, light feel that is both supple and gentle to the touch. Relaxed fit<br><a href="https://auralee.jp/item/detail/1_1_A26AS02OS_1/2500" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-  <figure style="margin:14px 0"><img src="img/auralee-ss27.jpg" alt="컬렉션 페이지의 2027 봄 여름 파리 런웨이. 시즌마다 런웨이 영상과 룩 전체를 올린다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">컬렉션 페이지의 2027 봄 여름 파리 런웨이. 시즌마다 런웨이 영상과 룩 전체를 올린다.</figcaption></figure>
+  <figure style="margin:14px 0"><img src="img/auralee-ss27.jpg" alt="컬렉션 페이지의 2027 봄 여름 파리 런웨이. 시즌마다 런웨이 영상과 룩 전체를 올린다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">컬렉션 페이지의 2027 봄 여름 파리 런웨이. 시즌마다 런웨이 영상과 룩 전체를 올린다.</figcaption></figure>
 </div>
 
   <div class="sec">
@@ -1147,7 +1208,7 @@ DETAILS['auralee'] = `
           <li>플래그십과 글로벌 편집샵으로만 운영한다. 매장 수를 늘리지 않는 것이 전략이다</li>
           <li>VMD는 행거 간격을 넓히고 상품 수를 줄여 한 벌씩 만지게 유도하고, 확산광 조명으로 원단의 균질한 표면을 보여준다</li>
           <li>다만 한국 정식 진출 전이라, 도쿄 아오야마 매장 실사가 유일한 원본 관찰 경로다</li>
-        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><img src="img/auralee-store-01.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="img/auralee-store-02.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">매장. 행거 간격을 넓히고 상품 수를 줄인 여백 위주의 VMD.</figcaption></figure></div>
+        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><img src="img/auralee-store-01.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="img/auralee-store-02.jpg" alt="" style="width:100%;border:1px solid var(--line);"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">매장. 행거 간격을 넓히고 상품 수를 줄인 여백 위주의 VMD.</figcaption></figure></div>
       </div>
     </div>
   </div>
@@ -1204,27 +1265,27 @@ DETAILS['arcteryx'] = `
     <h3>② 자사몰 상품 구성 체계</h3>
     <p class="ovw">네이밍 체계로 상품 구성을 알 수 있다. 대표 제품인 알파 SV 재킷처럼 대부분의 제품이 세 개로 분류된다. Alpha(패밀리, 알파인 클라이밍 제품군)에 SV(모디파이어, 극단적인 날씨 성능 등급)와 Jacket(품목)이 붙는 식이다. 홈페이지에 "Arc'teryx Naming Scheme"을 명시하고, 입문자 고객을 위해 Jacket Finder와 Footwear Finder, 비교하기 기능을 제공하여, 입문 장벽을 낮춘다. 아래 자사몰 캡처를 통해 확인할 수 있다.</p>
     <p class="ovw" style="margin-top:10px">서브브랜드로 다양한 상황에서 입을 수 있는 제품을 제공해 고객층을 확장하였다. 도시에서의 아크테릭스 베일런스("베일런스는 도시 환경을 탐색하고 대응하기 위해 설계된 필수적인 형태들의 시스템입니다"), 군과 경찰을 위한 LEAF, 클라이머용 Ascent까지 다른 상황에 브랜드의 철학을 적용시키는 확장 방식이다. 업사이클과 수선 프로그램인 리버드 또한 이 확장의 일부이다. 또 아웃도어 브랜드 특성 상 옷을 여러 겹 입는데, 이를 체계화해 레이어링을 가르치는데, 이 중에서도 가운데 층을 맡는 미드레이어의 예가 아래의 델타 하이브리드 후디다.</p>
-<figure style="margin:14px 0"><img src="img/arcteryx-rebird-window.jpg" alt="매장 안에 유리로 낸 리버드 서비스 센터. 수선과 세탁, 리기어 보상판매를 매장 안에서 한다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">매장 안에 유리로 낸 리버드 서비스 센터. 수선과 세탁, 리기어 보상판매를 매장 안에서 한다.</figcaption></figure>
-<figure style="margin:14px 0"><img src="img/arcteryx-rebird-service.jpg" alt="리버드 서비스 센터 내부. 수선대와 부자재가 판매 공간과 같은 층에 있다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">리버드 서비스 센터 내부. 수선대와 부자재가 판매 공간과 같은 층에 있다.</figcaption></figure>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://arcteryx.co.kr/products/view/686960" target="_blank"><img src="https://product.arcteryx.co.kr/images/products/686960/F26_X000010633_details_Delta_Hybrid_Hoody_Stratus_Front_View.jpg" alt="델타 하이브리드 후디 (플리스)" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<figure style="margin:14px 0"><img src="img/arcteryx-rebird-window.jpg" alt="매장 안에 유리로 낸 리버드 서비스 센터. 수선과 세탁, 리기어 보상판매를 매장 안에서 한다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">매장 안에 유리로 낸 리버드 서비스 센터. 수선과 세탁, 리기어 보상판매를 매장 안에서 한다.</figcaption></figure>
+<figure style="margin:14px 0"><img src="img/arcteryx-rebird-service.jpg" alt="리버드 서비스 센터 내부. 수선대와 부자재가 판매 공간과 같은 층에 있다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">리버드 서비스 센터 내부. 수선대와 부자재가 판매 공간과 같은 층에 있다.</figcaption></figure>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://arcteryx.co.kr/products/view/686960" target="_blank"><img src="https://product.arcteryx.co.kr/images/products/686960/F26_X000010633_details_Delta_Hybrid_Hoody_Stratus_Front_View.jpg" alt="델타 하이브리드 후디 (플리스)" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>델타 하이브리드 후디 (플리스)</b><br><span style="color:var(--sub)">₩395,000</span><br>플리스와 쉘의 장점을 균형 있게 결합한 델타 하이브리드 후디는 활동과 휴식이 반복되는 멀티 피치 등반과 모든 중간 강도의 산악 활동에 최적화된 통기성과 보호 성능을 제공합니다. 방풍 기능의 이중직 에어쉘 패널이 신뢰도 높은 Octa® 플리스의 성능을 보강하여 필요한 부위를 더욱 효과적으로 보호합니다. 몸에 밀착되는 슬림 핏은 하네스 아래에서도 깔끔하게 정리되고, 썸 루프는 소매를 안정적으로 고정해 줍니다. 헬멧과 호환되는 StormHood™는 리드 등반 중에도 시야를 확보해 줍니다.<br><a href="https://arcteryx.co.kr/products/view/686960" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://arcteryx.co.kr/products/view/686932" target="_blank"><img src="https://product.arcteryx.co.kr/images/products/686932/F26_X000010359_details_Heliad_Crossbody_Bag_Black_Front.jpg" alt="헬리아드 크로스바디 백" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://arcteryx.co.kr/products/view/686932" target="_blank"><img src="https://product.arcteryx.co.kr/images/products/686932/F26_X000010359_details_Heliad_Crossbody_Bag_Black_Front.jpg" alt="헬리아드 크로스바디 백" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>헬리아드 크로스바디 백</b><br><span style="color:var(--sub)">₩85,000</span><br>필요한 것만 가볍게 챙기는 여행을 위해 설계된 Heliad는 심플하고 효율적인 디자인으로 점심과 경량 윈드셸, 책과 태블릿, 또는 기내에서 필요한 소지품을 깔끔하게 수납할 수 있습니다. 길이 조절이 가능한 스트랩으로 슬링백이나 웨이스트팩으로 다양하게 착용할 수 있으며, 직사각형 디자인은 공간 활용을 극대화하고 패킹이 쉽도록 도와줍니다. 현대적인 미니멀 스타일을 완성하는 컴팩트한 디자인입니다.<br><a href="https://arcteryx.co.kr/products/view/686932" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://arcteryx.co.kr/products/view/686752" target="_blank"><img src="https://product.arcteryx.co.kr/images/products/686752/F26_X000009899_details_Alpha_SV_Jacket_Larch_Front_View.jpg" alt="알파 SV 재킷 남성" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://arcteryx.co.kr/products/view/686752" target="_blank"><img src="https://product.arcteryx.co.kr/images/products/686752/F26_X000009899_details_Alpha_SV_Jacket_Larch_Front_View.jpg" alt="알파 SV 재킷 남성" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>알파 SV 재킷 남성</b><br><span style="color:var(--sub)">₩1,450,000</span><br>산이 본색을 드러낼 때, 선택해야 할 쉘은 바로 알파 SV 재킷입니다. Alpha SV 재킷은 가장 거칠고 혹독한 알파인 지형, 집요하게 몰아치는 악천후, 그리고 후퇴 없는 등반을 견디도록 설계된 하드쉘입니다. 내구성이 뛰어난 100D GORE‑TEX PRO ePE 소재로 제작되어 우수한 방수, 투습 성능을 안정적으로 유지하며, 가장 혹독한 순간에도 강력한 보호 성능을 제공합니다.<br><a href="https://arcteryx.co.kr/products/view/686752" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://arcteryx.com/us/en/shop/mens/arris-jacket-9479" target="_blank"><img src="https://images-dynamic-arcteryx.imgix.net/details/1350x1710/F26-X000009479-Arris-Jacket-Black-Front-View.jpg?w=560" alt="Veilance Arris Jacket Men's" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://arcteryx.com/us/en/shop/mens/arris-jacket-9479" target="_blank"><img src="https://images-dynamic-arcteryx.imgix.net/details/1350x1710/F26-X000009479-Arris-Jacket-Black-Front-View.jpg?w=560" alt="Veilance Arris Jacket Men's" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Veilance Arris Jacket Men's</b><br><span style="color:var(--sub)">$800</span><br>Highly breathable, waterproof GORE-TEX shell with StormHood™ for everyday wear. Designed and refined for the city, the fully waterproof fabric is complemented by a quiet, highly breathable backer that feels cool and comfortable. The low-profile StormHood™ features internal cord routing so you can stay dry on the move.<br><a href="https://arcteryx.com/us/en/shop/mens/arris-jacket-9479" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-  <figure style="margin:14px 0"><img src="img/arcteryx-megamenu.jpg" alt="자사몰 남성 메뉴. 의류 품목과 액티비티, 컬렉션 축이 한 화면에 나란히 걸린다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 남성 메뉴. 의류 품목과 액티비티, 컬렉션 축이 한 화면에 나란히 걸린다.</figcaption></figure>
-<figure style="margin:14px 0"><img src="img/arcteryx-collections.jpg" alt="제품군 안내 페이지의 컬렉션 구분. 클라임, 트레일, 스키, 에브리데이 같은 활동 기준으로 나눈다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">제품군 안내 페이지의 컬렉션 구분. 클라임, 트레일, 스키, 에브리데이 같은 활동 기준으로 나눈다.</figcaption></figure>
-<figure style="margin:14px 0"><img src="img/arcteryx-naming.jpg" alt="제품명 규칙 페이지. 알파, 베타, 감마 같은 패밀리명과 SV, AR, LT 같은 수식어를 공식 문서로 설명해 둔다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">제품명 규칙 페이지. 알파, 베타, 감마 같은 패밀리명과 SV, AR, LT 같은 수식어를 공식 문서로 설명해 둔다.</figcaption></figure>
+  <figure style="margin:14px 0"><img src="img/arcteryx-megamenu.jpg" alt="자사몰 남성 메뉴. 의류 품목과 액티비티, 컬렉션 축이 한 화면에 나란히 걸린다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 남성 메뉴. 의류 품목과 액티비티, 컬렉션 축이 한 화면에 나란히 걸린다.</figcaption></figure>
+<figure style="margin:14px 0"><img src="img/arcteryx-collections.jpg" alt="제품군 안내 페이지의 컬렉션 구분. 클라임, 트레일, 스키, 에브리데이 같은 활동 기준으로 나눈다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">제품군 안내 페이지의 컬렉션 구분. 클라임, 트레일, 스키, 에브리데이 같은 활동 기준으로 나눈다.</figcaption></figure>
+<figure style="margin:14px 0"><img src="img/arcteryx-naming.jpg" alt="제품명 규칙 페이지. 알파, 베타, 감마 같은 패밀리명과 SV, AR, LT 같은 수식어를 공식 문서로 설명해 둔다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">제품명 규칙 페이지. 알파, 베타, 감마 같은 패밀리명과 SV, AR, LT 같은 수식어를 공식 문서로 설명해 둔다.</figcaption></figure>
 </div>
 
   <div class="sec">
@@ -1272,7 +1333,7 @@ DETAILS['arcteryx'] = `
         <div class="acc-body"><ul>
           <li>검증된 외부 소재(고어텍스, Hardon 원단 등)와 자체 생산한 고기능성 원단을 모두 쓴다. 고어텍스와 멤브레인을 공동 개발했고, 봉제 대신 열 접합을 표준화한 공정 차별화가 그 기반이다.</li>
         </ul>
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 6px"><img src="img/arcteryx-care-guide.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/arcteryx-hadron.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/arcteryx-seam.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/arcteryx-zipper.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"></div><p style="font-size:12px;color:var(--sub);margin:0 0 6px">자사몰의 소재 페이지. 고어텍스, 다운, 합성 보온재별 관리 안내와 Hadron 원단, 심실링 패턴, 방수 지퍼를 각각 한 화면씩 설명한다.</p></div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 6px"><img src="img/arcteryx-care-guide.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/arcteryx-hadron.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/arcteryx-seam.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/arcteryx-zipper.jpg" alt="" style="width:100%;border:1px solid var(--line)"></div><p style="font-size:12px;color:var(--sub);margin:0 0 6px">자사몰의 소재 페이지. 고어텍스, 다운, 합성 보온재별 관리 안내와 Hadron 원단, 심실링 패턴, 방수 지퍼를 각각 한 화면씩 설명한다.</p></div>
       </div>
       <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●●○</span><span class="arr">▶</span></button>
         <div class="acc-body"><ul>
@@ -1293,7 +1354,7 @@ DETAILS['arcteryx'] = `
         <div class="acc-body"><ul>
           <li>AS와 수선 인프라를 갖췄다(한국에도 파주 서비스센터가 있다). 도메인을 채널별로 분리하고 베일런스는 별도 매장과 존으로 운영한다. VMD는 장비점처럼 운영한다.</li>
         </ul>
-<div style="display:grid;grid-template-columns:2fr 1fr;gap:8px;margin:10px 0 6px"><img src="img/arcteryx-store-nyc.jpg" alt="" style="width:100%;border-radius:8px;border:1px solid var(--line)"><img src="img/arcteryx-rebird-service.jpg" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:8px;border:1px solid var(--line)"></div><p style="font-size:12px;color:var(--sub);margin:0 0 6px">뉴욕 매장. 마네킹을 흙과 돌 위에 세우고 로프와 장비를 함께 진열하는 장비점 방식이며, 리버드 서비스 센터가 매장 안에 있다.</p></div>
+<div style="display:grid;grid-template-columns:2fr 1fr;gap:8px;margin:10px 0 6px"><img src="img/arcteryx-store-nyc.jpg" alt="" style="width:100%;border:1px solid var(--line)"><img src="img/arcteryx-rebird-service.jpg" alt="" style="width:100%;height:100%;object-fit:cover;border:1px solid var(--line)"></div><p style="font-size:12px;color:var(--sub);margin:0 0 6px">뉴욕 매장. 마네킹을 흙과 돌 위에 세우고 로프와 장비를 함께 진열하는 장비점 방식이며, 리버드 서비스 센터가 매장 안에 있다.</p></div>
       </div>
     </div>
   </div>
@@ -1344,24 +1405,24 @@ DETAILS['nanamica'] = `
   <div class="sec">
     <h3>② 자사몰 상품 구성 체계</h3>
       <p>클래식 형태와 기능 소재를 엮어서 상품을 만드는 것이 특징이다. 상품명을 보아도 Club Jacket, Field Jacket, Coat, Shirt, Down으로 구성되어있고, ALPHADRY® / GORE-TEX / Cotton GORE-TEX / COOLMAX® / KODENSHI® 와 같은 소재가 붙어있는 것을 확인할 수 있다.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.nanamica.com/item/8763/" target="_blank"><img src="https://www.nanamica.com/assets/product_image/sm/69ddd3337f8e8.jpg" alt="Packable Balmacaan Coat" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.nanamica.com/item/8763/" target="_blank"><img src="https://www.nanamica.com/assets/product_image/sm/69ddd3337f8e8.jpg" alt="Packable Balmacaan Coat" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Packable Balmacaan Coat</b><br><span style="color:var(--sub)">¥63,800</span><br>Balmacaan coat made with 2.5-layer 12D nylon ripstop. Features excellent windproof and durable water-repellency while being extremely lightweight. Features voluminous single raglan sleeves. Packable design allows the garment to be folded into the inner pocket for compact storage and easy portability. Slightly roomy silhouette.<br><a href="https://www.nanamica.com/item/8763/" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.nanamica.com/item/8765/" target="_blank"><img src="https://www.nanamica.com/assets/product_image/sm/69dc6cc7386a6.jpg" alt="ALPHADRY Club Jacket" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.nanamica.com/item/8765/" target="_blank"><img src="https://www.nanamica.com/assets/product_image/sm/69dc6cc7386a6.jpg" alt="ALPHADRY Club Jacket" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>ALPHADRY Club Jacket</b><br><span style="color:var(--sub)">¥47,300</span><br>Club Jacket made with ALPHADRY®, featuring excellent moisture-wicking, quick-drying, and stretch properties. Front three-button design. Regular silhouette.<br><a href="https://www.nanamica.com/item/8765/" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.nanamica.com/item/8831/" target="_blank"><img src="https://www.nanamica.com/assets/product_image/69dc723196e30.jpg" alt="2L GORE-TEX Cruiser Jacket" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.nanamica.com/item/8831/" target="_blank"><img src="https://www.nanamica.com/assets/product_image/69dc723196e30.jpg" alt="2L GORE-TEX Cruiser Jacket" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>2L GORE-TEX Cruiser Jacket</b><br><span style="color:var(--sub)">¥82,500</span><br>Cruiser Jacket made from 2-layer polyester twill material. Utilizes a two-layer ePE GORE-TEX fabric featuring a non-fluorinated waterproof-breathable membrane and water-repellent finish. Fully seam taped. Lined with natural-colored organic cotton/COOLMAX® EcoMade twill. Adjustable fit with hem adjusters. Includes zipper security pocket. Includes an inner pocket with zipper<br><a href="https://www.nanamica.com/item/8831/" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.nanamica.com/item/8797/" target="_blank"><img src="https://www.nanamica.com/assets/product_image/69ddd94f2d273.jpg" alt="Button Down Wind Shirt" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.nanamica.com/item/8797/" target="_blank"><img src="https://www.nanamica.com/assets/product_image/69ddd94f2d273.jpg" alt="Button Down Wind Shirt" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Button Down Wind Shirt</b><br><span style="color:var(--sub)">¥25,300</span><br>Button down shirt made from organic cotton/CORDURA® nylon oxford. Design based on vintage shirts, featuring five buttons on the front and a rounded hem. Stitch work varies in thread count and stitching depending on the part of the shirt, adding accents. Front embroidered with the nanamica logo. Slightly roomy relaxed fit<br><a href="https://www.nanamica.com/item/8797/" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-      <p>자사몰에서는 라인(nanamica / TNF Purple Label / SELECTION)으로 자사와 라이선스, 편집을 나누어두었다. 또한 품목, 자체 콘텐츠, 한정과 시즌으로 나누어두었다. 특이한 점은 ALPHADRY®를 "만원 전철에서 흘린 땀", "갑작스러운 비" 같은 장면으로 설명하고, 이에 대한 해법으로 해당 원단을 설명하는 방식이다.</p><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"><img src="img/nanamica-news-featured.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="img/nanamica-featured-vol17.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">공식 사이트의 Featured Product 연재. "수트보다 편하고 워크재킷보다 샤프하게", "산책부터 짧은 여행까지 든든한 터프함"처럼 상품을 장면으로 소개한다.</figcaption></figure>
-<figure style="margin:14px 0"><img src="img/nanamica-fw26.jpg" alt="자사몰 메인의 2026 가을 겨울 컬렉션. 시즌 룩북이 첫 화면이다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 메인의 2026 가을 겨울 컬렉션. 시즌 룩북이 첫 화면이다.</figcaption></figure>
+      <p>자사몰에서는 라인(nanamica / TNF Purple Label / SELECTION)으로 자사와 라이선스, 편집을 나누어두었다. 또한 품목, 자체 콘텐츠, 한정과 시즌으로 나누어두었다. 특이한 점은 ALPHADRY®를 "만원 전철에서 흘린 땀", "갑작스러운 비" 같은 장면으로 설명하고, 이에 대한 해법으로 해당 원단을 설명하는 방식이다.</p><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"><img src="img/nanamica-news-featured.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="img/nanamica-featured-vol17.jpg" alt="" style="width:100%;border:1px solid var(--line);"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">공식 사이트의 Featured Product 연재. "수트보다 편하고 워크재킷보다 샤프하게", "산책부터 짧은 여행까지 든든한 터프함"처럼 상품을 장면으로 소개한다.</figcaption></figure>
+<figure style="margin:14px 0"><img src="img/nanamica-fw26.jpg" alt="자사몰 메인의 2026 가을 겨울 컬렉션. 시즌 룩북이 첫 화면이다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 메인의 2026 가을 겨울 컬렉션. 시즌 룩북이 첫 화면이다.</figcaption></figure>
 </div>
 
   <div class="sec">
@@ -1408,7 +1469,7 @@ DETAILS['nanamica'] = `
       <div class="acc-item"><button class="acc-btn"><span class="ax">원단/소재</span><span class="dots">●●●●○</span><span class="arr">▶</span></button>
         <div class="acc-body"><ul>
           <li>ALPHADRY®, KODENSHI®, COOLMAX® Cotton 세 가지에 고어 재팬과 공동 개발한 Cotton GORE-TEX가 있다. TNF Purple Label과 소재를 공유해 규모의 경제를 달성하였다</li>
-        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px"><img src="https://www.nanamica.com/f/img/about/about_06.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="https://www.nanamica.com/f/img/about/about_05.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="https://www.nanamica.com/f/img/about/about_04.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자체 소재 ALPHADRY, KODENSHI와 고어 재팬 공동 개발 Cotton GORE-TEX.</figcaption></figure></div>
+        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px"><img src="https://www.nanamica.com/f/img/about/about_06.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="https://www.nanamica.com/f/img/about/about_05.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="https://www.nanamica.com/f/img/about/about_04.jpg" alt="" style="width:100%;border:1px solid var(--line);"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자체 소재 ALPHADRY, KODENSHI와 고어 재팬 공동 개발 Cotton GORE-TEX.</figcaption></figure></div>
       </div>
       <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●●○</span><span class="arr">▶</span></button>
         <div class="acc-body"><ul>
@@ -1439,7 +1500,7 @@ DETAILS['nanamica'] = `
           <li>한국은 정식 매장 없이 편집샵이 맡는다. 슬로우스테디클럽, 에잇디비전, 신세계몰 등에서 취급한다</li>
           <li>매장은 기능복 매장으로 보이지 않게 설계한다. 교토점은 요트 갑판을 떠올리게 하는 밝은 오크와 검은 철제 집기, 마치야를 참고한 루버 파사드로 만들었고, 뉴욕점은 구마 다이치가 일본 해변 주택처럼 설계했다</li>
           <li>점포마다 지역색을 넣는다. 교토는 경관 조례에 맞춘 검은 철제, 뉴욕은 일본 가옥, 상하이는 우캉루의 옛 건물을 쓴다</li>
-        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"><img src="img/nanamica-doc-01.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="img/nanamica-doc-02.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">매장 외관과 진열. 상품 수를 줄이고 소재별로 접어 쌓는다.</figcaption></figure><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"><img src="https://www.nanamica.com/f/img/kyoto/1_kyoto.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="https://www.nanamica.com/f/img/kyoto/2_kyoto.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="https://www.nanamica.com/f/img/ny/1_nany.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="https://www.nanamica.com/f/img/ny/2_nany.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">교토 매장(위)과 뉴욕 매장(아래). 기능복 매장으로 보이지 않게 설계한다.</figcaption></figure></div>
+        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"><img src="img/nanamica-doc-01.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="img/nanamica-doc-02.jpg" alt="" style="width:100%;border:1px solid var(--line);"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">매장 외관과 진열. 상품 수를 줄이고 소재별로 접어 쌓는다.</figcaption></figure><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"><img src="https://www.nanamica.com/f/img/kyoto/1_kyoto.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="https://www.nanamica.com/f/img/kyoto/2_kyoto.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="https://www.nanamica.com/f/img/ny/1_nany.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="https://www.nanamica.com/f/img/ny/2_nany.jpg" alt="" style="width:100%;border:1px solid var(--line);"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">교토 매장(위)과 뉴욕 매장(아래). 기능복 매장으로 보이지 않게 설계한다.</figcaption></figure></div>
       </div>
     </div>
   </div>
@@ -1495,17 +1556,17 @@ DETAILS['theory'] = `
     <h3>② 자사몰 상품 구성 체계</h3>
     <p class="ovw">자사몰 분석 결과, 상품 구성은 3개의 축에 의해 짜여 있다. 품목 카테고리가 기본 층을 이루고, 그 위에 원단과 시즌 숍(cashmere-shop, linen-shop, 기능 원단 "In Motion" 등)이 있으며, 가이드와 큐레이션이 이를 뒷받침한다. 상품명이 '모델명 in 원단명' 공식으로 통일돼 있다(Precise Tee in Luxe Cotton Jersey가 그 예시이다). 한 모델이 원단만 바꿔서 출시되는 상품도 많다.</p>
     <p class="ovw" style="margin-top:10px">또한, 'Theory Wardrobe'와 같은 시스템을 운영 중이다. 이는 대표 스타일을 "our dress shirt: the Sylvain"처럼 문장으로 소개하는 상설 페이지로, 유행을 타지 않고 언제든 입을 수 있는 재킷, 셔츠, 팬츠, 니트 등의 핵심 클래식 라인을 하나의 묶음으로 만들어둔 것이다. 즉, '현대인의 유니폼'이라는 철학을 분류로 옮긴 장치라고 할 수 있다. Essential Trios는 같은 모델과 원단을 컬러만 달리해 3장 묶어 판매하는 전략으로, 노세일을 표방하면서 실질적으로는 약 23% 할인을 준다. 추가적으로, Fit guide / Pant guide로 각 카테고리별(팬츠, 블레이저와 자켓, 티셔츠와 폴로, 스웨터)로 핏을 3개 분류 기준으로 나누고, 이 핏에 따른 스테디셀러를 추천하는 등의 서비스도 제공한다.</p>
-    <div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.ssfshop.com/Theory/GM0026071649916/good" target="_blank"><img src="https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/SCTP/26/07/16/GM0026071649916_0_THNAIL_ORGINL_20260722104700015.jpg" alt="Fine Bilen Goris Polo Sweater" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+    <div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.ssfshop.com/Theory/GM0026071649916/good" target="_blank"><img src="https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/SCTP/26/07/16/GM0026071649916_0_THNAIL_ORGINL_20260722104700015.jpg" alt="Fine Bilen Goris Polo Sweater" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Fine Bilen Goris Polo Sweater</b><br><span style="color:var(--sub)">SSF샵 판매가 기준</span><br>브랜드를 대표하는 고리스 폴로 긴소매 스웨터입니다. 신축성과 형태감이 좋아 어느 팬츠와도 활용하기 좋습니다. 기본적인 디자인과 깔끔한 핏으로, 단독으로는 물론 재킷의 이너로 활용해도 멋스럽습니다.<br><a href="https://www.ssfshop.com/Theory/GM0026071649916/good" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.ssfshop.com/Theory/GM0026032431589/good" target="_blank"><img src="https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/SCTP/26/03/24/GM0026032431589_0_THNAIL_ORGINL_20260429170535047.jpg" alt="Perform Suit Clinton Jacket" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.ssfshop.com/Theory/GM0026032431589/good" target="_blank"><img src="https://img.ssfshop.com/cmd/LB_500x660/src/https://img.ssfshop.com/goods/SCTP/26/03/24/GM0026032431589_0_THNAIL_ORGINL_20260429170535047.jpg" alt="Perform Suit Clinton Jacket" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Perform Suit Clinton Jacket</b><br><span style="color:var(--sub)">SSF샵 판매</span><br>특유의 청량감이 매력적인 재킷입니다. 가벼운 무게와 우수한 신축성이 특징이며, 어깨와 품에 맞는 직선적인 패턴으로 깔끔한 실루엣을 선사합니다. 단독으로는 물론 동일한 소재의 팬츠와 셋업으로 연출할 수 있습니다.<br><a href="https://www.ssfshop.com/Theory/GM0026032431589/good" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<figure style="margin:14px 0"><img src="img/theory-brandshop.jpg" alt="SSF샵 띠어리 브랜드관 메인 화면." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">SSF샵 띠어리 브랜드관 메인 화면.</figcaption></figure>
-  <figure style="margin:14px 0"><img src="img/theory-wardrobe.jpg" alt="자사몰 Theory Wardrobe 페이지" style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 Theory Wardrobe 페이지이다. 캡슐 하나를 6개 스타일로 정의해서 이런 활용도 높은 상품들을 캐리오버 상품으로 판매하는 전략이다.</figcaption></figure>
-<figure style="margin:14px 0"><img src="img/theory-fitguide.jpg" alt="남성 핏 가이드. 팬츠를 슬림, 스탠다드, 릴랙스드 3개 핏으로 나눠 사진으로 비교해 준다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">남성 핏 가이드. 팬츠를 슬림, 스탠다드, 릴랙스드 3개 핏으로 나눠 사진으로 비교해 준다.</figcaption></figure>
+<figure style="margin:14px 0"><img src="img/theory-brandshop.jpg" alt="SSF샵 띠어리 브랜드관 메인 화면." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">SSF샵 띠어리 브랜드관 메인 화면.</figcaption></figure>
+  <figure style="margin:14px 0"><img src="img/theory-wardrobe.jpg" alt="자사몰 Theory Wardrobe 페이지" style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 Theory Wardrobe 페이지이다. 캡슐 하나를 6개 스타일로 정의해서 이런 활용도 높은 상품들을 캐리오버 상품으로 판매하는 전략이다.</figcaption></figure>
+<figure style="margin:14px 0"><img src="img/theory-fitguide.jpg" alt="남성 핏 가이드. 팬츠를 슬림, 스탠다드, 릴랙스드 3개 핏으로 나눠 사진으로 비교해 준다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">남성 핏 가이드. 팬츠를 슬림, 스탠다드, 릴랙스드 3개 핏으로 나눠 사진으로 비교해 준다.</figcaption></figure>
 </div>
 
   <div class="sec">
@@ -1647,19 +1708,19 @@ DETAILS['the-row'] = `
     <h3>② 자사몰 상품 구성 체계</h3>
     <p class="ovw">성별과 품목(Women과 Men 아래 RTW, Shoes, Handbags, Accessories)과 시즌(Collections)으로 나뉜다. Archive는 2019년까지의 지난 컬렉션을 지우지 않고 상설로 남긴다. 시즌 상품이 시즌으로 끝나지 않는다는 것을 보여준다. Galerie는 자사 제품이 아닌 오브제와 빈티지를 골라 높은 가격에 파는 일종의 편집샵 코너이다. 여기에 Home(블랭킷 등)이 더해진다.</p>
     <p class="ovw" style="margin-top:10px">가방이 브랜드의 기틀을 세웠다고 할 수 있으나(Margaux 17은 2019년 약 $3,400에서 2025년 약 $6,400으로 6년간 88% 인상되면서도 광고나 협찬 없이 대표 상품이 됐다), 아래 상품과 같이 높은 퀄리티의 일상적인 제품을 만들어 판매한다.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.therow.com/products/soft-margaux-15-black" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0552/0313/5593/products/W1255L133BLPLF_a7456523-a46a-4be1-a7f0-349b38bd9f4f.jpg?width=560" alt="Soft Margaux 15 Bag" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.therow.com/products/soft-margaux-15-black" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0552/0313/5593/products/W1255L133BLPLF_a7456523-a46a-4be1-a7f0-349b38bd9f4f.jpg?width=560" alt="Soft Margaux 15 Bag" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Soft Margaux 15 Bag</b><br><span style="color:var(--sub)">$4,700</span><br>Softly structured top-handle bag in matte grained calfskin leather with belted side gussets, protective metal feet, and interior toggle closure.<br><a href="https://www.therow.com/products/soft-margaux-15-black" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-    <div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.therow.com/products/toby-coat-cream" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0552/0313/5593/files/R000173W4784CREF.jpg?v=1781468649&width=560" alt="Toby Coat" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+    <div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.therow.com/products/toby-coat-cream" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0552/0313/5593/files/R000173W4784CREF.jpg?v=1781468649&width=560" alt="Toby Coat" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Toby Coat</b><br><span style="color:var(--sub)">$4,900</span><br>Mid-length car coat in brushed Pima cotton with buttoned chin tab, slant welt pockets, and concealed front placket with button closure.<br><a href="https://www.therow.com/products/toby-coat-cream" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.therow.com/products/nabuk-top-black" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0552/0313/5593/files/R000691Y1028BLKF_06d2df91-5f0b-491d-abaa-ef2cca030513.jpg?v=1784571282&width=560" alt="Nabuk Sweater" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.therow.com/products/nabuk-top-black" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0552/0313/5593/files/R000691Y1028BLKF_06d2df91-5f0b-491d-abaa-ef2cca030513.jpg?v=1784571282&width=560" alt="Nabuk Sweater" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Nabuk Sweater</b><br><span style="color:var(--sub)">$1,720</span><br>Long-sleeved mock neck sweater in ultrafine merino wool with ribbed neckline and tubular finish at cuffs and hem.<br><a href="https://www.therow.com/products/nabuk-top-black" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-  <figure style="margin:14px 0"><img src="img/therow-ss26.jpg" alt="2026 여름 남성 컬렉션 룩북. 자사몰에서 시즌별 룩을 아카이브로 공개한다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">2026 여름 남성 컬렉션 룩북. 자사몰에서 시즌별 룩을 아카이브로 공개한다.</figcaption></figure>
+  <figure style="margin:14px 0"><img src="img/therow-ss26.jpg" alt="2026 여름 남성 컬렉션 룩북. 자사몰에서 시즌별 룩을 아카이브로 공개한다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">2026 여름 남성 컬렉션 룩북. 자사몰에서 시즌별 룩을 아카이브로 공개한다.</figcaption></figure>
 </div>
 
   <div class="sec">
@@ -1795,23 +1856,23 @@ DETAILS['lemaire'] = `
   <div class="sec">
     <h3>② 자사몰 상품 구성 체계</h3>
     <p class="ovw">최상위 메뉴가 women, men, bags, shoes, accessories, Objects이다. 성별 아래 품목, 그 아래에 잡화를 두는 통상 구조와 달리 가방을 성별과 같은 층에 올렸다. 매출 구조가 메뉴 구조에 그대로 보인다. 가방은 일반 명사가 아니라 고유 형태명 컬렉션 9종(croissant, belted, molded 등)으로 나뉘고, 아래 사진과 같이 히어로 상품인 크루아상 하나가 fortune(변형), filt(협업), coin purse(축소)로 갈라져 관련 상품 612개가 엮여져 있다.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.lemaire.fr/products/dark-chocolate-medium-croissant-bag" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0431/7954/0638/files/BG0001LL095_BR490_1_6465bd10-75b1-4206-87cc-15e7b4e953e3.webp?width=560" alt="Medium Croissant Bag in Leather" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.lemaire.fr/products/dark-chocolate-medium-croissant-bag" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0431/7954/0638/files/BG0001LL095_BR490_1_6465bd10-75b1-4206-87cc-15e7b4e953e3.webp?width=560" alt="Medium Croissant Bag in Leather" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Medium Croissant Bag in Leather</b><br><span style="color:var(--sub)">₩2,490,000</span><br>The Croissant line is emblematic of the LEMAIRE wardrobe. This versatile, supple bag features a curve inspired by the Viennoiserie of the same name, created by an assembly of topstitched panels and knotted elements. This medium bag is crafted in nappa lamb leather, a soft, supple material characterized by its smooth hand and natural shine, certified LWG Gold.<br><a href="https://www.lemaire.fr/products/dark-chocolate-medium-croissant-bag" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.lemaire.fr/products/straight-collar-twisted-shirt-unisex-br532-licorice-lf1308-dry-silk-sh1141-lf1308-br532" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0431/7954/0638/files/SH1141LF1308_BR532_1.jpg?width=560" alt="Straight Collar Twisted Shirt in Dry Silk" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.lemaire.fr/products/straight-collar-twisted-shirt-unisex-br532-licorice-lf1308-dry-silk-sh1141-lf1308-br532" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0431/7954/0638/files/SH1141LF1308_BR532_1.jpg?width=560" alt="Straight Collar Twisted Shirt in Dry Silk" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Straight Collar Twisted Shirt in Dry Silk</b><br><span style="color:var(--sub)">₩1,570,000</span><br>This shirt is part of the Twisted family emblematic of the LEMAIRE wardrobe. It is crafted in a dry silk blend, a classic house fabric with a soft hand and slightly crinkled texture.<br><a href="https://www.lemaire.fr/products/straight-collar-twisted-shirt-unisex-br532-licorice-lf1308-dry-silk-sh1141-lf1308-br532" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.lemaire.fr/products/straight-collar-twisted-dress-women-bk999-black-lf1308" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0431/7954/0638/files/DR1092_LF1308_BK999_1_9f486116-5682-4dff-9181-e8810c5d8f5a.webp?width=560" alt="Straight Collar Twisted Dress in Dry Silk" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.lemaire.fr/products/straight-collar-twisted-dress-women-bk999-black-lf1308" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0431/7954/0638/files/DR1092_LF1308_BK999_1_9f486116-5682-4dff-9181-e8810c5d8f5a.webp?width=560" alt="Straight Collar Twisted Dress in Dry Silk" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Straight Collar Twisted Dress in Dry Silk</b><br><span style="color:var(--sub)">₩1,500,000</span><br>This dress is part of the Twisted family emblematic of the LEMAIRE wardrobe. It is crafted in a dry silk blend, a classic house fabric with a soft hand and slightly crinkled texture.<br><a href="https://www.lemaire.fr/products/straight-collar-twisted-dress-women-bk999-black-lf1308" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.lemaire.fr/products/soft-leather-blouson-unisex-ye550-ochre-ll0231-paper-cow-leather-ow1282-ll0231-ye550" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0431/7954/0638/files/OW1282LL0231_YE550_1.jpg?v=1782478445&width=560" alt="Soft Leather Blouson" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.lemaire.fr/products/soft-leather-blouson-unisex-ye550-ochre-ll0231-paper-cow-leather-ow1282-ll0231-ye550" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0431/7954/0638/files/OW1282LL0231_YE550_1.jpg?v=1782478445&width=560" alt="Soft Leather Blouson" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Soft Leather Blouson</b><br><span style="color:var(--sub)">₩4,603,000</span><br>This cropped leather jacket completes LEMAIRE's feminine wardrobe. It is made from soft cow leather, a lightweight material with a paper-like appearance and natural shine.<br><a href="https://www.lemaire.fr/products/soft-leather-blouson-unisex-ye550-ochre-ll0231-paper-cow-leather-ow1282-ll0231-ye550" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<figure style="margin:14px 0"><img src="img/lemaire-croissant.jpg" alt="자사몰 백 메뉴의 크루아상 백 컬렉션. 형태명이 곧 메뉴가 된다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 백 메뉴의 크루아상 백 컬렉션. 형태명이 곧 메뉴가 된다.</figcaption></figure>
+<figure style="margin:14px 0"><img src="img/lemaire-croissant.jpg" alt="자사몰 백 메뉴의 크루아상 백 컬렉션. 형태명이 곧 메뉴가 된다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 백 메뉴의 크루아상 백 컬렉션. 형태명이 곧 메뉴가 된다.</figcaption></figure>
     <p class="ovw" style="margin-top:10px">상품명은 옷과 잡화가 같은 명명 규칙을 쓴다. [형태/품목]-[성별]-[소재/가공]-[컬러]-[품번] 순이다. 소재를 상품명에 넣는 원칙은 포터리와 동일하다. 여기에 Objects 메뉴로 리빙 자리를 최상위에 미리 잡아뒀다. 반면 의류는 성별과 품목을 교차한 평범한 격자이고 모델명 체계도 없다. 분류 설계 역량이 전부 가방에 들어가 있다.</p>
   </div>
 
@@ -1944,25 +2005,25 @@ DETAILS['drakes'] = `
 
   <div class="sec">
     <h3>② 자사몰 상품 구성 체계</h3>
-<p>잡화가 최상위 메뉴 중 하나이다. New In, Clothing, Shirts, Games, Perennials, Footwear, Ties, Accessories, Editorial 순으로, Ties가 Clothing과 같은 층위에 있다. 이 보드에서 소품을 축으로 두는 유일한 브랜드다.</p><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px"><img src="img/drakes-doc-ties.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="img/drakes-doc-square.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="img/drakes-doc-tie-shirt.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">창업 품목인 수제 타이와 실크 스퀘어. 잡화가 지금도 브랜드의 정체성이다.</figcaption></figure>
+<p>잡화가 최상위 메뉴 중 하나이다. New In, Clothing, Shirts, Games, Perennials, Footwear, Ties, Accessories, Editorial 순으로, Ties가 Clothing과 같은 층위에 있다. 이 보드에서 소품을 축으로 두는 유일한 브랜드다.</p><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px"><img src="img/drakes-doc-ties.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="img/drakes-doc-square.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="img/drakes-doc-tie-shirt.jpg" alt="" style="width:100%;border:1px solid var(--line);"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">창업 품목인 수제 타이와 실크 스퀘어. 잡화가 지금도 브랜드의 정체성이다.</figcaption></figure>
       <p>Games: 격식을 덜어낸 테일러링에 붙인 라인 이름이다. 원형에서 구조를 걷어내는 방식으로 만들고, 소재별로 전개하며 Mk. III까지 세대를 관리한다.</p>
       <p>Perennials: 매 시즌 다시 나오는 스테디셀러 상품만 모은 상설 매대이다. 랄프로렌에서 'all year'에 해당하는 항목 축이라고 할 수 있다. 드레익스는 이 매대를 "Here today, here tomorrow"라는 문장으로 소개하며, 포터리가 가장 주목할 축이다.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.drakes.com/en-kr/products/green-waxed-coverall-jacket" target="_blank"><img src="https://www.drakes.com/cdn/shop/files/DR2A1O21591-03400-1_18a9f339-0229-488c-81fe-196f031f5b64_1200x1200.jpg?v=1767893217" alt="Green Waxed Coverall Jacket" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.drakes.com/en-kr/products/green-waxed-coverall-jacket" target="_blank"><img src="https://www.drakes.com/cdn/shop/files/DR2A1O21591-03400-1_18a9f339-0229-488c-81fe-196f031f5b64_1200x1200.jpg?v=1767893217" alt="Green Waxed Coverall Jacket" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Green Waxed Coverall Jacket</b><br><span style="color:var(--sub)">₩1,599,000</span><br>A generously sized piece of outerwear synonymous with the protean British weather. A hearty waxed cotton composition in a traditional emerald green offers unrivalled patination that will only improve with wear, while patch and stud bellows pockets provide ample utility whether strolling in town or stalking in the country. The mid-wale corduroy tab collar and soft oxford cotton lining lend a sense of comfort to a timeless and rugged jacket that is just smart enough to throw on over a suit.<br><a href="https://www.drakes.com/en-kr/products/green-waxed-coverall-jacket" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.drakes.com/en-kr/products/light-blue-ticking-stripe-cotton-oxford-cloth-button-down-shirt-1-1" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0640/6121/0837/files/DR2A4A21844-01202-1.jpg?width=560" alt="Ticking Stripe Oxford Button-Down Shirt" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.drakes.com/en-kr/products/light-blue-ticking-stripe-cotton-oxford-cloth-button-down-shirt-1-1" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0640/6121/0837/files/DR2A4A21844-01202-1.jpg?width=560" alt="Ticking Stripe Oxford Button-Down Shirt" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Ticking Stripe Oxford Button-Down Shirt</b><br><span style="color:var(--sub)">₩459,000</span><br>The oxford cloth button-down shirt is an enduring icon of menswear, which looks as good now as it did a century ago. It's an item that's at the very heart of our brand, and this is our attempt at perfecting the style. With a regular silhouette, floating interlinings, single-needle construction, and, perhaps most importantly, an elegant rolling collar, it's a shirt for all occasions.<br><a href="https://www.drakes.com/en-kr/products/light-blue-ticking-stripe-cotton-oxford-cloth-button-down-shirt-1-1" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.drakes.com/en-kr/products/black-pure-cashmere-solid-tipped-tie" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0640/6121/0837/files/DR1AAN23697-02100-2.jpg?v=1696945540&width=560" alt="Pure Cashmere Tipped Tie" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.drakes.com/en-kr/products/black-pure-cashmere-solid-tipped-tie" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0640/6121/0837/files/DR1AAN23697-02100-2.jpg?v=1696945540&width=560" alt="Pure Cashmere Tipped Tie" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Pure Cashmere Tipped Tie</b><br><span style="color:var(--sub)">₩329,000</span><br>The solid cashmere tie is one of our all-time best sellers. Comfortable to wear, and offers a chic alternative to silk. Equally at home with a suit or more casual tailoring.<br><a href="https://www.drakes.com/en-kr/products/black-pure-cashmere-solid-tipped-tie" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<figure style="margin:14px 0"><img src="img/drakes-perennials.jpg" alt="자사몰 Perennials 매대. 매 시즌 다시 나오는 스테디셀러만 모아 둔다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 Perennials 매대. 매 시즌 다시 나오는 스테디셀러만 모아 둔다.</figcaption></figure>
+<figure style="margin:14px 0"><img src="img/drakes-perennials.jpg" alt="자사몰 Perennials 매대. 매 시즌 다시 나오는 스테디셀러만 모아 둔다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">자사몰 Perennials 매대. 매 시즌 다시 나오는 스테디셀러만 모아 둔다.</figcaption></figure>
       <p>셔츠: 소재와 칼라의 2축 격자로 전개한다. 격자는 포터리가 더 정교하고, 자체 공장은 드레익스가 앞선다.</p>
       <p>Footwear는 편집: 자체 개발 대신 Alden, Paraboot, New Balance로 채운다. Editorial은 판매 메뉴와 같은 층에 있어 서사가 곧 탐색 경로가 된다.</p>
-<figure style="margin:14px 0"><img src="img/drakes-games.jpg" alt="Games 라인 페이지. 포멀의 가장 편안한 끝을 맡는 라인이라고 직접 설명한다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">Games 라인 페이지. 포멀의 가장 편안한 끝을 맡는 라인이라고 직접 설명한다.</figcaption></figure>
+<figure style="margin:14px 0"><img src="img/drakes-games.jpg" alt="Games 라인 페이지. 포멀의 가장 편안한 끝을 맡는 라인이라고 직접 설명한다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">Games 라인 페이지. 포멀의 가장 편안한 끝을 맡는 라인이라고 직접 설명한다.</figcaption></figure>
 </div>
 
   <div class="sec">
@@ -2009,7 +2070,7 @@ DETAILS['drakes'] = `
       <div class="acc-item"><button class="acc-btn"><span class="ax">원단/소재</span><span class="dots">●●●●○</span><span class="arr">▶</span></button>
         <div class="acc-body"><ul>
           <li>이탈리아, 스코틀랜드, 차드 자사 공장, 런던 워크숍으로 최적 산지에 분업한다. 소재는 독립 매대로 운영한다</li>
-        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"><img src="https://www.drakes.com/cdn/shop/files/DRA_MTO_CRAFT-38_1000x.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="https://www.drakes.com/cdn/shop/files/DRA_MTO_CRAFT-39_1000x.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">메이드 투 오더 공방. 원단을 재단하고 마킹하는 과정.</figcaption></figure></div>
+        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px"><img src="https://www.drakes.com/cdn/shop/files/DRA_MTO_CRAFT-38_1000x.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="https://www.drakes.com/cdn/shop/files/DRA_MTO_CRAFT-39_1000x.jpg" alt="" style="width:100%;border:1px solid var(--line);"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">메이드 투 오더 공방. 원단을 재단하고 마킹하는 과정.</figcaption></figure></div>
       </div>
       <div class="acc-item"><button class="acc-btn"><span class="ax">디자인</span><span class="dots">●●●●○</span><span class="arr">▶</span></button>
         <div class="acc-body"><ul>
@@ -2030,7 +2091,7 @@ DETAILS['drakes'] = `
         <div class="acc-body"><ul>
           <li>런던 해버대셔 스트리트에 공장, 쇼룸, 본사를 통합해 생산이 곧 진열이 된다. VMD는 서랍식 타이 진열이 중심이다</li>
           <li>한국에서는 유니페어가 2017년 팝업을 연 뒤 2018년 공식 에이전트가 됐고, SSF샵에 입점했다</li>
-        </ul><figure style="margin:14px 0"><img src="https://www.drakes.com/cdn/shop/files/About1_1000x.jpg" alt="" style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">새빌로 매장 앞의 크리에이티브 디렉터 마이클 힐.</figcaption></figure></div>
+        </ul><figure style="margin:14px 0"><img src="https://www.drakes.com/cdn/shop/files/About1_1000x.jpg" alt="" style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">새빌로 매장 앞의 크리에이티브 디렉터 마이클 힐.</figcaption></figure></div>
       </div>
     </div>
   </div>
@@ -2079,21 +2140,21 @@ DETAILS['polo-ralph-lauren'] = `
   <div class="sec">
     <h3>② 자사몰 상품 구성 체계</h3>
     <p>네이밍 공식은 [핏]+[소재]+[품목]이다. 첫 축이 '핏'인 것은 랄프 로렌뿐이다. 폴로 셔츠 한 품목에 핏 3종과 소재 5종을 교차한 격자가 걸리고 핏 3종은 60년간 고정이라, 고객이 "나는 커스텀 슬림"이라고 기억하고 소재와 색만 바꿔 재구매한다. 폴로 셔츠는 핏 가이드가 붙은 별개의 최상위 카테고리다. 이 재구매 구조의 몸통이 아래 케이블 니트처럼 수십 년째 같은 형태로 다시 나오는 스테디 아이템이다.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.ralphlauren.co.kr/%EC%BC%80%EC%9D%B4%EB%B8%94-%EB%8B%88%ED%8A%B8-%EC%BD%94%ED%8A%BC-%ED%8F%B4%EB%A1%9C-%EC%8A%A4%EC%9B%A8%ED%84%B0-650001.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1488600_alternate10?wid=560" alt="케이블 니트 코튼 폴로 스웨터" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.ralphlauren.co.kr/%EC%BC%80%EC%9D%B4%EB%B8%94-%EB%8B%88%ED%8A%B8-%EC%BD%94%ED%8A%BC-%ED%8F%B4%EB%A1%9C-%EC%8A%A4%EC%9B%A8%ED%84%B0-650001.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1488600_alternate10?wid=560" alt="케이블 니트 코튼 폴로 스웨터" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>케이블 니트 코튼 폴로 스웨터</b><br><span style="color:var(--sub)">국내 공식몰 판매</span><br>시그니처 폴로 셔츠의 실루엣에 부드러운 면 방적사와 아이코닉한 케이블 니트 모티프가 조화를 이루는 스웨터입니다.<br><a href="https://www.ralphlauren.co.kr/%EC%BC%80%EC%9D%B4%EB%B8%94-%EB%8B%88%ED%8A%B8-%EC%BD%94%ED%8A%BC-%ED%8F%B4%EB%A1%9C-%EC%8A%A4%EC%9B%A8%ED%84%B0-650001.html" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
     <p>그 위에 있는 진짜 격자가 서브브랜드 계층이다. 가격대마다 브랜드를 나눠(Purple Label~Lauren 5층) 최상단 메뉴에 병렬로 배치한다. 분류축은 5개가 동시에 작동하는데(서브브랜드, 품목, 핏, 소재/시즌, 캐릭터/이벤트), 폴로 베어 샵은 캐릭터가 카테고리가 된 축이다.</p>
     <p>잡화가 격자 안에 있다. 남성 액세서리만 해도 모자, 가방, 양말, 스카프 등 13개 하위 카테고리이고, 여성 가방은 형태별 4분류다. 격자 밖으로는 Home(1983~), Ralph's Coffee 40+, 레스토랑 5곳, 키즈 5구간까지 실제로 운영한다.</p>
-  <div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.ralphlauren.co.kr/custom-slim-fit-mesh-polo-shirt-401481.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1266700_alternate10?wid=560" alt="아이코닉 커스텀 슬림핏 메시 폴로" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+  <div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.ralphlauren.co.kr/custom-slim-fit-mesh-polo-shirt-401481.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1266700_alternate10?wid=560" alt="아이코닉 커스텀 슬림핏 메시 폴로" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>아이코닉 커스텀 슬림핏 메시 폴로</b><br><span style="color:var(--sub)">₩199,000</span><br>1972년 이래 아메리칸 스타일의 표준으로 자리한 폴로 셔츠는 결코 모방할 수 없는 오리지널의 품격을 자랑합니다. Ralph Lauren은 수십 년에 걸쳐 다양한 컬러와 핏으로 시그니처 스타일을 재해석해 왔으며 모두 아이코닉한 오리지널 아이템의 디테일과 품질을 유지하고 있습니다. 통기성이 높은 코튼 메시로 만들어진 슬림한 버전으로, 질감을 살린 룩과 부드러운 느낌을 자랑합니다.<br><a href="https://www.ralphlauren.co.kr/custom-slim-fit-mesh-polo-shirt-401481.html" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://www.ralphlauren.co.kr/classic-fit-garment-dyed-oxford-shirt-459930.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1469470_alternate10?wid=560" alt="클래식핏 가먼트 다이 옥스포드 셔츠" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://www.ralphlauren.co.kr/classic-fit-garment-dyed-oxford-shirt-459930.html" target="_blank"><img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1469470_alternate10?wid=560" alt="클래식핏 가먼트 다이 옥스포드 셔츠" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>클래식핏 가먼트 다이 옥스포드 셔츠</b><br><span style="color:var(--sub)">₩259,000</span><br>초창기 Ralph Lauren 디자인에서 선보였던 옥스포드 셔츠는 이후 Polo 룩의 한 축으로서 그 입지를 굳건히 지켜왔습니다. Ralph Lauren의 패브릭은 시크릿 워싱으로 개발되어 즉각적인 개성과 편안함, 그리고 완벽한 '럼플'이라고 부르는 헤더의 부드러움을 선사합니다. 그 제작법은 매우 특별하여 30년 넘게 보안이 철저히 유지되고 있습니다.<br><a href="https://www.ralphlauren.co.kr/classic-fit-garment-dyed-oxford-shirt-459930.html" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<figure style="margin:14px 0"><img src="img/polo-fitguide.jpg" alt="폴로 셔츠 핏 가이드 샵. 핏마다 착용 사진과 설명을 붙여 별도 페이지로 운영한다." style="width:100%;max-width:820px;border:1px solid var(--line);border-radius:10px"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">폴로 셔츠 핏 가이드 샵. 핏마다 착용 사진과 설명을 붙여 별도 페이지로 운영한다.</figcaption></figure>
+<figure style="margin:14px 0"><img src="img/polo-fitguide.jpg" alt="폴로 셔츠 핏 가이드 샵. 핏마다 착용 사진과 설명을 붙여 별도 페이지로 운영한다." style="width:100%;max-width:820px;border:1px solid var(--line);"><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">폴로 셔츠 핏 가이드 샵. 핏마다 착용 사진과 설명을 붙여 별도 페이지로 운영한다.</figcaption></figure>
 </div>
 
   <div class="sec">
@@ -2161,7 +2222,7 @@ DETAILS['polo-ralph-lauren'] = `
         <div class="acc-body"><ul>
           <li>매장을 저택과 서재로 만드는 문법의 원조다. 층별 라인 배치로 공간이 라벨 아키텍처를 표현한다</li>
           <li>2010년대 채널 과다 노출로 희석됐다가 도매 축소, DTC 전환, 프로모션 축소로 회복했다. AUR +18%에 시총 4배가 그 결과다</li>
-        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px"><img src="https://www.ralphlauren.co.kr/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/ko_KR/v1786999484340/img/202410/20241015-kr-garosu-flagship-lp-cafe-refresh/1015_kr_garosu_flagship_lp_cafe_refresh_c01_img.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="https://www.ralphlauren.co.kr/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/ko_KR/v1786999484340/img/202008/store-flagship-lp/202008_flagship_lp_c01_hero.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"><img src="https://www.ralphlauren.co.kr/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/ko_KR/v1786999484340/img/202606/20260629-apac-flagship-update-lp/0629_apac_flagship_update_lp_c01_img.jpg" alt="" style="width:100%;border:1px solid var(--line);border-radius:10px"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">가로수길 플래그십과 해외 플래그십. 매장을 저택과 서재처럼 만드는 문법.</figcaption></figure></div>
+        </ul><figure style="margin:14px 0"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px"><img src="https://www.ralphlauren.co.kr/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/ko_KR/v1786999484340/img/202410/20241015-kr-garosu-flagship-lp-cafe-refresh/1015_kr_garosu_flagship_lp_cafe_refresh_c01_img.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="https://www.ralphlauren.co.kr/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/ko_KR/v1786999484340/img/202008/store-flagship-lp/202008_flagship_lp_c01_hero.jpg" alt="" style="width:100%;border:1px solid var(--line);"><img src="https://www.ralphlauren.co.kr/on/demandware.static/-/Library-Sites-RalphLauren_EU_Library/ko_KR/v1786999484340/img/202606/20260629-apac-flagship-update-lp/0629_apac_flagship_update_lp_c01_img.jpg" alt="" style="width:100%;border:1px solid var(--line);"></div><figcaption style="font-size:12px;color:var(--sub);margin-top:6px">가로수길 플래그십과 해외 플래그십. 매장을 저택과 서재처럼 만드는 문법.</figcaption></figure></div>
       </div>
     </div>
   </div>
@@ -2215,20 +2276,20 @@ DETAILS['kaptain-sunshine'] = `
     <p>상품명은 원단이 먼저 나오고 형태가 뒤에 붙는다. Cotton Mock Twist Umbrella Coat, Wool Herringbone Flight Jacket, Cotton Drill Gurkha Pants처럼 소재를 앞에 두고 옷의 원형 이름을 붙이는 식이다. 원형은 대부분 군복과 작업복에서 가져왔다. Flight, Explorer, Gurkha, Officer, Baker, Tracker, Walker, Skipper가 모두 실제로 있던 옷의 이름이다. 그대로 복각하지 않고 이름과 형태만 빌린 다음 소재와 비례를 바꾸기 때문에, 같은 이름의 옷이 시즌마다 다른 원단으로 다시 나온다.</p>
     <p>상품 수가 적다. 남성 전체가 44스타일 113컬러이고, 컬러도 아이템당 2~4개 정도로 브라운, 차콜, 에크루, 네이비 같은 무난한 색 위주다. 재고를 쌓아두지 않고 그 시즌 발매분 위주로 파는 방식이라 오라리와 비슷하다. 아직 안 나온 상품은 COMING SOON으로 미리 걸어두고 순서대로 발매한다.</p>
     <p>가격 폭은 넓은 편이다. 티셔츠 ¥13,200부터 스웨이드 스포츠 재킷 ¥198,000까지 15배 차이가 난다. 티셔츠와 컷소가 처음 사보는 가격대를 맡고 코트와 재킷이 객단가를 올린다. 가격 차이를 설명하는 것도 결국 원단 이름이다.</p>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://kaptainsunshine.com/ap/item/i/A0KS0000QIIF" target="_blank"><img src="https://itemimg-kps.adss-sys.com/itemimg/KS010/A0KS0000QIIF/03_002-750.jpg" alt="Cotton Mock Twist Umbrella Coat" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://kaptainsunshine.com/ap/item/i/A0KS0000QIIF" target="_blank"><img src="https://itemimg-kps.adss-sys.com/itemimg/KS010/A0KS0000QIIF/03_002-750.jpg" alt="Cotton Mock Twist Umbrella Coat" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Cotton Mock Twist Umbrella Coat</b><br><span style="color:var(--sub)">¥176,000 (KHAKI/CHARCOAL)</span><br>オーガニックスーピマコットンを撚り杢にして製作したコットンシャンブレー・ギャバジン。しっかりと打ち込み、一度綺麗に仕上げた後に幾度もの洗い加工などを施し、しなやか且つ上質な膨らみを持たせています。Elegant Umbrella Pattern / Relax Fitting / Fully Wool Herringbone Tweed Lined / Garment Washed / Made in Japan<br><a href="https://kaptainsunshine.com/ap/item/i/A0KS0000QIIF" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://kaptainsunshine.com/ap/item/i/A0KS0000PIE7" target="_blank"><img src="https://itemimg-kps.adss-sys.com/itemimg/KS010/A0KS0000PIE7/03_002-750.jpg" alt="Wool Cavalry Walker Coat" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://kaptainsunshine.com/ap/item/i/A0KS0000PIE7" target="_blank"><img src="https://itemimg-kps.adss-sys.com/itemimg/KS010/A0KS0000PIE7/03_002-750.jpg" alt="Wool Cavalry Walker Coat" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Wool Cavalry Walker Coat</b><br><span style="color:var(--sub)">¥132,000 (OLIVE/NAVY)</span><br>タテ糸に極細繊維スーパー120’s、ヨコ糸には英国羊毛の最上品質とされるブルーフェイスを使用し、最大限打ち込んだウールキャバルリー・ツイル素材。上質原料ならではの独特な光沢感や美しいドレープが特徴のコートです。A-Line Fitting / Onepiece Raglan Sleeves / Fully Lined / Made in Japan<br><a href="https://kaptainsunshine.com/ap/item/i/A0KS0000PIE7" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://kaptainsunshine.com/ap/item/i/A0KS0000MZPJ" target="_blank"><img src="https://itemimg-kps.adss-sys.com/itemimg/KS010/A0KS0000MZPJ/03_002-750.jpg" alt="Suvin Supima Tube Tee Light" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://kaptainsunshine.com/ap/item/i/A0KS0000MZPJ" target="_blank"><img src="https://itemimg-kps.adss-sys.com/itemimg/KS010/A0KS0000MZPJ/03_002-750.jpg" alt="Suvin Supima Tube Tee Light" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Suvin Supima Tube Tee Light</b><br><span style="color:var(--sub)">¥13,200 (4컬러)</span><br>超長綿SUVINと、アメリカ産の上質超長綿SUPIMAをブレンドし紡績したTUBE天竺のライトウエイトです。糸に程よくツイストを施しシャリ感を持たせつつも、超長綿原料本来の滑らかな肌触り、光沢感を併せもち、着込むほどに良さを増すKS定番素材です。ボディは丸胴、程よく立ち上がシームレスのネックが特徴です。Regular Fitting / Seemless (Body,Neck) / Made in Japan<br><a href="https://kaptainsunshine.com/ap/item/i/A0KS0000MZPJ" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
-<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0;background:#fff">
-  <a href="https://kaptainsunshine.com/ap/item/i/A0KS0000PIBC" target="_blank"><img src="https://itemimg-kps.adss-sys.com/itemimg/KS010/A0KS0000PIBC/03_002-750.jpg" alt="Montana KS" style="width:120px;height:150px;object-fit:cover;object-position:top;border-radius:6px;background:#f0f0f0"></a>
+<div style="display:flex;gap:14px;align-items:center;border:1px solid var(--line);padding:12px;margin:12px 0;background:#fff">
+  <a href="https://kaptainsunshine.com/ap/item/i/A0KS0000PIBC" target="_blank"><img src="https://itemimg-kps.adss-sys.com/itemimg/KS010/A0KS0000PIBC/03_002-750.jpg" alt="Montana KS" style="width:120px;height:150px;object-fit:cover;object-position:top;background:#f0f0f0"></a>
   <div style="font-size:13px;line-height:1.6"><b>Montana KS</b><br><span style="color:var(--sub)">¥69,300 (2컬러)</span><br>MADE BY PARABOOT。Parabootで展開しているローカットタイプのクライミングブーツ“MONTANA”に別注をかけたレザーシューズ。Made in Spain / COW LEATHER / SOLE:RUBBER<br><a href="https://kaptainsunshine.com/ap/item/i/A0KS0000PIBC" target="_blank" style="font-size:12px">자사몰에서 보기 →</a></div>
 </div>
     <p>잡화는 직접 만들지 않고 다른 회사에 맡겨서 채운다. 위 Montana KS는 파라부트의 클라이밍 부츠를 별주로 만든 것이고, 가방도 영국 브래디(Brady) 같은 곳과 함께 만든다. 소재를 중요하게 여기는 브랜드가 잡화를 갖는 방법이 자체 개발이 아니라 연결이라는 점이 상품 목록에서 그대로 보인다.</p>
